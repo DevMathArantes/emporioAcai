@@ -1,0 +1,24 @@
+footer{
+    background-color: var(--cor1);
+    color: var(--cor2);
+    text-align: center;
+    padding: 2em 1em;
+}
+footer a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    color: var(--cor2);
+}
+footer a img{
+    width: 1.5em;
+}
+footer h2{
+    margin: 1em 0;
+    border: 2px solid var(--cor2);
+    border-radius: 10px;
+}
+footer h3{
+    font-size: 0.8rem;
+}
