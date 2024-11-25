@@ -1,22 +1,22 @@
 .combos{
     display: flex;
-    flex-flow:  row wrap;
-    justify-content: space-around;
+    width: 220%;
 }
 .combo{
     width: 40%;
     display: flex;
     flex-direction: column;
-    margin-bottom: 1em;
+    margin: 0 0.5em;
     gap: 0.2em;
-    text-align: center;
+    align-items: flex-start;
 }
 .combo img{
     width: 100%;
-    border-radius: 20px;
+    border-radius: 10px;
 }
 .combo h3, .combo span{
     color: var(--cor1);
+    font-size: 1rem;
 }
 .combo span{
     font-family: var(--fontTitulos);
@@ -28,6 +28,6 @@
     color: var(--cor2);
     border: 0;
     border-radius: 10px;
-    padding: 1em;
-    font-size: 1rem
+    padding: 0.5em;
+    width: 75%;
 }

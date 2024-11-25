@@ -37,3 +37,9 @@ a, p{
 a{
     text-decoration: none;
 }
+
+/*Elementos padrão*/
+.carrossel{
+    width: 100%;
+    overflow: auto;
+}
