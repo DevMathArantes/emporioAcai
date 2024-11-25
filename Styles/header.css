@@ -5,6 +5,6 @@ header{
     margin-top: 30vw;
     padding: 1em;
 }
-header h1, header h2{
+header h1{
     color: var(--cor1);
 }
