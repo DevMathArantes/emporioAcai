@@ -1,37 +1,33 @@
-.combo img{
-    width: 40%;
-    border-radius: 0 20px 20px 0;
+.combos{
+    display: flex;
+    flex-flow:  row wrap;
+    justify-content: space-around;
 }
 .combo{
-    display: flex;
-    justify-content: space-between;
-    padding: 1em 0;
-}
-.comboInfo{
-    width: 60%;
-    text-align: center;
+    width: 40%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    margin-bottom: 1em;
+    gap: 0.2em;
+    text-align: center;
 }
-.comboInfo h3{
+.combo img{
+    width: 100%;
+    border-radius: 20px;
+}
+.combo h3, .combo span{
     color: var(--cor1);
 }
-.comboInfo + img{
-    border-radius: 20px 0 0 20px;
-}
-.comboInfo span{
-    font-size: 1.5rem;
+.combo span{
     font-family: var(--fontTitulos);
+    font-size: 1.2rem;
     font-weight: 500;
-    color: var(--cor1);
 }
-.comboInfo button{
-    width: 60%;
+.combo button{
     background-color: var(--cor1);
     color: var(--cor2);
     border: 0;
+    border-radius: 10px;
     padding: 1em;
-    border-radius: 20px;
-    font-size: 1rem;
+    font-size: 1rem
 }
