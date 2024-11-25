@@ -9,6 +9,7 @@
 @import url('Styles/cardapio.css');
 @import url('Styles/main.css');
 @import url('Styles/especiais.css');
+@import url('Styles/especial.css');
 
 /*Variáveis*/
 :root{
@@ -42,4 +43,13 @@ a{
 .carrossel{
     width: 100%;
     overflow: auto;
+}
+.pedir{
+    background-color: var(--cor1);
+    color: var(--cor2);
+    border: 0;
+    border-radius: 10px;
+    padding: 0.5em;
+    font-size: 1rem;
+    width: 75%;
 }
