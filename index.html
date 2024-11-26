@@ -27,27 +27,54 @@
         <h2>Faça já o seu pedido</h2>
         <section class="carrossel">
             <div class="tipos">
+
+                <!--Sorvetes-->
                 <div class="tipoProduto">
-                    <img src="Assets/Imagens/sorvetes.jpg" alt="">
-                    <button>Ver Sorvetes</button>
+                    <img src="Assets/Imagens/sorvetes.jpg" alt="sorvetes">
+                    <button onclick="interagirModal('modalSorvete')">Ver Sorvetes</button>
                 </div>
+                <div id="modalSorvete" class="categoria modal">
+                    <img src="Assets/Imagens/sorvetes.jpg" alt="sorvetes">
+                    <button onclick="interagirModal('modalSorvete')" class="voltar">Voltar</button>
+                    
+                </div>
+
+
+                <!--Açais-->
                 <div class="tipoProduto">
-                    <img src="Assets/Imagens/pizzas.jpg" alt="">
-                    <button>Ver Pizzas</button>
+                    <img src="Assets/Imagens/acai.jpg" alt="açais">
+                    <button onclick="interagirModal('modalAcai')">Ver Açais</button>
                 </div>
+                <div id="modalAcai" class="categoria modal">
+                    <img src="Assets/Imagens/acai.jpg" alt="açais">
+                    <button onclick="interagirModal('modalAcai')"  class="voltar">Voltar</button>
+                </div>
+
+                <!--Especiais-->
                 <div class="tipoProduto">
-                    <img src="Assets/Imagens/lanches.jpg" alt="">
-                    <button>Ver Lanches</button>
+                    <img src="Assets/Imagens/especiais.png" alt="especiais">
+                    <button onclick="interagirModal('modalEspeciais')">Ver Especiais</button>
                 </div>
+                <div id="modalEspeciais" class="categoria modal">
+                    <img src="Assets/Imagens/especiais.png" alt="especiais">
+                    <button onclick="interagirModal('modalEspeciais')" class="voltar">Voltar</button>
+                </div>
+
+                <!--Bebidas-->
                 <div class="tipoProduto">
-                    <img src="Assets/Imagens/bebidas.jpg" alt="">
-                    <button>Ver Bebidas</button>
+                    <img src="Assets/Imagens/bebidas.jpg" alt="bebidas">
+                    <button onclick="interagirModal('modalBebidas')">Ver Bebidas</button>
                 </div>
+                <div id="modalBebidas" class="categoria modal">
+                    <img src="Assets/Imagens/bebidas.jpg" alt="bebidas">
+                    <button onclick="interagirModal('modalBebidas')" class="voltar">Voltar</button>
+                </div>
+
             </div>
         </section>
 
         <!--Porções-->
-        <h2>Nossa especialidade <br> PORÇÕES</h2>
+        <h2>Para toda a família <br> PORÇÕES</h2>
         <section class="carrossel">
            <div class="especiais">
                 <div class="especiaisItem">
@@ -94,37 +121,7 @@
            </div>
         </section>
 
-        <!--Tapiocas-->
-        <h2>Monte sua Tapioca</h2>
-        <section>
-
-        </section>
-
-        <!--Omelete-->
-        <h2>Curta nosso ambiente <br>Omeletes</h2>
-        <section class="especial">
-            <img src="Assets/Imagens/omelete.jpg" alt="omelete">
-            <ul>
-                <li>
-                    <h3>Omelete de Filé</h3>
-                    <p>Filé, bacon, salsicha, presunto, queijo, catupiry, tomate e batata palha</p>
-                    <span>R$ 76.00</span>
-                    <button class="pedir">Pedir</button>
-                </li>
-                <li>
-                    <h3>Omelete de Lombo</h3>
-                    <p>Lombo, bacon, salsicha, presunto, queijo, catupiry, tomate e batata palha</p>
-                    <span>R$ 61.00</span>
-                    <button class="pedir">Pedir</button>
-                </li>
-                <li>
-                    <h3>Omelete de Frango</h3>
-                    <p>Frango, bacon, salsicha, presunto, queijo, catupiry, tomate e batata palha</p>
-                    <span>R$ 62.00</span>
-                    <button class="pedir">Pedir</button>
-                </li>
-            </ul>
-        </section>
+        
 
     </main>
     <footer>
@@ -132,5 +129,8 @@
         <h2>MAF</h2>
         <a href="">Acesse nosso site <img src="Assets/icons/link.png" alt="icone link"></a>
     </footer>
+
+    <!--Scripts-->
+    <script src="script.js"></script>
 </body>
 </html>

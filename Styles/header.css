@@ -4,11 +4,11 @@ header{
     text-align: center;
 }
 header img{
-    width: 80%;
+    width: 20em;
 }
 header p{
     padding: 1em 5em;
-    background-size: 5%;
+    background-size: 2em;
     background-position: 10%;
     background-repeat: no-repeat;
 }

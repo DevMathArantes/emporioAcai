@@ -9,7 +9,8 @@
 @import url('Styles/cardapio.css');
 @import url('Styles/main.css');
 @import url('Styles/especiais.css');
-@import url('Styles/especial.css');
+@import url('Styles/modal.css');
+@import url('Styles/categoria.css');
 
 /*Variáveis*/
 :root{
@@ -18,6 +19,7 @@
     --cor1: #4e0c57;
     --cor2: #ffffff;
     --cor3: #808080;
+    --cor4: #000000;
 }
 
 /*Regras*/
