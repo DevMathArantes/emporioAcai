@@ -38,6 +38,9 @@
     width: 100%;
     padding: 0.5em 0;
 }
+.produtoVariado p{
+    width: 100%;
+}
 .produtoVariado ul{
     display: flex;
     flex-direction: column;
