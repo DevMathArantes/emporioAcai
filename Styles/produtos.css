@@ -1,0 +1,90 @@
+/*Combos de açai*/
+.combos{
+    width: 250%;
+    display: flex;
+    gap: 1em;
+}
+.combo{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.combo p{
+    color: var(--cor1);
+}
+
+/*Produto único*/
+.produtoEspecial{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+}
+.produtoEspecial img{
+    border-radius: 20px;
+}
+.produtoEspecial p{
+    margin: 0;
+}
+
+/*Mesmo produto com variações*/
+.produtoVariado{
+    width: 90%;
+}
+.produtoVariado h3{
+    color: var(--cor1);
+    width: 100%;
+    padding: 0.5em 0;
+}
+.produtoVariado ul{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.produtoVariado li{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--cor1);
+}
+.produtoVariado li span{
+    font-size: 1.2rem;
+    font-family: var(--fontPadrao);
+    font-weight: 400;
+}
+.produtoVariado li button{
+    width: 8em;
+    background-color: var(--cor1);
+    color: var(--cor2);
+    padding: 0.5em;
+    border: 0;
+    border-radius: 10px 0 0 0;
+}
+
+/*Produtos comuns*/
+.produtosPadrao{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+.produtoPadrao{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 45%;
+    align-items: center;
+}
+.produtoPadrao img{
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+}
+.produtoPadrao span{
+    font-size: 1.2rem;
+    font-family: var(--fontPadrao);
+    color: var(--cor1);
+}

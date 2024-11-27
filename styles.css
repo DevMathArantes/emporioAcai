@@ -8,9 +8,9 @@
 @import url('Styles/footer.css');
 @import url('Styles/cardapio.css');
 @import url('Styles/main.css');
-@import url('Styles/especiais.css');
 @import url('Styles/modal.css');
 @import url('Styles/categoria.css');
+@import url('Styles/produtos.css');
 
 /*Variáveis*/
 :root{
@@ -33,7 +33,7 @@ h1, h2, h3, h4, h5, h6{
 body{
     margin: 0;
 }
-a, p{
+a, p, button{
     font-family: var(--fontPadrao);
     font-size: 0.8rem;
 }

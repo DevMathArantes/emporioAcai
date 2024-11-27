@@ -18,15 +18,131 @@
         </nav>
         <h1>Seja bem vindo</h1>
         <img src="Assets/Imagens/logo.jpg" alt="logo emporio do açai">
-        <p class="funcionamento">Horário de funcionamento <br> 14h30 as 22h00</p>
+        <p class="funcionamento">Horário de funcionamento 14h30 as 22h00</p>
         <p class="local">Avenida Coronel Quito, 88 / Centro - Igarapava (SP)</p>
     </header>
     <main>
 
-        <!--Cardápio-->
+        <!--Sobremesas-->
         <h2>Faça já o seu pedido</h2>
         <section class="carrossel">
             <div class="tipos">
+
+                <!--Açais-->
+                <div class="tipoProduto">
+                    <img src="Assets/Imagens/acai.jpg" alt="açais">
+                    <button onclick="interagirModal('modalAcai')">Ver Açais</button>
+                </div>
+                <div id="modalAcai" class="categoria modal">
+                    <img src="Assets/Imagens/acai.jpg" alt="açais">
+                    <button onclick="interagirModal('modalAcai')"  class="voltar">Voltar</button>
+                    
+                    <!--Combos-->
+                    <h2>Combos</h2>
+                    <div class="produtoEspecial">
+
+                        <img src="Assets/Imagens/combo1litro.jpg" alt="1 litro de açai">
+                        <h3>1 Litro de açai</h3>
+                        <p>Escolha até 4 adicionais</p>
+                        <button class="pedir">Pedir</button>
+                   
+                        <!--Combos de açai-->
+                        <div class="carrossel">
+                            <div class="combos">
+                                <div class="combo">
+                                    <img src="Assets/Imagens/combo300ml.jpg" alt="combo 300 ml">
+                                    <h3>Copo 300 Ml</h3>
+                                    <p>Escolha até 3 adicionais</p>
+                                    <button class="pedir">Pedir</button>
+                                </div>
+                                <div class="combo">
+                                    <img src="Assets/Imagens/combo400ml.jpg" alt="combo 400 ml">
+                                    <h3>Copo 400 Ml</h3>
+                                    <p>Escolha até 3 adicionais</p>
+                                    <button class="pedir">Pedir</button>
+                                </div>
+                                <div class="combo">
+                                    <img src="Assets/Imagens/combo500ml.jpg" alt="combo 500 ml">
+                                    <h3>Copo 500 Ml</h3>
+                                    <p>Escolha até 3 adicionais</p>
+                                    <button class="pedir">Pedir</button>
+                                </div>
+                                <div class="combo">
+                                    <img src="Assets/Imagens/combo700ml.jpg" alt="combo 700 ml">
+                                    <h3>Copo 700 Ml</h3>
+                                    <p>Escolha até 3 adicionais</p>
+                                    <button class="pedir">Pedir</button>
+                                </div>
+                            </div>
+                        </div>
+                   
+                    </div>
+                   
+
+                    <!--Açai padrão-->
+                    <h2>Copos de açai</h2>
+                    <div class="produtoVariado">
+                        <img src="Assets/Imagens/copoAcai.jpg" alt="copo de açaí">
+                        <ul>
+                            <li>
+                                <h3>Copo 300 Ml</h3>
+                                <span>R$ 11.00</span>
+                                <button>Pedir</button>
+                            </li>
+                            <li>
+                                <h3>Copo 400 Ml</h3>
+                                <span>R$ 12.00</span>
+                                <button>Pedir</button>
+                            </li>
+                            <li>
+                                <h3>Copo 500 Ml</h3>
+                                <span>R$ 16.00</span>
+                                <button>Pedir</button>
+                            </li>
+                            <li>
+                                <h3>Copo 700 Ml</h3>
+                                <span>R$ 18.00</span>
+                                <button>Pedir</button>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!--Barcas-->
+                    <h2>Barcas</h2>
+                    <div class="produtoVariado">
+                        <img src="Assets/Imagens/barca.jpg" alt="barca de açai">
+                        <ul>
+                            <li>
+                                <h3>Barca 1 Litro</h3>
+                                <span>R$ 55.00</span>
+                                <button>Pedir</button>
+                            </li>
+                            <li>
+                                <h3>Barca 1.5 Litros</h3>
+                                <span>R$ 65.00</span>
+                                <button>Pedir</button>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!--Tigelas-->
+                    <h2>Tigelas</h2>
+                    <div class="produtosPadrao">
+                        <div class="produtoPadrao">
+                            <img src="Assets/Imagens/tigela600ml.jpg" alt="tigela de 600 ml de açai">
+                            <h3>Tigela 1 litro</h3>
+                            <span>R$ 22.00</span>
+                            <button class="pedir">Pedir</button>
+                        </div>
+                        <div class="produtoPadrao">
+                            <img src="Assets/Imagens/tigela1litro.jpg" alt="tigela de 1 litro">
+                            <h3>Tigela 1 litro</h3>
+                            <span>R$ 22.00</span>
+                            <button class="pedir">Pedir</button>
+                        </div>
+                    </div>
+
+                </div>
 
                 <!--Sorvetes-->
                 <div class="tipoProduto">
@@ -37,27 +153,6 @@
                     <img src="Assets/Imagens/sorvetes.jpg" alt="sorvetes">
                     <button onclick="interagirModal('modalSorvete')" class="voltar">Voltar</button>
                     
-                </div>
-
-
-                <!--Açais-->
-                <div class="tipoProduto">
-                    <img src="Assets/Imagens/acai.jpg" alt="açais">
-                    <button onclick="interagirModal('modalAcai')">Ver Açais</button>
-                </div>
-                <div id="modalAcai" class="categoria modal">
-                    <img src="Assets/Imagens/acai.jpg" alt="açais">
-                    <button onclick="interagirModal('modalAcai')"  class="voltar">Voltar</button>
-                </div>
-
-                <!--Especiais-->
-                <div class="tipoProduto">
-                    <img src="Assets/Imagens/especiais.png" alt="especiais">
-                    <button onclick="interagirModal('modalEspeciais')">Ver Especiais</button>
-                </div>
-                <div id="modalEspeciais" class="categoria modal">
-                    <img src="Assets/Imagens/especiais.png" alt="especiais">
-                    <button onclick="interagirModal('modalEspeciais')" class="voltar">Voltar</button>
                 </div>
 
                 <!--Bebidas-->
@@ -73,55 +168,43 @@
             </div>
         </section>
 
-        <!--Porções-->
-        <h2>Para toda a família <br> PORÇÕES</h2>
+        <!--Salgados-->
+        <h2>Sabores que inspiram</h2>
         <section class="carrossel">
-           <div class="especiais">
-                <div class="especiaisItem">
-                    <img src="Assets/Imagens/batataFrita.jpg" alt="imagem de batata frita">
-                    <h3>Batata Frita (básica)</h3>
-                    <select id="">
-                        <option value="">Inteira</option>
-                        <option value="">Meia</option>
-                    </select>
-                    <span>R$ 31.00</span>
-                    <button class="pedir">Pedir</button>
-                </div>
-                <div class="especiaisItem">
-                    <img src="Assets/Imagens/batataEspecial.jpg" alt="batata frita com bacon">
-                    <h3>Batata Frita (especial)</h3>
-                    <select id="">
-                        <option value="">Inteira</option>
-                        <option value="">Meia</option>
-                    </select>
-                    <span>R$ 43.00</span>
-                    <button class="pedir">Pedir</button>
-                </div>
-                <div class="especiaisItem">
-                    <img src="Assets/Imagens/file.jpg" alt="porção de filé">
-                    <h3>Porção de Filé</h3>
-                    <p>Filé, cebola, bacon, alface e tomate</p>
-                    <span>R$ 56.00</span>
-                    <button class="pedir">Pedir</button>
-                </div>
-                <div class="especiaisItem">
-                    <img src="Assets/Imagens/frango.jpg" alt="porção de frango">
-                    <h3>Porção de Frango</h3>
-                    <p>Frango, cebola, bacon, alface e tomate</p>
-                    <span>R$ 42.00</span>
-                    <button class="pedir">Pedir</button>
-                </div>
-                <div class="especiaisItem">
-                    <img src="Assets/Imagens/lombo.jpg" alt="porção de lombo">
-                    <h3>Porção de Lombo</h3>
-                    <p>Lombo, cebola, bacon, alface e tomate</p>
-                    <span>R$ 46.00</span>
-                    <button class="pedir">Pedir</button>
-                </div>
-           </div>
-        </section>
+            <div class="tipos">
 
-        
+                <!--Lanches-->
+                <div class="tipoProduto">
+                    <img src="Assets/Imagens/lanche.jpg" alt="lanches">
+                    <button onclick="interagirModal('modalLanches')">Ver Lanches</button>
+                </div>
+                <div id="modalLanches" class="categoria modal">
+                    <img src="Assets/Imagens/lanche.jpg" alt="lanches">
+                    <button onclick="interagirModal('modalLanches')" class="voltar">Voltar</button>
+                </div>
+
+                <!--Pizzas-->
+                <div class="tipoProduto">
+                    <img src="Assets/Imagens/pizzas.jpg" alt="pizzas">
+                    <button onclick="interagirModal('modalPizzas')">Ver Pizzas</button>
+                </div>
+                <div id="modalPizzas" class="categoria modal">
+                    <img src="Assets/Imagens/pizzas.jpg" alt="Pizzas">
+                    <button onclick="interagirModal('modalPizzas')" class="voltar">Voltar</button>
+                </div>
+
+                <!--Especiais-->
+                <div class="tipoProduto">
+                    <img src="Assets/Imagens/especiais.png" alt="especiais">
+                    <button onclick="interagirModal('modalEspeciais')">Ver Especiais</button>
+                </div>
+                <div id="modalEspeciais" class="categoria modal">
+                    <img src="Assets/Imagens/especiais.png" alt="especiais">
+                    <button onclick="interagirModal('modalEspeciais')" class="voltar">Voltar</button>
+                </div>
+
+            </div>
+        </section>
 
     </main>
     <footer>

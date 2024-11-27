@@ -1,5 +1,10 @@
+.categoria{
+    align-items: center;
+    flex-direction: column;
+    gap: 2em;
+    padding-bottom: 3em;
+}
 .categoria img{
     width: 100%;
-    margin-bottom: 200vh;
 }
 

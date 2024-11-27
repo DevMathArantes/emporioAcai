@@ -7,9 +7,10 @@ header img{
     width: 20em;
 }
 header p{
-    padding: 1em 5em;
-    background-size: 2em;
-    background-position: 10%;
+    text-align: left;
+    padding: 0.5em 0.5em 0.5em 4em;
+    background-size: 1.5em;
+    background-position: 1em;
     background-repeat: no-repeat;
 }
 .local{

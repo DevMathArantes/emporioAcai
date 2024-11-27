@@ -6,7 +6,7 @@ function get(id){
 //Abre ou fecha o modal
 function interagirModal(modal){
     if(get(modal).style.display == 'none'){
-        get(modal).style.display='block';
+        get(modal).style.display='flex';
         document.body.style.overflow='hidden';
     }
     else{
