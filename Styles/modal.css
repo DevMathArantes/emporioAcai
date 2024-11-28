@@ -10,7 +10,7 @@
     overflow-y: auto;
 }
 .voltar{
-    width: 30%;
+    width: 6em;
     background-color: var(--cor1);
     color: var(--cor2);
     border: none;
@@ -20,5 +20,4 @@
     left: 1em;
     padding: 1em;
     border-radius: 10px;
-    
 }

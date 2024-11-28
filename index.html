@@ -26,10 +26,10 @@
         <!--Sobremesas-->
         <h2>Faça já o seu pedido</h2>
         <section class="carrossel">
-            <div class="tipos">
+            <div class="carrosselFilho tipos">
 
                 <!--Açais-->
-                <div class="tipoProduto">
+                <div class="carrosselItem tipoProduto">
                     <img src="Assets/Imagens/acai.jpg" alt="açais">
                     <button onclick="interagirModal('modalAcai')">Ver Açais</button>
                 </div>
@@ -44,33 +44,38 @@
                         <img src="Assets/Imagens/combo1litro.jpg" alt="1 litro de açai">
                         <h3>1 Litro de açai</h3>
                         <p>Escolha até 4 adicionais</p>
+                        <span>R$ 34.90</span>
                         <button class="pedir">Pedir</button>
                    
                         <!--Combos de açai-->
                         <div class="carrossel">
-                            <div class="combos">
-                                <div class="combo">
+                            <div class="carrosselFilho combos">
+                                <div class="carrosselItem combo">
                                     <img src="Assets/Imagens/combo300ml.jpg" alt="combo 300 ml">
                                     <h3>Copo 300 Ml</h3>
                                     <p>Escolha até 3 adicionais</p>
+                                    <span>R$ 23.00</span>
                                     <button class="pedir">Pedir</button>
                                 </div>
-                                <div class="combo">
+                                <div class="carrosselItem combo">
                                     <img src="Assets/Imagens/combo400ml.jpg" alt="combo 400 ml">
                                     <h3>Copo 400 Ml</h3>
                                     <p>Escolha até 3 adicionais</p>
+                                    <span>R$ 25.00</span>
                                     <button class="pedir">Pedir</button>
                                 </div>
-                                <div class="combo">
+                                <div class="carrosselItem combo">
                                     <img src="Assets/Imagens/combo500ml.jpg" alt="combo 500 ml">
                                     <h3>Copo 500 Ml</h3>
                                     <p>Escolha até 3 adicionais</p>
+                                    <span>R$ 28.00</span>
                                     <button class="pedir">Pedir</button>
                                 </div>
-                                <div class="combo">
+                                <div class="carrosselItem combo">
                                     <img src="Assets/Imagens/combo700ml.jpg" alt="combo 700 ml">
                                     <h3>Copo 700 Ml</h3>
                                     <p>Escolha até 3 adicionais</p>
+                                    <span>R$ 30.00</span>
                                     <button class="pedir">Pedir</button>
                                 </div>
                             </div>
@@ -86,21 +91,25 @@
                         <ul>
                             <li>
                                 <h3>Copo 300 Ml</h3>
+                                <p>Copo de 300ml de açai</p>
                                 <span>R$ 11.00</span>
                                 <button>Pedir</button>
                             </li>
                             <li>
                                 <h3>Copo 400 Ml</h3>
+                                <p>Copo de 400ml de açai</p>
                                 <span>R$ 12.00</span>
                                 <button>Pedir</button>
                             </li>
                             <li>
                                 <h3>Copo 500 Ml</h3>
+                                <p>Copo de 500ml de açai</p>
                                 <span>R$ 16.00</span>
                                 <button>Pedir</button>
                             </li>
                             <li>
                                 <h3>Copo 700 Ml</h3>
+                                <p>Copo de 700ml de açai</p>
                                 <span>R$ 18.00</span>
                                 <button>Pedir</button>
                             </li>
@@ -147,7 +156,7 @@
                 </div>
 
                 <!--Sorvetes-->
-                <div class="tipoProduto">
+                <div class="carrosselItem tipoProduto">
                     <img src="Assets/Imagens/sorvetes.jpg" alt="sorvetes">
                     <button onclick="interagirModal('modalSorvete')">Ver Sorvetes</button>
                 </div>
@@ -155,10 +164,19 @@
                     <img src="Assets/Imagens/sorvetes.jpg" alt="sorvetes">
                     <button onclick="interagirModal('modalSorvete')" class="voltar">Voltar</button>
                     
+                    <!--Destaque-->
+                    <h2>Mais sorvete, mais diversão</h2>
+                    <div class="produtoEspecial">
+                        <img src="Assets/Imagens/sorvete1litro.jpg" alt="1 litro de sorvete">
+                        <h3>1 Litro de sorvete</h3>
+                        <span>R$ 22.00</span>
+                        <button class="pedir">Pedir</button>
+                    </div>
+
                 </div>
 
                 <!--Bebidas-->
-                <div class="tipoProduto">
+                <div class="carrosselItem tipoProduto">
                     <img src="Assets/Imagens/bebidas.jpg" alt="bebidas">
                     <button onclick="interagirModal('modalBebidas')">Ver Bebidas</button>
                 </div>
@@ -173,20 +191,212 @@
         <!--Salgados-->
         <h2>Sabores que inspiram</h2>
         <section class="carrossel">
-            <div class="tipos">
+            <div class="carrosselFilho tipos">
 
                 <!--Lanches-->
-                <div class="tipoProduto">
+                <div class="carrosselItem tipoProduto">
                     <img src="Assets/Imagens/lanche.jpg" alt="lanches">
                     <button onclick="interagirModal('modalLanches')">Ver Lanches</button>
                 </div>
                 <div id="modalLanches" class="categoria modal">
                     <img src="Assets/Imagens/lanche.jpg" alt="lanches">
                     <button onclick="interagirModal('modalLanches')" class="voltar">Voltar</button>
+                
+                    <!--Lanches com hambúrguer-->
+                    <h2>Lanches com Hambúrguer</h2>
+                    <div class="produtoVariado">
+                        <img src="Assets/Imagens/xBurguer.png" alt="lanche x-burguer">
+                        <ul>
+                            <li>
+                                <h3>X-Bacon</h3>
+                                <p>Pão, queijo, hambúrguer e bacon</p>
+                                <span>R$ 17.00</span>
+                                <button>Pedir</button>
+                            </li>
+                            <li>
+                                <h3>X-Burguer</h3>
+                                <p>Pão, 2 hambúrgueres e queijo</p>
+                                <span>R$ 16.00</span>
+                                <button>Pedir</button>
+                            </li>
+                            <li>
+                                <h3>X-Egg</h3>
+                                <p>Pão, queijo, hambúrguer e ovo</p>
+                                <span>R$ 15.00</span>
+                                <button>Pedir</button>
+                            </li>
+                            <li>
+                                <h3>X-Salada</h3>
+                                <p>Pão, queijo, hambúrguer, alface e tomate</p>
+                                <span>R$ 17.00</span>
+                                <button>Pedir</button>
+                            </li>
+                            <li>
+                                <h3>X-Tudão</h3>
+                                <p>Pão, presunto, queijo, catupiry, salsicha, 3 hambúrgueres, bacon, milho, batata palha, alface e tomate</p>
+                                <span>R$ 31.90</span>
+                                <button>Pedir</button>
+                            </li>
+                            <li>
+                                <h3>X-Tudo</h3>
+                                <p>Pão, presunto, queijo, 2 hambúrgueres, ovo, bacon, alface, catupiry e tomate</p>
+                                <span>R$ 26.00</span>
+                                <button>Pedir</button>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!--Lanches com frango-->
+                    <h2>Lanches com frango</h2>
+                    <div class="produtoVariado">
+                        <img src="Assets/Imagens/xFrango.jpg" alt="lanche de frango">
+                        <ul>
+                            <li>
+                                <h3>X-Frango</h3>
+                                <p>Pão, queijo e frango</p>
+                                <span>R$ 20.00</span>
+                                <button>Pedir</button>
+                            </li>
+                            <li>
+                                <h3>X-Frango  Bacon</h3>
+                                <p>Pão, queijo, frango e bacon</p>
+                                <span>R$ 24.00</span>
+                                <button>Pedir</button>
+                            </li>
+                            <li>
+                                <h3>X-Frango cremoso</h3>
+                                <p>Pão, queijo, frango, catupiry e bacon</p>
+                                <span>R$ 28.00</span>
+                                <button>Pedir</button>
+                            </li>
+                            <li>
+                                <h3>X-Frango Egg</h3>
+                                <p>Pão, queijo, frango e ovo</p>
+                                <span>R$ 21.00</span>
+                                <button>Pedir</button>
+                            </li>
+                            <li>
+                                <h3>X-Frango Salada Egg</h3>
+                                <p>Pão, queijo, frango, presunto, ovo, alface e tomate</p>
+                                <span>R$ 23.00</span>
+                                <button>Pedir</button>
+                            </li>
+                            <li>
+                                <h3>X-Frango Salada</h3>
+                                <p>Pão, queijo, frango, presunto, alface e tomate</p>
+                                <span>R$ 22.00</span>
+                                <button>Pedir</button>
+                            </li>
+                            <li>
+                                <h3>X-Frango Tudo</h3>
+                                <p>Pão, queijo, frango, alface, tomate, bacon, salsicha, ovo e presunto</p>
+                                <span>R$ 29.00</span>
+                                <button>Pedir</button>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!--Combo Lanche-->
+                    <h2>Combo</h2>
+                    <div class="produtoEspecial">
+                        <img src="Assets/Imagens/lanche.jpg" alt="combo lanche">
+                        <p>Lanche + Batata + Coca-Cola lata</p>
+                        <span>R$ 26.90</span>
+                        <button class="pedir">Pedir</button>
+                    </div>
+
+                     <!--Lanches com filé-->
+                     <h2>Lanches com file</h2>
+                     <div class="produtoVariado">
+                         <img src="Assets/Imagens/xfile.jpg" alt="lanche de frango">
+                         <ul>
+                             <li>
+                                 <h3>X-Filé</h3>
+                                 <p>Pão, queijo e carne</p>
+                                 <span>R$ 22.00</span>
+                                 <button>Pedir</button>
+                             </li>
+                             <li>
+                                 <h3>X-Filé Bacon</h3>
+                                 <p>Pão, queijo, carne e bacon</p>
+                                 <span>R$ 27.00</span>
+                                 <button>Pedir</button>
+                             </li>
+                             <li>
+                                 <h3>X-Filé Egg</h3>
+                                 <p>Pão, queijo, carne e ovo</p>
+                                 <span>R$ 23.00</span>
+                                 <button>Pedir</button>
+                             </li>
+                             <li>
+                                 <h3>X-Filé Salada</h3>
+                                 <p>Pão, queijo, carne, presunto, alface e tomate</p>
+                                 <span>R$ 25.00</span>
+                                 <button>Pedir</button>
+                             </li>
+                             <li>
+                                 <h3>X-Filé Salada Egg</h3>
+                                 <p>Pão, queijo, carne, presunto, ovo, alface e tomate</p>
+                                 <span>R$ 26.00</span>
+                                 <button>Pedir</button>
+                             </li>
+                             <li>
+                                 <h3>X-Filé Tudo</h3>
+                                 <p>Pão, queijo, carne, presunto, bacon, ovo, salsicha, alface e tomate</p>
+                                 <span>R$ 31.00</span>
+                                 <button>Pedir</button>
+                             </li>
+                         </ul>
+                     </div>
+
+                     <!--Lanches com lombo-->
+                     <h2>Lanches com lombo</h2>
+                     <div class="produtoVariado">
+                        <img src="Assets/Imagens/xLombo.jpg" alt="lanche de frango">
+                        <ul>
+                            <li>
+                                <h3>X-Lombo</h3>
+                                <p>Pão, queijo e Lombo</p>
+                                <span>R$ 21.00</span>
+                                <button>Pedir</button>
+                            </li>
+                            <li>
+                                <h3>X-Lombo Bacon</h3>
+                                <p>Pão, queijo, lombo e bacon</p>
+                                <span>R$ 25.00</span>
+                                <button>Pedir</button>
+                            </li>
+                            <li>
+                                <h3>X-Lombo Egg</h3>
+                                <p>Pão, queijo, lombo e ovo</p>
+                                <span>R$ 22.00</span>
+                                <button>Pedir</button>
+                            </li>
+                            <li>
+                                <h3>X-Lombo Salada</h3>
+                                <p>Pão, queijo, lombo, presunto, alface e tomate</p>
+                                <span>R$ 23.00</span>
+                                <button>Pedir</button>
+                            </li>
+                            <li>
+                                <h3>X-Lombo Salada Egg</h3>
+                                <p>Pão, queijo, lombo, presunto, ovo, alface e tomate</p>
+                                <span>R$ 24.00</span>
+                                <button>Pedir</button>
+                            </li>
+                            <li>
+                                <h3>X-Lombo Tudo</h3>
+                                <p>Pão, queijo, lombo, ovo, bacon, presunto, salsicha, alface e tomate</p>
+                                <span>R$ 29.00</span>
+                                <button>Pedir</button>
+                            </li>
+                        </ul>
+                    </div>
+                
                 </div>
 
                 <!--Pizzas-->
-                <div class="tipoProduto">
+                <div class="carrosselItem tipoProduto">
                     <img src="Assets/Imagens/pizzas.jpg" alt="pizzas">
                     <button onclick="interagirModal('modalPizzas')">Ver Pizzas</button>
                 </div>
@@ -196,13 +406,109 @@
                 </div>
 
                 <!--Especiais-->
-                <div class="tipoProduto">
+                <div class="carrosselItem tipoProduto">
                     <img src="Assets/Imagens/especiais.png" alt="especiais">
                     <button onclick="interagirModal('modalEspeciais')">Ver Especiais</button>
                 </div>
                 <div id="modalEspeciais" class="categoria modal">
                     <img src="Assets/Imagens/especiais.png" alt="especiais">
                     <button onclick="interagirModal('modalEspeciais')" class="voltar">Voltar</button>
+                
+                    <!--Porções-->
+                    <h2>Curta nosso ambiente</h2>
+                    <div class="produtoEspecial">
+                        <div class="carrossel">
+                            <div class="carrosselFilho porcoes">
+                                <div class="carrosselItem porcao">
+                                    <img src="Assets/Imagens/batataFrita.jpg" alt="porção batata frita">
+                                    <h3>Batata Frita (Básica)</h3>
+                                    <select name="" id="">
+                                        <option value="">Inteira</option>
+                                        <option value="">Meia</option>
+                                    </select>
+                                    <span>R$ 31.00</span>
+                                    <button class="pedir">Pedir</button>
+                                </div>
+                                <div class="carrosselItem porcao">
+                                    <img src="Assets/Imagens/batataEspecial.jpg" alt="porção batata frita com queijo e bacon">
+                                    <h3>Batata Frita (Especial)</h3>
+                                    <select name="" id="">
+                                        <option value="">Inteira</option>
+                                        <option value="">Meia</option>
+                                    </select>
+                                    <span>R$ 43.00</span>
+                                    <button class="pedir">Pedir</button>
+                                </div>
+                                <div class="carrosselItem porcao">
+                                    <img src="Assets/Imagens/porcaoFile.jpg" alt="porção file">
+                                    <h3>Porção de Filé</h3>
+                                    <p>Filé, bacon, cebola, alface e tomate</p>
+                                    <span>R$ 56.00</span>
+                                    <button class="pedir">Pedir</button>
+                                </div>
+                                <div class="carrosselItem porcao">
+                                    <img src="Assets/Imagens/porcaoFrango.jpg" alt="porção frango">
+                                    <h3>Porção de Frango</h3>
+                                    <p>Frango, bacon, cebola, alface e tomate</p>
+                                    <span>R$ 42.00</span>
+                                    <button class="pedir">Pedir</button>
+                                </div>
+                                <div class="carrosselItem porcao">
+                                    <img src="Assets/Imagens/porcaoLombo.jpg" alt="porção lombo">
+                                    <h3>Porção de Lombo</h3>
+                                    <p>Lombo, bacon, cebola, alface e tomate</p>
+                                    <span>R$ 46.00</span>
+                                    <button class="pedir">Pedir</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Omelete-->
+                    <h2>Omeletes</h2>
+                    <div class="produtoVariado">
+                        <img src="Assets/Imagens/omelete.jpg" alt="omeletes">
+                        <ul>
+                            <li>
+                                <h3>Omelete de filé</h3>
+                                <p>Filé, bacon, salsicha, presunto, queijo, catupiry, tomate e batata palha</p>
+                                <span>R$ 76.00</span>
+                                <button>Pedir</button>
+                            </li>
+                            <li>
+                                <h3>Omelete de frango</h3>
+                                <p>Frango, bacon, salsicha, presunto, queijo, catupiry, tomate e batata palha</p>
+                                <span>R$ 63.00</span>
+                                <button>Pedir</button>
+                            </li>
+                            <li>
+                                <h3>Omelete de Lombo</h3>
+                                <p>Lombo, bacon, salsicha, presunto, queijo, catupiry, tomate e batata palha</p>
+                                <span>R$ 61.00</span>
+                                <button>Pedir</button>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!--Tapiocas-->
+                    <h2>Tapiocas</h2>
+                    <div class="produtosPadrao">
+                        <div class="produtoPadrao">
+                            <img src="Assets/Imagens/tapioca2.jpg" alt="tapioca salgada">
+                            <h3>Tapioca Salgada</h3>
+                            <p>Escolha entre nossos vários sabores como frango, presunto, calabresa, mussarela, entre outros...</p>
+                            <span>R$ 18.00</span>
+                            <button class="pedir">Pedir</button>
+                        </div>
+                        <div class="produtoPadrao">
+                            <img src="Assets/Imagens/tigela1litro.jpg" alt="tigela de 1 litro">
+                            <h3>Tapioca Doce</h3>
+                            <p>Escolha entre nossos vários sabores como chocolate, morango, nutella, leite condensado, entre outros...</p>
+                            <span>R$ 18.00</span>
+                            <button class="pedir">Pedir</button>
+                        </div>
+                    </div>
+
                 </div>
 
             </div>

@@ -33,19 +33,41 @@ h1, h2, h3, h4, h5, h6{
 body{
     margin: 0;
 }
-a, p, button{
+button{
+    font-family: var(--fontTitulos);
+    font-size: 1rem;
+}
+a, p{
     font-family: var(--fontPadrao);
     font-size: 0.8rem;
 }
 a{
     text-decoration: none;
 }
+span{
+    font-size: 1.2rem;
+    font-family: var(--fontPadrao);
+    color: var(--cor1);
+    font-weight: 600;
+}
 
 /*Elementos padrão*/
 .carrossel{
     width: 100%;
-    overflow: auto;
+    overflow-x: auto;
+    padding: 1em 0;
 }
+    /*Atalhos para carrossel*/
+    .carrosselFilho{
+        display: flex;
+        gap: 1em;
+        padding-left: 1em;
+    }
+    .carrosselItem{
+        display: flex;
+        flex-direction: column;
+    }
+
 .pedir{
     background-color: var(--cor1);
     color: var(--cor2);
