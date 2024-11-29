@@ -10,16 +10,12 @@
 }
 .porcao{
     width: 20%;
-    justify-content: space-between;
 }
-.porcao select{
-    font-size: 1rem;
-    border: 1px solid var(--cor1);
-    width: 10em;
-    border-radius: 10px;
-    color: var(--cor1);
-    text-align: center;
-    padding: 0.5em;
+.tacas{
+    width: 450%;
+}
+.taca{
+    width: 14%;
 }
 
 /*Produto único*/
@@ -27,7 +23,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    gap: 0.5em;
     align-items: center;
 }
 .produtoEspecial img{
@@ -61,6 +57,7 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
+    align-items: center;
     border-bottom: 1px solid var(--cor1);
 }
 .produtoVariado li button{
@@ -70,6 +67,7 @@
     padding: 0.5em;
     border: 0;
     border-radius: 10px 0 0 0;
+    margin-left: auto;
 }
 
 /*Produtos comuns*/
