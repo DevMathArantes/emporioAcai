@@ -10,17 +10,24 @@
 <body>
     <header>
         <nav>
-            <h2>Aberto</h2>
-            <a href=""><img src="Assets/icons/whatsapp.png" alt="icone whats app"></a>
-            <a href=""><img src="Assets/icons/instagram.png" alt="icone instagram"></a>
-            <a href=""><img src="Assets/icons/facebook.png" alt="icone facebook"></a>
-            <a href=""><span>0</span><img src="Assets/icons/carrinho.png" alt=""></a>
+            <h2 id="status"></h2>
+            <a href="https://wa.me/551631723514">
+                <img src="Assets/icons/whatsapp.png" alt="icone whats app">
+            </a>
+            <a href="https://www.instagram.com/omelhordoacai?igsh=emJlOWdvaHF4cWQ2">
+                <img src="Assets/icons/instagram.png" alt="icone instagram">
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100064760106360&mibextid=ZbWKwL">
+                <img src="Assets/icons/facebook.png" alt="icone facebook">
+            </a>
+            <button onclick="interagirModal('carrinho')"><span>0</span><img src="Assets/icons/carrinho.png" alt=""></button>
         </nav>
         <h1>Seja bem vindo</h1>
         <img src="Assets/Imagens/logo.jpg" alt="logo emporio do açai">
         <p class="funcionamento">Horário de funcionamento 14h30 as 22h00</p>
         <p class="local">Avenida Coronel Quito, 88 / Centro - Igarapava (SP)</p>
     </header>
+
     <main>
 
         <!--Sobremesas-->
@@ -1305,7 +1312,47 @@
             </div>
         </section>
 
+        <!--Carrinho-->
+        <section id="carrinho" class="carrinho categoria modal">
+            <img src="Assets/Imagens/geral.png" alt="empório do açai">
+            <h2>Agradecemos pela preferência</h2>
+
+            <div class="pedido">
+                <h2>Hamburguer123</h2>
+                <p>Adicional x (+ R$ 00.00), adicional y (+ R$ 00.00)</p>
+                <button>+ Adicional</button>
+                <input type="text" placeholder="Algum lembrete ?">
+                <h2>Hamburguer123</h2>
+                <p>Adicional x (+ R$ 00.00), adicional y (+ R$ 00.00)</p>
+                <button>+ Adicional</button>
+                <input type="text" placeholder="Algum lembrete ?">
+                <h2>Hamburguer123</h2>
+                <p>Adicional x (+ R$ 00.00), adicional y (+ R$ 00.00)</p>
+                <button>+ Adicional</button>
+                <input type="text" placeholder="Algum lembrete ?">
+            </div>
+
+            <div class="formulario">
+                <h2>Quase lá</h2>
+                <input type="text" placeholder="Nome">
+                <select name="" id="">
+                    <option value="">Forma de pagamento</option>
+                    <option value="">Dinheiro</option>
+                    <option value="">Cartão</option>
+                    <option value="">Pix</option>
+                </select>
+                <div>
+                    <input id="endereco" type="checkbox">
+                <label for="endereco">Para entrega</label>
+                </div>
+                <input type="text" placeholder="Endereço">
+            </div>
+            <button class="pedir">Gerar Pedido</button>
+
+        </section>
+
     </main>
+
     <footer>
         <h3>Developed by Matheus Arantes Ferreira</h3>
         <h2>MAF</h2>

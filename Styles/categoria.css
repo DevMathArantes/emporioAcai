@@ -3,6 +3,7 @@
     flex-direction: column;
     gap: 2em;
     padding-bottom: 3em;
+    z-index: 1;
 }
 .categoria img{
     width: 100%;

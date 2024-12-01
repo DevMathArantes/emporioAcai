@@ -1,0 +1,39 @@
+.carrinho{
+    z-index: 2;
+}
+.carrinho input{
+    border: 1px solid var(--cor1);
+    border-radius: 5px;
+    padding: 0.5em;
+}
+.carrinho select{
+    width: 100%;
+}
+.pedido{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    width: 90%;
+}
+.pedido h2{
+    margin: 0;
+    padding: 0;
+}
+.pedido p{
+    margin: 0;
+    color: var(--cor1);
+}
+.pedido button{
+    background-color: var(--cor1);
+    color: var(--cor2);
+    border-radius: 10px;
+    border: 0;
+    padding: 0.2em;
+}
+.formulario{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    gap: 0.5em;
+}
+

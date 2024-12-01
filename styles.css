@@ -11,6 +11,7 @@
 @import url('Styles/modal.css');
 @import url('Styles/categoria.css');
 @import url('Styles/produtos.css');
+@import url('Styles/carrinho.css');
 
 /*Variáveis*/
 :root{
@@ -37,7 +38,7 @@ button{
     font-family: var(--fontTitulos);
     font-size: 1rem;
 }
-a, p{
+a, p, label{
     font-family: var(--fontPadrao);
     font-size: 0.8rem;
 }
