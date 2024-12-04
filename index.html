@@ -47,44 +47,42 @@
                     <!--Combos-->
                     <h2>Combos</h2>
                     <div class="produtoEspecial">
-
                         <img src="Assets/Imagens/combo1litro.jpg" alt="1 litro de açai">
-                        <h3>1 Litro de açai</h3>
-                        <p>Escolha até 4 adicionais</p>
-                        <span>R$ 34.90</span>
-                        <select name="" id="adicionalCombos1"></select>
-                        <button class="pedir">Pedir</button>
-                   
+                        <h3 id="nome1">1 Litro de açai</h3>
+                        <p id="descricao1">Escolha até 4 adicionais</p>
+                        <span id="valor1">R$ 34.90</span>
+                        <button onclick="confirmarPedido('1', 4, 1)" class="pedir">Pedir</button>
+
                         <!--Combos de açai-->
                         <div class="carrossel">
                             <div class="carrosselFilho combos">
                                 <div class="carrosselItem combo">
                                     <img src="Assets/Imagens/combo300ml.jpg" alt="combo 300 ml">
-                                    <h3>Copo 300 Ml</h3>
-                                    <p>Escolha até 3 adicionais</p>
-                                    <span>R$ 23.00</span>
-                                    <button class="pedir">Pedir</button>
+                                    <h3 id="nome2">Copo 300 Ml</h3>
+                                    <p id="descricao2">Escolha até 3 adicionais</p>
+                                    <span id="valor2">R$ 23.00</span>
+                                    <button onclick="confirmarPedido('2', 3, 1)" class="pedir">Pedir</button>
                                 </div>
                                 <div class="carrosselItem combo">
                                     <img src="Assets/Imagens/combo400ml.jpg" alt="combo 400 ml">
-                                    <h3>Copo 400 Ml</h3>
-                                    <p>Escolha até 3 adicionais</p>
-                                    <span>R$ 25.00</span>
-                                    <button class="pedir">Pedir</button>
+                                    <h3 id="nome3">Copo 400 Ml</h3>
+                                    <p id="descricao3">Escolha até 3 adicionais</p>
+                                    <span id="valor3">R$ 25.00</span>
+                                    <button onclick="confirmarPedido('3', 3, 1)" class="pedir">Pedir</button>
                                 </div>
                                 <div class="carrosselItem combo">
                                     <img src="Assets/Imagens/combo500ml.jpg" alt="combo 500 ml">
-                                    <h3>Copo 500 Ml</h3>
-                                    <p>Escolha até 3 adicionais</p>
-                                    <span>R$ 28.00</span>
-                                    <button class="pedir">Pedir</button>
+                                    <h3 id="nome4">Copo 500 Ml</h3>
+                                    <p id="descricao4">Escolha até 3 adicionais</p>
+                                    <span id="valor4">R$ 28.00</span>
+                                    <button onclick="confirmarPedido('4', 3, 1)" class="pedir">Pedir</button>
                                 </div>
                                 <div class="carrosselItem combo">
                                     <img src="Assets/Imagens/combo700ml.jpg" alt="combo 700 ml">
-                                    <h3>Copo 700 Ml</h3>
-                                    <p>Escolha até 3 adicionais</p>
-                                    <span>R$ 30.00</span>
-                                    <button class="pedir">Pedir</button>
+                                    <h3 id="nome5">Copo 700 Ml</h3>
+                                    <p id="descricao5">Escolha até 3 adicionais</p>
+                                    <span id="valor5">R$ 30.00</span>
+                                    <button onclick="confirmarPedido('5', 3, 1)" class="pedir">Pedir</button>
                                 </div>
                             </div>
                         </div>
@@ -98,28 +96,28 @@
                         <img src="Assets/Imagens/copoAcai.jpg" alt="copo de açaí">
                         <ul>
                             <li>
-                                <h3>Copo 300 Ml</h3>
-                                <p>Copo de 300ml de açai</p>
-                                <span>R$ 11.00</span>
-                                <button>Pedir</button>
+                                <h3 id="nome1">Copo 300 Ml</h3>
+                                <p id="descricao1">Copo de 300ml de açai</p>
+                                <span id="valor1">R$ 11.00</span>
+                                <button onclick="confirmarPedido('6', 0, 1)">Pedir</button>
                             </li>
                             <li>
-                                <h3>Copo 400 Ml</h3>
-                                <p>Copo de 400ml de açai</p>
-                                <span>R$ 12.00</span>
-                                <button>Pedir</button>
+                                <h3 id="nome2">Copo 400 Ml</h3>
+                                <p id="descricao2">Copo de 400ml de açai</p>
+                                <span id="valor2">R$ 12.00</span>
+                                <button onclick="confirmarPedido('7', 0, 1)">Pedir</button>
                             </li>
                             <li>
-                                <h3>Copo 500 Ml</h3>
-                                <p>Copo de 500ml de açai</p>
-                                <span>R$ 16.00</span>
-                                <button>Pedir</button>
+                                <h3 id="nome3">Copo 500 Ml</h3>
+                                <p id="descricao3">Copo de 500ml de açai</p>
+                                <span id="valor3">R$ 16.00</span>
+                                <button onclick="confirmarPedido('8', 0, 1)">Pedir</button>
                             </li>
                             <li>
-                                <h3>Copo 700 Ml</h3>
-                                <p>Copo de 700ml de açai</p>
-                                <span>R$ 18.00</span>
-                                <button>Pedir</button>
+                                <h3 id="nome4">Copo 700 Ml</h3>
+                                <p id="descricao4">Copo de 700ml de açai</p>
+                                <span id="valor4">R$ 18.00</span>
+                                <button onclick="confirmarPedido('9', 0, 1)">Pedir</button>
                             </li>
                         </ul>
                     </div>
@@ -130,16 +128,16 @@
                         <img src="Assets/Imagens/barca.jpg" alt="barca de açai">
                         <ul>
                             <li>
-                                <h3>Barca 1 Litro</h3>
-                                <p>Inclui até 8 adicionais</p>
-                                <span>R$ 55.00</span>
-                                <button>Pedir</button>
+                                <h3 id="nome10">Barca 1 Litro</h3>
+                                <p id="descricao10">Inclui até 8 adicionais</p>
+                                <span id="valor10">R$ 55.00</span>
+                                <button onclick="confirmarPedido('10', 8, 1)">Pedir</button>
                             </li>
                             <li>
-                                <h3>Barca 1.5 Litros</h3>
-                                <p>Inclui até 8 adicionais</p>
-                                <span>R$ 65.00</span>
-                                <button>Pedir</button>
+                                <h3 id="nome11">Barca 1.5 Litros</h3>
+                                <p id="descricao11">Inclui até 8 adicionais</p>
+                                <span id="valor11">R$ 65.00</span>
+                                <button onclick="confirmarPedido('11', 8, 1)">Pedir</button>
                             </li>
                         </ul>
                     </div>
@@ -149,15 +147,15 @@
                     <div class="produtosPadrao">
                         <div class="produtoPadrao">
                             <img src="Assets/Imagens/tigela600ml.jpg" alt="tigela de 600 ml de açai">
-                            <h3>Tigela 1 litro</h3>
-                            <span>R$ 22.00</span>
-                            <button class="pedir">Pedir</button>
+                            <h3 id="nome12">Tigela 1 litro</h3>
+                            <span id="valor12">R$ 22.00</span>
+                            <button onclick="confirmarPedido('12', 3, 1)" class="pedir">Pedir</button>
                         </div>
                         <div class="produtoPadrao">
                             <img src="Assets/Imagens/tigela1litro.jpg" alt="tigela de 1 litro">
-                            <h3>Tigela 1 litro</h3>
-                            <span>R$ 22.00</span>
-                            <button class="pedir">Pedir</button>
+                            <h3 id="nome13">Tigela 1 litro</h3>
+                            <span id="valor13">R$ 22.00</span>
+                            <button onclick="confirmarPedido('13', 3, 1)" class="pedir">Pedir</button>
                         </div>
                     </div>
 
@@ -1313,10 +1311,14 @@
             </div>
         </section>
 
+        <!--Confirmar Pedido-->
+        <section id="confirmarPedido" class="modal confirmarPedido"></section>
+
         <!--Carrinho-->
         <section id="carrinho" class="carrinho categoria modal">
             <img src="Assets/Imagens/geral.png" alt="empório do açai">
             <h2>Agradecemos pela preferência</h2>
+            <button onclick="interagirModal('carrinho')"  class="voltar">Voltar</button>
 
             <div class="pedido">
                 <h2>Hamburguer123</h2>

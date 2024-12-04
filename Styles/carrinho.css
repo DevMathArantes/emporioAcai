@@ -1,5 +1,5 @@
 .carrinho{
-    z-index: 2;
+    z-index: 3;
 }
 .carrinho input{
     border: 1px solid var(--cor1);

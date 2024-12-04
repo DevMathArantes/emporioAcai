@@ -12,6 +12,7 @@
 @import url('Styles/categoria.css');
 @import url('Styles/produtos.css');
 @import url('Styles/carrinho.css');
+@import url('Styles/confirmarPedido.css');
 
 /*Variáveis*/
 :root{

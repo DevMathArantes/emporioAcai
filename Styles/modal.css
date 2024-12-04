@@ -17,6 +17,6 @@
     position: fixed;
     top: 12vh;
     left: 1em;
-    padding: 1em;
-    border-radius: 10px;
+    padding: 0.5em;
+    border-radius: 5px;
 }

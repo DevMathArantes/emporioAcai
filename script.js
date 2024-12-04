@@ -34,8 +34,8 @@ else{
     get('status').innerHTML="Fechado";
 }
 
-//Lógica dos adicionais
-let adicionaisDoces = [
+//Adicionais para açai  e sorvete 
+let Doces = ["Nenhum",
     "Abacaxi R$ 3.50", "Nutella R$ 4.50", "Nutella x2 R$ 7.00",
     "Aveia R$ 2.50", "Banana R$ 3.00", "Bis branco R$ 3.00",
     "Bis preto R$ 3.00", "Castanha R$ 4.50", "Cereja R$ 6.00",
@@ -56,11 +56,57 @@ let adicionaisDoces = [
     "Space boll R$ 3.50", "Sucrilhos R$ 3.00", "Whey protein R$ 4.99" 
 ];
 
-function gerarAdicionais(adicionais, campo){
-    for(let i = 0; i < adicionais.length; i++){
-        let preco = adicionais[i].slice(-4);
-        get(campo).innerHTML += `<option value="${preco}">${adicionais[i]}</option>`
+//Adiciona a lista de adicionais a um select
+function adicionarAdicionais(campo, lista){
+    for(let i = 0; i < lista.length; i++){
+        get(campo).innerHTML+=`
+            <option value="">${lista[i]}</option>
+        `;
     }
 }
 
-gerarAdicionais(adicionaisDoces, 'adicionalCombos1');
+//Abre o modal de confirmar pedido com os dados do produto
+function confirmarPedido(identificador, adicionaisInclusos, tipo){
+
+    switch(tipo){
+        case 1: lista = Doces;
+    }
+
+    modal = get('confirmarPedido');
+    nome = get('nome'+identificador).innerHTML;
+    descricao = get('descricao'+identificador).innerHTML;
+    valor = get('valor'+identificador).innerHTML;
+
+    modal.style.display='flex';
+    modal.innerHTML=`
+        <img src="Assets/Imagens/logo.jpg" alt="logo empório do açai">
+        <h2>Boa escolha</h2>
+        <h3>${nome}</h3>
+        <p>${descricao}</p>
+    `
+    
+    for(let i = 1; i <= adicionaisInclusos; i++){
+        modal.innerHTML+=`
+            <select id="adicionar${i}" class="adicionalIncluso" name="" id="">
+                <option value="">Nenhum</option>
+            </select>
+        `;
+        adicionarAdicionais('adicionar'+i, lista);
+    }
+
+    modal.innerHTML+=`
+        <div class="adicionaisExtra" id="adicionaisExtra"></div>
+        <button onclick="maisAdicional()">+ Adicional</button>
+        <span>${valor}</span>
+        <button>Confirmar</button>
+    `
+}
+
+    //Adiciona mais adicionais ao modal de confirmar pedido
+    function maisAdicional(){
+        get('adicionaisExtra').innerHTML+=`
+            <select class="adicionalExtra" name="" id="">
+                <option value="">Nenhum</option>
+            </select>
+        `
+    }
