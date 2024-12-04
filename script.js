@@ -17,6 +17,8 @@ function interagirModal(modal){
 
 //Script geral
 
+let totalExtras = 0;
+
 //Status aberto ou fechado
 let dataAtual = new Date();
 let horaAtual = dataAtual.getHours();
@@ -96,17 +98,22 @@ function confirmarPedido(identificador, adicionaisInclusos, tipo){
 
     modal.innerHTML+=`
         <div class="adicionaisExtra" id="adicionaisExtra"></div>
-        <button onclick="maisAdicional()">+ Adicional</button>
+        <button onclick="maisAdicional(${tipo})">+ Adicional</button>
         <span>${valor}</span>
         <button>Confirmar</button>
     `
 }
 
     //Adiciona mais adicionais ao modal de confirmar pedido
-    function maisAdicional(){
+    function maisAdicional(tipo){
+        totalExtras++;
+        switch(tipo){
+            case 1: lista = Doces;
+        }
         get('adicionaisExtra').innerHTML+=`
-            <select class="adicionalExtra" name="" id="">
+            <select id="adicionalExtra${totalExtras}" class="adicionalExtra" name="" id="">
                 <option value="">Nenhum</option>
             </select>
-        `
+        `;
+        adicionarAdicionais('adicionalExtra'+totalExtras, lista);
     }
