@@ -58,6 +58,19 @@ let Doces = ["Nenhum",
     "Space boll R$ 3.50", "Sucrilhos R$ 3.00", "Whey protein R$ 4.99" 
 ];
 
+let Lanches = ["Nenhum", 
+    "Bacon R$ 4.99", "Catupiry R$ 4.99","Cheddar R$ 4.99",
+    "Creme de alho R$ 3.00", "Hambúrguer R$ 4.00", "Mussarela R$ 4.00",
+    "Ovo R$ 2.00","Presunto R$ 4.00","Salada R$ 4.00"
+];
+
+let Bordas = ["Nenhum",
+    "Borda mussarela R$ 21.00",
+    "Borda catupiry R$ 16.00",
+    "Borda cheddar R$ 16.00",
+    "Borda de nutella R$ 16.00"
+];
+
 //Adiciona a lista de adicionais a um select
 function adicionarAdicionais(campo, lista){
     for(let i = 0; i < lista.length; i++){
@@ -71,7 +84,12 @@ function adicionarAdicionais(campo, lista){
 function confirmarPedido(identificador, adicionaisInclusos, tipo){
 
     switch(tipo){
-        case 1: lista = Doces;
+        case 1: lista = Doces
+        break;
+        case 2: lista = Lanches
+        break;
+        case 3: lista = Bordas
+        break;
     }
 
     modal = get('confirmarPedido');
@@ -79,13 +97,14 @@ function confirmarPedido(identificador, adicionaisInclusos, tipo){
     descricao = get('descricao'+identificador).innerHTML;
     valor = get('valor'+identificador).innerHTML;
 
-    modal.style.display='flex';
+    interagirModal('confirmarPedido');
     modal.innerHTML=`
         <img src="Assets/Imagens/logo.jpg" alt="logo empório do açai">
+        <button onclick="interagirModal('confirmarPedido')" class="voltar">Voltar</button>
         <h2>Boa escolha</h2>
         <h3>${nome}</h3>
         <p>${descricao}</p>
-    `
+    `;
     
     for(let i = 1; i <= adicionaisInclusos; i++){
         modal.innerHTML+=`
@@ -98,9 +117,9 @@ function confirmarPedido(identificador, adicionaisInclusos, tipo){
 
     modal.innerHTML+=`
         <div class="adicionaisExtra" id="adicionaisExtra"></div>
-        <button onclick="maisAdicional(${tipo})">+ Adicional</button>
+        <button class="pedir" onclick="maisAdicional(${tipo})">+ Adicional</button>
         <span>${valor}</span>
-        <button>Confirmar</button>
+        <button class="pedir">Confirmar</button>
     `
 }
 
