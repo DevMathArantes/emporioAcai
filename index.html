@@ -177,8 +177,8 @@
                         <h3 id="nome14">1 Litro de sorvete</h3>
                         <p id="descricao14"></p>
                         <select name="" id="">
-                            <option value="">Leite ninho</option>
-                            <option value="">Chocolate</option>
+                            <option value="1">Leite ninho</option>
+                            <option value="2">Chocolate</option>
                         </select>
                         <span id="valor14">R$ 22.00</span>
                         <button onclick="confirmarPedido('14', 0, 1)" class="pedir" >Pedir</button>
@@ -190,9 +190,7 @@
                                     <img src="Assets/Imagens/casquinha.jpg" alt="casquinha">
                                     <h3 id="nome15">Casquinha</h3>
                                     <p id="descricao15"></p>
-                                    <select name="" id="">
-                                        <option value="">Escolher</option>
-                                    </select>
+                                    <select id="saborSorvete1"></select>
                                     <span id="valor15">R$ 4.00</span>
                                     <button class="pedir" onclick="confirmarPedido('15', 0, 1)">Pedir</button>
                                 </div>
@@ -200,9 +198,7 @@
                                     <img src="Assets/Imagens/casquinhaTrufada.jpg" alt="casquinha trufada">
                                     <h3 id="nome16">Casquinha trufada</h3>
                                     <p id="descricao16"></p>
-                                    <select name="" id="">
-                                        <option value="">Escolher</option>
-                                    </select>
+                                    <select id="saborSorvete2"></select>
                                     <span id="valor16">R$ 8.00</span>
                                     <button class="pedir" onclick="confirmarPedido('16', 0, 1)">Pedir</button>
                                 </div>
@@ -210,9 +206,7 @@
                                     <img src="Assets/Imagens/cascao.jpg" alt="cascão">
                                     <h3 id="nome17">Cascão</h3>
                                     <p id="descricao17"></p>
-                                    <select name="" id="">
-                                        <option value="">Escolher</option>
-                                    </select>
+                                    <select id="saborSorvete3"></select>
                                     <span id="valor17">R$ 5.00</span>
                                     <button class="pedir" onclick="confirmarPedido('17', 0, 1)">Pedir</button>
                                 </div>
@@ -220,9 +214,7 @@
                                     <img src="Assets/Imagens/cascaoTrufado.jpg" alt="cascão trufado">
                                     <h3 id="nome18">Cascão trufado</h3>
                                     <p id="descricao18"></p>
-                                    <select name="" id="">
-                                        <option value="">Escolher</option>
-                                    </select>
+                                    <select id="saborSorvete4"></select>
                                     <span id="valor18">R$ 11.00</span>
                                     <button class="pedir" onclick="confirmarPedido('18', 0, 1)">Pedir</button>
                                 </div>
@@ -233,9 +225,7 @@
                         <img src="Assets/Imagens/sorveteBola.jpg" alt="Sorvete bola">
                         <h3 id="nome19">Sorvete (bola)</h3>
                         <p id="descricao19"></p>
-                        <select name="" id="">
-                            <option value="">Escolher</option>
-                        </select>
+                        <select id="saborSorvete5"></select>
                         <span id="valor19">R$ 4.50</span>
                         <button onclick="confirmarPedido('19', 0, 1)" class="pedir">Pedir</button>
 
@@ -304,36 +294,28 @@
                             <li>
                                 <h3 id="nome27">Milk Shake 300 Ml</h3>
                                 <p id="descricao27">Copo de 300ml</p>
-                                <select name="" id="">
-                                    <option value="">Sabor</option>
-                                </select>
+                                <select id="saborSorvete6"></select>
                                 <span id="valor27">R$ 12.00</span>
                                 <button onclick="confirmarPedido('27', 0, 1)">Pedir</button>
                             </li>
                             <li>
                                 <h3 id="nome28">Milk Shake 400 Ml</h3>
                                 <p id="descricao28">Copo de 400ml</p>
-                                <select name="" id="">
-                                    <option value="">Sabor</option>
-                                </select>
+                                <select id="saborSorvete7"></select>
                                 <span id="valor28">R$ 14.00</span>
                                 <button onclick="confirmarPedido('28', 0, 1)">Pedir</button>
                             </li>
                             <li>
                                 <h3 id="nome29">Milk Shake 500 Ml</h3>
                                 <p id="descricao29">Copo de 500ml</p>
-                                <select name="" id="">
-                                    <option value="">Sabor</option>
-                                </select>
+                                <select id="saborSorvete8"></select>
                                 <span id="valor29">R$ 15.00</span>
                                 <button onclick="confirmarPedido('29', 0, 1)">Pedir</button>
                             </li>
                             <li>
                                 <h3 id="nome30">Milk Shake 700 Ml</h3>
                                 <p id="descricao30">Copo de 300ml</p>
-                                <select name="" id="">
-                                    <option value="">Sabor</option>
-                                </select>
+                                <select id="saborSorvete9"></select>
                                 <span id="valor30">R$ 18.00</span>
                                 <button onclick="confirmarPedido('30', 0, 1)">Pedir</button>
                             </li>
@@ -361,7 +343,7 @@
                                     <h3 id="nome31">H20h</h3>
                                     <p id="descricao31">Limoneto</p>
                                     <span id="valor31">R$ 6.00</span>
-                                    <button onclick="confirmarPedido('31', 0, 3)" class="pedir">Pedir</button>
+                                    <button onclick="" class="pedir">Pedir</button>
                                 </div>
                                 <div class="carrosselItem bebida">
                                     <img src="Assets/Imagens/refrigerante1litro.jpg" alt="refrigerante 1 litro">
@@ -371,7 +353,7 @@
                                         <option value="">Coca-cola</option>
                                     </select>
                                     <span id="valor32">R$ 25.00</span>
-                                    <button onclick="confirmarPedido('32', 0, 3)" class="pedir">Pedir</button>
+                                    <button onclick="" class="pedir">Pedir</button>
                                 </div>
                                 <div class="carrosselItem bebida">
                                     <img src="Assets/Imagens/refrigerante2litros.jpg" alt="refrigerante 2 litros">
@@ -381,7 +363,7 @@
                                         <option value="">Coca-cola</option>
                                     </select>
                                     <span id="valor33">R$ 12.00</span>
-                                    <button onclick="confirmarPedido('33', 0, 3)" class="pedir">Pedir</button>
+                                    <button onclick="" class="pedir">Pedir</button>
                                 </div>
                                 <div class="carrosselItem bebida">
                                     <img src="Assets/Imagens/refrigerante.jpg" alt="refrigerantes">
@@ -391,7 +373,7 @@
                                         <option value="">Fanta Laranja</option>
                                     </select>
                                     <span id="valor34">R$ 6.00</span>
-                                    <button onclick="confirmarPedido('34', 0, 3)" class="pedir">Pedir</button>
+                                    <button onclick="" class="pedir">Pedir</button>
                                 </div>
                                 <div class="carrosselItem bebida">
                                     <img src="Assets/Imagens/sucos.jpg" alt="sucos">
@@ -401,7 +383,7 @@
                                         <option value="">Acerola</option>
                                     </select>
                                     <span id="valor35">R$ 9.00</span>
-                                    <button onclick="confirmarPedido('35', 0, 3)" class="pedir">Pedir</button>
+                                    <button onclick="" class="pedir">Pedir</button>
                                 </div>
                                 <div class="carrosselItem bebida">
                                     <img src="Assets/Imagens/vitaminas.jpg" alt="vitaminas">
@@ -411,7 +393,7 @@
                                         <option value="">Morango</option>
                                     </select>
                                     <span id="valor36">R$ 8.00</span>
-                                    <button onclick="confirmarPedido('36', 0, 3)" class="pedir">Pedir</button>
+                                    <button onclick="" class="pedir">Pedir</button>
                                 </div>
                             </div>
                         </div>
@@ -427,49 +409,49 @@
                                 <h3 id="nome37">Polpa de fruta abacaxi</h3>
                                 <p id="descricao37"></p>
                                 <span id="valor37">R$ 3.75</span>
-                                <button onclick="confirmarPedido('37', 0, 3)">Pedir</button>
+                                <button onclick="">Pedir</button>
                             </li>
                             <li>
                                 <h3 id="nome38">Polpa de fruta abacaxi ao vinho</h3>
                                 <p id="descricao38"></p>
                                 <span id="valor38">R$ 3.75</span>
-                                <button onclick="confirmarPedido('38', 0, 3)">Pedir</button>
+                                <button onclick="">Pedir</button>
                             </li>
                             <li>
                                 <h3 id="nome39">Polpa de fruta ameixa</h3>
                                 <p id="descricao39"></p>
                                 <span id="valor39">R$ 3.75</span>
-                                <button onclick="confirmarPedido('39', 0, 3)">Pedir</button>
+                                <button onclick="">Pedir</button>
                             </li>
                             <li>
                                 <h3 id="nome40">Polpa de fruta amora</h3>
                                 <p id="descricao40"></p>
                                 <span id="valor40">R$ 3.75</span>
-                                <button onclick="confirmarPedido('40', 0, 3)">Pedir</button>
+                                <button onclick="">Pedir</button>
                             </li>
                             <li>
                                 <h3 id="nome41">Polpa de fruta cereja</h3>
                                 <p id="descricao41"></p>
                                 <span id="valor41">R$ 3.75</span>
-                                <button onclick="confirmarPedido('41', 0, 3)">Pedir</button>
+                                <button onclick="">Pedir</button>
                             </li>
                             <li>
                                 <h3 id="nome42">Polpa de frutas vermelhas</h3>
                                 <p id="descricao42"></p>
                                 <span id="valor42">R$ 3.75</span>
-                                <button onclick="confirmarPedido('42', 0, 3)">Pedir</button>
+                                <button onclick="">Pedir</button>
                             </li>
                             <li>
                                 <h3 id="nome43">Polpa de fruta maracujá</h3>
                                 <p id="descricao43"></p>
                                 <span id="valor43">R$ 3.75</span>
-                                <button onclick="confirmarPedido('43', 0, 3)">Pedir</button>
+                                <button onclick="">Pedir</button>
                             </li>
                             <li>
                                 <h3 id="nome44">Polpa de fruta morango</h3>
                                 <p id="descricao44"></p>
                                 <span id="valor44">R$ 3.75</span>
-                                <button onclick="confirmarPedido('44', 0, 3)">Pedir</button>
+                                <button onclick="">Pedir</button>
                             </li>
                         </ul>
                     </div>
@@ -593,7 +575,7 @@
                         <img src="Assets/Imagens/lanche.jpg" alt="combo lanche">
                         <p id="descricao58">Lanche + Batata + Coca-Cola lata</p>
                         <span id="valor58">R$ 26.90</span>
-                        <button onclick="confirmarPedido('58', 0, 2)" class="pedir">Pedir</button>
+                        <button onclick="" class="pedir">Pedir</button>
                     </div>
 
                      <!--Lanches com filé-->
@@ -1123,7 +1105,7 @@
                                         <option value="">Meia</option>
                                     </select>
                                     <span id="valor114">R$ 31.00</span>
-                                    <button onclick="confirmarPedido('114', 0, 3)" class="pedir">Pedir</button>
+                                    <button onclick="" class="pedir">Pedir</button>
                                 </div>
                                 <div class="carrosselItem porcao">
                                     <img src="Assets/Imagens/batataEspecial.jpg" alt="porção batata frita com queijo e bacon">
@@ -1134,28 +1116,28 @@
                                         <option value="">Meia</option>
                                     </select>
                                     <span id="valor115">R$ 43.00</span>
-                                    <button onclick="confirmarPedido('115', 0, 3)" class="pedir">Pedir</button>
+                                    <button onclick="" class="pedir">Pedir</button>
                                 </div>
                                 <div class="carrosselItem porcao">
                                     <img src="Assets/Imagens/porcaoFile.jpg" alt="porção file">
                                     <h3 id="nome116">Porção de Filé</h3>
                                     <p id="descricao116">Filé, bacon, cebola, alface e tomate</p>
                                     <span id="valor116">R$ 56.00</span>
-                                    <button onclick="confirmarPedido('116', 0, 3)" class="pedir">Pedir</button>
+                                    <button onclick="" class="pedir">Pedir</button>
                                 </div>
                                 <div class="carrosselItem porcao">
                                     <img src="Assets/Imagens/porcaoFrango.jpg" alt="porção frango">
                                     <h3 id="nome117">Porção de Frango</h3>
                                     <p id="descricao117">Frango, bacon, cebola, alface e tomate</p>
                                     <span id="valor117">R$ 42.00</span>
-                                    <button onclick="confirmarPedido('117', 0, 3)" class="pedir">Pedir</button>
+                                    <button onclick="" class="pedir">Pedir</button>
                                 </div>
                                 <div class="carrosselItem porcao">
                                     <img src="Assets/Imagens/porcaoLombo.jpg" alt="porção lombo">
                                     <h3 id="nome118">Porção de Lombo</h3>
                                     <p id="descricao118">Lombo, bacon, cebola, alface e tomate</p>
                                     <span id="valor118">R$ 46.00</span>
-                                    <button onclick="confirmarPedido('118', 0, 3)" class="pedir">Pedir</button>
+                                    <button onclick="" class="pedir">Pedir</button>
                                 </div>
                             </div>
                         </div>
@@ -1174,7 +1156,7 @@
                                     <option value="">Meia</option>
                                 </select>
                                 <span id="valor119">R$ 76.00</span>
-                                <button onclick="confirmarPedido('119', 0, 3)">Pedir</button>
+                                <button onclick="">Pedir</button>
                             </li>
                             <li>
                                 <h3 id="nome120">Omelete de frango</h3>
@@ -1184,7 +1166,7 @@
                                     <option value="">Meia</option>
                                 </select>
                                 <span id="valor120">R$ 63.00</span>
-                                <button onclick="confirmarPedido('120', 0, 3)">Pedir</button>
+                                <button onclick="">Pedir</button>
                             </li>
                             <li>
                                 <h3 id="nome121">Omelete de Lombo</h3>
@@ -1194,7 +1176,7 @@
                                     <option value="">Meia</option>
                                 </select>
                                 <span id="valor121">R$ 61.00</span>
-                                <button onclick="confirmarPedido('121', 0, 3)">Pedir</button>
+                                <button onclick="">Pedir</button>
                             </li>
                         </ul>
                     </div>
@@ -1208,61 +1190,61 @@
                                 <h3 id="nome122"></h3>
                                 <p id="descricao122">Chocolate ao leite com queijo</p>
                                 <span id="valor122">R$ 18.00</span>
-                                <button onclick="confirmarPedido('122', 0, 3)">Pedir</button>
+                                <button onclick="">Pedir</button>
                             </li>
                             <li>
                                 <h3 id="nome123"></h3>
                                 <p id="descricao123">Prestígio</p>
                                 <span id="valor123">R$ 18.00</span>
-                                <button onclick="confirmarPedido('123', 0, 3)">Pedir</button>
+                                <button onclick="">Pedir</button>
                             </li>
                             <li>
                                 <h3 id="nome124"></h3>
                                 <p id="descricao124">Morango com nutella</p>
                                 <span id="valor124">R$ 18.00</span>
-                                <button onclick="confirmarPedido('124', 0, 3)">Pedir</button>
+                                <button onclick="">Pedir</button>
                             </li>
                             <li>
                                 <h3 id="nome125"></h3>
                                 <p id="descricao125">Morango com leite condensado</p>
                                 <span id="valor125">R$ 18.00</span>
-                                <button onclick="confirmarPedido('125', 0, 3)">Pedir</button>
+                                <button onclick="">Pedir</button>
                             </li>
                             <li>
                                 <h3 id="nome126"></h3>
                                 <p id="descricao126">Morango, coco e leite condensado</p>
                                 <span id="valor126">R$ 18.00</span>
-                                <button onclick="confirmarPedido('126', 0, 3)">Pedir</button>
+                                <button onclick="">Pedir</button>
                             </li>
                             <li>
                                 <h3 id="nome127"></h3>
                                 <p id="descricao127">Nutella e coco</p>
                                 <span id="valor127">R$ 18.00</span>
-                                <button onclick="confirmarPedido('127', 0, 3)">Pedir</button>
+                                <button onclick="">Pedir</button>
                             </li>
                             <li>
                                 <h3 id="nome128"></h3>
                                 <p id="descricao128">Nutella com banana</p>
                                 <span id="valor128">R$ 18.00</span>
-                                <button onclick="confirmarPedido('128', 0, 3)">Pedir</button>
+                                <button onclick="">Pedir</button>
                             </li>
                             <li>
                                 <h3 id="nome129"></h3>
                                 <p id="descricao129">Banana com canela</p>
                                 <span id="valor129">R$ 18.00</span>
-                                <button onclick="confirmarPedido('129', 0, 3)">Pedir</button>
+                                <button onclick="">Pedir</button>
                             </li>
                             <li>
                                 <h3 id="nom130"></h3>
                                 <p id="descricao130">Goiabada com queijo</p>
                                 <span id="valor130">R$ 18.00</span>
-                                <button onclick="confirmarPedido('130', 0, 3)">Pedir</button>
+                                <button onclick="">Pedir</button>
                             </li>
                             <li>
                                 <h3 id="nome131"></h3>
                                 <p id="descricao131">Moda da casa (banana, nutella, coco, bis preto e sorvete de creme)</p>
                                 <span id="valor131">R$ 20.00</span>
-                                <button onclick="confirmarPedido('131', 0, 3)">Pedir</button>
+                                <button onclick="">Pedir</button>
                             </li>
                         </ul>
                     </div>
@@ -1275,97 +1257,97 @@
                             <h3 id="nome132"></h3>
                             <p id="descricao132">Frango com tomate</p>
                             <span id="valor132">R$ 18.00</span>
-                            <button onclick="confirmarPedido('132', 0, 3)">Pedir</button>
+                            <button onclick="">Pedir</button>
                         </li>
                         <li>
                             <h3 id="nome133"></h3>
                             <p id="descricao133">Frango com catupiry</p>
                             <span id="valor133">R$ 18.00</span>
-                            <button onclick="confirmarPedido('133', 0, 3)">Pedir</button>
+                            <button onclick="">Pedir</button>
                         </li>
                         <li>
                             <h3 id="nome134"></h3>
                             <p id="descricao134">Frango com bacon</p>
                             <span id="valor134">R$ 18.00</span>
-                            <button onclick="confirmarPedido('134', 0, 3)">Pedir</button>
+                            <button onclick="">Pedir</button>
                         </li>
                         <li>
                             <h3 id="nome135"></h3>
                             <p id="descricao135">Frango com mussarela</p>
                             <span id="valor135">R$ 18.00</span>
-                            <button onclick="confirmarPedido('135', 0, 3)">Pedir</button>
+                            <button onclick="">Pedir</button>
                         </li>
                         <li>
                             <h3 id="nome136"></h3>
                             <p id="descricao136">Frango com milho</p>
                             <span id="valor136">R$ 18.00</span>
-                            <button onclick="confirmarPedido('136', 0, 3)">Pedir</button>
+                            <button onclick="">Pedir</button>
                         </li>
                         <li>
                             <h3 id="nome137"></h3>
                             <p id="descricao137">Calabresa com tomate</p>
                             <span id="valor137">R$ 18.00</span>
-                            <button onclick="confirmarPedido('137', 0, 3)">Pedir</button>
+                            <button onclick="">Pedir</button>
                         </li>
                         <li>
                             <h3 id="nome138"></h3>
                             <p id="descricao138">Calabresa com caturpiry</p>
                             <span id="valor138">R$ 18.00</span>
-                            <button onclick="confirmarPedido('138', 0, 3)">Pedir</button>
+                            <button onclick="">Pedir</button>
                         </li>
                         <li>
                             <h3 id="nome139"></h3>
                             <p id="descricao139">Calabresa com bacon</p>
                             <span id="valor139">R$ 18.00</span>
-                            <button onclick="confirmarPedido('139', 0, 3)">Pedir</button>
+                            <button onclick="">Pedir</button>
                         </li>
                         <li>
                             <h3 id="nome140"></h3>
                             <p id="descricao140">Calabresaa com mussarela</p>
                             <span id="valor140">R$ 18.00</span>
-                            <button onclick="confirmarPedido('140', 0, 3)">Pedir</button>
+                            <button onclick="">Pedir</button>
                         </li>
                         <li>
                             <h3 id="nome141"></h3>
                             <p id="descricao141">Calabresa com milho e mussarela</p>
                             <span id="valor141">R$ 18.00</span>
-                            <button onclick="confirmarPedido('141', 0, 3)">Pedir</button>
+                            <button onclick="">Pedir</button>
                         </li>
                         <li>
                             <h3 id="nome142"></h3>
                             <p id="descricao142">Presunto e mussarela</p>
                             <span id="valor142">R$ 18.00</span>
-                            <button onclick="confirmarPedido('142', 0, 3)">Pedir</button>
+                            <button onclick="">Pedir</button>
                         </li>
                         <li>
                             <h3 id="nome143"></h3>
                             <p id="descricao143">Presunto, mussarela e tomate</p>
                             <span id="valor143">R$ 18.00</span>
-                            <button onclick="confirmarPedido('143', 0, 3)">Pedir</button>
+                            <button onclick="">Pedir</button>
                         </li>
                         <li>
                             <h3 id="nome144"></h3>
                             <p id="descricao144">Presunto, mussarela e catupiry</p>
                             <span id="valor144">R$ 18.00</span>
-                            <button onclick="confirmarPedido('144', 0, 3)">Pedir</button>
+                            <button onclick="">Pedir</button>
                         </li>
                         <li>
                             <h3 id="nome145"></h3>
                             <p id="descricao145">Presunto, mussarela e milho</p>
                             <span id="valor145">R$ 18.00</span>
-                            <button onclick="confirmarPedido('145', 0, 3)">Pedir</button>
+                            <button onclick="">Pedir</button>
                         </li>
                         <li>
                             <h3 id="nome146"></h3>
                             <p id="descricao146">Presunto, mussarela e bacon</p>
                             <span id="valor146">R$ 18.00</span>
-                            <button onclick="confirmarPedido('146', 0, 3)">Pedir</button>
+                            <button onclick="">Pedir</button>
                         </li>
                         <li>
                             <h3 id="nome147"></h3>
                             <p id="descricao147">Moda da casa (bacon, presunto, queijo, catupiry, calabresa e tomate)</p>
                             <span id="valor147">R$ 20.00</span>
-                            <button onclick="confirmarPedido('147', 0, 3)">Pedir</button>
+                            <button onclick="">Pedir</button>
                         </li>
                     </div>
 
@@ -1373,10 +1355,10 @@
 
             </div>
         </section>
-
+        
         <!--Confirmar Pedido-->
         <section id="confirmarPedido" class="modal confirmarPedido"></section>
-
+       
         <!--Carrinho-->
         <section id="carrinho" class="carrinho categoria modal">
             <img src="Assets/Imagens/geral.png" alt="empório do açai">
@@ -1384,18 +1366,34 @@
             <button onclick="interagirModal('carrinho')"  class="voltar">Voltar</button>
 
             <div class="pedido">
-                <h2>Hamburguer123</h2>
-                <p>Adicional x (+ R$ 00.00), adicional y (+ R$ 00.00)</p>
-                <button>+ Adicional</button>
-                <input type="text" placeholder="Algum lembrete ?">
-                <h2>Hamburguer123</h2>
-                <p>Adicional x (+ R$ 00.00), adicional y (+ R$ 00.00)</p>
-                <button>+ Adicional</button>
-                <input type="text" placeholder="Algum lembrete ?">
-                <h2>Hamburguer123</h2>
-                <p>Adicional x (+ R$ 00.00), adicional y (+ R$ 00.00)</p>
-                <button>+ Adicional</button>
-                <input type="text" placeholder="Algum lembrete ?">
+                <div class="itemFinal">
+                    <h2>Hambuguer de teste</h2>
+                    <p>descrição do item</p>
+                    <p class="adicionais">Adicional 1, adicional 2, adicional 3, etc...</p>
+                    <span>Total do item: R$ 00.00</span>
+                    <button>Esquecer</button>
+                </div>
+                <div class="itemFinal">
+                    <h2>Hambuguer de teste</h2>
+                    <p>descrição do item</p>
+                    <p class="adicionais">Adicional 1, adicional 2, adicional 3, etc...</p>
+                    <span>Total do item: R$ 00.00</span>
+                    <button>Esquecer</button>
+                </div>
+                <div class="itemFinal">
+                    <h2>Hambuguer de teste</h2>
+                    <p>descrição do item</p>
+                    <p class="adicionais">Adicional 1, adicional 2, adicional 3, etc...</p>
+                    <span>Total do item: R$ 00.00</span>
+                    <button>Esquecer</button>
+                </div>
+                <div class="itemFinal">
+                    <h2>Hambuguer de teste</h2>
+                    <p>descrição do item</p>
+                    <p class="adicionais">Adicional 1, adicional 2, adicional 3, etc...</p>
+                    <span>Total do item: R$ 00.00</span>
+                    <button>Esquecer</button>
+                </div>
             </div>
 
             <div class="formulario">

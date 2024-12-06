@@ -9,27 +9,31 @@
 .carrinho select{
     width: 100%;
 }
-.pedido{
+
+/*Demonstração de produtos adicionados ao carrinho*/
+.itemFinal{
     display: flex;
-    flex-direction: column;
+    flex-flow: row wrap;
+    padding: 1em;
     gap: 0.5em;
-    width: 90%;
+    border-bottom: 1px solid var(--cor1);
 }
-.pedido h2{
+.itemFinal h2, .itemFinal p{
     margin: 0;
     padding: 0;
 }
-.pedido p{
-    margin: 0;
+.adicionais{
     color: var(--cor1);
+    font-weight: 600;
 }
-.pedido button{
+.itemFinal button{
     background-color: var(--cor1);
     color: var(--cor2);
-    border-radius: 10px;
     border: 0;
-    padding: 0.2em;
+    border-radius: 5px;
+    padding: 0.5em 1em;
 }
+
 .formulario{
     display: flex;
     flex-direction: column;

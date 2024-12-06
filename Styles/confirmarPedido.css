@@ -5,6 +5,17 @@
     gap: 0.5em;
     padding: 5em 1em;
 }
+.confirmarPedido input{
+    border: 2px solid var(--cor1);
+    color: var(--cor1);
+    padding: 0.5em;
+    border-radius: 5px;
+    width: 100%;
+    margin: 1em 0;
+}
+.confirmarPedido input::placeholder{
+    color: var(--cor1);
+}
 .confirmarPedido img{
     width: 20em;
 }

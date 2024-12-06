@@ -37,7 +37,8 @@ else{
 }
 
 //Adicionais para açai  e sorvete 
-let Doces = ["Nenhum",
+
+let Doces = [
     "Abacaxi R$ 3.50", "Nutella R$ 4.50", "Nutella x2 R$ 7.00",
     "Aveia R$ 2.50", "Banana R$ 3.00", "Bis branco R$ 3.00",
     "Bis preto R$ 3.00", "Castanha R$ 4.50", "Cereja R$ 6.00",
@@ -58,24 +59,44 @@ let Doces = ["Nenhum",
     "Space boll R$ 3.50", "Sucrilhos R$ 3.00", "Whey protein R$ 4.99" 
 ];
 
-let Lanches = ["Nenhum", 
+let Lanches = [ 
     "Bacon R$ 4.99", "Catupiry R$ 4.99","Cheddar R$ 4.99",
     "Creme de alho R$ 3.00", "Hambúrguer R$ 4.00", "Mussarela R$ 4.00",
     "Ovo R$ 2.00","Presunto R$ 4.00","Salada R$ 4.00"
 ];
 
-let Bordas = ["Nenhum",
+let Bordas = [
     "Borda mussarela R$ 21.00",
     "Borda catupiry R$ 16.00",
     "Borda cheddar R$ 16.00",
     "Borda de nutella R$ 16.00"
 ];
 
+let SaborSorvetes = [
+    "Corneto", "Nozes com doce de leite", "Abóbora com coco",
+    "Creme", "Ninho trufado", "Red Velvet",
+    "Sensação", "Mousse de nutella", "Delírio",
+    "Ameixa", "Laka", "Flocos",
+    "Mousse de goiaba", " Mousse de maracujá", "Pavê trufado",
+    "Milho verde", "Torta de limão", "Banana com nutella",
+    "Morango silvestre 0", "Coca Malasia", "Torta chocolate",
+    "Cheesecake", "Papaya com cassis", "Caraxi",
+]
+
 //Adiciona a lista de adicionais a um select
 function adicionarAdicionais(campo, lista){
     for(let i = 0; i < lista.length; i++){
         get(campo).innerHTML+=`
-            <option value="">${lista[i]}</option>
+            <option value="${lista[i].slice(-5)}">${lista[i]}</option>
+        `;
+    }
+}
+
+//Adiciona a lista de adicionais sem preço a um select de inclusos
+function adicionarInclusos(campo, lista){
+    for(let i = 0; i < lista.length; i++){
+        get(campo).innerHTML+=`
+            <option value="${lista[i].slice(-5)}">${lista[i].slice(0, -8)}</option>
         `;
     }
 }
@@ -112,13 +133,14 @@ function confirmarPedido(identificador, adicionaisInclusos, tipo){
                 <option value="">Nenhum</option>
             </select>
         `;
-        adicionarAdicionais('adicionar'+i, lista);
+        adicionarInclusos('adicionar'+i, lista);
     }
 
     modal.innerHTML+=`
         <div class="adicionaisExtra" id="adicionaisExtra"></div>
         <button class="pedir" onclick="maisAdicional(${tipo})">+ Adicional</button>
         <span>${valor}</span>
+        <input type="text" placeholder="Deseja adicionar algum lembrete ?">
         <button class="pedir">Confirmar</button>
     `
 }
@@ -136,3 +158,8 @@ function confirmarPedido(identificador, adicionaisInclusos, tipo){
         `;
         adicionarAdicionais('adicionalExtra'+totalExtras, lista);
     }
+
+//Adiciona as opções de casquinha
+for(let i = 1; i <= 9; i++){
+    adicionarAdicionais('saborSorvete'+i, SaborSorvetes);
+};
