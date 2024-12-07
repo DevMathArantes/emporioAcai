@@ -166,13 +166,15 @@ for(let i = 1; i <= 9; i++){
     adicionarAdicionais('saborSorvete'+i, SaborSorvetes);
 };
 
-//Muda o preço de acordo com os tamanhos do produto
+//Muda o tamanho do produto
 function mudarTamanho(identificador, maior, menor){
     if(get('tamanho'+identificador).value == 1){
         get('valor'+identificador).innerHTML='R$ '+ maior;
+        get('mostrarTamanho'+identificador).innerHTML= "(Grande)"
     }
     else{
         get('valor'+identificador).innerHTML='R$ '+ menor;
+        get('mostrarTamanho'+identificador).innerHTML="(Meia)"
     }
 }
 
