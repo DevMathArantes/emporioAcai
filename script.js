@@ -17,6 +17,8 @@ function interagirModal(modal){
 
 //Script geral
 
+let totalItens = 0;
+
 let totalExtras = 0;
 
 //Status aberto ou fechado
@@ -163,3 +165,28 @@ function confirmarPedido(identificador, adicionaisInclusos, tipo){
 for(let i = 1; i <= 9; i++){
     adicionarAdicionais('saborSorvete'+i, SaborSorvetes);
 };
+
+//Muda o preço de acordo com os tamanhos do produto
+function mudarTamanho(identificador, maior, menor){
+    if(get('tamanho'+identificador).value == 1){
+        get('valor'+identificador).innerHTML='R$ '+ maior;
+    }
+    else{
+        get('valor'+identificador).innerHTML='R$ '+ menor;
+    }
+}
+
+//Enviar para o pedido
+function pedir(identificador){
+    get('pedido').innerHTML+=`
+         <div class="itemFinal">
+            <h2>${get('nome'+identificador).innerHTML}</h2>
+            <p>${get('descricao'+identificador).innerHTML}</p>
+            <p class="adicionais">Adicional 1, adicional 2, adicional 3, etc...</p>
+            <span>Total do item: ${get('valor'+identificador).innerHTML}</span>
+            <button>Esquecer</button>
+        </div>
+    `;
+    totalItens++;
+    get('totalItens').innerHTML=totalItens.toString();
+}
