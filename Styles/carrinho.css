@@ -44,10 +44,20 @@
     margin: 1em 0;
 }
 
+/*Formulário final*/
 .formulario{
     display: flex;
     flex-direction: column;
     width: 90%;
     gap: 0.5em;
 }
-
+.endereco{
+    width: 100%;
+    margin: 0.5em 0;
+}
+#camposEndereco{
+    display: none;
+}
+#endereco:checked ~ #camposEndereco{
+    display: block;
+}

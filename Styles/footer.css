@@ -2,7 +2,7 @@ footer{
     background-color: var(--cor1);
     color: var(--cor2);
     text-align: center;
-    padding: 2em 1em;
+    padding: 2em 0;    
 }
 footer a{
     display: flex;
@@ -15,9 +15,10 @@ footer a img{
     width: 1.5em;
 }
 footer h2{
-    margin: 1em 0;
     border: 2px solid var(--cor2);
     border-radius: 10px;
+    width: 10em;
+    margin: 1em auto;
 }
 footer h3{
     font-size: 0.8rem;
