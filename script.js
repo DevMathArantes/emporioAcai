@@ -89,7 +89,7 @@ let SaborSorvetes = [
 function adicionarAdicionais(campo, lista){
     for(let i = 0; i < lista.length; i++){
         get(campo).innerHTML+=`
-            <option value="${lista[i].slice(-5)}">${lista[i]}</option>
+            <option value="${lista[i]}">${lista[i]}</option>
         `;
     }
 }
@@ -98,7 +98,7 @@ function adicionarAdicionais(campo, lista){
 function adicionarInclusos(campo, lista){
     for(let i = 0; i < lista.length; i++){
         get(campo).innerHTML+=`
-            <option value="${lista[i].slice(-5)}">${lista[i].slice(0, -8)}</option>
+            <option value="${lista[i].slice(0, -8)}">${lista[i].slice(0, -8)}</option>
         `;
     }
 }
@@ -115,24 +115,24 @@ function confirmarPedido(identificador, adicionaisInclusos, tipo){
         break;
     }
 
-    modal = get('confirmarPedido');
-    nome = get('nome'+identificador).innerHTML;
-    descricao = get('descricao'+identificador).innerHTML;
-    valor = get('valor'+identificador).innerHTML;
+    let modal = get('confirmarPedido');
+    let nome = get('nome'+identificador).innerHTML;
+    let descricao = get('descricao'+identificador).innerHTML;
+    let valor = get('valor'+identificador).innerHTML;
 
     interagirModal('confirmarPedido');
     modal.innerHTML=`
         <img src="Assets/Imagens/logo.jpg" alt="logo empório do açai">
         <button onclick="interagirModal('confirmarPedido')" class="voltar">Voltar</button>
         <h2>Boa escolha</h2>
-        <h3>${nome}</h3>
-        <p>${descricao}</p>
+        <h3 id="confirmarNome">${nome}</h3>
+        <p id="confirmarDescricao">${descricao}</p>
     `;
     
     for(let i = 1; i <= adicionaisInclusos; i++){
         modal.innerHTML+=`
             <select id="adicionar${i}" class="adicionalIncluso" name="" id="">
-                <option value="">Nenhum</option>
+                <option value="Nenhum">Nenhum</option>
             </select>
         `;
         adicionarInclusos('adicionar'+i, lista);
@@ -143,7 +143,7 @@ function confirmarPedido(identificador, adicionaisInclusos, tipo){
         <button class="pedir" onclick="maisAdicional(${tipo})">+ Adicional</button>
         <span>${valor}</span>
         <input type="text" placeholder="Deseja adicionar algum lembrete ?">
-        <button class="pedir">Confirmar</button>
+        <button onclick="pedidoPersonalizado(${adicionaisInclusos})" class="pedir">Confirmar</button>
     `
 }
 
@@ -191,4 +191,29 @@ function pedir(identificador){
     `;
     totalItens++;
     get('totalItens').innerHTML=totalItens.toString();
+}
+
+//
+function pedidoPersonalizado(adicionaisInclusos){
+    let listaAdicionais = "";
+    let totalDoItem = 0.0;
+    for(let i = 1; i <= adicionaisInclusos; i++){
+        listaAdicionais+= get('adicionar'+i).value+" | ";
+    }
+    for(let i = 1; i <= totalExtras; i++){
+        listaAdicionais += get('adicionalExtra'+i).value+" | "
+    }
+    get('pedido').innerHTML+=`
+        <div class="itemFinal">
+            <h2>${get('confirmarNome').innerHTML}</h2>
+            <p>${get('confirmarDescricao').innerHTML}</p>
+            <p class="adicionais">${listaAdicionais}</p>
+            <span>Total do item: ${totalDoItem}</span>
+            <button>Esquecer</button>
+        </div>
+    `;
+    totalItens++;
+    totalExtras = 0;
+    get('totalItens').innerHTML=totalItens.toString();
+    alert("Adicionado ao carrinho com sucesso!")
 }
