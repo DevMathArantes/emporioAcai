@@ -347,53 +347,72 @@
                                 </div>
                                 <div class="carrosselItem bebida">
                                     <img src="Assets/Imagens/refrigerante1litro.jpg" alt="refrigerante 1 litro">
-                                    <h3 id="nome32">Refrigerante 1 Litro</h3>
+                                    <h3 id="nome32">Coca-cola 1 Litro</h3>
                                     <p id="descricao32"></p>
-                                    <select name="" id="">
-                                        <option value="">Coca-cola</option>
+                                    <select onchange="mudarTitulo('32')" id="nomeAdicionado32">
+                                        <option value="Coca-cola 1 litro">Coca-cola</option>
+                                        <option value="Guaraná Antarctica 1 litro">Guaraná Antarctica</option>
                                     </select>
-                                    <span id="valor32">R$ 25.00</span>
-                                    <button onclick="" class="pedir">Pedir</button>
+                                    <span id="valor32">R$ 9.00</span>
+                                    <button onclick="pedir('32')" class="pedir">Pedir</button>
                                 </div>
                                 <div class="carrosselItem bebida">
                                     <img src="Assets/Imagens/refrigerante2litros.jpg" alt="refrigerante 2 litros">
-                                    <h3 id="nome33">Refrigerante 2 litros</h3>
+                                    <h3 id="nome33">Coca-cola 2 litros</h3>
                                     <p id="descricao33"></p>
-                                    <select name="" id="">
-                                        <option value="">Coca-cola</option>
+                                    <select onchange="mudarTitulo('33')" id="nomeAdicionado33">
+                                        <option value="Coca-cola 2 litros">Coca-cola</option>
+                                        <option value="Coca-cola 0 2 litros">Coca-cola 0</option>
+                                        <option value="Guaraná Jaboti 2 litros">Guaraná Jaboti</option>
+                                        <option value="Fanta Laranja 2 litros">Fanta Laranja</option>
+                                        <option value="Sprite 2 litros">Sprite</option>
                                     </select>
                                     <span id="valor33">R$ 12.00</span>
-                                    <button onclick="" class="pedir">Pedir</button>
+                                    <button onclick="pedir('33')" class="pedir">Pedir</button>
                                 </div>
                                 <div class="carrosselItem bebida">
                                     <img src="Assets/Imagens/refrigerante.jpg" alt="refrigerantes">
-                                    <h3 id="nome34">Refrigerante Lata</h3>
+                                    <h3 id="nome34">Lata Fanta Laranja</h3>
                                     <p id="descricao34"></p>
-                                    <select name="" id="">
-                                        <option value="">Fanta Laranja</option>
+                                    <select onchange="mudarTitulo('34')" id="nomeAdicionado34">
+                                        <option value="Lata Fanta Laranja">Fanta Laranja</option>
+                                        <option value="Lata Fanta Uva">Fanta Uva</option>
+                                        <option value="Lata Sprite">Sprite</option>
+                                        <option value="Lata Guaraná Antártica">Guaraná Antártica</option>
                                     </select>
                                     <span id="valor34">R$ 6.00</span>
-                                    <button onclick="" class="pedir">Pedir</button>
+                                    <button onclick="pedir('34')" class="pedir">Pedir</button>
                                 </div>
                                 <div class="carrosselItem bebida">
                                     <img src="Assets/Imagens/sucos.jpg" alt="sucos">
-                                    <h3 id="nome35">Suco de Frutas</h3>
+                                    <h3 id="nome35">Suco de Acerola</h3>
                                     <p id="descricao35"></p>
-                                    <select name="" id="">
-                                        <option value="">Acerola</option>
+                                    <select onchange="mudarTitulo('35')" id="nomeAdicionado35">
+                                        <option value="Suco de Acerola">Acerola</option>
+                                        <option value="Suco de Abacaxi">Abacaxi</option>
+                                        <option value="Suco de Abacaxi com Hortelã">Abacaxi com Hortelã</option>
+                                        <option value="Suco de Caju">Caju</option>
+                                        <option value="Suco de Cupuaçu">Cupuaçu</option>
+                                        <option value="Suco de Laranja">Laranja</option>
+                                        <option value="Suco de Limão">Limão</option>
+                                        <option value="Suco de Pêssego">Pêssego</option>
+                                        <option value="Suco de Uva">Uva</option>
+                                        <option value="Suco de Tamarino">Tamarino</option>
                                     </select>
                                     <span id="valor35">R$ 9.00</span>
-                                    <button onclick="" class="pedir">Pedir</button>
+                                    <button onclick="pedir('35')" class="pedir">Pedir</button>
                                 </div>
                                 <div class="carrosselItem bebida">
                                     <img src="Assets/Imagens/vitaminas.jpg" alt="vitaminas">
-                                    <h3 id="nome36">Vitaminas</h3>
+                                    <h3 id="nome36">Vitamina de Morango</h3>
                                     <p id="descricao36"></p>
-                                    <select name="" id="">
-                                        <option value="">Morango</option>
+                                    <select onchange="mudarTitulo('36')" id="nomeAdicionado36">
+                                        <option value="Vitamina de Morango">Morango</option>
+                                        <option value="Vitamina de Maracujá">Maracujá</option>
+                                        <option value="Vitamina Mista">Mista</option>
                                     </select>
                                     <span id="valor36">R$ 8.00</span>
-                                    <button onclick="" class="pedir">Pedir</button>
+                                    <button onclick="pedir('36')" class="pedir">Pedir</button>
                                 </div>
                             </div>
                         </div>
@@ -409,49 +428,49 @@
                                 <h3 id="nome37">Polpa de fruta abacaxi</h3>
                                 <p id="descricao37"></p>
                                 <span id="valor37">R$ 3.75</span>
-                                <button onclick="">Pedir</button>
+                                <button onclick="pedir('37')">Pedir</button>
                             </li>
                             <li>
                                 <h3 id="nome38">Polpa de fruta abacaxi ao vinho</h3>
                                 <p id="descricao38"></p>
                                 <span id="valor38">R$ 3.75</span>
-                                <button onclick="">Pedir</button>
+                                <button onclick="pedir('38')">Pedir</button>
                             </li>
                             <li>
                                 <h3 id="nome39">Polpa de fruta ameixa</h3>
                                 <p id="descricao39"></p>
                                 <span id="valor39">R$ 3.75</span>
-                                <button onclick="">Pedir</button>
+                                <button onclick="pedir('39')">Pedir</button>
                             </li>
                             <li>
                                 <h3 id="nome40">Polpa de fruta amora</h3>
                                 <p id="descricao40"></p>
                                 <span id="valor40">R$ 3.75</span>
-                                <button onclick="">Pedir</button>
+                                <button onclick="pedir('40')">Pedir</button>
                             </li>
                             <li>
                                 <h3 id="nome41">Polpa de fruta cereja</h3>
                                 <p id="descricao41"></p>
                                 <span id="valor41">R$ 3.75</span>
-                                <button onclick="">Pedir</button>
+                                <button onclick="pedir('41')">Pedir</button>
                             </li>
                             <li>
                                 <h3 id="nome42">Polpa de frutas vermelhas</h3>
                                 <p id="descricao42"></p>
                                 <span id="valor42">R$ 3.75</span>
-                                <button onclick="">Pedir</button>
+                                <button onclick="pedir('42')">Pedir</button>
                             </li>
                             <li>
                                 <h3 id="nome43">Polpa de fruta maracujá</h3>
                                 <p id="descricao43"></p>
                                 <span id="valor43">R$ 3.75</span>
-                                <button onclick="">Pedir</button>
+                                <button onclick="pedir('43')">Pedir</button>
                             </li>
                             <li>
                                 <h3 id="nome44">Polpa de fruta morango</h3>
                                 <p id="descricao44"></p>
                                 <span id="valor44">R$ 3.75</span>
-                                <button onclick="">Pedir</button>
+                                <button onclick="pedir('44')">Pedir</button>
                             </li>
                         </ul>
                     </div>

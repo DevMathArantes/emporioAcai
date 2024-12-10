@@ -166,6 +166,7 @@ function confirmarPedido(identificador, adicionaisInclusos, tipo){
 //Adiciona as opções de casquinha
 for(let i = 1; i <= 9; i++){
     adicionarAdicionais('saborSorvete'+i, SaborSorvetes);
+    totalPedidos--;
 };
 
 //Muda o tamanho do produto
@@ -182,22 +183,29 @@ function mudarTamanho(identificador, maior, menor){
 
 //Enviar para o pedido
 function pedir(identificador){
+    totalPedidos++;
     get('pedido').innerHTML+=`
-         <div class="itemFinal">
+         <div id="itemAdicionado${totalPedidos}" class="itemFinal">
             <h2>${get('nome'+identificador).innerHTML}</h2>
             <p>${get('descricao'+identificador).innerHTML}</p>
-            <p class="adicionais">Adicional 1, adicional 2, adicional 3, etc...</p>
             <span>Total do item: ${get('valor'+identificador).innerHTML}</span>
-            <button>Esquecer</button>
+            <button onclick="esquecer('itemAdicionado${totalPedidos}')">Esquecer</button>
         </div>
     `;
     totalItens++;
     get('totalItens').innerHTML=totalItens.toString();
 }
 
+function esquecer(item){
+    get(item).style.display='none';
+    totalItens--;
+    get('totalItens').innerHTML=totalItens.toString();
+}
 //
 function pedidoPersonalizado(adicionaisInclusos){
     let listaAdicionais = "";
+    totalPedidos++;
+    
     let totalDoItem = parseFloat((get('precoItem').innerHTML).slice(2));
     for(let i = 1; i <= adicionaisInclusos; i++){
         listaAdicionais+= get('adicionar'+i).value+" | ";
@@ -207,13 +215,13 @@ function pedidoPersonalizado(adicionaisInclusos){
         totalDoItem +=parseFloat((get('adicionalExtra'+i).value).slice(-4));
     }
     get('pedido').innerHTML+=`
-        <div id="itemPedido${totalPedidos}" class="itemFinal">
+        <div id="itemAdicionado${totalPedidos}" class="itemFinal">
             <h2>${get('confirmarNome').innerHTML}</h2>
             <p>${get('confirmarDescricao').innerHTML}</p>
             <p class="adicionais">${listaAdicionais}</p>
             <p>${get('lembrete').value}</p>
             <span>Total do item: R$ ${(totalDoItem.toFixed(2)).toString()}</span>
-            <button onclick="esquecer('itemPedido${totalPedidos}')">Esquecer</button>
+            <button onclick="esquecer('itemAdicionado${totalPedidos}')">Esquecer</button>
         </div>
     `;
     totalItens++;
@@ -222,6 +230,7 @@ function pedidoPersonalizado(adicionaisInclusos){
     alert("Adicionado ao carrinho com sucesso!")
     interagirModal('confirmarPedido');
 }
-function esquecer(item){
-    get(item).style.display='none';
+
+function mudarTitulo(identificador){
+    get('nome'+identificador).innerHTML=get('nomeAdicionado'+identificador).value;
 }
