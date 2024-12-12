@@ -117,7 +117,10 @@
 
     //abre o modal para confirmar o pedido
     let lista;
-    function confirmar(identificador, adicionaisInclusos, adicionais, tipoLista){
+    function confirmar(identificador, adicionaisInclusos, adicionaisExtra, tipoLista){
+
+        //Reiniciando contagem de adicionais
+        adicionais = 0;
 
         //Chamando funções auxiliares
         interagirModal('confirmarPedido');
@@ -136,11 +139,13 @@
             <button id="criarAdicional" class="pedir" onclick="criarAdicional()">+ Adicional</button>
             <span>${get('valor'+identificador).innerHTML}</span>
             <input id="lembrete" type="text" placeholder="Deseja adicionar algum lembrete ?">
-            <button onclick="" class="pedir">Confirmar</button>
+            <button onclick="subirCarrinho('${identificador}', ${adicionaisInclusos})" class="pedir">
+                Confirmar
+            </button>
         `;
 
         //Chamando funções auxiliares de verificação
-        verificarExtras(adicionais);
+        verificarExtras(adicionaisExtra);
 
         //Adicionando selects inclusos
         for(let i = 1; i <= adicionaisInclusos; i++){
@@ -151,6 +156,37 @@
             `;
             preencherLista('adicionarIncluso'+i, lista, true);
         }
+    }
+
+    //Envia o produto para o carrinho
+    let totalProdutos = 0;
+    totalIds = 0;
+    function subirCarrinho(identificador, adicionaisInclusos){
+        
+        //Adicionando contagem
+        totalProdutos++;
+        totalIds++;
+        get('pedido').innerHTML+=`
+            <div id="produtoCarrinho${totalIds}" class="produtoCarrinho">
+                <h3>${get('nome'+identificador).innerHTML}</h3>
+                <p>${get('descricao'+identificador).innerHTML}</p>
+                <p id="adicionaisCarrinho"></p>
+                <p>${get('lembrete').value}</p>
+                <span></span>
+                <button onclick="esquecer('${totalIds}')">Esquecer</button>
+            </div>
+        `
+        for(let i = 1; i <= adicionaisInclusos; i++){
+            get('adicionaisCarrinho').innerHTML+=`${get('adicionarIncluso'+i).value} |`;
+        }
+        for(let i = 1; i <= adicionais; i++){
+            get('adicionaisCarrinho').innerHTML+=`${get('adicionalExtra'+i).value} |`
+        }
+
+        //Chamando funções auxiliares
+        interagirModal('confirmarPedido');
+        
+        get('totalItens').innerHTML=totalProdutos.toString();
     }
 
 //Funções auxiliares
@@ -198,6 +234,12 @@
         }
     }
   
+    //Retirar do carrinho
+    function esquecer(identificador){
+        get('produtoCarrinho'+identificador).style.display='none';
+        totalProdutos--;
+        get('totalItens').innerHTML=totalProdutos.toString();
+    }
 
 //Script geral, separados em trechos com funções específicas
 
@@ -218,125 +260,3 @@
     for(let i = 27; i<= 30; i++){
         preencherLista('mudarDescricao'+i, SaborSorvetes, false);
     }
-
-
-
-
-
-
-
-//Enviar para o pedido
-function pedir(identificador){
-    totalPedidos++;
-    get('pedido').innerHTML+=`
-        <div id="itemAdicionado${totalPedidos}" class="itemFinal">
-            <h2 id="itemNome${totalPedidos}">${get('nome'+identificador).innerHTML}</h2>
-            <p id="itemDescricao${totalPedidos}">${get('descricao'+identificador).innerHTML}</p>
-            <p id="itemAdicionais${totalPedidos}" class="adicionais"></p>
-            <p id="itemLembrete${totalPedidos}"></p>
-            <span id="itemValor${totalPedidos}">Total do item: ${get('valor'+identificador).innerHTML}</span>
-            <button onclick="esquecer('itemAdicionado${totalPedidos}')">Esquecer</button>
-        </div>
-    `;
-    totalItens++;
-    get('totalItens').innerHTML=totalItens.toString();
-}
-
-function esquecer(item){
-    get(item).style.display='none';
-    totalItens--;
-    get('totalItens').innerHTML=totalItens.toString();
-}
-//
-function pedidoPersonalizado(adicionaisInclusos){
-    let listaAdicionais = "";
-    totalPedidos++;
-    let totalDoItem = parseFloat((get('precoItem').innerHTML).slice(2));
-    for(let i = 1; i <= adicionaisInclusos; i++){
-        listaAdicionais+= get('adicionar'+i).value+" | ";
-    }
-    for(let i = 1; i <= totalExtras; i++){
-        listaAdicionais += get('adicionalExtra'+i).value+" | ";
-        totalDoItem +=parseFloat((get('adicionalExtra'+i).value).slice(-4));
-    }
-    get('pedido').innerHTML+=`
-        <div id="itemAdicionado${totalPedidos}" class="itemFinal">
-            <h2 id="itemNome${totalPedidos}">${get('confirmarNome').innerHTML}</h2>
-            <p id="itemDescricao${totalPedidos}">${get('confirmarDescricao').innerHTML}</p>
-            <p id="itemAdicionais${totalPedidos}" class="adicionais">${listaAdicionais}</p>
-            <p id="itemLembrete${totalPedidos}">${get('lembrete').value}</p>
-            <span id="itemValor${totalPedidos}">Total do item: R$ ${(totalDoItem.toFixed(2)).toString()}</span>
-            <button onclick="esquecer('itemAdicionado${totalPedidos}')">Esquecer</button>
-        </div>
-    `;
-    totalItens++;
-    totalExtras = 0;
-    get('totalItens').innerHTML=totalItens.toString();
-    alert("Adicionado ao carrinho com sucesso!")
-    interagirModal('confirmarPedido');
-}
-
-//
-function gerarPedido(){
-    let verificador = true;
-    if(formaPagamento == ""){
-        alert("informe o método de pagamento!")
-        verificador = false;
-    }
-    if(get('nome').value == ""){
-        alert("Informe seu nome!")
-        verificador= false
-    }
-    if(get('endereco').checked){
-       for(let i = 1; i<=4; i++){
-            if(get('endereco'+i).value == ""){
-                verificador = false;
-                alert('Endereço incompleto!')
-            }
-       }
-    }
-  
-    if(verificador == true){
-        let totalValor = 0.0;
-        for(let i = 1; i <= totalPedidos; i++){
-            if(get('itemAdicionado'+i).style.display != 'none'){
-                get('pedido').innerHTML+=`
-                    <div class="listaFinal">
-                        <h3>${get('itemNome'+i).innerHTML}</h3>
-                        <p>${get('itemDescricao'+i).innerHTML}</p>
-                        <p>${get('itemAdicionais'+i).innerHTML}</p>
-                        <p>${get('itemLembrete'+i).innerHTML}</p>
-                        <span>${get('itemValor'+i).innerHTML}</span>
-                    </div>
-                `;
-                get('informacoesCliente').style.display='none';
-                get('itemAdicionado'+i).style.display='none';
-                totalValor+= parseFloat((get('itemValor'+i).innerHTML).slice(-5));
-                get('gerarLista').style.display='none';
-            }
-        }
-        get('gerarLista').style.display='none';
-        get('informacoesCliente').style.display='none';
-        get('pedido').innerHTML=`<h2>Total: R$${(totalValor.toFixed(2)).toString()}</h2>`
-    }
-}
-
-let formaPagamento = "";
-function verificaPagamento(){
-    let valor = get('formaPagamento').value;
-    switch(valor){
-        case '1':
-            formaPagamento ="";
-            break;
-        case '2':
-            formaPagamento = "Dinheiro";
-            get('troco').style.display="block";
-            break;
-        case '3':
-            formaPagamento = "Cartão";
-            break;
-        case '4':
-            formaPagamento = "Pix"
-            break;
-    }
-}

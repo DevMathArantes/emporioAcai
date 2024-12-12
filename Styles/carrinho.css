@@ -10,40 +10,6 @@
     width: 100%;
 }
 
-/*Demonstração de produtos adicionados ao carrinho*/
-.itemFinal{
-    display: flex;
-    flex-flow: row wrap;
-    padding: 1em;
-    gap: 0.5em;
-    justify-content: center;
-    border-bottom: 1px solid var(--cor1);
-}
-.itemFinal h2, .itemFinal p, .itemFinal span{
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    text-align: left;
-}
-.itemFinal span{
-    font-weight: 400;
-}
-.itemFinal p{
-    font-weight: 500;
-}
-.adicionais{
-    color: var(--cor1);
-    font-weight: 600;
-    line-height: 1.5em;
-}
-.itemFinal button{
-    background-color: var(--cor1);
-    color: var(--cor2);
-    border: 0;
-    border-radius: 5px;
-    padding: 0.5em 1em;
-    margin: 1em 0;
-}
 
 /*Formulário final*/
 .formulario{
@@ -63,14 +29,33 @@
     display: block;
 }
 
-/*Lista final*/
-.listaFinal{
-    padding: 1em;
-    border-bottom: 1px solid var(--cor1);
+/*Pedidos*/
+.pedido{
+    padding: 0 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    text-align: center;
+    width: 100%;
 }
-.listaFinal h3{
+.produtoCarrinho{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid var(--cor1);
+    padding: 1em 0;
+}
+.produtoCarrinho h3{
     color: var(--cor1);
 }
+.produtoCarrinho button{
+    background-color: var(--cor1);
+    color: var(--cor2);
+    border: 0;
+    padding: 0.5em 3em;
+    border-radius: 5px;
+}
+
 
 #troco{
     display: none;
