@@ -56,9 +56,22 @@
     width: 100%;
     margin: 0.5em 0;
 }
-#camposEndereco{
+.camposEndereco{
     display: none;
 }
 #endereco:checked ~ #camposEndereco{
     display: block;
+}
+
+/*Lista final*/
+.listaFinal{
+    padding: 1em;
+    border-bottom: 1px solid var(--cor1);
+}
+.listaFinal h3{
+    color: var(--cor1);
+}
+
+#troco{
+    display: none;
 }

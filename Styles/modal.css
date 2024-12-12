@@ -9,7 +9,7 @@
     overflow-y: auto;
 }
 .voltar{
-    width: 6em;
+    width: 7em;
     background-color: var(--cor1);
     color: var(--cor2);
     border: none;
@@ -19,4 +19,9 @@
     left: 1em;
     padding: 0.5em;
     border-radius: 5px;
+    background-image: url("../Assets/icons/voltar.png");
+    background-repeat: no-repeat;
+    background-size: 1em;
+    background-position: 0.5em;
+    text-align: center;
 }
