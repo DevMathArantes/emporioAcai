@@ -95,7 +95,23 @@
         }
         
     }
+
+    //Mudar descrição de acordo com value de um select
+    function mudarDescricao(identificador){
+        get('descricao'+identificador).innerHTML=`${get('mudarDescricao'+identificador).value}`;
+    }
     
+    //Muda o titulo e preço do produto de acordo com o tamanho
+    function mudarTamanho(identificador, maior, menor){
+        if(get('tamanho'+identificador).value == 1){
+            get('valor'+identificador).innerHTML='R$ '+ maior;
+            get('mostrarTamanho'+identificador).innerHTML= "(Grande)"
+        }
+        else{
+            get('valor'+identificador).innerHTML='R$ '+ menor;
+            get('mostrarTamanho'+identificador).innerHTML="(Meia)"
+        }
+    }
 
 //Funções principais
 
@@ -193,60 +209,21 @@
         get('status').innerHTML = "Fechado";   
     }
 
+    //Adicionando as opções de select
 
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-let totalItens = 0;
-
-let totalExtras = 0;
-
-let totalPedidos = 0;
-
-
-
-
-
-
-
-
-
-
-
-
-
-//Adiciona as opções de casquinha
-for(let i = 1; i <= 9; i++){
-    adicionarAdicionais('saborSorvete'+i, SaborSorvetes);
-    
-};
-
-//Muda o tamanho do produto
-function mudarTamanho(identificador, maior, menor){
-    if(get('tamanho'+identificador).value == 1){
-        get('valor'+identificador).innerHTML='R$ '+ maior;
-        get('mostrarTamanho'+identificador).innerHTML= "(Grande)"
+    //Sorvetes
+    for(let i = 15; i<= 19; i++){
+        preencherLista('mudarDescricao'+i, SaborSorvetes, false);
     }
-    else{
-        get('valor'+identificador).innerHTML='R$ '+ menor;
-        get('mostrarTamanho'+identificador).innerHTML="(Meia)"
+    for(let i = 27; i<= 30; i++){
+        preencherLista('mudarDescricao'+i, SaborSorvetes, false);
     }
-}
+
+
+
+
+
+
 
 //Enviar para o pedido
 function pedir(identificador){
@@ -298,12 +275,6 @@ function pedidoPersonalizado(adicionaisInclusos){
     alert("Adicionado ao carrinho com sucesso!")
     interagirModal('confirmarPedido');
 }
-
-function mudarTitulo(identificador){
-    get('nome'+identificador).innerHTML=get('nomeAdicionado'+identificador).value;
-}
-
-
 
 //
 function gerarPedido(){

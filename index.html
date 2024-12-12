@@ -177,10 +177,11 @@
                     <div class="produtoEspecial">
                         <img src="Assets/Imagens/sorvete1litro.jpg" alt="1 litro de sorvete">
                         <h3 id="nome14">1 Litro de sorvete</h3>
-                        <p id="descricao14"></p>
-                        <select name="" id="">
-                            <option value="1">Leite ninho</option>
-                            <option value="2">Chocolate</option>
+                        <p id="descricao14">Nenhum sabor escolhido</p>
+                        <select onchange="mudarDescricao('14')" id="mudarDescricao14">
+                            <option value="Nenhum sabor escolhido">Escolher</option>
+                            <option value="Leite ninho">Leite ninho</option>
+                            <option value="Chocolate">Chocolate</option>
                         </select>
                         <span id="valor14">R$ 22.00</span>
                         <button onclick="confirmar('14', 0, true, 1)" class="pedir" >Pedir</button>
@@ -188,46 +189,63 @@
                          <!--Casquinhas-->
                          <div class="carrossel">
                             <div class="carrosselFilho combos">
+                               
                                 <div class="carrosselItem combo">
                                     <img src="Assets/Imagens/casquinha.jpg" alt="casquinha">
                                     <h3 id="nome15">Casquinha</h3>
-                                    <p id="descricao15"></p>
-                                    <select id="saborSorvete1"></select>
+                                    <p id="descricao15">Nenhum escolhido</p>
+                                    <select onchange="mudarDescricao('15')" id="mudarDescricao15">
+                                        <option value="Nenhum escolhido">Escolher</option>
+                                    </select>
                                     <span id="valor15">R$ 4.00</span>
                                     <button class="pedir" onclick="confirmar('15', 0, true, 1)">Pedir</button>
                                 </div>
+
                                 <div class="carrosselItem combo">
                                     <img src="Assets/Imagens/casquinhaTrufada.jpg" alt="casquinha trufada">
                                     <h3 id="nome16">Casquinha trufada</h3>
-                                    <p id="descricao16"></p>
-                                    <select id="saborSorvete2"></select>
+                                    <p id="descricao16">Nenhum escolhido</p>
+                                    <select onchange="mudarDescricao('16')" id="mudarDescricao16">
+                                        <option value="Nenhum escolhido">Escolher</option>
+                                    </select>
                                     <span id="valor16">R$ 8.00</span>
                                     <button class="pedir" onclick="confirmar('16', 0, true, 1)">Pedir</button>
                                 </div>
+
                                 <div class="carrosselItem combo">
                                     <img src="Assets/Imagens/cascao.jpg" alt="cascão">
                                     <h3 id="nome17">Cascão</h3>
-                                    <p id="descricao17"></p>
-                                    <select id="saborSorvete3"></select>
+                                    <p id="descricao17">Nenhum escolhido</p>
+                                    <select onchange="mudarDescricao('17')" id="mudarDescricao17">
+                                        <option value="Nenhum escolhido">Escolher</option>
+                                    </select>
                                     <span id="valor17">R$ 5.00</span>
                                     <button class="pedir" onclick="confirmar('17', 0, true, 1)">Pedir</button>
                                 </div>
+
                                 <div class="carrosselItem combo">
                                     <img src="Assets/Imagens/cascaoTrufado.jpg" alt="cascão trufado">
                                     <h3 id="nome18">Cascão trufado</h3>
-                                    <p id="descricao18"></p>
-                                    <select id="saborSorvete4"></select>
+                                    <p id="descricao18">Nenhum escolhido</p>
+                                    <select onchange="mudarDescricao('18')" id="mudarDescricao18">
+                                        <option value="Nenhum escolhido">Escolher</option>
+                                    </select>
                                     <span id="valor18">R$ 11.00</span>
                                     <button class="pedir" onclick="confirmar('18', 0, true, 1)">Pedir</button>
                                 </div>
+
                             </div>
                         </div>
 
                         <!--Sorvete (bola)-->
                         <img src="Assets/Imagens/sorveteBola.jpg" alt="Sorvete bola">
                         <h3 id="nome19">Sorvete (bola)</h3>
-                        <p id="descricao19"></p>
-                        <select id="saborSorvete5"></select>
+                        <p id="descricao19">
+                            Nenhum escolhido
+                        </p>
+                        <select onchange="mudarDescricao('19')" id="mudarDescricao19">
+                            <option value="Nenhum escolhido">Escolher</option>
+                        </select>
                         <span id="valor19">R$ 4.50</span>
                         <button onclick="confirmar('19', 0, true, 1)" class="pedir">Pedir</button>
 
@@ -293,34 +311,47 @@
                     <div class="produtoVariado">
                         <img src="Assets/Imagens/milkShakes.jpg" alt="MilkShakes">
                         <ul>
+
                             <li>
                                 <h3 id="nome27">Milk Shake 300 Ml</h3>
-                                <p id="descricao27">Copo de 300ml</p>
-                                <select id="saborSorvete6"></select>
+                                <p id="descricao27">Nenhum escolhido</p>
+                                <select onchange="mudarDescricao('27')" id="mudarDescricao27">
+                                    <option value="Nenhum escolhido">Escolher</option>
+                                </select>
                                 <span id="valor27">R$ 12.00</span>
                                 <button onclick="confirmar('27', 0, true, 1)">Pedir</button>
                             </li>
+
                             <li>
                                 <h3 id="nome28">Milk Shake 400 Ml</h3>
-                                <p id="descricao28">Copo de 400ml</p>
-                                <select id="saborSorvete7"></select>
+                                <p id="descricao28">Nenhum escolhido</p>
+                                <select onchange="mudarDescricao('28')" id="mudarDescricao28">
+                                    <option value="Nenhum escolhido">Escolher</option>
+                                </select>
                                 <span id="valor28">R$ 14.00</span>
                                 <button onclick="confirmar('28', 0, true, 1)">Pedir</button>
                             </li>
+
                             <li>
                                 <h3 id="nome29">Milk Shake 500 Ml</h3>
-                                <p id="descricao29">Copo de 500ml</p>
-                                <select id="saborSorvete8"></select>
+                                <p id="descricao29">Nenhum escolhido</p>
+                                <select onchange="mudarDescricao('29')" id="mudarDescricao29">
+                                    <option value="Nenhum escolhido">Escolher</option>
+                                </select>
                                 <span id="valor29">R$ 15.00</span>
                                 <button onclick="confirmar('29', 0, true, 1)">Pedir</button>
                             </li>
+
                             <li>
                                 <h3 id="nome30">Milk Shake 700 Ml</h3>
-                                <p id="descricao30">Copo de 300ml</p>
-                                <select id="saborSorvete9"></select>
+                                <p id="descricao30">Nenhum escolhido</p>
+                                <select onchange="mudarDescricao('30')" id="mudarDescricao30">
+                                    <option value="Nenhum escolhido">Escolher</option>
+                                </select>
                                 <span id="valor30">R$ 18.00</span>
                                 <button onclick="confirmar('30', 0, true, 1)">Pedir</button>
                             </li>
+
                         </ul>
                     </div>
 
@@ -352,9 +383,9 @@
                                 <div class="carrosselItem bebida">
                                     <img src="Assets/Imagens/refrigerante1litro.jpg" alt="refrigerante 1 litro">
                                     <h3 id="nome32">Refrigerante 1 Litro</h3>
-                                    <p id="descricao32">Escolha seu refrigerante</p>
-                                    <select onchange="mudarSelect('32')" id="nomeAdicionado32">
-                                        <option value="Nenhum">Nenhum</option>
+                                    <p id="descricao32">Nenhum escolhido</p>
+                                    <select onchange="mudarDescricao('32')" id="mudarDescricao32">
+                                        <option value="Nenhum escolhido">Escolher</option>
                                         <option value="Coca-cola 1 litro">Coca-cola</option>
                                         <option value="Guaraná Antarctica 1 litro">Guaraná Antarctica</option>
                                     </select>
@@ -364,9 +395,10 @@
 
                                 <div class="carrosselItem bebida">
                                     <img src="Assets/Imagens/refrigerante2litros.jpg" alt="refrigerante 2 litros">
-                                    <h3 id="nome33">Coca-cola 2 litros</h3>
-                                    <p id="descricao33"></p>
-                                    <select onchange="mudarSelect('33')" id="nomeAdicionado33">
+                                    <h3 id="nome33">Refrigerante 2 Litros</h3>
+                                    <p id="descricao33">Nenhum escolhido</p>
+                                    <select onchange="mudarDescricao('33')" id="mudarDescricao33">
+                                        <option value="Nenhum escolhido">Escolher</option>
                                         <option value="Coca-cola 2 litros">Coca-cola</option>
                                         <option value="Coca-cola 0 2 litros">Coca-cola 0</option>
                                         <option value="Guaraná Jaboti 2 litros">Guaraná Jaboti</option>
@@ -380,8 +412,8 @@
                                 <div class="carrosselItem bebida">
                                     <img src="Assets/Imagens/refrigerante.jpg" alt="refrigerantes">
                                     <h3 id="nome34">Lata Fanta Laranja</h3>
-                                    <p id="descricao34"></p>
-                                    <select onchange="mudarSelect('34')" id="nomeAdicionado34">
+                                    <p id="descricao34">Nenhum escolhido</p>
+                                    <select onchange="mudarDescricao('34')" id="mudarDescricao34">
                                         <option value="Lata Fanta Laranja">Fanta Laranja</option>
                                         <option value="Lata Fanta Uva">Fanta Uva</option>
                                         <option value="Lata Sprite">Sprite</option>
@@ -393,9 +425,10 @@
 
                                 <div class="carrosselItem bebida">
                                     <img src="Assets/Imagens/sucos.jpg" alt="sucos">
-                                    <h3 id="nome35">Suco de Acerola</h3>
-                                    <p id="descricao35"></p>
-                                    <select onchange="mudarSelect('35')" id="nomeAdicionado35">
+                                    <h3 id="nome35">Suco</h3>
+                                    <p id="descricao35">Nenhum escolhido</p>
+                                    <select onchange="mudarDescricao('35')" id="mudarDescricao35">
+                                        <option value="Nenhum escolhido">Escolher</option>
                                         <option value="Suco de Acerola">Acerola</option>
                                         <option value="Suco de Abacaxi">Abacaxi</option>
                                         <option value="Suco de Abacaxi com Hortelã">Abacaxi com Hortelã</option>
@@ -413,9 +446,10 @@
 
                                 <div class="carrosselItem bebida">
                                     <img src="Assets/Imagens/vitaminas.jpg" alt="vitaminas">
-                                    <h3 id="nome36">Vitamina de Morango</h3>
-                                    <p id="descricao36"></p>
-                                    <select onchange="mudarSelect('36')" id="nomeAdicionado36">
+                                    <h3 id="nome36">Vitamina</h3>
+                                    <p id="descricao36">Nenhum escolhido</p>
+                                    <select onchange="mudarDescricao('36')" id="mudarDescricao36">
+                                        <option value="Nenhum escolhido">Escolher</option>
                                         <option value="Vitamina de Morango">Morango</option>
                                         <option value="Vitamina de Maracujá">Maracujá</option>
                                         <option value="Vitamina Mista">Mista</option>
@@ -712,7 +746,7 @@
                         <img src="Assets/Imagens/pizzaMedia.jpg" alt="pizza média">
                         <ul>
                             <li>
-                                <h3 id="nome71">Alho e óleo <span id="mostrarTamanho71">(Grande)</span></h3>
+                                <h3 id="nome71">Pizza Alho e óleo <span id="mostrarTamanho71">(Grande)</span></h3>
                                 <p id="descricao71">Mussarela, bacon, alho, tomate, cebola, orégano e azeitona</p>
                                 <select id="tamanho71" onchange="mudarTamanho('71', '65.00', '45.00')">
                                     <option value="1">Grande</option>
@@ -722,7 +756,7 @@
                                 <button onclick="confirmar('71', 0, true, 3)">Pedir</button>
                             </li>
                             <li>
-                                <h3 id="nome72">Baiana <span id="mostrarTamanho72">(Grande)</span></h3>
+                                <h3 id="nome72">Pizza Baiana <span id="mostrarTamanho72">(Grande)</span></h3>
                                 <p id="descricao72">Mussarela, calabresa picada, parmesão, pimenta, ovos, pimentão, tomate, cebola, orégano e azeitona</p>
                                 <select id="tamanho72" onchange="mudarTamanho('72', '70.00', '48.00')">
                                     <option value="1">Grande</option>
@@ -732,7 +766,7 @@
                                 <button onclick="confirmar('72', 0, true, 3)">Pedir</button>
                             </li>
                             <li>
-                                <h3 id="nome73">Bolonhesa <span id="mostrarTamanho73">(Grande)</span></h3>
+                                <h3 id="nome73">Pizza Bolonhesa <span id="mostrarTamanho73">(Grande)</span></h3>
                                 <p id="descricao73">Molho especial, carne moída, orégano e mussarela</p>
                                 <select id="tamanho73" onchange="mudarTamanho('73', '65.00', '45.00')">
                                     <option value="1">Grande</option>
@@ -742,7 +776,7 @@
                                 <button onclick="confirmar('73', 0, true, 3)">Pedir</button>
                             </li>
                             <li>
-                                <h3 id="nome74">Brócolis <span id="mostrarTamanho74">(Grande)</span></h3>
+                                <h3 id="nome74">Pizza Brócolis <span id="mostrarTamanho74">(Grande)</span></h3>
                                 <p id="descricao74">Brócolis, bacon fatiado, mussarela e catupiry</p>
                                 <select id="tamanho74" onchange="mudarTamanho('74', '70.00', '48.00')">
                                     <option value="1">Grande</option>
@@ -752,7 +786,7 @@
                                 <button onclick="confirmar('74', 0, true, 3)">Pedir</button>
                             </li>
                             <li>
-                                <h3 id="nome75">Calabresa <span id="mostrarTamanho75">(Grande)</span></h3>
+                                <h3 id="nome75">Pizza Calabresa <span id="mostrarTamanho75">(Grande)</span></h3>
                                 <p id="descricao75">Calabresa, mussarela, cebola, tomate, orégano, molho de tomate</p>
                                 <select id="tamanho75" onchange="mudarTamanho('75', '60.00', '45.00')">
                                     <option value="1">Grande</option>
@@ -762,17 +796,17 @@
                                 <button onclick="confirmar('75', 0, true, 3)">Pedir</button>
                             </li>
                             <li>
-                                <h3 id="nome76">Carijó <span id="mostrarTamanho76">(Grande)</span></h3>
+                                <h3 id="nome76">Pizza Carijó <span id="mostrarTamanho76">(Grande)</span></h3>
                                 <p id="descricao76">Mussarela, molho, frango, ovo, catupiry, milho, orégano e azeitona</p>
                                 <select id="tamanho76" onchange="mudarTamanho('76', '65.00', '45.00')">
                                     <option value="1">Grande</option>
                                     <option value="2">Média</option>
                                 </select>
                                 <span id="valor76">R$ 65.00</span>
-                                <button onclick="confirmar('', 0, 3 true,)">Pedir</button>
+                                <button onclick="confirmar('', 0, true, 3)">Pedir</button>
                             </li>
                             <li>
-                                <h3 id="nome77">Fazendinha <span id="mostrarTamanho77">(Grande)</span></h3>
+                                <h3 id="nome77">Pizza Fazendinha <span id="mostrarTamanho77">(Grande)</span></h3>
                                 <p id="descricao77">Presunto, mussarela, ovo, tomate, milho e cebola</p>
                                 <select id="tamanho77" onchange="mudarTamanho('77', '65.00', '45.00')">
                                     <option value="1">Grande</option>
@@ -782,7 +816,7 @@
                                 <button onclick="confirmar('77', 0, true, 3)">Pedir</button>
                             </li>
                             <li>
-                                <h3 id="nome78">Frango com catupiry <span id="mostrarTamanho78">(Grande)</span></h3>
+                                <h3 id="nome78">Pizza Frango com catupiry <span id="mostrarTamanho78">(Grande)</span></h3>
                                 <p id="descricao78">Mussarela, frango, catupiry, orégano, tomate, azeitona e molho de tomate</p>
                                 <select id="tamanho78" onchange="mudarTamanho('78', '60.00', '45.00')">
                                     <option value="1">Grande</option>
@@ -792,7 +826,7 @@
                                 <button onclick="confirmar('78', 0, true, 3)">Pedir</button>
                             </li>
                             <li>
-                                <h3 id="nome79">Frango cremoso <span id="mostrarTamanho79">(Grande)</span></h3>
+                                <h3 id="nome79">Pizza Frango cremoso <span id="mostrarTamanho79">(Grande)</span></h3>
                                 <p id="descricao79">Frango, catupiry, batata palha, azeitona fatiada, mussarela e orégano</p>
                                 <select id="tamanho79" onchange="mudarTamanho('79', '67.00', '45.00')">
                                     <option value="1">Grande</option>
@@ -802,7 +836,7 @@
                                 <button onclick="confirmar('79', 0, true, 3)">Pedir</button>
                             </li>
                             <li>
-                                <h3 id="nome80">Franlone <span id="mostrarTamanho80">(Grande)</span></h3>
+                                <h3 id="nome80">Pizza Franlone <span id="mostrarTamanho80">(Grande)</span></h3>
                                 <p id="descricao80">Frango, queijo provolone, tomate, mussarela, orégano, azeitona, milho e molho de tomate</p>
                                 <select id="tamanho80" onchange="mudarTamanho('80', '65.00', '45.00')">
                                     <option value="1">Grande</option>
@@ -812,7 +846,7 @@
                                 <button onclick="confirmar('80', 0, true, 3)">Pedir</button>
                             </li>
                             <li>
-                                <h3 id="nome81">Hot Dog <span id="mostrarTamanho81">(Grande)</span></h3>
+                                <h3 id="nome81">Pizza Hot Dog <span id="mostrarTamanho81">(Grande)</span></h3>
                                 <p id="descricao81">Salsicha ao molho, batata palha, catchup, maioneses, mussarela e milho</p>
                                 <select id="tamanho81" onchange="mudarTamanho('81', '60.00', '45.00')">
                                     <option value="1">Grande</option>
@@ -822,7 +856,7 @@
                                 <button onclick="confirmar('81', 0, true, 3)">Pedir</button>
                             </li>
                             <li>
-                                <h3 id="nome82">Lombinho especial <span id="mostrarTamanho82">(Grande)</span></h3>
+                                <h3 id="nome82">Pizza Lombinho especial <span id="mostrarTamanho82">(Grande)</span></h3>
                                 <p id="descricao82">Lombo canadense, presunto, mussarela, tomate e orégano</p>
                                 <select id="tamanho82" onchange="mudarTamanho('82', '70.00', '48.00')">
                                     <option value="1">Grande</option>
@@ -832,7 +866,7 @@
                                 <button onclick="confirmar('82', 0, true, 3)">Pedir</button>
                             </li>
                             <li>
-                                <h3 id="nome83">Lombo canadense <span id="mostrarTamanho83">(Grande)</span></h3>
+                                <h3 id="nome83">Pizza Lombo canadense <span id="mostrarTamanho83">(Grande)</span></h3>
                                 <p id="descricao83">Lombo canadense, presunto, mussarela, tomate, orégano, molho de tomate, palmito e catupiry</p>
                                 <select id="tamanho83" onchange="mudarTamanho('83', '65.00', '45.00')">
                                     <option value="1">Grande</option>
@@ -842,7 +876,7 @@
                                 <button onclick="confirmar('83', 0, true, 3)">Pedir</button>
                             </li>
                             <li>
-                                <h3 id="nome84">Marajá <span id="mostrarTamanho84">(Grande)</span></h3>
+                                <h3 id="nome84">Pizza Marajá <span id="mostrarTamanho84">(Grande)</span></h3>
                                 <p id="descricao84">Mussarela, lombo, canadense, catupiry, palmito, bacon, orégano, calabresa, champignon, azeitona e tomate</p>
                                 <select id="tamanho84" onchange="mudarTamanho('84', '73.00', '48.00')">
                                     <option value="1">Grande</option>
@@ -852,7 +886,7 @@
                                 <button onclick="confirmar('84', 0, true, 3)">Pedir</button>
                             </li>
                             <li>
-                                <h3 id="nome85">Maromba <span id="mostrarTamanho85">(Grande)</span></h3>
+                                <h3 id="nome85">Pizza Maromba <span id="mostrarTamanho85">(Grande)</span></h3>
                                 <p id="descricao85">Frango, catupiry, ovos, mussarela, orégano, bacon, tomate e molho especial</p>
                                 <select id="tamanho85" onchange="mudarTamanho('85', '70.00', '48.00')">
                                     <option value="1">Grande</option>
@@ -862,7 +896,7 @@
                                 <button onclick="confirmar('85', 0, true, 3)">Pedir</button>
                             </li>
                             <li>
-                                <h3 id="nome86">Moda da casa <span id="mostrarTamanho86">(Grande)</span></h3>
+                                <h3 id="nome86">Pizza Moda da casa <span id="mostrarTamanho86">(Grande)</span></h3>
                                 <p id="descricao86">Presunto, mussarela, calabresa, bacon, catupiry, tomate, cebola, orégano, e molho de tomate</p>
                                 <select id="tamanho86" onchange="mudarTamanho('86', '73.00', '48.00')">
                                     <option value="1">Grande</option>
@@ -872,7 +906,7 @@
                                 <button onclick="confirmar('86', 0, true, 3)">Pedir</button>
                             </li>
                             <li>
-                                <h3 id="nome87">Mussarela <span id="mostrarTamanho87">(Grande)</span></h3>
+                                <h3 id="nome87">Pizza Mussarela <span id="mostrarTamanho87">(Grande)</span></h3>
                                 <p id="descricao87">Mussarela, molho gourmet de tomate, azeitona, tomate e orégano</p>
                                 <select id="tamanho87" onchange="mudarTamanho('87', '65.00', '48.00')">
                                     <option value="1">Grande</option>
@@ -882,7 +916,7 @@
                                 <button onclick="confirmar('87', 0, true, 3)">Pedir</button>
                             </li>
                             <li>
-                                <h3 id="nome88">Napolitana <span id="mostrarTamanho88">(Grande)</span></h3>
+                                <h3 id="nome88">Pizza Napolitana <span id="mostrarTamanho88">(Grande)</span></h3>
                                 <p id="descricao88">Tomate, azeite, orégano, alho e mussarela</p>
                                 <select id="tamanho88" onchange="mudarTamanho('88', '60.00', '45.00')">
                                     <option value="1">Grande</option>
@@ -892,7 +926,7 @@
                                 <button onclick="confirmar('88', 0, true, 3)">Pedir</button>
                             </li>
                             <li>
-                                <h3 id="nome89">Parmegiana <span id="mostrarTamanho89">(Grande)</span></h3>
+                                <h3 id="nome89">Pizza Parmegiana <span id="mostrarTamanho89">(Grande)</span></h3>
                                 <p id="descricao89">Presunto, queijo, provolono, mussarela, molho de tomate, baconorégano, azeitona e tomate</p>
                                 <select id="tamanho89" onchange="mudarTamanho('89', '70.00', '48.00')">
                                     <option value="1">Grande</option>
@@ -902,7 +936,7 @@
                                 <button onclick="confirmar('89', 0, true, 3)">Pedir</button>
                             </li>
                             <li>
-                                <h3 id="nome90">Portuguesa <span id="mostrarTamanho90">(Grande)</span></h3>
+                                <h3 id="nome90">Pizza Portuguesa <span id="mostrarTamanho90">(Grande)</span></h3>
                                 <p id="descricao90">Presunto, mussarela, bacon, ovo, azeitona, tomate, palmito, cebola e molho de tomate</p>
                                 <select id="tamanho90" onchange="mudarTamanho('90', '60.00', '45.00')">
                                     <option value="1">Grande</option>
@@ -912,7 +946,7 @@
                                 <button onclick="confirmar('90', 0, true, 3)">Pedir</button>
                             </li>
                             <li>
-                                <h3 id="nome91">Presunto Mussarela <span id="mostrarTamanho91">(Grande)</span></h3>
+                                <h3 id="nome91">Pizza Presunto Mussarela <span id="mostrarTamanho91">(Grande)</span></h3>
                                 <p id="descricao91">Presunto, mussarela, orégano, tomate e molho de tomate</p>
                                 <select id="tamanho91" onchange="mudarTamanho('91', '60.00', '45.00')">
                                     <option value="1">Grande</option>
@@ -922,7 +956,7 @@
                                 <button onclick="confirmar('91', 0, true, 3)">Pedir</button>
                             </li>
                             <li>
-                                <h3 id="nome92">Quatro queijos <span id="mostrarTamanho92">(Grande)</span></h3>
+                                <h3 id="nome92">Pizza Quatro queijos <span id="mostrarTamanho92">(Grande)</span></h3>
                                 <p id="descricao92">Mussarela, queijo provolone, queijo parmesão, catupiry, tomate, orégano, azeitona e tomate</p>
                                 <select id="tamanho92" onchange="mudarTamanho('92', '73.00', '48.00')">
                                     <option value="1">Grande</option>
@@ -932,7 +966,7 @@
                                 <button onclick="confirmar('92', 0, true, 3)">Pedir</button>
                             </li>
                             <li>
-                                <h3 id="nome93">Siciliana <span id="mostrarTamanho93">(Grande)</span></h3>
+                                <h3 id="nome93">Pizza Siciliana <span id="mostrarTamanho93">(Grande)</span></h3>
                                 <p id="descricao93">Mussarela, calabresa, parmesão, bacon, pimentão, cebola, tomate, orégano e azeitona</p>
                                 <select id="tamanho93" onchange="mudarTamanho('93', '70.00', '48.00')">
                                     <option value="1">Grande</option>
@@ -942,7 +976,7 @@
                                 <button onclick="confirmar('93', 0, true, 3)">Pedir</button>
                             </li>
                             <li>
-                                <h3 id="nome94">Soft <span id="mostrarTamanho94">(Grande)</span></h3>
+                                <h3 id="nome94">Pizza Soft <span id="mostrarTamanho94">(Grande)</span></h3>
                                 <p id="descricao94">Mussarela, calabresa picada, champignon, cebola, bacon, tomate, catupiry, orégano e azeitona</p>
                                 <select id="tamanho94" onchange="mudarTamanho('94', '70.00', '48.00')">
                                     <option value="1">Grande</option>
@@ -952,7 +986,7 @@
                                 <button onclick="confirmar('94', 0, true, 3)">Pedir</button>
                             </li>
                             <li>
-                                <h3 id="nome95">Vegetariana <span id="mostrarTamanho95">(Grande)</span></h3>
+                                <h3 id="nome95">Pizza Vegetariana <span id="mostrarTamanho95">(Grande)</span></h3>
                                 <p id="descricao95">Milho, palmito, brócolis, champignon, mussarela e couve</p>
                                 <select id="tamanho95" onchange="mudarTamanho('95', '70.00', '48.00')">
                                     <option value="1">Grande</option>
@@ -970,8 +1004,8 @@
                         <img src="Assets/Imagens/pizzaDoce.jpg" alt="pizza doce">
                         <ul>
                             <li>
-                                <h3 id="nome96">Açai com leite ninho <span id="mostrarTamanho96">(Grande)</span></h3>
-                                <p id="descricao96"></p>
+                                <h3 id="nome96">Pizza Doce <span id="mostrarTamanho96">(Grande)</span></h3>
+                                <p id="descricao96">Açai com leite ninho</p>
                                 <select onchange="mudarTamanho('96', '65.00', '45.00')" id="tamanho96">
                                     <option value="1">Grande</option>
                                     <option value="2">Média</option>
@@ -980,8 +1014,8 @@
                                 <button onclick="confirmar('96', 0, true, 3)">Pedir</button>
                             </li>
                             <li>
-                                <h3 id="nome97">Açai com morango e nutella <span id="mostrarTamanho97">(Grande)</span></h3>
-                                <p id="descricao97"></p>
+                                <h3 id="nome97">Pizza Doce <span id="mostrarTamanho97">(Grande)</span></h3>
+                                <p id="descricao97">Açai com morango e nutella</p>
                                 <select id="tamanho97" onchange="mudarTamanho('97', '65.00', '45.00')">
                                     <option value="1">Grande</option>
                                     <option value="2">Média</option>
@@ -990,8 +1024,8 @@
                                 <button onclick="confirmar('97', 0, true, 3)">Pedir</button>
                             </li>
                             <li>
-                                <h3 id="nome98">Banana</h3>
-                                <p id="descricao98">Banana, canela, queijo, calda de caramelo <span id="mostrarTamanho98">(Grande)</span></p>
+                                <h3 id="nome98">Pizza Doce <span id="mostrarTamanho97">(Grande)</h3>
+                                <p id="descricao98">Banana, canela, queijo, calda de caramelo</p>
                                 <select id="tamanho98" onchange="mudarTamanho('98', '65.00', '45.00')">
                                     <option value="1">Grande</option>
                                     <option value="2">Média</option>
@@ -1000,8 +1034,8 @@
                                 <button onclick="confirmar('98', 0, true, 3)">Pedir</button>
                             </li>
                             <li>
-                                <h3 id="nome99">Creme ninho com morango <span id="mostrarTamanho99">(Grande)</span></h3>
-                                <p id="descricao99"></p>
+                                <h3 id="nome99">Pizza Doce <span id="mostrarTamanho99">(Grande)</span></h3>
+                                <p id="descricao99">Creme ninho com morango</p>
                                 <select id="tamanho99" onchange="mudarTamanho('99', '65.00', '45.00')">
                                     <option value="1">Grande</option>
                                     <option value="2">Média</option>
@@ -1010,8 +1044,8 @@
                                 <button onclick="confirmar('99', 0, true, 3)">Pedir</button>
                             </li>
                             <li>
-                                <h3 id="nome100">Diamante negro <span id="mostrarTamanho100">(Grande)</span></h3>
-                                <p id="descricao100"></p>
+                                <h3 id="nome100">Pizza Doce <span id="mostrarTamanho100">(Grande)</span></h3>
+                                <p id="descricao100">Diamante negro</p>
                                 <select id="tamanho100" onchange="mudarTamanho('100', '65.00', '45.00')">
                                     <option value="1">Grande</option>
                                     <option value="2">Média</option>
@@ -1020,8 +1054,8 @@
                                 <button onclick="confirmar('100', 0, true, 3)">Pedir</button>
                             </li>
                             <li>
-                                <h3 id="nome101">Doce de leite com queijo <span id="mostrarTamanho101">(Grande)</span></h3>
-                                <p id="descricao101"></p>
+                                <h3 id="nome101">Pizza Doce <span id="mostrarTamanho101">(Grande)</span></h3>
+                                <p id="descricao101">Doce de leite com queijo</p>
                                 <select id="tamanho101" onchange="mudarTamanho('101', '65.00', '45.00')">
                                     <option value="1">Grande</option>
                                     <option value="2">Média</option>
@@ -1030,8 +1064,8 @@
                                 <button onclick="confirmar('101', 0, true, 3)">Pedir</button>
                             </li>
                             <li>
-                                <h3 id="nome102">Goiabada com queijo <span id="mostrarTamanho102">(Grande)</span></h3>
-                                <p id="descricao102"></p>
+                                <h3 id="nome102">Pizza Doce <span id="mostrarTamanho102">(Grande)</span></h3>
+                                <p id="descricao102">Goiabada com queijo</p>
                                 <select id="tamanho102" onchange="mudarTamanho('102', '65.00', '45.00')">
                                     <option value="1">Grande</option>
                                     <option value="2">Média</option>
@@ -1040,8 +1074,8 @@
                                 <button onclick="confirmar('102', 0, true, 3)">Pedir</button>
                             </li>
                             <li>
-                                <h3 id="nome103">Laka <span id="mostrarTamanho103">(Grande)</span></h3>
-                                <p id="descricao103"></p>
+                                <h3 id="nome103">Pizza Doce <span id="mostrarTamanho103">(Grande)</span></h3>
+                                <p id="descricao103">Laka</p>
                                 <select id="tamanho103" onchange="mudarTamanho('103', '65.00', '45.00')">
                                     <option value="1">Grande</option>
                                     <option value="2">Média</option>
@@ -1050,8 +1084,8 @@
                                 <button onclick="confirmar('103', 0, true, 3)">Pedir</button>
                             </li>
                             <li>
-                                <h3 id="nome104">Laka óreo <span id="mostrarTamanho104">(Grande)</span></h3>
-                                <p id="descricao104"></p>
+                                <h3 id="nome104">Pizza Doce <span id="mostrarTamanho104">(Grande)</span></h3>
+                                <p id="descricao104">Laka óreo</p>
                                 <select id="tamanho104" onchange="mudarTamanho('104', '65.00', '45.00')">
                                     <option value="1">Grande</option>
                                     <option value="2">Média</option>
@@ -1060,7 +1094,7 @@
                                 <button onclick="confirmar('104', 0, true, 3)">Pedir</button>
                             </li>
                             <li>
-                                <h3 id="nome105">Moda da casa <span id="mostrarTamanho105">(Grande)</span></h3>
+                                <h3 id="nome105">Pizza Doce <span id="mostrarTamanho105">(Grande)</span></h3>
                                 <p id="descricao105">Nutella, morango, coco ralado, leite condensado e bis preto</p>
                                 <select id="tamanho105" onchange="mudarTamanho('105', '65.00', '45.00')">
                                     <option value="1">Grande</option>
@@ -1070,8 +1104,8 @@
                                 <button onclick="confirmar('105', 0, true, 3)">Pedir</button>
                             </li>
                             <li>
-                                <h3 id="nome106">Nutella <span id="mostrarTamanho106">(Grande)</span></h3>
-                                <p id="descricao106"></p>
+                                <h3 id="nome106">Pizza Doce <span id="mostrarTamanho106">(Grande)</span></h3>
+                                <p id="descricao106">Nutella</p>
                                 <select id="tamanho106" onchange="mudarTamanho('106', '65.00', '45.00')">
                                     <option value="1">Grande</option>
                                     <option value="2">Média</option>
@@ -1080,8 +1114,8 @@
                                 <button onclick="confirmar('106', 0, true, 3)">Pedir</button>
                             </li>
                             <li>
-                                <h3 id="nome107">Nutella com kit kat <span id="mostrarTamanho107">(Grande)</span></h3>
-                                <p id="descricao107"></p>
+                                <h3 id="nome107">Pizza Doce <span id="mostrarTamanho107">(Grande)</span></h3>
+                                <p id="descricao107">Nutella com kit kat</p>
                                 <select id="tamanho107" onchange="mudarTamanho('107', '65.00', '45.00')">
                                     <option value="1">Grande</option>
                                     <option value="2">Média</option>
@@ -1090,8 +1124,8 @@
                                 <button onclick="confirmar('107', 0, true, 3)">Pedir</button>
                             </li>
                             <li>
-                                <h3 id="nome108">Nutella com morango <span id="mostrarTamanho108">(Grande)</span></h3>
-                                <p id="descricao108"></p>
+                                <h3 id="nome108">Pizza Doce <span id="mostrarTamanho108">(Grande)</span></h3>
+                                <p id="descricao108">Nutella com morango</p>
                                 <select id="tamanho108" onchange="mudarTamanho('108', '65.00', '45.00')">
                                     <option value="1">Grande</option>
                                     <option value="2">Média</option>
@@ -1100,8 +1134,8 @@
                                 <button onclick="confirmar('108', 0, true, 3)">Pedir</button>
                             </li>
                             <li>
-                                <h3 id="nome109">Nutella e confete <span id="mostrarTamanho109">(Grande)</span></h3>
-                                <p id="descricao109"></p>
+                                <h3 id="nome109">Pizza Doce <span id="mostrarTamanho109">(Grande)</span></h3>
+                                <p id="descricao109">Nutella e confete</p>
                                 <select id="tamanho109" onchange="mudarTamanho('109', '65.00', '45.00')">
                                     <option value="1">Grande</option>
                                     <option value="2">Média</option>
@@ -1110,8 +1144,8 @@
                                 <button onclick="confirmar('109', 0, true, 3)">Pedir</button>
                             </li>
                             <li>
-                                <h3 id="nome110">Nutella morango e confete <span id="mostrarTamanho110">(Grande)</span></h3>
-                                <p id="descricao110"></p>
+                                <h3 id="nome110">Pizza Doce <span id="mostrarTamanho110">(Grande)</span></h3>
+                                <p id="descricao110">Nutella morango e confete</p>
                                 <select id="tamanho110" onchange="mudarTamanho('110', '65.00', '45.00')">
                                     <option value="1">Grande</option>
                                     <option value="2">Média</option>
@@ -1120,8 +1154,8 @@
                                 <button onclick="confirmar('110', 0, true, 3)">Pedir</button>
                             </li>
                             <li>
-                                <h3 id="nome111">Ouro branco <span id="mostrarTamanho111">(Grande)</span></h3>
-                                <p id="descricao111"></p>
+                                <h3 id="nome111">Pizza Doce <span id="mostrarTamanho111">(Grande)</span></h3>
+                                <p id="descricao111">Ouro branco</p>
                                 <select id="tamanho111"  onchange="mudarTamanho('111', '65.00', '45.00')">
                                     <option value="1">Grande</option>
                                     <option value="2">Média</option>
@@ -1130,8 +1164,8 @@
                                 <button onclick="confirmar('111', 0, true, 3)">Pedir</button>
                             </li>
                             <li>
-                                <h3 id="nome112">Prestígio <span id="mostrarTamanho112">(Grande)</span></h3>
-                                <p id="descricao112"></p>
+                                <h3 id="nome112">Pizza Doce <span id="mostrarTamanho112">(Grande)</span></h3>
+                                <p id="descricao112">Prestígio</p>
                                 <select id="tamanho112" onchange="mudarTamanho('112', '65.00', '45.00')">
                                     <option value="1">Grande</option>
                                     <option value="2">Média</option>
@@ -1140,8 +1174,8 @@
                                 <button onclick="confirmar('112', 0, true, 3)">Pedir</button>
                             </li>
                             <li>
-                                <h3 id="nome113">Sonho de valsa <span id="mostrarTamanho113">(Grande)</span></h3>
-                                <p id="descricao113"></p>
+                                <h3 id="nome113">Pizza Doce <span id="mostrarTamanho113">(Grande)</span></h3>
+                                <p id="descricao113">Sonho de valsa</p>
                                 <select id="tamanho113" onchange="mudarTamanho('113', '65.00', '45.00')">
                                     <option value="1">Grande</option>
                                     <option value="2">Média</option>
@@ -1259,61 +1293,61 @@
                         <img src="Assets/Imagens/tapioca.jpg" alt="tapioca doce">
                         <ul>
                             <li>
-                                <h3 id="nome122"></h3>
+                                <h3 id="nome122">Tapioca doce</h3>
                                 <p id="descricao122">Chocolate ao leite com queijo</p>
                                 <span id="valor122">R$ 18.00</span>
                                 <button onclick="confirmar('122', 0, false, 0)">Pedir</button>
                             </li>
                             <li>
-                                <h3 id="nome123"></h3>
+                                <h3 id="nome123">Tapioca doce</h3>
                                 <p id="descricao123">Prestígio</p>
                                 <span id="valor123">R$ 18.00</span>
                                 <button onclick="confirmar('123', 0, false, 0)">Pedir</button>
                             </li>
                             <li>
-                                <h3 id="nome124"></h3>
+                                <h3 id="nome124">Tapioca doce</h3>
                                 <p id="descricao124">Morango com nutella</p>
                                 <span id="valor124">R$ 18.00</span>
                                 <button onclick="confirmar('124', 0, false, 0)">Pedir</button>
                             </li>
                             <li>
-                                <h3 id="nome125"></h3>
+                                <h3 id="nome125">Tapioca doce</h3>
                                 <p id="descricao125">Morango com leite condensado</p>
                                 <span id="valor125">R$ 18.00</span>
                                 <button onclick="confirmar('125', 0, false, 0)">Pedir</button>
                             </li>
                             <li>
-                                <h3 id="nome126"></h3>
+                                <h3 id="nome126">Tapioca doce</h3>
                                 <p id="descricao126">Morango, coco e leite condensado</p>
                                 <span id="valor126">R$ 18.00</span>
                                 <button onclick="confirmar('126', 0, false, 0)">Pedir</button>
                             </li>
                             <li>
-                                <h3 id="nome127"></h3>
+                                <h3 id="nome127">Tapioca doce</h3>
                                 <p id="descricao127">Nutella e coco</p>
                                 <span id="valor127">R$ 18.00</span>
                                 <button onclick="confirmar('127', 0, false, 0)">Pedir</button>
                             </li>
                             <li>
-                                <h3 id="nome128"></h3>
+                                <h3 id="nome128">Tapioca doce</h3>
                                 <p id="descricao128">Nutella com banana</p>
                                 <span id="valor128">R$ 18.00</span>
                                 <button onclick="confirmar('128', 0, false, 0)">Pedir</button>
                             </li>
                             <li>
-                                <h3 id="nome129"></h3>
+                                <h3 id="nome129">Tapioca doce</h3>
                                 <p id="descricao129">Banana com canela</p>
                                 <span id="valor129">R$ 18.00</span>
                                 <button onclick="confirmar('129', 0, false, 0)">Pedir</button>
                             </li>
                             <li>
-                                <h3 id="nom130"></h3>
+                                <h3 id="nom130">Tapioca doce</h3>
                                 <p id="descricao130">Goiabada com queijo</p>
                                 <span id="valor130">R$ 18.00</span>
                                 <button onclick="confirmar('130', 0, false, 0)">Pedir</button>
                             </li>
                             <li>
-                                <h3 id="nome131"></h3>
+                                <h3 id="nome131">Tapioca doce</h3>
                                 <p id="descricao131">Moda da casa (banana, nutella, coco, bis preto e sorvete de creme)</p>
                                 <span id="valor131">R$ 20.00</span>
                                 <button onclick="confirmar('131', 0, false, 0)">Pedir</button>
@@ -1326,97 +1360,97 @@
                     <div class="produtoVariado">
                         <img src="Assets/Imagens/tapioca2.jpg" alt="tapioca salgada">
                         <li>
-                            <h3 id="nome132"></h3>
+                            <h3 id="nome132">Tapioca salgada</h3>
                             <p id="descricao132">Frango com tomate</p>
                             <span id="valor132">R$ 18.00</span>
                             <button onclick="confirmar('132', 0, false, 0)">Pedir</button>
                         </li>
                         <li>
-                            <h3 id="nome133"></h3>
+                            <h3 id="nome133">Tapioca salgada</h3>
                             <p id="descricao133">Frango com catupiry</p>
                             <span id="valor133">R$ 18.00</span>
                             <button onclick="confirmar('133', 0, false, 0)">Pedir</button>
                         </li>
                         <li>
-                            <h3 id="nome134"></h3>
+                            <h3 id="nome134">Tapioca salgada</h3>
                             <p id="descricao134">Frango com bacon</p>
                             <span id="valor134">R$ 18.00</span>
                             <button onclick="confirmar('134', 0, false, 0)">Pedir</button>
                         </li>
                         <li>
-                            <h3 id="nome135"></h3>
+                            <h3 id="nome135">Tapioca salgada</h3>
                             <p id="descricao135">Frango com mussarela</p>
                             <span id="valor135">R$ 18.00</span>
                             <button onclick="confirmar('135', 0, false, 0)">Pedir</button>
                         </li>
                         <li>
-                            <h3 id="nome136"></h3>
+                            <h3 id="nome136">Tapioca salgada</h3>
                             <p id="descricao136">Frango com milho</p>
                             <span id="valor136">R$ 18.00</span>
                             <button onclick="confirmar('136', 0, false, 0)">Pedir</button>
                         </li>
                         <li>
-                            <h3 id="nome137"></h3>
+                            <h3 id="nome137">Tapioca salgada</h3>
                             <p id="descricao137">Calabresa com tomate</p>
                             <span id="valor137">R$ 18.00</span>
                             <button onclick="confirmar('137', 0, false, 0)">Pedir</button>
                         </li>
                         <li>
-                            <h3 id="nome138"></h3>
+                            <h3 id="nome138">Tapioca salgada</h3>
                             <p id="descricao138">Calabresa com caturpiry</p>
                             <span id="valor138">R$ 18.00</span>
                             <button onclick="confirmar('138', 0, false, 0)">Pedir</button>
                         </li>
                         <li>
-                            <h3 id="nome139"></h3>
+                            <h3 id="nome139">Tapioca salgada</h3>
                             <p id="descricao139">Calabresa com bacon</p>
                             <span id="valor139">R$ 18.00</span>
                             <button onclick="confirmar('139', 0, false, 0)">Pedir</button>
                         </li>
                         <li>
-                            <h3 id="nome140"></h3>
+                            <h3 id="nome140">Tapioca salgada</h3>
                             <p id="descricao140">Calabresaa com mussarela</p>
                             <span id="valor140">R$ 18.00</span>
                             <button onclick="confirmar('140', 0, false, 0)">Pedir</button>
                         </li>
                         <li>
-                            <h3 id="nome141"></h3>
+                            <h3 id="nome141">Tapioca salgada</h3>
                             <p id="descricao141">Calabresa com milho e mussarela</p>
                             <span id="valor141">R$ 18.00</span>
                             <button onclick="confirmar('141', 0, false, 0)">Pedir</button>
                         </li>
                         <li>
-                            <h3 id="nome142"></h3>
+                            <h3 id="nome142">Tapioca salgada</h3>
                             <p id="descricao142">Presunto e mussarela</p>
                             <span id="valor142">R$ 18.00</span>
                             <button onclick="confirmar('142', 0, false, 0)">Pedir</button>
                         </li>
                         <li>
-                            <h3 id="nome143"></h3>
+                            <h3 id="nome143">Tapioca salgada</h3>
                             <p id="descricao143">Presunto, mussarela e tomate</p>
                             <span id="valor143">R$ 18.00</span>
                             <button onclick="confirmar('143', 0, false, 0)">Pedir</button>
                         </li>
                         <li>
-                            <h3 id="nome144"></h3>
+                            <h3 id="nome144">Tapioca salgada</h3>
                             <p id="descricao144">Presunto, mussarela e catupiry</p>
                             <span id="valor144">R$ 18.00</span>
                             <button onclick="confirmar('144', 0, false, 0)">Pedir</button>
                         </li>
                         <li>
-                            <h3 id="nome145"></h3>
+                            <h3 id="nome145">Tapioca salgada</h3>
                             <p id="descricao145">Presunto, mussarela e milho</p>
                             <span id="valor145">R$ 18.00</span>
                             <button onclick="confirmar('145', 0, false, 0)">Pedir</button>
                         </li>
                         <li>
-                            <h3 id="nome146"></h3>
+                            <h3 id="nome146">Tapioca salgada</h3>
                             <p id="descricao146">Presunto, mussarela e bacon</p>
                             <span id="valor146">R$ 18.00</span>
                             <button onclick="confirmar('146', 0, false, 0)">Pedir</button>
                         </li>
                         <li>
-                            <h3 id="nome147"></h3>
+                            <h3 id="nome147">Tapioca salgada</h3>
                             <p id="descricao147">Moda da casa (bacon, presunto, queijo, catupiry, calabresa e tomate)</p>
                             <span id="valor147">R$ 20.00</span>
                             <button onclick="confirmar('147', 0, false, 0)">Pedir</button>
