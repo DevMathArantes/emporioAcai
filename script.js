@@ -221,7 +221,8 @@
         link+="________________________%0A";
 
         //Inserindo valor do pedido e forma de pagamento ao link
-        link+="%0ATotal%20do%20pedido:%20R$%20"+(totalPedido.toFixed(2)).toString();
+        link+=pagamento();
+        link+="%0ATotal%20do%20pedido:%20R$%20"+(totalPedido.toFixed(2)).toString()+"%0A%0A";
 
         //Trocando final por link
         get('gerarLista').style.display='none';
@@ -290,6 +291,26 @@
             valorTotal += valorAdicional;
         }
         return "R$ "+(valorTotal.toFixed(2)).toString();
+    }
+
+    //Verifica o método de pagamento
+    function pagamento(){
+        let pagamento;
+        switch(get('formaPagamento').value){
+            case 1:
+                pagamento="";
+                break;
+            case 2:
+                pagamento="%0ADinheiro%0ATroco%20para%20R$%20"+((get('troco').value).toFixed(2)).toString;
+                break;
+            case 3:
+                pagamento="%0ACartão%0A"
+                break;
+            case 4:
+                pagamento="%0APix%0AFazer%20pix:%20000000000%20(envie%20o%20comprovante)%0A";
+                break;
+        }
+        return pagamento;
     }
 
 //Script geral, separados em trechos com funções específicas
