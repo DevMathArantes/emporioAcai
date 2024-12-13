@@ -209,7 +209,7 @@
                 get('esquecer'+i).style.display='none';
 
                 //Adicionando o pedido ao link
-                link+=get('nomeCarrinho'+i).innerHTML+"%0A";
+                link+="%0A"+get('nomeCarrinho'+i).innerHTML+"%0A";
                 link+=get('descricaoCarrinho'+i).innerHTML+"%0A";
                 link+=get('adicionaisCarrinho'+i).innerHTML+"%0A";
                 link+=get('lembreteCarrinho'+i).innerHTML+"%0A";
