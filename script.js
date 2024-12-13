@@ -221,7 +221,7 @@
         link+="________________________%0A";
 
         //Inserindo valor do pedido e forma de pagamento ao link
-        link+=pagamento();
+        link+=pagamento;
         link+="%0ATotal%20do%20pedido:%20R$%20"+(totalPedido.toFixed(2)).toString()+"%0A%0A";
 
         //Trocando final por link
@@ -294,8 +294,8 @@
     }
 
     //Verifica o método de pagamento
+    let pagamento;
     function pagamento(){
-        let pagamento;
         switch(get('formaPagamento').value){
             case 1:
                 pagamento="";
@@ -310,7 +310,6 @@
                 pagamento="%0APix%0AFazer%20pix:%20000000000%20(envie%20o%20comprovante)%0A";
                 break;
         }
-        return pagamento;
     }
 
 //Script geral, separados em trechos com funções específicas
