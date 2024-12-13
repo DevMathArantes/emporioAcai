@@ -323,7 +323,7 @@
                 break;
             case "2":
                 let troco = totalPedido - parseFloat(get('troco').value);
-                link += "Dinheiro%0ATroco%20para%20"+(troco.toFixed(2)).toString();
+                link += "Dinheiro%0ATroco:%20"+(troco.toFixed(2)).toString()+"%20(troco%20para%20R$%20"+(get('troco').value)+")%0A";
                 break;
             case "3":
                 link +="Cartão%0A"
