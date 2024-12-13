@@ -221,7 +221,6 @@
         link+="________________________%0A";
 
         //Inserindo valor do pedido e forma de pagamento ao link
-        link+=pagamento;
         link+="%0ATotal%20do%20pedido:%20R$%20"+(totalPedido.toFixed(2)).toString()+"%0A%0A";
 
         //Trocando final por link
@@ -294,20 +293,20 @@
     }
 
     //Verifica o método de pagamento
-    let pagamento;
-    function pagamento(){
+    let tipoPagamento;
+    function verificaPagamento(){
         switch(get('formaPagamento').value){
-            case 1:
-                pagamento="";
+            case "1":
                 break;
-            case 2:
-                pagamento="%0ADinheiro%0ATroco%20para%20R$%20"+((get('troco').value).toFixed(2)).toString;
+            case "2":
+                tipoPagamento = "Dinheiro";
+                get('troco').style.display='block';
                 break;
-            case 3:
-                pagamento="%0ACartão%0A"
+            case "3":
+                tipoPagamento = "Cartão";
                 break;
-            case 4:
-                pagamento="%0APix%0AFazer%20pix:%20000000000%20(envie%20o%20comprovante)%0A";
+            case "4":
+                tipoPagamento = "Pix";
                 break;
         }
     }
