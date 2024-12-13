@@ -168,25 +168,66 @@
         totalIds++;
         get('pedido').innerHTML+=`
             <div id="produtoCarrinho${totalIds}" class="produtoCarrinho">
-                <h3>${get('nome'+identificador).innerHTML}</h3>
-                <p>${get('descricao'+identificador).innerHTML}</p>
-                <p id="adicionaisCarrinho"></p>
-                <p>${get('lembrete').value}</p>
-                <span></span>
-                <button onclick="esquecer('${totalIds}')">Esquecer</button>
+                <h3 id="nomeCarrinho${totalIds}">${get('nome'+identificador).innerHTML}</h3>
+                <p id="descricaoCarrinho${totalIds}">${get('descricao'+identificador).innerHTML}</p>
+                <p id="adicionaisCarrinho${totalIds}"></p>
+                <p id="lembreteCarrinho${totalIds}">${get('lembrete').value}</p>
+                <span id="valorCarrinho${totalIds}">Total: ${totalProduto(identificador)}</span>
+                <button id="esquecer${totalIds}" onclick="esquecer('${totalIds}')">Esquecer</button>
             </div>
         `
         for(let i = 1; i <= adicionaisInclusos; i++){
-            get('adicionaisCarrinho').innerHTML+=`${get('adicionarIncluso'+i).value} |`;
+            get('adicionaisCarrinho'+totalIds).innerHTML+=`${get('adicionarIncluso'+i).value} |`;
         }
         for(let i = 1; i <= adicionais; i++){
-            get('adicionaisCarrinho').innerHTML+=`${get('adicionalExtra'+i).value} |`
+            get('adicionaisCarrinho'+totalIds).innerHTML+=`${get('adicionalExtra'+i).value} |`
         }
 
         //Chamando funções auxiliares
         interagirModal('confirmarPedido');
         
         get('totalItens').innerHTML=totalProdutos.toString();
+    }
+
+    //Gera o link do pedido
+    let totalPedido = 0.0
+    let link = "https://wa.me/551631723514?text=Pedido%20para:%20";
+    function gerarPedido(){
+
+        //Inserindo dados do formulário ao link
+        link +=get('nome').value +"%0AEndereço:%0A";
+        for(let i = 1; i <= 4; i++){
+            link+=get('endereco'+i).value+"%0A";
+        }
+        link+="________________________%0A";
+
+        //Inserindo dados do pedido ao link
+        for(let i = 1; i <= totalIds; i++){
+            if(get('produtoCarrinho'+i).style.display != 'none'){
+                
+                //Retirando as modificações de pedido
+                get('esquecer'+i).style.display='none';
+
+                //Adicionando o pedido ao link
+                link+=get('nomeCarrinho'+i).innerHTML+"%0A";
+                link+=get('descricaoCarrinho'+i).innerHTML+"%0A";
+                link+=get('adicionaisCarrinho'+i).innerHTML+"%0A";
+                link+=get('lembreteCarrinho'+i).innerHTML+"%0A";
+                link+=get('valorCarrinho'+i).innerHTML+"%0A%0A";
+
+                totalPedido+=parseFloat((get('valorCarrinho'+i).innerHTML).slice(-6));
+            }
+        }
+        link+="________________________%0A";
+
+        //Inserindo valor do pedido e forma de pagamento ao link
+        link+="%0ATotal%20do%20pedido:%20R$%20"+(totalPedido.toFixed(2)).toString();
+
+        //Trocando final por link
+        get('gerarLista').style.display='none';
+        get('informacoesCliente').style.display='none';
+        get('pedido').innerHTML+=`<a href="${link}">Enviar Pedido</a>`
+
     }
 
 //Funções auxiliares
@@ -239,6 +280,16 @@
         get('produtoCarrinho'+identificador).style.display='none';
         totalProdutos--;
         get('totalItens').innerHTML=totalProdutos.toString();
+    }
+
+    //Calcula total do produto
+    function totalProduto(identificador){
+        let valorTotal = parseFloat((get('valor'+identificador).innerHTML).slice(-5));
+        for(let i = 1; i <= adicionais; i++){
+            let valorAdicional = parseFloat((get('adicionalExtra'+i).value).slice(-5));
+            valorTotal += valorAdicional;
+        }
+        return "R$ "+(valorTotal.toFixed(2)).toString();
     }
 
 //Script geral, separados em trechos com funções específicas
