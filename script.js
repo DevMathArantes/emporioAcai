@@ -221,12 +221,18 @@
         link+="________________________%0A";
 
         //Inserindo valor do pedido e forma de pagamento ao link
+        adicionarPagamento();
         link+="%0ATotal%20do%20pedido:%20R$%20"+(totalPedido.toFixed(2)).toString()+"%0A%0A";
 
         //Trocando final por link
         get('gerarLista').style.display='none';
         get('informacoesCliente').style.display='none';
-        get('pedido').innerHTML+=`<a href="${link}">Enviar Pedido</a>`
+
+        //Adicionando link e total do pedido
+        get('pedido').innerHTML+=`
+            <span>Total do pedido: R$ ${(totalPedido.toFixed(2)).toString()}</span>
+            <a href="${link}">Enviar Pedido</a>
+        `;
 
     }
 
@@ -307,6 +313,23 @@
                 break;
             case "4":
                 tipoPagamento = "Pix";
+                break;
+        }
+    }
+
+    function adicionarPagamento(){
+        switch(get('formaPagamento').value){
+            case "1":
+                break;
+            case "2":
+                let troco = totalPedido - parseFloat(get('troco').value);
+                link += "Dinheiro%0ATroco%20para%20"+(troco.toFixed(2)).toString();
+                break;
+            case "3":
+                link +="Cartão%0A"
+                break;
+            case "4":
+                link+="Pix%0AEnvie%20para:%2000000000000%20(enviar%20comprovante%20neste%20contato)%0A";
                 break;
         }
     }
