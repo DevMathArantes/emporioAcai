@@ -202,48 +202,68 @@
     //Gera o link do pedido
     let totalPedido = 0.0
     let link = "https://wa.me/551631723514?text=Pedido%20para:%20";
+    let nulo;
+    let verificado;
     function gerarPedido(){
-
-        //Inserindo dados do formulário ao link
-        link +=get('nome').value +"%0AEndereço:%0A";
-        for(let i = 1; i <= 4; i++){
-            link+=get('endereco'+i).value+"%0A";
+        
+        //Executa as devidas verificações
+        verificado = true;
+        verificaCampo('nome', 'Nome');
+        verificaCampo('formaPagamento', 'Forma de pagamento');
+        if(get('endereco').checked){
+            verificaCampo('endereco1', 'Bairro');
+            verificaCampo('endereco2', 'Rua');
+            verificaCampo('endereco3', 'Número');
         }
-        link+="________________________%0A";
+        if(get('troco').style.display=='block'){
+            verificaCampo('troco', 'Troco');
 
-        //Inserindo dados do pedido ao link
-        for(let i = 1; i <= totalIds; i++){
-            if(get('produtoCarrinho'+i).style.display != 'none'){
-                
-                //Retirando as modificações de pedido
-                get('esquecer'+i).style.display='none';
+        }
 
-                //Adicionando o pedido ao link
-                link+="%0A"+get('nomeCarrinho'+i).innerHTML+"%0A";
-                link+=get('descricaoCarrinho'+i).innerHTML+"%0A";
-                link+=get('adicionaisCarrinho'+i).innerHTML+"%0A";
-                link+=get('lembreteCarrinho'+i).innerHTML+"%0A";
-                link+="R$%20"+get('valorCarrinho'+i).innerHTML+"%0A%0A";
-
-                totalPedido+=parseFloat(get('valorCarrinho'+i).innerHTML);
+        if(verificado){
+            //Inserindo dados do formulário ao link
+            link +=get('nome').value +"%0AEndereço:%0A";
+            for(let i = 1; i <= 4; i++){
+                link+=get('endereco'+i).value+"%0A";
             }
+            link+="________________________%0A";
+    
+            //Inserindo dados do pedido ao link
+            for(let i = 1; i <= totalIds; i++){
+                if(get('produtoCarrinho'+i).style.display != 'none'){
+                    
+                    //Retirando as modificações de pedido
+                    get('esquecer'+i).style.display='none';
+    
+                    //Adicionando o pedido ao link
+                    link+="%0A"+get('nomeCarrinho'+i).innerHTML+"%0A";
+                    link+=get('descricaoCarrinho'+i).innerHTML+"%0A";
+                    link+=get('adicionaisCarrinho'+i).innerHTML+"%0A";
+                    link+=get('lembreteCarrinho'+i).innerHTML+"%0A";
+                    link+="R$%20"+get('valorCarrinho'+i).innerHTML+"%0A%0A";
+    
+                    totalPedido+=parseFloat(get('valorCarrinho'+i).innerHTML);
+                }
+            }
+            link+="________________________%0A";
+    
+            //Inserindo valor do pedido e forma de pagamento ao link
+            adicionarPagamento();
+            link+="%0ATotal%20do%20pedido:%20R$%20"+(totalPedido.toFixed(2)).toString()+"%0A%0A";
+    
+            //Trocando final por link
+            get('gerarLista').style.display='none';
+            get('informacoesCliente').style.display='none';
+    
+            //Adicionando link e total do pedido
+            get('pedido').innerHTML+=`
+                <span>Total do pedido: R$ ${(totalPedido.toFixed(2)).toString()}</span>
+                <a href="${link}">Enviar Pedido</a>
+            `;
         }
-        link+="________________________%0A";
-
-        //Inserindo valor do pedido e forma de pagamento ao link
-        adicionarPagamento();
-        link+="%0ATotal%20do%20pedido:%20R$%20"+(totalPedido.toFixed(2)).toString()+"%0A%0A";
-
-        //Trocando final por link
-        get('gerarLista').style.display='none';
-        get('informacoesCliente').style.display='none';
-
-        //Adicionando link e total do pedido
-        get('pedido').innerHTML+=`
-            <span>Total do pedido: R$ ${(totalPedido.toFixed(2)).toString()}</span>
-            <a href="${link}">Enviar Pedido</a>
-        `;
-
+        else{
+            alert("Campo "+nulo+" está incorreto!")
+        }
     }
 
 //Funções auxiliares
@@ -312,16 +332,16 @@
     let tipoPagamento;
     function verificaPagamento(){
         switch(get('formaPagamento').value){
-            case "1":
-                break;
             case "2":
                 tipoPagamento = "Dinheiro";
                 get('troco').style.display='block';
                 break;
             case "3":
+                get('troco').style.display='none';
                 tipoPagamento = "Cartão";
                 break;
             case "4":
+                get('troco').style.display='none';
                 tipoPagamento = "Pix";
                 break;
         }
@@ -344,6 +364,15 @@
                 break;
         }
     }
+
+    //Verifica se o campo estão devidamente preenchidos
+    function verificaCampo(campo, vazio){
+        if(get(campo).value===""){
+            verificado = false;
+            nulo = vazio;
+        }
+    }
+
 
 //Script geral, separados em trechos com funções específicas
 
