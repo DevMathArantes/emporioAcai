@@ -4,7 +4,6 @@
 
 /*Estilos*/
 @import url('Styles/header.css');
-@import url('Styles/nav.css');
 @import url('Styles/footer.css');
 @import url('Styles/cardapio.css');
 @import url('Styles/main.css');
@@ -39,10 +38,12 @@ body{
 button{
     font-family: var(--fontTitulos);
     font-size: 1rem;
+    background-color: var(--cor1);
+    color: var(--cor2);
 }
 a, p, label{
     font-family: var(--fontPadrao);
-    font-size: 0.8rem;
+    font-size: 0.7rem;
 }
 a{
     text-decoration: none;
@@ -82,6 +83,9 @@ select{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+    }
+    .carrosselItem h3{
+        padding-right: 1em;
     }
 
 .pedir{

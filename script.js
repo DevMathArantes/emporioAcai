@@ -28,10 +28,10 @@
     ];
 
     let Bordas = [
-        "Borda mussarela R$ 21.00",
-        "Borda catupiry R$ 16.00",
-        "Borda cheddar R$ 16.00",
-        "Borda de nutella R$ 16.00"
+        "Musarela R$ 21.00",
+        "Catupiry R$ 16.00",
+        "Cheddar R$ 16.00 ",
+        "Nutella R$ 16.00 "
     ];
 
     let SaborSorvetes = [
@@ -100,16 +100,26 @@
     function mudarDescricao(identificador){
         get('descricao'+identificador).innerHTML=`${get('mudarDescricao'+identificador).value}`;
     }
+
+    //Adiciona valores do select a descrição do produto
+    function adicionarDescricao(identificador){
+        
+        
+       
+
+    }
     
     //Muda o titulo e preço do produto de acordo com o tamanho
     function mudarTamanho(identificador, maior, menor){
+        let novoNome = (get('nome'+identificador).innerHTML).slice(0, -7);
+        get('nome'+identificador).innerHTML=novoNome;
         if(get('tamanho'+identificador).value == 1){
-            get('valor'+identificador).innerHTML='R$ '+ maior;
-            get('mostrarTamanho'+identificador).innerHTML= "(Grande)"
+            get('valor'+identificador).innerHTML=maior;
+            get('nome'+identificador).innerHTML+="Grande)";
         }
         else{
-            get('valor'+identificador).innerHTML='R$ '+ menor;
-            get('mostrarTamanho'+identificador).innerHTML="(Meia)"
+            get('valor'+identificador).innerHTML=menor;
+            get('nome'+identificador).innerHTML+="Média) ";
         }
     }
 
@@ -137,7 +147,7 @@
             <div id="adicionaisInclusos"></div>
             <div id="adicionais"></div>
             <button id="criarAdicional" class="pedir" onclick="criarAdicional()">+ Adicional</button>
-            <span>${get('valor'+identificador).innerHTML}</span>
+            <span>R$ ${get('valor'+identificador).innerHTML}</span>
             <input id="lembrete" type="text" placeholder="Deseja adicionar algum lembrete ?">
             <button onclick="subirCarrinho('${identificador}', ${adicionaisInclusos})" class="pedir">
                 Confirmar
@@ -172,7 +182,7 @@
                 <p id="descricaoCarrinho${totalIds}">${get('descricao'+identificador).innerHTML}</p>
                 <p id="adicionaisCarrinho${totalIds}"></p>
                 <p id="lembreteCarrinho${totalIds}">${get('lembrete').value}</p>
-                <span id="valorCarrinho${totalIds}">Total: ${totalProduto(identificador)}</span>
+                <span>Total: R$ <i id="valorCarrinho${totalIds}">${totalProduto(identificador)}</i></span>
                 <button id="esquecer${totalIds}" onclick="esquecer('${totalIds}')">Esquecer</button>
             </div>
         `
@@ -213,9 +223,9 @@
                 link+=get('descricaoCarrinho'+i).innerHTML+"%0A";
                 link+=get('adicionaisCarrinho'+i).innerHTML+"%0A";
                 link+=get('lembreteCarrinho'+i).innerHTML+"%0A";
-                link+=get('valorCarrinho'+i).innerHTML+"%0A%0A";
+                link+="R$%20"+get('valorCarrinho'+i).innerHTML+"%0A%0A";
 
-                totalPedido+=parseFloat((get('valorCarrinho'+i).innerHTML).slice(-6));
+                totalPedido+=parseFloat(get('valorCarrinho'+i).innerHTML);
             }
         }
         link+="________________________%0A";
@@ -290,12 +300,12 @@
 
     //Calcula total do produto
     function totalProduto(identificador){
-        let valorTotal = parseFloat((get('valor'+identificador).innerHTML).slice(-5));
+        let valorTotal = parseFloat(get('valor'+identificador).innerHTML);
         for(let i = 1; i <= adicionais; i++){
             let valorAdicional = parseFloat((get('adicionalExtra'+i).value).slice(-5));
             valorTotal += valorAdicional;
         }
-        return "R$ "+(valorTotal.toFixed(2)).toString();
+        return (valorTotal.toFixed(2)).toString();
     }
 
     //Verifica o método de pagamento
@@ -315,14 +325,15 @@
                 tipoPagamento = "Pix";
                 break;
         }
-    }
+    } 
 
+    //Adiciona os dados de pagamento ao link
     function adicionarPagamento(){
         switch(get('formaPagamento').value){
             case "1":
                 break;
             case "2":
-                let troco = totalPedido - parseFloat(get('troco').value);
+                let troco = parseFloat(get('troco').value) - totalPedido;
                 link += "Dinheiro%0ATroco:%20"+(troco.toFixed(2)).toString()+"%20(troco%20para%20R$%20"+(get('troco').value)+")%0A";
                 break;
             case "3":
@@ -352,4 +363,9 @@
     }
     for(let i = 27; i<= 30; i++){
         preencherLista('mudarDescricao'+i, SaborSorvetes, false);
+    }
+
+    //Bordas 
+    for(let i = 71; i <= 113; i++){
+        preencherLista('borda'+i, Bordas, false);
     }
