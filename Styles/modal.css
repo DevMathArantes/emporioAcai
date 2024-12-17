@@ -10,8 +10,6 @@
 }
 .voltar{
     width: 7em;
-    background-color: var(--cor1);
-    color: var(--cor2);
     border: none;
     z-index: 2;
     position: fixed;

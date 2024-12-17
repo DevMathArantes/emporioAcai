@@ -5,7 +5,6 @@
 /*Estilos*/
 @import url('Styles/header.css');
 @import url('Styles/footer.css');
-@import url('Styles/cardapio.css');
 @import url('Styles/main.css');
 @import url('Styles/modal.css');
 @import url('Styles/categoria.css');
@@ -39,6 +38,7 @@ button{
     font-size: 1rem;
     background-color: var(--cor1);
     color: var(--cor2);
+    border: 0;
 }
 a, p, label{
     font-family: var(--fontPadrao);
@@ -87,10 +87,8 @@ select{
         padding-right: 1em;
     }
 
+/*Botão padrão para pedidos*/
 .pedir{
-    background-color: var(--cor1);
-    color: var(--cor2);
-    border: 0;
     border-radius: 10px;
     padding: 0.5em;
     font-size: 1rem;

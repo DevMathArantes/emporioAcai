@@ -27,8 +27,6 @@
     border-radius: 10px;
     padding: 0.5em;
     border: 0;
-    background-color: var(--cor1);
-    color: var(--cor2);
 }
 
 #adicionaisInclusos, #adicionais{

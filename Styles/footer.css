@@ -22,7 +22,7 @@ footer h2{
     margin: 1em auto;
 }
 footer h3{
-    font-size: 0.8rem;
+    font-size: 1.2rem;
     margin: 1em 0;
 }
 
@@ -36,7 +36,17 @@ footer h3{
 }
 
 @media screen and (min-width: 724px){
+
+    /*Carrossel com fotos do ambiente*/
     .ambienteFilho{
         width: 100%;
+    }
+
+}
+
+@media screen and (min-width: 1300px){
+    /*Carrossel com fotos do ambiente*/
+    .ambienteFilho{
+        width: 75%;
     }
 }
