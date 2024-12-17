@@ -64,5 +64,31 @@ nav a span, nav button i{
 }
 
 @media screen and (min-width: 724px){
-
+    /*Nav padrão da página*/
+    nav{
+        padding: 1em;
+    }
+    nav a span, nav button i{
+        display: block;
+        font-size: 0.7rem;
+    }
+    nav a, nav button{
+        width: 12em;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5em;
+    }
+    nav button img, nav a img{
+        width: 2em;
+        height: 2em;
+    }
+    .iconeCarrinho span{
+        display: flex;
+        align-items: center;
+        gap: 0.5em;
+    }
+    .iconeCarrinho img{
+        width: 1.5em;
+        height: 1.5em;
+    }
 }

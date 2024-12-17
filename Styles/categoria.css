@@ -13,3 +13,7 @@
 .categoria .carrosselItem{
     gap: 0.5em;
 }
+
+@media screen and (min-width: 724px){
+    
+}

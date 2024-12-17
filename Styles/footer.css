@@ -1,3 +1,4 @@
+/*Campo inferior da página*/
 footer{
     background-color: var(--cor1);
     color: var(--cor2);
@@ -23,4 +24,19 @@ footer h2{
 footer h3{
     font-size: 0.8rem;
     margin: 1em 0;
+}
+
+/*Carrossel com fotos do ambiente*/
+.ambienteFilho{
+    width: 200%;
+}
+.ambienteFilho img{
+    width: 40%;
+    border-radius: 5px;
+}
+
+@media screen and (min-width: 724px){
+    .ambienteFilho{
+        width: 100%;
+    }
 }
