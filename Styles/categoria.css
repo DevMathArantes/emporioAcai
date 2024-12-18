@@ -1,3 +1,4 @@
+/*Categorias dos itens*/
 .categoria{
     align-items: center;
     flex-direction: column;
@@ -6,11 +7,22 @@
     z-index: 1;
 }
 .categoria img{
-    width: 100%;
+    width: 18em;
     box-shadow: 0px 0px 10px var(--cor3);
 }
 .categoria .carrosselItem{
     gap: 0.5em;
+}
+.imagemEntrada{
+    width: 100%;
+    background-size: 100%;
+    background-position: center;
+    padding: 10em;
+}
+
+/*Imagens de entrada*/
+.acais{
+    background-image: url(../Assets/Imagens/acai.jpg);
 }
 
 /*Itens dentro do carrossel*/
@@ -48,8 +60,8 @@
     align-items: center;
 }
 .produtoEspecial img{
-    width: 90%;
     border-radius: 20px;
+    max-width: 90%;
 }
 .produtoEspecial p{
     margin: 0;
@@ -58,6 +70,10 @@
 /*Mesmo produto com variações*/
 .produtoVariado{
     width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
 }
 .produtoVariado h3{
     width: 100%;
@@ -80,6 +96,7 @@
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid var(--cor1);
+    width: 18em;
 }
 .produtoVariado li button{
     width: 8em;

@@ -69,6 +69,16 @@ nav a span, nav button i{
 
 @media screen and (min-width: 724px){
    
+    /*Parte superior da página*/
+    header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    header img{
+        width: 20em;
+    }
+
     /*Nav padrão da página*/
     nav{
         padding: 1em;

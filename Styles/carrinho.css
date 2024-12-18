@@ -49,7 +49,6 @@
 .produtoCarrinho h3{
     color: var(--cor1);
 }
-
 .pedido a{
     background-color: var(--cor1);
     color: var(--cor2);
@@ -62,7 +61,6 @@
     background-repeat: no-repeat;
     background-position: 3em;
 }
-
 .produtoCarrinho button{
     padding: 0.5em 3em;
     border-radius: 5px;
