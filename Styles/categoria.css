@@ -24,6 +24,21 @@
 .acais{
     background-image: url(../Assets/Imagens/acai.jpg);
 }
+.sorvetes{
+    background-image: url(../Assets/Imagens/sorvetes.jpg);
+}
+.refrescos{
+    background-image: url(../Assets/Imagens/bebidas.jpg);
+}
+.lanches{
+    background-image: url(../Assets/Imagens/lanche.jpg);
+}
+.pizzas{
+    background-image: url(../Assets/Imagens/pizzas.jpg);
+}
+.especiais{
+    background-image: url(../Assets/Imagens/especiais.png);
+}
 
 /*Itens dentro do carrossel*/
 .combos{
