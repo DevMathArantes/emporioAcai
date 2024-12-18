@@ -353,10 +353,10 @@
                 break;
             case "2":
                 let troco = parseFloat(get('troco').value) - totalPedido;
-                link += "Dinheiro%0ATroco:%20"+(troco.toFixed(2))
-                    +"%20(troco%20para%20R$%20" 
-                    +((get('troco').value)).toFixed(2)
-                    +")%0A";
+                link += "Dinheiro%0ATroco:%20"+(troco.toFixed(2)).toString()
+                +"%20(troco%20para%20R$%20"
+                +((get('troco').value)).toFixed(2)
+                +")%0A";
                 break;
             case "3":
                 link +="Cartão%0A"
