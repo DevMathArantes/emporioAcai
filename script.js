@@ -217,7 +217,6 @@
         }
         if(get('troco').style.display=='block'){
             verificaCampo('troco', 'Troco');
-
         }
 
         if(verificado){

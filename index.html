@@ -8,8 +8,6 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-
     <header>
         <nav>
             <h2 id="status"></h2>
@@ -31,7 +29,6 @@
             </button>
         </nav>
         <img src="Assets/Imagens/logo.jpg" alt="logo emporio do açai">
-        
         <h1>Seja bem vindo</h1>
         <p>
             <img src="Assets/icons/relogio.png" alt="icone relogio">
@@ -39,7 +36,9 @@
         </p>
         <p>
             <img src="Assets/icons/local.png" alt="icone local">
-            Avenida Coronel Quito, 147 / Centro - Igarapava (SP)
+            <a href="https://maps.app.goo.gl/rpcVGbXBotXaR6qG8">
+                Avenida Coronel Quito, 147 / Centro - Igarapava (SP)
+            </a>
         </p>
     </header>
 
@@ -160,21 +159,22 @@
 
                         <!--Tigelas-->
                         <h2>Tigelas</h2>
-                        <div class="produtosPadrao">
-                            <div class="produtoPadrao">
-                                <img src="Assets/Imagens/tigela600ml.jpg" alt="tigela de 600 ml de açai">
-                                <h3 id="nome12">Tigela 1 litro</h3>
-                                <p id="descricao12"></p>
-                                <span>R$ <i id="valor12">22.00</i></span>
-                                <button onclick="confirmar('12', 3, true, 1)" class="pedir">Pedir</button>
-                            </div>
-                            <div class="produtoPadrao">
-                                <img src="Assets/Imagens/tigela1litro.jpg" alt="tigela de 1 litro">
-                                <h3 id="nome13">Tigela 1 litro</h3>
-                                <p id="descricao13"></p>
-                                <span>R$ <i id="valor13">22.00</i></span>
-                                <button onclick="confirmar('13', 3, true, 1)" class="pedir">Pedir</button>
-                            </div>
+                        <div class="produtoVariado">
+                            <img src="Assets/Imagens/tigelaAcai.jpg" alt="tigela de açai">
+                            <ul>
+                                <li>
+                                    <h3 id="nome12">Tigela 1 Litro</h3>
+                                    <p id="descricao12">Tigela com 1 litro de açai</p>
+                                    <span>R$ <i id="valor12">22.00</i></span>
+                                    <button onclick="confirmar('12', 0, true, 1)">Pedir</button>
+                                </li>
+                                <li>
+                                    <h3 id="nome13">Tigela 600 Ml</h3>
+                                    <p id="descricao13">Tigela com 600 Ml de açai</p>
+                                    <span>R$ <i id="valor13">15.00</i></span>
+                                    <button onclick="confirmar('13', 0, true, 1)">Pedir</button>
+                                </li>
+                            </ul>
                         </div>
 
                     </div>
@@ -542,7 +542,6 @@
         </section>
 
         <!--Salgados-->
-        
         <section class="mainCarrossel">
             <h2>Sabores que inspiram</h2>
             <div class="carrossel">

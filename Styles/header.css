@@ -23,6 +23,10 @@ header p img{
     width: 1.2em;
     margin: 0.5em 0;
 }
+header p a{
+    color: var(--cor1);
+    text-decoration: underline;
+}
 
 /*Nav padrão da página*/
 nav{
