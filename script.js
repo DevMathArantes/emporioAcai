@@ -356,7 +356,7 @@
                 link += "Dinheiro%0ATroco:%20"
                 +(troco.toFixed(2)).toString()
                 +"%20(troco%20para%20R$%20"
-                +(get('troco').value).toFixed(2)
+                +((get('troco').value).toFixed(2)).toString()
                 +")%0A";
                 break;
             case "3":
