@@ -136,42 +136,47 @@
     let lista;
     function confirmar(identificador, adicionaisInclusos, adicionaisExtra, tipoLista){
 
-        //Reiniciando contagem de adicionais
-        adicionais = 0;
+        if(aberto()){
+            //Reiniciando contagem de adicionais
+            adicionais = 0;
 
-        //Chamando funções auxiliares
-        interagirModal('confirmarPedido');
-        mostrarLista(tipoLista);
-        
+            //Chamando funções auxiliares
+            interagirModal('confirmarPedido');
+            mostrarLista(tipoLista);
+            
 
-        //Preenchendo o modal com informações do produto
-        get('confirmarPedido').innerHTML=`
-            <img src="Assets/Imagens/logo.jpg" alt="logo empório do açai">
-            <button onclick="interagirModal('confirmarPedido')" class="voltar">Voltar</button>
-            <h2>Boa escolha</h2>
-            <h3>${get('nome'+identificador).innerHTML}</h3>
-            <p>${get('descricao'+identificador).innerHTML}</p>
-            <div id="adicionaisInclusos"></div>
-            <div id="adicionais"></div>
-            <button id="criarAdicional" class="pedir" onclick="criarAdicional()">+ Adicional</button>
-            <span>R$ ${get('valor'+identificador).innerHTML}</span>
-            <input id="lembrete" type="text" placeholder="Deseja adicionar algum lembrete ?">
-            <button onclick="subirCarrinho('${identificador}', ${adicionaisInclusos})" class="pedir">
-                Confirmar
-            </button>
-        `;
-
-        //Chamando funções auxiliares de verificação
-        verificarExtras(adicionaisExtra);
-
-        //Adicionando selects inclusos
-        for(let i = 1; i <= adicionaisInclusos; i++){
-            get('adicionaisInclusos').innerHTML+=`
-                <select id="adicionarIncluso${i}" class="adicionalIncluso">
-                    <option value="Nenhum">Nenhum</option>
-                </select>
+            //Preenchendo o modal com informações do produto
+            get('confirmarPedido').innerHTML=`
+                <img src="Assets/Imagens/logo.jpg" alt="logo empório do açai">
+                <button onclick="interagirModal('confirmarPedido')" class="voltar">Voltar</button>
+                <h2>Boa escolha</h2>
+                <h3>${get('nome'+identificador).innerHTML}</h3>
+                <p>${get('descricao'+identificador).innerHTML}</p>
+                <div id="adicionaisInclusos"></div>
+                <div id="adicionais"></div>
+                <button id="criarAdicional" class="pedir" onclick="criarAdicional()">+ Adicional</button>
+                <span>R$ ${get('valor'+identificador).innerHTML}</span>
+                <input id="lembrete" type="text" placeholder="Deseja adicionar algum lembrete ?">
+                <button onclick="subirCarrinho('${identificador}', ${adicionaisInclusos})" class="pedir">
+                    Confirmar
+                </button>
             `;
-            preencherLista('adicionarIncluso'+i, lista, true);
+
+            //Chamando funções auxiliares de verificação
+            verificarExtras(adicionaisExtra);
+
+            //Adicionando selects inclusos
+            for(let i = 1; i <= adicionaisInclusos; i++){
+                get('adicionaisInclusos').innerHTML+=`
+                    <select id="adicionarIncluso${i}" class="adicionalIncluso">
+                        <option value="Nenhum">Nenhum</option>
+                    </select>
+                `;
+                preencherLista('adicionarIncluso'+i, lista, true);
+            }
+        }
+        else{
+            alert("No momento não estamos recebendo pedidos, agradecemos pela preferência!")
         }
     }
 

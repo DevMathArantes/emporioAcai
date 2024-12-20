@@ -125,6 +125,9 @@
     border-radius: 10px 0 0 0;
     margin-left: auto;
 }
+.produtoVariado img{
+    border-radius: 20px;
+}
 
 @media screen and (min-width: 724px){
     
@@ -142,6 +145,9 @@
     }
     .tacas{
         width: 200%;
+    }
+    .bebidas{
+        width: 180%;
     }
 
     /*Produto único*/
@@ -161,6 +167,33 @@
         justify-content: center;
         gap: 2em;
         padding: 1em;
+    }
+
+}
+@media screen and (min-width: 1300px){
+
+    /*Itens dentro do carrossel*/
+    .combos{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .porcoes{
+        width: 100%;
+    }
+    .bebidas{
+        width: 100%;
+    }
+    .tacas{
+        width: 100%;
+    }
+
+    /*Mesmo produto com variações*/
+    .produtoVariado ul{
+        width: 100%;
+        justify-content: left;
+    }
+    .produtoVariado li{
+        width: 22%;
     }
 
 }

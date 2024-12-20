@@ -1,5 +1,8 @@
 /*Campo inferior da página*/
 footer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     background-color: var(--cor1);
     color: var(--cor2);
     text-align: center;
@@ -40,6 +43,13 @@ footer h3{
     /*Carrossel com fotos do ambiente*/
     .ambienteFilho{
         width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        gap: 0.5em;
+        justify-content: space-around;
+    }
+    .ambienteFilho img{
+        width: 23%;
     }
 
 }
@@ -47,6 +57,9 @@ footer h3{
 @media screen and (min-width: 1300px){
     /*Carrossel com fotos do ambiente*/
     .ambienteFilho{
-        width: 75%;
+        width: 100%;
+    }
+    .ambienteFilho img{
+        width: 20%;
     }
 }

@@ -73,7 +73,9 @@
     margin: 1em 0;
 }
 
-
+.entradaCarrinho{
+    background-image: url(../Assets/Imagens/geral.png);
+}
 #troco{
     display: none;
 }
