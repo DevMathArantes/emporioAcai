@@ -366,7 +366,7 @@
                 link +="Cartão%0A"
                 break;
             case "4":
-                link+="Pix%0AEnvie%20para:%2000000000000%20(enviar%20comprovante%20neste%20contato)%0A";
+                link+="Pix%0AEnvie%20para:%2016993383633%0A(enviar%20comprovante%20neste%20contato)%0A";
                 break;
         }
     }
