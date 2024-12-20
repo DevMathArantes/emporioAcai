@@ -66,11 +66,13 @@
                         <h2>Combos</h2>
                         <div class="produtoEspecial">
                             <img src="Assets/Imagens/combo1litro.jpg" alt="1 litro de açai">
-                            <h3 id="nome1">1 Litro de açai</h3>
-                            <p id="descricao1">Escolha até 4 adicionais</p>
-                            <span>R$<i id="valor1"> 34.90</i></span>
-                            <button onclick="confirmar('1', 4, true, 1)" class="pedir">Pedir</button>
-
+                            <div class="especialInfo">
+                                <h3 id="nome1">1 Litro de açai</h3>
+                                <p id="descricao1">Escolha até 4 adicionais</p>
+                                <span>R$<i id="valor1"> 34.90</i></span>
+                                <button onclick="confirmar('1', 4, true, 1)" class="pedir">Pedir</button>
+                            </div>
+                            
                             <!--Combos de açai-->
                             <div class="carrossel">
                                 <div class="carrosselFilho combos">
@@ -195,15 +197,17 @@
                         <h2>Mais sorvete, mais diversão</h2>
                         <div class="produtoEspecial">
                             <img src="Assets/Imagens/sorvete1litro.jpg" alt="1 litro de sorvete">
-                            <h3 id="nome14">1 Litro de sorvete</h3>
-                            <p id="descricao14">Nenhum sabor escolhido</p>
-                            <select onchange="mudarDescricao('14')" id="mudarDescricao14">
-                                <option value="Nenhum sabor escolhido">Escolher</option>
-                                <option value="Leite ninho">Leite ninho</option>
-                                <option value="Chocolate">Chocolate</option>
-                            </select>
-                            <span>R$ <i id="valor14">22.00</i></span>
-                            <button onclick="confirmar('14', 0, true, 1)" class="pedir" >Pedir</button>
+                            <div class="especialInfo">
+                                <h3 id="nome14">1 Litro de sorvete</h3>
+                                <p id="descricao14">Nenhum sabor escolhido</p>
+                                <select onchange="mudarDescricao('14')" id="mudarDescricao14">
+                                    <option value="Nenhum sabor escolhido">Escolher</option>
+                                    <option value="Leite ninho">Leite ninho</option>
+                                    <option value="Chocolate">Chocolate</option>
+                                </select>
+                                <span>R$ <i id="valor14">22.00</i></span>
+                                <button onclick="confirmar('14', 0, true, 1)" class="pedir" >Pedir</button>
+                            </div>
                         
                             <!--Casquinhas-->
                             <div class="carrossel">
@@ -258,15 +262,15 @@
 
                             <!--Sorvete (bola)-->
                             <img src="Assets/Imagens/sorveteBola.jpg" alt="Sorvete bola">
-                            <h3 id="nome19">Sorvete (bola)</h3>
-                            <p id="descricao19">
-                                Nenhum escolhido
-                            </p>
-                            <select onchange="mudarDescricao('19')" id="mudarDescricao19">
-                                <option value="Nenhum escolhido">Escolher</option>
-                            </select>
-                            <span>R$ <i id="valor19">4.50</i></span>
-                            <button onclick="confirmar('19', 0, true, 1)" class="pedir">Pedir</button>
+                            <div class="especialInfo">
+                                <h3 id="nome19">Sorvete (bola)</h3>
+                                <p id="descricao19">Nenhum escolhido</p>
+                                <select onchange="mudarDescricao('19')" id="mudarDescricao19">
+                                    <option value="Nenhum escolhido">Escolher</option>
+                                </select>
+                                <span>R$ <i id="valor19">4.50</i></span>
+                                <button onclick="confirmar('19', 0, true, 1)" class="pedir">Pedir</button>
+                            </div>
 
                             <!--Taças-->
                             <div class="carrossel">
@@ -654,12 +658,14 @@
                         </div>
 
                         <!--Combo Lanche-->
-                        <h2 id="nome58">Combo</h2>
                         <div class="produtoEspecial">
                             <img src="Assets/Imagens/lanche.jpg" alt="combo lanche">
-                            <p id="descricao58">Lanche (2 hamburgueres, queijo, cheddar cremoso, alface e tomate) + Batata + Coca-Cola lata</p>
-                            <span>R$ <i id="valor58">26.90</i></span>
-                            <button onclick="confirmar('58', 0, true, 2)" class="pedir">Pedir</button>
+                            <div class="especialInfo">
+                                <h2 id="nome58">Combo</h2>
+                                <p id="descricao58">Lanche (2 hamburgueres, queijo, cheddar cremoso, alface e tomate) + Batata + Coca-Cola lata</p>
+                                <span>R$ <i id="valor58">26.90</i></span>
+                                <button onclick="confirmar('58', 0, true, 2)" class="pedir">Pedir</button>
+                            </div>
                         </div>
 
                         <!--Lanches com filé-->
@@ -774,7 +780,7 @@
                                         <option value="2">Média</option>
                                     </select>
                                     <select onchange="adicionarDescricao('71')" id="borda71">
-                                        <option value="Nenhuma R$ 00.00 ">Borda</option>
+                                        <option value="Nenhuma R$ 00.00 ">Nenhuma</option>
                                     </select>
                                     <span>R$ <i id="valor71">65.00</i></span>
                                     <button onclick="confirmar('71', 0, false, 3)">Pedir</button>
@@ -1508,102 +1514,104 @@
                         <h2>Tapiocas salgadas</h2>
                         <div class="produtoVariado">
                             <img src="Assets/Imagens/tapioca2.jpg" alt="tapioca salgada">
-                            <li>
-                                <h3 id="nome132">Tapioca salgada</h3>
-                                <p id="descricao132">Frango com tomate</p>
-                                <span>R$ <i id="valor132">18.00</i></span>
-                                <button onclick="confirmar('132', 0, false, 0)">Pedir</button>
-                            </li>
-                            <li>
-                                <h3 id="nome133">Tapioca salgada</h3>
-                                <p id="descricao133">Frango com catupiry</p>
-                                <span>R$ <i id="valor133">18.00</i></span>
-                                <button onclick="confirmar('133', 0, false, 0)">Pedir</button>
-                            </li>
-                            <li>
-                                <h3 id="nome134">Tapioca salgada</h3>
-                                <p id="descricao134">Frango com bacon</p>
-                                <span>R$ <i id="valor134">18.00</i></span>
-                                <button onclick="confirmar('134', 0, false, 0)">Pedir</button>
-                            </li>
-                            <li>
-                                <h3 id="nome135">Tapioca salgada</h3>
-                                <p id="descricao135">Frango com mussarela</p>
-                                <span>R$ <i id="valor135">18.00</i></span>
-                                <button onclick="confirmar('135', 0, false, 0)">Pedir</button>
-                            </li>
-                            <li>
-                                <h3 id="nome136">Tapioca salgada</h3>
-                                <p id="descricao136">Frango com milho</p>
-                                <span>R$ <i id="valor136">18.00</i></span>
-                                <button onclick="confirmar('136', 0, false, 0)">Pedir</button>
-                            </li>
-                            <li>
-                                <h3 id="nome137">Tapioca salgada</h3>
-                                <p id="descricao137">Calabresa com tomate</p>
-                                <span>R$ <i id="valor137">18.00</i></span>
-                                <button onclick="confirmar('137', 0, false, 0)">Pedir</button>
-                            </li>
-                            <li>
-                                <h3 id="nome138">Tapioca salgada</h3>
-                                <p id="descricao138">Calabresa com caturpiry</p>
-                                <span>R$ <i id="valor138">18.00</i></span>
-                                <button onclick="confirmar('138', 0, false, 0)">Pedir</button>
-                            </li>
-                            <li>
-                                <h3 id="nome139">Tapioca salgada</h3>
-                                <p id="descricao139">Calabresa com bacon</p>
-                                <span>R$ <i id="valor139">18.00</i></span>
-                                <button onclick="confirmar('139', 0, false, 0)">Pedir</button>
-                            </li>
-                            <li>
-                                <h3 id="nome140">Tapioca salgada</h3>
-                                <p id="descricao140">Calabresaa com mussarela</p>
-                                <span>R$ <i id="valor140">18.00</i></span>
-                                <button onclick="confirmar('140', 0, false, 0)">Pedir</button>
-                            </li>
-                            <li>
-                                <h3 id="nome141">Tapioca salgada</h3>
-                                <p id="descricao141">Calabresa com milho e mussarela</p>
-                                <span>R$ <i id="valor141">18.00</i></span>
-                                <button onclick="confirmar('141', 0, false, 0)">Pedir</button>
-                            </li>
-                            <li>
-                                <h3 id="nome142">Tapioca salgada</h3>
-                                <p id="descricao142">Presunto e mussarela</p>
-                                <span>R$ <i id="valor142">18.00</i></span>
-                                <button onclick="confirmar('142', 0, false, 0)">Pedir</button>
-                            </li>
-                            <li>
-                                <h3 id="nome143">Tapioca salgada</h3>
-                                <p id="descricao143">Presunto, mussarela e tomate</p>
-                                <span>R$ <i id="valor143">18.00</i></span>
-                                <button onclick="confirmar('143', 0, false, 0)">Pedir</button>
-                            </li>
-                            <li>
-                                <h3 id="nome144">Tapioca salgada</h3>
-                                <p id="descricao144">Presunto, mussarela e catupiry</p>
-                                <span>R$ <i id="valor144">18.00</i></span>
-                                <button onclick="confirmar('144', 0, false, 0)">Pedir</button>
-                            </li>
-                            <li>
-                                <h3 id="nome145">Tapioca salgada</h3>
-                                <p id="descricao145">Presunto, mussarela e milho</p>
-                                <span>R$ <i id="valor145">18.00</i></span>
-                                <button onclick="confirmar('145', 0, false, 0)">Pedir</button>
-                            </li>
-                            <li>
-                                <h3 id="nome146">Tapioca salgada</h3>
-                                <p id="descricao146">Presunto, mussarela e bacon</p>
-                                <span>R$ <i id="valor146">18.00</i></span>
-                                <button onclick="confirmar('146', 0, false, 0)">Pedir</button>
-                            </li>
-                            <li>
-                                <h3 id="nome147">Tapioca salgada</h3>
-                                <p id="descricao147">Moda da casa (bacon, presunto, queijo, catupiry, calabresa e tomate)</p>
-                                <span>R$ <i id="valor147">20.00</i></span>
-                                <button onclick="confirmar('147', 0, false, 0)">Pedir</button>
-                            </li>
+                            <ul>
+                                <li>
+                                    <h3 id="nome132">Tapioca salgada</h3>
+                                    <p id="descricao132">Frango com tomate</p>
+                                    <span>R$ <i id="valor132">18.00</i></span>
+                                    <button onclick="confirmar('132', 0, false, 0)">Pedir</button>
+                                </li>
+                                <li>
+                                    <h3 id="nome133">Tapioca salgada</h3>
+                                    <p id="descricao133">Frango com catupiry</p>
+                                    <span>R$ <i id="valor133">18.00</i></span>
+                                    <button onclick="confirmar('133', 0, false, 0)">Pedir</button>
+                                </li>
+                                <li>
+                                    <h3 id="nome134">Tapioca salgada</h3>
+                                    <p id="descricao134">Frango com bacon</p>
+                                    <span>R$ <i id="valor134">18.00</i></span>
+                                    <button onclick="confirmar('134', 0, false, 0)">Pedir</button>
+                                </li>
+                                <li>
+                                    <h3 id="nome135">Tapioca salgada</h3>
+                                    <p id="descricao135">Frango com mussarela</p>
+                                    <span>R$ <i id="valor135">18.00</i></span>
+                                    <button onclick="confirmar('135', 0, false, 0)">Pedir</button>
+                                </li>
+                                <li>
+                                    <h3 id="nome136">Tapioca salgada</h3>
+                                    <p id="descricao136">Frango com milho</p>
+                                    <span>R$ <i id="valor136">18.00</i></span>
+                                    <button onclick="confirmar('136', 0, false, 0)">Pedir</button>
+                                </li>
+                                <li>
+                                    <h3 id="nome137">Tapioca salgada</h3>
+                                    <p id="descricao137">Calabresa com tomate</p>
+                                    <span>R$ <i id="valor137">18.00</i></span>
+                                    <button onclick="confirmar('137', 0, false, 0)">Pedir</button>
+                                </li>
+                                <li>
+                                    <h3 id="nome138">Tapioca salgada</h3>
+                                    <p id="descricao138">Calabresa com caturpiry</p>
+                                    <span>R$ <i id="valor138">18.00</i></span>
+                                    <button onclick="confirmar('138', 0, false, 0)">Pedir</button>
+                                </li>
+                                <li>
+                                    <h3 id="nome139">Tapioca salgada</h3>
+                                    <p id="descricao139">Calabresa com bacon</p>
+                                    <span>R$ <i id="valor139">18.00</i></span>
+                                    <button onclick="confirmar('139', 0, false, 0)">Pedir</button>
+                                </li>
+                                <li>
+                                    <h3 id="nome140">Tapioca salgada</h3>
+                                    <p id="descricao140">Calabresaa com mussarela</p>
+                                    <span>R$ <i id="valor140">18.00</i></span>
+                                    <button onclick="confirmar('140', 0, false, 0)">Pedir</button>
+                                </li>
+                                <li>
+                                    <h3 id="nome141">Tapioca salgada</h3>
+                                    <p id="descricao141">Calabresa com milho e mussarela</p>
+                                    <span>R$ <i id="valor141">18.00</i></span>
+                                    <button onclick="confirmar('141', 0, false, 0)">Pedir</button>
+                                </li>
+                                <li>
+                                    <h3 id="nome142">Tapioca salgada</h3>
+                                    <p id="descricao142">Presunto e mussarela</p>
+                                    <span>R$ <i id="valor142">18.00</i></span>
+                                    <button onclick="confirmar('142', 0, false, 0)">Pedir</button>
+                                </li>
+                                <li>
+                                    <h3 id="nome143">Tapioca salgada</h3>
+                                    <p id="descricao143">Presunto, mussarela e tomate</p>
+                                    <span>R$ <i id="valor143">18.00</i></span>
+                                    <button onclick="confirmar('143', 0, false, 0)">Pedir</button>
+                                </li>
+                                <li>
+                                    <h3 id="nome144">Tapioca salgada</h3>
+                                    <p id="descricao144">Presunto, mussarela e catupiry</p>
+                                    <span>R$ <i id="valor144">18.00</i></span>
+                                    <button onclick="confirmar('144', 0, false, 0)">Pedir</button>
+                                </li>
+                                <li>
+                                    <h3 id="nome145">Tapioca salgada</h3>
+                                    <p id="descricao145">Presunto, mussarela e milho</p>
+                                    <span>R$ <i id="valor145">18.00</i></span>
+                                    <button onclick="confirmar('145', 0, false, 0)">Pedir</button>
+                                </li>
+                                <li>
+                                    <h3 id="nome146">Tapioca salgada</h3>
+                                    <p id="descricao146">Presunto, mussarela e bacon</p>
+                                    <span>R$ <i id="valor146">18.00</i></span>
+                                    <button onclick="confirmar('146', 0, false, 0)">Pedir</button>
+                                </li>
+                                <li>
+                                    <h3 id="nome147">Tapioca salgada</h3>
+                                    <p id="descricao147">Moda da casa (bacon, presunto, queijo, catupiry, calabresa e tomate)</p>
+                                    <span>R$ <i id="valor147">20.00</i></span>
+                                    <button onclick="confirmar('147', 0, false, 0)">Pedir</button>
+                                </li>
+                            </ul>
                         </div>
 
                     </div>
