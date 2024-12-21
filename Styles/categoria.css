@@ -1,13 +1,9 @@
 /*Categorias dos itens*/
 .categoria{
-    align-items: center;
-    flex-direction: column;
-    gap: 2em;
-    padding-bottom: 3em;
     z-index: 1;
 }
 .categoria img{
-    width: 15em;
+    border-radius: 20px;
     box-shadow: 0px 0px 10px var(--cor3);
 }
 .categoria .carrosselItem{
@@ -41,42 +37,53 @@
 }
 
 /*Itens dentro do carrossel*/
-.combos{
-    width: 250%;
-}
-.combo{
-    width: 25%;
-}
-.porcoes{
-    width: 300%;
-}
-.porcao{
-    width: 20%;
-}
-.tacas{
-    width: 450%;
-}
-.taca{
-    width: 14%;
-}
-.bebida{
-    width: 16%;
-}
-.bebidas{
-    width: 400%;
-}
+
+    /*Combos*/
+    .combos{
+        width: 200%;
+    }
+    .combo{
+        width: 25%;
+    }
+    .combo img{
+        width: 10em;
+    }
+
+    /*Porções*/
+    .porcoes{
+        width: 300%;
+    }
+    .porcao{
+        width: 20%;
+    }
+
+    /*Taças*/
+    .tacas{
+        width: 450%;
+    }
+    .taca{
+        width: 14%;
+    }
+
+    /*Bebidas*/
+    .bebida{
+        width: 16%;
+    }
+    .bebidas{
+        width: 400%;
+    }
 
 /*Produto único*/
 .produtoEspecial{
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 0.5em;
     align-items: center;
+    padding: 1em;
+    text-align: center;
 }
 .produtoEspecial img{
-    border-radius: 20px;
-    max-width: 90%;
+    width: 90%;
 }
 .produtoEspecial p{
     margin: 0;
@@ -86,36 +93,28 @@
     flex-direction: column;
     align-items: center;
     gap: 0.5em;
+    padding: 1em 0;
 }
 
 /*Mesmo produto com variações*/
 .produtoVariado{
-    width: 90%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1em;
 }
 .produtoVariado h3{
     width: 100%;
     padding: 0.5em 0;
 }
-.produtoVariado p{
-    width: 100%;
-}
 .produtoVariado ul{
-    display: flex;
-    flex-direction: column;
-    gap: 0.5em;
     list-style: none;
-    margin: 0;
-    padding: 0;
+    padding: 1em 0;
 }
 .produtoVariado li{
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    align-items: center;
     border-bottom: 1px solid var(--cor1);
     width: 18em;
 }
@@ -125,8 +124,14 @@
     border-radius: 10px 0 0 0;
     margin-left: auto;
 }
+.produtoVariado p{
+    width: 100%;
+}
 .produtoVariado img{
-    border-radius: 20px;
+    width: 18em;
+}
+.produtoVariado select{
+    width: 50%;
 }
 
 @media screen and (min-width: 724px){

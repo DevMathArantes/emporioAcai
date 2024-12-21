@@ -69,12 +69,14 @@ select{
     width: 100%;
     overflow-x: auto;
     padding: 1em 0;
+    height: auto;
 }
     /*Atalhos para carrossel*/
     .carrosselFilho{
         display: flex;
         gap: 1em;
         padding-left: 1em;
+        height: auto;
     }
     .carrosselItem{
         display: flex;
@@ -103,12 +105,12 @@ select{
     top: 12vh;
     left: 1em;
     padding: 0.7em;
-    border-radius: 5px;
     background-image: url("../Assets/icons/voltar.png");
     background-repeat: no-repeat;
     background-size: 1em;
     background-position: 0.5em;
     text-align: center;
+    box-shadow: 0px 0px 10px var(--cor3);
 }
 .pedir{
     border-radius: 10px;

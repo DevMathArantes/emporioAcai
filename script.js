@@ -57,12 +57,12 @@
 
     //Abre e fecha o modal
     function interagirModal(modal){
-        if(get(modal).style.display == 'flex'){
+        if(get(modal).style.display == 'block'){
             get(modal).style.display='none';
             document.body.style.overflow='visible';
         }
         else{
-            get(modal).style.display='flex';
+            get(modal).style.display='block';
             document.body.style.overflow='hidden';
         }
     }
@@ -155,7 +155,7 @@
                 <div id="adicionaisInclusos"></div>
                 <div id="adicionais"></div>
                 <button id="criarAdicional" class="pedir" onclick="criarAdicional()">+ Adicional</button>
-                <span>R$ ${get('valor'+identificador).innerHTML}</span>
+                <p><span>R$ ${get('valor'+identificador).innerHTML}</span></p>
                 <input id="lembrete" type="text" placeholder="Deseja adicionar algum lembrete ?">
                 <button onclick="subirCarrinho('${identificador}', ${adicionaisInclusos})" class="pedir">
                     Confirmar
@@ -176,7 +176,7 @@
             }
         }
         else{
-            alert("No momento não estamos recebendo pedidos, agradecemos pela preferência!")
+            alert("No momento não estamos recebendo pedidos, agradecemos pela preferência! (Horário de funcionamento: 14h30 ás 22h00)")
         }
     }
 

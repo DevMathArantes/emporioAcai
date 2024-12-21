@@ -1,13 +1,20 @@
 .carrinho{
     z-index: 3;
+    padding: 3em 0;
+    text-align: center;
+}
+.carrinho button{
+    margin: 1em 0;
 }
 .carrinho input{
     border: 1px solid var(--cor1);
     border-radius: 5px;
     padding: 0.5em;
+    width: 100%;
 }
 .carrinho select{
     width: 100%;
+    margin: 2em auto;
 }
 
 
@@ -15,7 +22,9 @@
 .formulario{
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 90%;
+    margin: 0 auto;
     gap: 0.5em;
 }
 .endereco{
