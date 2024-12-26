@@ -29,30 +29,16 @@ header p a{
 }
 
 /*Nav padrão da página*/
-nav{
-    width: 100%;
-    display: flex;
-    gap: 1em;
-    position: fixed;
+header nav{
     top: 0;
-    background-color: var(--cor2);
     justify-content: end;
-    align-items: center;
-    padding: 0.5em 2em;
-    box-shadow: 0px 0px 10px var(--cor3);
-    color: var(--cor1);
-    z-index: 4;
 }
-nav a, nav button{
+nav a{
     width: 2.5em;
     display: flex;
     gap: 0.5em;
 }
-nav button{
-    border: none;
-    background-color: transparent;
-}
-nav button img, nav a img{
+nav a img{
     width: 100%;
 }
 nav h2{
@@ -63,9 +49,10 @@ nav h2{
     border-radius: 5px;
     margin-right: auto;
 }
-nav a span, nav button i{
+nav a span{
     display: none;
 }
+
 
 @media screen and (min-width: 724px){
    

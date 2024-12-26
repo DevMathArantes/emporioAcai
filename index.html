@@ -11,7 +11,7 @@
     <header>
 
         <!--Nav com links e redirecionamentos-->
-        <nav>
+        <nav class="nav">
             <h2 id="status"></h2>
             <a href="https://wa.me/551631723514">
                 <img src="Assets/icons/whatsapp.png" alt="icone whats app">
@@ -25,10 +25,6 @@
                 <img src="Assets/icons/facebook.png" alt="icone facebook">
                 <span>Novidades</span>
             </a>
-            <button class="iconeCarrinho" onclick="interagirModal('carrinho')">
-                <span id="totalItens"><i>Carrinho:</i> 0</span>
-                <img src="Assets/icons/carrinho.png" alt="carrinho">
-            </button>
         </nav>
 
         <!--Início da página principal-->
@@ -1752,6 +1748,10 @@
         <h3>Developed by <br> Matheus Arantes Ferreira</h3>
         <h2>MAF</h2>
         <a href="">Acesse nosso site <img src="Assets/icons/link.png" alt="icone link"></a>
+
+        <nav class="nav" id="navInferior">
+            <button onclick="interagirModal('carrinho')">Pedido</button>
+        </nav>
 
     </footer>
 

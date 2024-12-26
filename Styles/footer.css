@@ -28,6 +28,23 @@ footer h3{
     font-size: 1.2rem;
     margin: 1em 0;
 }
+footer nav{
+    bottom: 0;
+    justify-content: center;
+}
+footer nav button{
+    padding: 0.5em;
+    width: 10em;
+    background-image: url(../Assets/icons/carrinho.png);
+    background-size: 1.3em;
+    background-repeat: no-repeat;
+    background-position: 1em;
+}
+
+/*Nav inferior*/
+#navInferior{
+    display: none;
+}
 
 /*Carrossel com fotos do ambiente*/
 .ambienteFilho{

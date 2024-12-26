@@ -198,8 +198,8 @@
 
         //Chamando funções auxiliares
         interagirModal('confirmarPedido');
-        
-        get('totalItens').innerHTML=totalProdutos.toString();
+        verificaCarrinho();
+
     }
 
     //Gera o link do pedido
@@ -281,6 +281,13 @@
     }
 
 //Funções auxiliares
+
+    //Faz o carrinho aparecer quando não está vazio
+    function verificaCarrinho(){
+        if(totalProdutos>0){
+            get('navInferior').style.display='flex';
+        }
+    }
 
     //Define o tipo de lista a preencher os adicionais
     function mostrarLista(tipoLista){
