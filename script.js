@@ -242,14 +242,20 @@
                     get('esquecer'+i).style.display='none';
     
                     //Adicionando o pedido ao link
-                    link+="%0A--------------------------%0A";
                     link+="%0A* "+get('nomeCarrinho'+i).innerHTML+"%0A";
-                    link+="%0A* "+get('descricaoCarrinho'+i).innerHTML+"%0A";
-                    link+="%0A* "+get('adicionaisCarrinho'+i).innerHTML+"%0A";
-                    link+="%0A* "+get('lembreteCarrinho'+i).innerHTML+"%0A";
-                    link+="%0A* "+"R$%20"+get('valorCarrinho'+i).innerHTML+"%0A%0A";
+                    link+="%0A* Descrição: "+get('descricaoCarrinho'+i).innerHTML+"%0A";
+
+                    //Verificando se o item possui adicionais
+                    if(get('adicionaisCarrinho'+i).style.display!='none'){
+                        link+="%0A* Adicionais: "+get('adicionaisCarrinho'+i).innerHTML+"%0A";
+                    }
+
+                    link+="%0A* Lembrete: "+get('lembreteCarrinho'+i).innerHTML+"%0A";
+                    link+="%0A* Total do item: "+"R$%20"+get('valorCarrinho'+i).innerHTML+"%0A%0A";
+                    link+="%0A----------------------------------------------------%0A";
+
+                    //Somando valor ao total
                     totalPedido+=parseFloat(get('valorCarrinho'+i).innerHTML);
-                    link+="%0A--------------------------%0A";
                 }
             }
             link+="%0A_________________________________%0A";
