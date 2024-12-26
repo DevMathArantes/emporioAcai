@@ -126,9 +126,6 @@
 
         //aberto()
         if(true){
-            //Reiniciando contagem de adicionais
-            adicionais = 0;
-            let inclusos = 0;
 
             //Chamando funções auxiliares
             interagirModal('confirmarPedido');
@@ -226,12 +223,16 @@
         }
 
         if(verificado){
+
             //Inserindo dados do formulário ao link
-            link +=get('nome').value +"%0AEndereço:%0A";
-            for(let i = 1; i <= 4; i++){
-                link+=get('endereco'+i).value+"%0A";
+            link+=get('nome').value;
+            if(get('endereco').checked){
+                link += "%0AEndereço:%0A";
+                for(let i = 1; i <= 4; i++){
+                    link+=get('endereco'+i).value+"%0A";
+                }
             }
-            link+="________________________%0A";
+            link+="%0A__________________________________%0A";
     
             //Inserindo dados do pedido ao link
             for(let i = 1; i <= totalIds; i++){
@@ -241,16 +242,17 @@
                     get('esquecer'+i).style.display='none';
     
                     //Adicionando o pedido ao link
-                    link+="%0A"+get('nomeCarrinho'+i).innerHTML+"%0A";
-                    link+=get('descricaoCarrinho'+i).innerHTML+"%0A";
-                    link+=get('adicionaisCarrinho'+i).innerHTML+"%0A";
-                    link+=get('lembreteCarrinho'+i).innerHTML+"%0A";
-                    link+="R$%20"+get('valorCarrinho'+i).innerHTML+"%0A%0A";
-    
+                    link+="%0A--------------------------%0A";
+                    link+="%0A* "+get('nomeCarrinho'+i).innerHTML+"%0A";
+                    link+="%0A* "+get('descricaoCarrinho'+i).innerHTML+"%0A";
+                    link+="%0A* "+get('adicionaisCarrinho'+i).innerHTML+"%0A";
+                    link+="%0A* "+get('lembreteCarrinho'+i).innerHTML+"%0A";
+                    link+="%0A* "+"R$%20"+get('valorCarrinho'+i).innerHTML+"%0A%0A";
                     totalPedido+=parseFloat(get('valorCarrinho'+i).innerHTML);
+                    link+="%0A--------------------------%0A";
                 }
             }
-            link+="________________________%0A";
+            link+="%0A_________________________________%0A";
     
             //Inserindo valor do pedido e forma de pagamento ao link
             adicionarPagamento();
