@@ -6,16 +6,6 @@
 .carrinho button{
     margin: 1em 0;
 }
-.carrinho input{
-    border: 1px solid var(--cor1);
-    border-radius: 5px;
-    padding: 0.5em;
-    width: 100%;
-}
-.carrinho select{
-    width: 100%;
-    margin: 2em auto;
-}
 
 
 /*Formulário final*/
@@ -31,12 +21,7 @@
     width: 100%;
     margin: 0.5em 0;
 }
-.camposEndereco{
-    display: none;
-}
-#endereco:checked ~ #camposEndereco{
-    display: block;
-}
+
 
 /*Pedidos*/
 .pedido{

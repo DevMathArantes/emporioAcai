@@ -3,35 +3,36 @@
     text-align: center;
     padding: 5em 1em;
 }
-.confirmarPedido input{
-    border: 2px solid var(--cor1);
-    color: var(--cor1);
-    padding: 0.5em;
-    border-radius: 5px;
-    width: 100%;
-    margin: 1em 0;
-}
-.confirmarPedido input::placeholder{
-    color: var(--cor1);
-}
+
 .confirmarPedido img{
-    width: 20em;
-}
-.confirmarPedido select{
-    margin: 0.2em 0;
-    width: 20em;
+    width: 10em;
 }
 .confirmarPedido button{
     margin: 1em 0;
     padding: 0.5em;
 }
-
-#adicionaisInclusos, #adicionais{
-    width: 100%;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-}
 .confirmarPedido span{
     font-size: 1.5rem;
+}
+.adicionais{
+    padding: 0 1em;
+    text-align: left;
+
+}
+.adicionais input{
+    width: 10%;
+    margin: 0;
+}
+.adicionais label{
+    text-align: left;
+    width: 90%;
+}
+#adicionais{
+    margin: 2em 0;
+}
+.contagemAdicionais{
+    font-size: 1rem;
+}
+.contagemAdicionais span{
+    font-size: 1rem;
 }

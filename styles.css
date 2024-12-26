@@ -37,6 +37,7 @@ button{
     background-color: var(--cor1);
     color: var(--cor2);
     border: 0;
+    border-radius: 5px;
 }
 a, p, label{
     font-family: var(--fontPadrao);
@@ -53,7 +54,8 @@ span{
 }
 select{
     font-size: 1rem;
-    width: 10em;
+    width: 16em;
+    max-width: 90%;
     margin: 1em 1em 1em 0;
     border: 1px solid var(--cor1);
     padding: 0.5em;
@@ -62,6 +64,17 @@ select{
     color: var(--cor1);
     font-weight: 700;
     text-align: center;
+}
+input{
+    border: 1px solid var(--cor3);
+    color: var(--cor1);
+    padding: 0.5em;
+    border-radius: 5px;
+    width: 100%;
+    margin: 1em 0;
+}
+input::placeholder{
+    color: var(--cor3);
 }
 
 /*Elementos padrão*/
@@ -113,8 +126,34 @@ select{
     box-shadow: 0px 0px 10px var(--cor3);
 }
 .pedir{
-    border-radius: 10px;
     padding: 0.5em;
     font-size: 1rem;
     width: 10em;
 }
+    /*Checkbox que abre o campo dinâmico*/
+    .abrirCampo{
+        display: none;
+    }
+    .labelDinamico{
+        background-color: var(--cor1);
+        padding: 0.5em 4em;
+        width: 16em;
+        border-radius: 5px;
+        color: var(--cor2);
+        font-size: 1rem;
+        display: block;
+        background-image: url(Assets/icons/setaDireita.png);
+        background-size: 1em;
+        background-repeat: no-repeat;
+        background-position: 90%;
+        margin: 0 auto;
+    }
+    .abrirCampo:checked ~.labelDinamico{
+        background-image: url(Assets/icons/setaBaixo.png);
+    }
+    .campoDinamico{
+        display: none;
+    }
+    .abrirCampo:checked ~ .campoDinamico{
+        display: block;
+    }

@@ -1,27 +1,25 @@
 //Listas
 
     let Doces = [
-        "Abacaxi R$ 3.50", "Aveia R$ 2.50", "Banana R$ 3.00", 
-        "Bis branco R$ 3.00", "Bis preto R$ 3.00", "Chantilly R$ 3.00", 
-        "Chocolate branco R$ 3.50", "Chocolate R$ 3.50", "Cobertura de caramelo R$ 2.50", 
-        "Cobertura de chocolate R$ 2.50", "Cobertura de morango R$ 2.50", "Coco ralado R$ 3.00", 
-        "Confete R$ 3.50", "Mel R$ 2.50", "Farinha lactea R$ 3.00",
-        "Granola R$ 3.00", "Granulado R$ 2.50", "Kinder chocolate (ao leite) R$ 3.00",  
-        "Leite condensado R$ 3.50", "Doce de leite R$ 2.50", "Goiabada R$ 3.00",
-        "Paçoca R$ 2.75", "Pó de guaraná R$ 3.00", "Sonho de valsa R$ 3.00",
-        "Space boll R$ 3.50", "Sucrilhos R$ 3.00", "Ovomaltine R$ 3.50", 
-        "Ouro branco R$ 3.00",
-          
-        "Nutella x2 R$ 7.00", "Nutella R$ 4.50", "Castanha R$ 4.50",
-        "Cereja R$ 6.00", "Chocolate suflair R$ 3.99", "Creme de ovomaltine R$ 5.50", 
-        "Creme de paçoca R$ 3.99", "Creme de pistache R$ 6.50", "Leite Ninho R$ 4.00", 
-        "Morango R$ 4.00", "Cupuaçu R$ 4.50", "Creme de morango R$ 5.00",
-        "Creme de kit kat R$ 5.50", "Kit kat R$ 4.99", "Kiwi R$ 5.00",
-        "Pasta de amendoim, sabor leite ninho R$ 4.99", "Whey protein R$ 4.99", "Creme laka R$ 5.00",
-        "Creme de ouro branco R$ 4.50", "Creme de leite ninho R$ 5.00", "Creme de lacta com óreo R$ 5.00",
-        "Creme de valsa R$ 4.50", "Creme diamante negro R$ 5.00", 
-
-        "Ferrero rocher R$ 9.50", "Kinder bueno R$ 9.50", "Kinder ovo R$ 9.50"
+        "Aveia R$ 2.50", "Cobertura de caramelo R$ 2.50", "Cobertura de chocolate R$ 2.50", 
+        "Cobertura de morango R$ 2.50", "Mel R$ 2.50", "Granulado R$ 2.50", 
+        "Doce de leite R$ 2.50", "Paçoca R$ 2.75", "Banana R$ 3.00", 
+        "Bis branco R$ 3.00", "Bis preto R$ 3.00", "Chantilly R$ 3.00",
+        "Coco ralado R$ 3.00", "Granola R$ 3.00", "Farinha lactea R$ 3.00",
+        "Kinder chocolate (ao leite) R$ 3.00", "Sonho de valsa R$ 3.00", "Sucrilhos R$ 3.00",
+        "Pó de guaraná R$ 3.00", "Ouro branco R$ 3.00", "Goiabada R$ 3.00",
+        "Abacaxi R$ 3.50", "Chocolate branco R$ 3.50", "Chocolate R$ 3.50", 
+        "Confete R$ 3.50", "Leite condensado R$ 3.50", "Space boll R$ 3.50",
+        "Chocolate suflair R$ 3.99", "Creme de paçoca R$ 3.99", 
+        "Ovomaltine R$ 3.50", "Leite Ninho R$ 4.00", "Morango R$ 4.00", 
+        "Nutella R$ 4.50", "Castanha R$ 4.50", "Creme de ouro branco R$ 4.50", 
+        "Cupuaçu R$ 4.50", "Creme de valsa R$ 4.50", "Kit kat R$ 4.99",
+        "Pasta de amendoim, sabor leite ninho R$ 4.99", "Whey protein R$ 4.99", "Creme diamante negro R$ 5.00",
+        "Creme de morango R$ 5.00", "Kiwi R$ 5.00", "Creme laka R$ 5.00",
+        "Creme de leite ninho R$ 5.00", "Creme de lacta com óreo R$ 5.00", "Creme de ovomaltine R$ 5.50", 
+        "Creme de kit kat R$ 5.50", "Cereja R$ 6.00", "Creme de pistache R$ 6.50", 
+        "Nutella x2 R$ 7.00", "Ferrero rocher R$ 9.50", "Kinder bueno R$ 9.50", 
+        "Kinder ovo R$ 9.50"
     ];
 
     let Lanches = [ 
@@ -85,20 +83,10 @@
     }
 
     //Preenche um select com uma lista de adicionais, inclusos ou não
-    function preencherLista(campo, lista, incluso){
-        if(incluso){
-            for(let i = 0; i < lista.length; i++){
-                if(parseFloat(lista[i].slice(-5)) < 3.99){
-                    get(campo).innerHTML+=`<option value="${lista[i].slice(0, -8)}">${lista[i].slice(0, -8)}</option>`;
-                }
-            }
-        }
-        else{
+    function preencherLista(campo, lista){
             for(let i = 0; i < lista.length; i++){
                 get(campo).innerHTML+=`<option value="${lista[i]}">${lista[i]}</option>`;
             }
-        }
-        
     }
 
     //Mudar descrição de acordo com value de um select
@@ -136,9 +124,11 @@
     let lista;
     function confirmar(identificador, adicionaisInclusos, adicionaisExtra, tipoLista){
 
-        if(aberto()){
+        //aberto()
+        if(true){
             //Reiniciando contagem de adicionais
             adicionais = 0;
+            let inclusos = 0;
 
             //Chamando funções auxiliares
             interagirModal('confirmarPedido');
@@ -152,28 +142,26 @@
                 <h2>Boa escolha</h2>
                 <h3>${get('nome'+identificador).innerHTML}</h3>
                 <p>${get('descricao'+identificador).innerHTML}</p>
-                <div id="adicionaisInclusos"></div>
-                <div id="adicionais"></div>
-                <button id="criarAdicional" class="pedir" onclick="criarAdicional()">+ Adicional</button>
-                <p><span>R$ ${get('valor'+identificador).innerHTML}</span></p>
+                <input class="abrirCampo" id="abrirAdicionais" type="checkbox">
+                <label id="revelarAdicionais" class="labelDinamico" for="abrirAdicionais">Ver Adicionais</label>
+                <div class="campoDinamico" id="adicionais">
+                    
+                </div>
+                <p>R$<span id="confirmarValor"> ${get('valor'+identificador).innerHTML}</span></p>
                 <input id="lembrete" type="text" placeholder="Deseja adicionar algum lembrete ?">
-                <button onclick="subirCarrinho('${identificador}', ${adicionaisInclusos})" class="pedir">
+                <button onclick="subirCarrinho('${identificador}', ${adicionaisExtra})" class="pedir">
                     Confirmar
                 </button>
             `;
 
-            //Chamando funções auxiliares de verificação
-            verificarExtras(adicionaisExtra);
-
-            //Adicionando selects inclusos
-            for(let i = 1; i <= adicionaisInclusos; i++){
-                get('adicionaisInclusos').innerHTML+=`
-                    <select id="adicionarIncluso${i}" class="adicionalIncluso">
-                        <option value="Nenhum">Nenhum</option>
-                    </select>
-                `;
-                preencherLista('adicionarIncluso'+i, lista, true);
+            //Chamando funções auxiliares pós-modal
+            if(adicionaisExtra){
+                montarAdicionais(adicionaisInclusos);
             }
+            else{
+                get('revelarAdicionais').style.display='none';
+            }
+
         }
         else{
             alert("No momento não estamos recebendo pedidos, agradecemos pela preferência! (Horário de funcionamento: 14h30 ás 22h00)")
@@ -183,7 +171,7 @@
     //Envia o produto para o carrinho
     let totalProdutos = 0;
     totalIds = 0;
-    function subirCarrinho(identificador, adicionaisInclusos){
+    function subirCarrinho(identificador, adicionais){
         
         //Adicionando contagem
         totalProdutos++;
@@ -192,17 +180,23 @@
             <div id="produtoCarrinho${totalIds}" class="produtoCarrinho">
                 <h3 id="nomeCarrinho${totalIds}">${get('nome'+identificador).innerHTML}</h3>
                 <p id="descricaoCarrinho${totalIds}">${get('descricao'+identificador).innerHTML}</p>
-                <p id="adicionaisCarrinho${totalIds}"></p>
+                <p class="adicionais" id="adicionaisCarrinho${totalIds}">ADICIONAIS: </p>
                 <p id="lembreteCarrinho${totalIds}">${get('lembrete').value}</p>
-                <span>Total: R$ <i id="valorCarrinho${totalIds}">${totalProduto(identificador)}</i></span>
+                <span>Total: R$ <i id="valorCarrinho${totalIds}">${get('confirmarValor').innerHTML}</i></span>
                 <button id="esquecer${totalIds}" onclick="esquecer('${totalIds}')">Esquecer</button>
             </div>
         `
-        for(let i = 1; i <= adicionaisInclusos; i++){
-            get('adicionaisCarrinho'+totalIds).innerHTML+=`${get('adicionarIncluso'+i).value} |`;
+        
+        if(adicionais){
+            for(let i = 0; i < lista.length; i++){
+                if(get('adicional'+i).checked){
+                    get('adicionaisCarrinho'+totalIds).innerHTML+=" ["+get('nomeAdicional'+i).innerHTML+"] - ";
+                }
+                
+            }
         }
-        for(let i = 1; i <= adicionais; i++){
-            get('adicionaisCarrinho'+totalIds).innerHTML+=`${get('adicionalExtra'+i).value} |`
+        else{
+            get('adicionaisCarrinho'+totalIds).style.display='none';
         }
 
         //Chamando funções auxiliares
@@ -279,18 +273,6 @@
 
 //Funções auxiliares
 
-    //Adiciona um select de adicional extra ao modal de confirmação com itens de uma lista
-    let adicionais = 0;
-    function criarAdicional(){
-        adicionais++;
-        get('adicionais').innerHTML+=`
-            <select id="adicionalExtra${adicionais}" class="adicionalExtra">
-                <option value="Nenhum R$ 00.00">Nenhum R$ 00.00</option>
-            </select>
-        `;
-        preencherLista('adicionalExtra'+adicionais, lista, false);
-    }
-
     //Define o tipo de lista a preencher os adicionais
     function mostrarLista(tipoLista){
         switch(tipoLista){
@@ -309,16 +291,6 @@
             case 4:
                 lista = SaborSorvetes
                 break;
-        }
-    }
-
-    //Define se o produto possui ou não adicionais
-    function verificarExtras(extras){
-        if(extras){
-        }
-        else{
-            get('adicionais').style.display='none';
-            get('criarAdicional').style.display='none';
         }
     }
   
@@ -384,6 +356,64 @@
         }
     }
 
+    //Adiciona os adicionais ao item
+    function montarAdicionais(inclusos){
+        for(let i = 0; i < lista.length; i++){
+            get('adicionais').innerHTML+=`
+                <div class="adicionais">
+                    <input id="adicional${i}" onchange="interagirAdicional(${i}, ${inclusos})" id="adicionalListado${i}" type="checkbox">
+                    <label id="nomeAdicional${i}" for="adicional${i}">${lista[i]}</label>
+                </div>
+            `;
+        }
+    }
+
+    //Adiciona ou retira o adicional da contagem
+    function interagirAdicional(identificador, inclusos){
+
+        //Contagem de adicionais inclusos
+        let contagem = 1;
+        for(let i = 0; i < lista.length; i++){
+            if(get('nomeAdicional'+i).innerHTML.slice(-9)== "(INCLUSO)"){
+                contagem++;
+            }
+        }
+
+        //Quando a checkbox for marcada
+        if(get('adicional'+identificador).checked){
+
+            //Se a contagem for maior que inclusos, o preço será adicionado
+            if((contagem > inclusos) || (parseFloat((get('nomeAdicional'+identificador).innerHTML).slice(-5)) >= 3.99)){
+                if(parseFloat((get('nomeAdicional'+identificador).innerHTML).slice(-5)) >= 3.99){
+                    alert("Lembrete: adicionais com valor igual ou superior a 3.99 não podem ser inclusos")
+                }
+                let adicionarValor = parseFloat(get('confirmarValor').innerHTML);
+                adicionarValor += parseFloat((get('nomeAdicional'+identificador).innerHTML).slice(-5))
+                get('confirmarValor').innerHTML= adicionarValor.toFixed(2);
+            }
+
+            //Produto incluso, não deve ser cobrado
+            else{
+                get('nomeAdicional'+identificador).innerHTML+=` (INCLUSO)`;
+            }
+        }
+
+        //Quando a checkbox for desmarcada
+        else{
+
+            //Se for incluso, não há alteração de preço
+            if(get('nomeAdicional'+identificador).innerHTML.slice(-9)== "(INCLUSO)"){
+                get('nomeAdicional'+identificador).innerHTML= (get('nomeAdicional'+identificador).innerHTML).slice(0,-10);
+            }
+
+            //Produto não incluso, preço deve ser retirado
+            else{
+                let retirarValor = parseFloat(get('confirmarValor').innerHTML);
+                retirarValor -= parseFloat((get('nomeAdicional'+identificador).innerHTML).slice(-5))
+                get('confirmarValor').innerHTML= retirarValor.toFixed(2);
+            }
+        }
+    }
 
 //Script geral, separados em trechos com funções específicas
 
@@ -399,13 +429,13 @@
 
     //Sorvetes
     for(let i = 15; i<= 19; i++){
-        preencherLista('mudarDescricao'+i, SaborSorvetes, false);
+        preencherLista('mudarDescricao'+i, SaborSorvetes);
     }
     for(let i = 27; i<= 30; i++){
-        preencherLista('mudarDescricao'+i, SaborSorvetes, false);
+        preencherLista('mudarDescricao'+i, SaborSorvetes);
     }
 
     //Bordas 
     for(let i = 71; i <= 113; i++){
-        preencherLista('borda'+i, Bordas, false);
+        preencherLista('borda'+i, Bordas);
     }
