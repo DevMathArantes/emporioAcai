@@ -43,6 +43,7 @@ footer nav button{
 
 /*Nav inferior*/
 #navInferior{
+    padding: 1em 0;
     display: none;
 }
 
