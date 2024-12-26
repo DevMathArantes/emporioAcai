@@ -77,6 +77,19 @@ input::placeholder{
     color: var(--cor3);
 }
 
+nav{
+    width: 100%;
+    display: flex;
+    gap: 1em;
+    position: fixed;
+    background-color: var(--cor2);
+    align-items: center;
+    padding: 0.5em 2em;
+    box-shadow: 0px 0px 10px var(--cor3);
+    color: var(--cor1);
+    z-index: 3;
+}
+
 /*Elementos padrão*/
 .carrossel{
     width: 100%;
@@ -157,16 +170,3 @@ input::placeholder{
     .abrirCampo:checked ~ .campoDinamico{
         display: block;
     }
-
-.nav{
-    width: 100%;
-    display: flex;
-    gap: 1em;
-    position: fixed;
-    background-color: var(--cor2);
-    align-items: center;
-    padding: 0.5em 2em;
-    box-shadow: 0px 0px 10px var(--cor3);
-    color: var(--cor1);
-    z-index: 4;
-}

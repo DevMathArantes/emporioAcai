@@ -8,10 +8,11 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <header>
 
         <!--Nav com links e redirecionamentos-->
-        <nav class="nav">
+        <nav>
             <h2 id="status"></h2>
             <a href="https://wa.me/551631723514">
                 <img src="Assets/icons/whatsapp.png" alt="icone whats app">
@@ -44,6 +45,7 @@
         </section>
         
     </header>
+
     <main>
 
     <!--Carrossel----------------------------------------------------------------------------------------------->
@@ -1727,6 +1729,7 @@
         </section>
 
     </main>
+
     <footer>
 
         <!--Fotos do ambiente-->
@@ -1749,9 +1752,9 @@
         <h2>MAF</h2>
         <a href="">Acesse nosso site <img src="Assets/icons/link.png" alt="icone link"></a>
 
-        <nav class="nav" id="navInferior">
-            <button onclick="interagirModal('carrinho')">Pedido</button>
-        </nav>
+        <!--Botão que abre o carrinho, localizado na parte inferior da tela-->
+        <button id="btnPedido" onclick="interagirModal('carrinho')">Pedido</button>
+        
 
     </footer>
 

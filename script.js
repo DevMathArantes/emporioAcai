@@ -124,8 +124,7 @@
     let lista;
     function confirmar(identificador, adicionaisInclusos, adicionaisExtra, tipoLista){
 
-        //aberto()
-        if(true){
+        if(aberto()){
 
             //Chamando funções auxiliares
             interagirModal('confirmarPedido');
@@ -285,7 +284,12 @@
     //Faz o carrinho aparecer quando não está vazio
     function verificaCarrinho(){
         if(totalProdutos>0){
-            get('navInferior').style.display='flex';
+            get('btnPedido').style.display='flex';
+            
+        }
+        if(totalProdutos==0){
+            interagirModal('carrinho')
+            get('btnPedido').style.display='none';  
         }
     }
 
@@ -314,7 +318,7 @@
     function esquecer(identificador){
         get('produtoCarrinho'+identificador).style.display='none';
         totalProdutos--;
-        get('totalItens').innerHTML=totalProdutos.toString();
+        verificaCarrinho()
     }
 
     //Calcula total do produto

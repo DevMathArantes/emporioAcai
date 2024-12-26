@@ -1,6 +1,6 @@
 .carrinho{
-    z-index: 3;
-    padding: 3em 0;
+    z-index: 4;
+    padding: 0 0 5em 0;
     text-align: center;
 }
 .carrinho button{
