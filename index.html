@@ -108,60 +108,62 @@
         <!--Página dos açais-->
         <section id="modalAcai" class="categoria modal">
 
-            <!--Imagem de entrada + botão "voltar"-->
-            <div class="imagemEntrada acais"></div>
+            <!--botão "voltar"-->
             <button onclick="interagirModal('modalAcai')"  class="voltar">Voltar</button>
             
             <!--Combos-->
-            <h2>Combos</h2>
-            <div class="produtoEspecial">
-                <img src="Assets/Imagens/combo1litro.jpg" alt="1 litro de açai">
-                <div class="especialInfo">
-                    <h3 id="nome1">1 Litro de açai</h3>
-                    <p id="descricao1">Escolha até 4 adicionais</p>
-                    <span>R$<i id="valor1"> 34.90</i></span>
-                    <button onclick="confirmar('1', 4, true, 1)" class="pedir">Pedir</button>
+            <br><br><br><br>
+            <input class="abrirCampo" id="combos" type="checkbox">
+            <label class="imagemProduto combosImg" for="combos">Combos <span></span></label>
+            <div class="produto">
+                <div class="produtoEspecial">
+                    <img src="Assets/Imagens/combo1litro.jpg" alt="1 litro de açai">
+                    <div class="especialInfo">
+                        <h3 id="nome1">1 Litro de açai</h3>
+                        <p id="descricao1">Escolha até 4 adicionais</p>
+                        <span>R$<i id="valor1"> 34.90</i></span>
+                        <button onclick="confirmar('1', 4, true, 1)" class="pedir">Pedir</button>
+                    </div>
                 </div>
-            </div>
 
-            <!--Combos de açai-->
-            <div class="carrossel">
-                <div class="carrosselFilho combos">
-                    <div class="carrosselItem combo">
-                        <img src="Assets/Imagens/combo300ml.jpg" alt="combo 300 ml">
-                        <h3 id="nome2">Copo 300 Ml</h3>
-                        <p id="descricao2">Escolha até 3 adicionais</p>
-                        <span>R$<i id="valor2"> 23.00</i></span>
-                        <button onclick="confirmar('2', 3, true, 1)" class="pedir">Pedir</button>
-                    </div>
-                    <div class="carrosselItem combo">
-                        <img src="Assets/Imagens/combo400ml.jpg" alt="combo 400 ml">
-                        <h3 id="nome3">Copo 400 Ml</h3>
-                        <p id="descricao3">Escolha até 3 adicionais</p>
-                        <span>R$<i id="valor3"> 25.00</i></span>
-                        <button onclick="confirmar('3', 3, true, 1)" class="pedir">Pedir</button>
-                    </div>
-                    <div class="carrosselItem combo">
-                        <img src="Assets/Imagens/combo500ml.jpg" alt="combo 500 ml">
-                        <h3 id="nome4">Copo 500 Ml</h3>
-                        <p id="descricao4">Escolha até 3 adicionais</p>
-                        <span>R$<i id="valor4"> 28.00</i></span>
-                        <button onclick="confirmar('4', 3, true, 1)" class="pedir">Pedir</button>
-                    </div>
-                    <div class="carrosselItem combo">
-                        <img src="Assets/Imagens/combo700ml.jpg" alt="combo 700 ml">
-                        <h3 id="nome5">Copo 700 Ml</h3>
-                        <p id="descricao5">Escolha até 3 adicionais</p>
-                        <span>R$<i id="valor5"> 30.00</i></span>
-                        <button onclick="confirmar('5', 3, true, 1)" class="pedir">Pedir</button>
+                <div class="carrossel">
+                    <div class="carrosselFilho combos">
+                        <div class="carrosselItem combo">
+                            <img src="Assets/Imagens/combo300ml.jpg" alt="combo 300 ml">
+                            <h3 id="nome2">Copo 300 Ml</h3>
+                            <p id="descricao2">Escolha até 3 adicionais</p>
+                            <span>R$<i id="valor2"> 23.00</i></span>
+                            <button onclick="confirmar('2', 3, true, 1)" class="pedir">Pedir</button>
+                        </div>
+                        <div class="carrosselItem combo">
+                            <img src="Assets/Imagens/combo400ml.jpg" alt="combo 400 ml">
+                            <h3 id="nome3">Copo 400 Ml</h3>
+                            <p id="descricao3">Escolha até 3 adicionais</p>
+                            <span>R$<i id="valor3"> 25.00</i></span>
+                            <button onclick="confirmar('3', 3, true, 1)" class="pedir">Pedir</button>
+                        </div>
+                        <div class="carrosselItem combo">
+                            <img src="Assets/Imagens/combo500ml.jpg" alt="combo 500 ml">
+                            <h3 id="nome4">Copo 500 Ml</h3>
+                            <p id="descricao4">Escolha até 3 adicionais</p>
+                            <span>R$<i id="valor4"> 28.00</i></span>
+                            <button onclick="confirmar('4', 3, true, 1)" class="pedir">Pedir</button>
+                        </div>
+                        <div class="carrosselItem combo">
+                            <img src="Assets/Imagens/combo700ml.jpg" alt="combo 700 ml">
+                            <h3 id="nome5">Copo 700 Ml</h3>
+                            <p id="descricao5">Escolha até 3 adicionais</p>
+                            <span>R$<i id="valor5"> 30.00</i></span>
+                            <button onclick="confirmar('5', 3, true, 1)" class="pedir">Pedir</button>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </div><br>
 
             <!--Açai padrão-->
-            <h2>Copos de açai</h2>
-            <div class="produtoVariado">
-                <img src="Assets/Imagens/copoAcai.jpg" alt="copo de açaí">
+            <input class="abrirCampo" id="copos" type="checkbox">
+            <label class="imagemProduto coposImg" for="copos">Copos de Açai <span></span></label>
+            <div class="produtoVariado produto">
                 <ul>
                     <li>
                         <h3 id="nome6">Copo 300 Ml</h3>
@@ -188,12 +190,12 @@
                         <button onclick="confirmar('9', 0, true, 1)">Pedir</button>
                     </li>
                 </ul>
-            </div>
+            </div><br>
 
             <!--Barcas-->
-            <h2>Barcas</h2>
-            <div class="produtoVariado">
-                <img src="Assets/Imagens/barca.jpg" alt="barca de açai">
+            <input class="abrirCampo" id="barcas" type="checkbox">
+            <label class="imagemProduto barcasImg" for="barcas">Barcas de Açai<span></span></label>
+            <div class="produtoVariado produto">
                 <ul>
                     <li>
                         <h3 id="nome10">Barca 1 Litro</h3>
@@ -208,12 +210,12 @@
                         <button onclick="confirmar('11', 8, true, 1)">Pedir</button>
                     </li>
                 </ul>
-            </div>
+            </div><br>
 
             <!--Tigelas-->
-            <h2>Tigelas</h2>
-            <div class="produtoVariado">
-                <img src="Assets/Imagens/tigelaAcai.jpg" alt="tigela de açai">
+            <input class="abrirCampo" id="tigelas" type="checkbox">
+            <label class="imagemProduto tigelasImg" for="tigelas">Tigelas de Açai<span></span></label>
+            <div class="produtoVariado produto">
                 <ul>
                     <li>
                         <h3 id="nome12">Tigela 1 Litro</h3>
@@ -228,7 +230,7 @@
                         <button onclick="confirmar('13', 0, true, 1)">Pedir</button>
                     </li>
                 </ul>
-            </div>
+            </div><br>
 
         </section>
 
@@ -593,13 +595,14 @@
 
         <!--Página dos lanches-->
         <section id="modalLanches" class="categoria modal">
-            <div class="imagemEntrada lanches"></div>
+
             <button onclick="interagirModal('modalLanches')" class="voltar">Voltar</button>
         
             <!--Lanches com hambúrguer-->
-            <h2>Lanches com Hambúrguer</h2>
-            <div class="produtoVariado">
-                <img src="Assets/Imagens/xBurguer.png" alt="lanche x-burguer">
+            <br><br><br><br>
+            <input class="abrirCampo" id="hamburguer" type="checkbox">
+            <label class="imagemProduto hamburguerImg" for="hamburguer">Hamburguer <span></span></label>
+            <div class="produtoVariado produto">
                 <ul>
                     <li>
                         <h3 id="nome45">X-Bacon</h3>
@@ -638,12 +641,12 @@
                         <button onclick="confirmar('50', 0, true, 2)">Pedir</button>
                     </li>
                 </ul>
-            </div>
+            </div><br>
 
             <!--Lanches com frango-->
-            <h2>Lanches com frango</h2>
-            <div class="produtoVariado">
-                <img src="Assets/Imagens/xFrango.jpg" alt="lanche de frango">
+            <input class="abrirCampo" id="frango" type="checkbox">
+            <label class="imagemProduto frangoImg" for="frango">Frango <span></span></label>
+            <div class="produtoVariado produto">
                 <ul>
                     <li>
                         <h3 id="nome51">X-Frango</h3>
@@ -688,10 +691,12 @@
                         <button onclick="confirmar('57', 0, true, 2)">Pedir</button>
                     </li>
                 </ul>
-            </div>
+            </div><br>
 
             <!--Combo Lanche-->
-            <div class="produtoEspecial">
+            <input class="abrirCampo" id="comboLanche" type="checkbox">
+            <label class="imagemProduto comboLancheImg" for="comboLanche">Combo <span></span></label>
+            <div class="produtoEspecial produto">
                 <img src="Assets/Imagens/lanche.jpg" alt="combo lanche">
                 <div class="especialInfo">
                     <h2 id="nome58">Combo</h2>
@@ -699,12 +704,12 @@
                     <span>R$ <i id="valor58">26.90</i></span>
                     <button onclick="confirmar('58', 0, true, 2)" class="pedir">Pedir</button>
                 </div>
-            </div>
+            </div><br>
 
             <!--Lanches com filé-->
-            <h2>Lanches com file</h2>
-            <div class="produtoVariado">
-                <img src="Assets/Imagens/xfile.jpg" alt="lanche de frango">
+            <input class="abrirCampo" id="file" type="checkbox">
+            <label class="imagemProduto fileImg" for="file">Filé <span></span></label>
+            <div class="produtoVariado produto">
                 <ul>
                     <li>
                         <h3 id="nome59">X-Filé</h3>
@@ -743,12 +748,12 @@
                         <button onclick="confirmar('64', 0, true, 2)">Pedir</button>
                     </li>
                 </ul>
-            </div>
+            </div><br>
 
             <!--Lanches com lombo-->
-            <h2>Lanches com lombo</h2>
-            <div class="produtoVariado">
-                <img src="Assets/Imagens/xLombo.jpg" alt="lanche de frango">
+            <input class="abrirCampo" id="lombo" type="checkbox">
+            <label class="imagemProduto lomboImg" for="lombo">Lombo <span></span></label>
+            <div class="produtoVariado produto">
                 <ul>
                     <li>
                         <h3 id="nome65">X-Lombo</h3>
@@ -787,7 +792,7 @@
                         <button onclick="confirmar('70', 0, true, 2)">Pedir</button>
                     </li>
                 </ul>
-            </div>
+            </div><br>
         
         </section>
         
