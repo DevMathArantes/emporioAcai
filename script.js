@@ -6,7 +6,7 @@
         "Doce de leite R$ 2.50", "Paçoca R$ 2.75", "Banana R$ 3.00", 
         "Bis branco R$ 3.00", "Bis preto R$ 3.00", "Chantilly R$ 3.00",
         "Coco ralado R$ 3.00", "Granola R$ 3.00", "Farinha lactea R$ 3.00",
-        "Kinder chocolate (ao leite) R$ 3.00", "Sonho de valsa R$ 3.00", "Sucrilhos R$ 3.00",
+        "Sonho de valsa R$ 3.00", "Sucrilhos R$ 3.00",
         "Pó de guaraná R$ 3.00", "Ouro branco R$ 3.00", "Goiabada R$ 3.00",
         "Abacaxi R$ 3.50", "Chocolate branco R$ 3.50", "Chocolate R$ 3.50", 
         "Confete R$ 3.50", "Leite condensado R$ 3.50", "Space boll R$ 3.50",
@@ -17,8 +17,8 @@
         "Pasta de amendoim, sabor leite ninho R$ 4.99", "Whey protein R$ 4.99", "Creme diamante negro R$ 5.00",
         "*Creme de morango R$ 5.00", "Kiwi R$ 5.00", "Creme laka R$ 5.00",
         "Creme de leite ninho R$ 5.00", "Creme de lacta com óreo R$ 5.00", "*Creme de ovomaltine R$ 5.50", 
-        "*Creme de kit kat R$ 5.50", "Cereja R$ 6.00", "*Creme de pistache R$ 6.50", 
-        "Nutella x2 R$ 7.00", "*Ferrero rocher R$ 9.50", "*Kinder bueno R$ 9.50" 
+        "*Creme de kit kat R$ 5.50", "*Cereja R$ 6.00", "*Creme de pistache R$ 6.50", 
+        "*Nutella x2 R$ 7.00", "*Ferrero rocher R$ 9.50", "*Kinder bueno R$ 9.50" 
     ];
 
     let Lanches = [ 

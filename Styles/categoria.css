@@ -40,13 +40,13 @@
 
     /*Combos*/
     .combos{
-        width: 200%;
+        width: 165%;
     }
     .combo{
         width: 25%;
     }
-    .combo img{
-        width: 10em;
+    .combo img, .combo button{
+        max-width: 90%;
     }
 
     /*Porções*/
