@@ -15,10 +15,10 @@
         "Nutella R$ 4.50", "Castanha R$ 4.50", "Creme de ouro branco R$ 4.50", 
         "Cupuaçu R$ 4.50", "Creme de valsa R$ 4.50", "Kit kat R$ 4.99",
         "Pasta de amendoim, sabor leite ninho R$ 4.99", "Whey protein R$ 4.99", "Creme diamante negro R$ 5.00",
-        "Creme de morango R$ 5.00", "Kiwi R$ 5.00", "Creme laka R$ 5.00",
-        "Creme de leite ninho R$ 5.00", "Creme de lacta com óreo R$ 5.00", "Creme de ovomaltine R$ 5.50", 
-        "Creme de kit kat R$ 5.50", "Cereja R$ 6.00", "Creme de pistache R$ 6.50", 
-        "Nutella x2 R$ 7.00", "Ferrero rocher R$ 9.50" 
+        "*Creme de morango R$ 5.00", "Kiwi R$ 5.00", "Creme laka R$ 5.00",
+        "Creme de leite ninho R$ 5.00", "Creme de lacta com óreo R$ 5.00", "*Creme de ovomaltine R$ 5.50", 
+        "*Creme de kit kat R$ 5.50", "Cereja R$ 6.00", "*Creme de pistache R$ 6.50", 
+        "Nutella x2 R$ 7.00", "*Ferrero rocher R$ 9.50", "*Kinder bueno R$ 9.50" 
     ];
 
     let Lanches = [ 
@@ -139,8 +139,9 @@
                 <p>${get('descricao'+identificador).innerHTML}</p>
                 <input class="abrirCampo" id="abrirAdicionais" type="checkbox">
                 <label id="revelarAdicionais" class="labelDinamico" for="abrirAdicionais">Ver Adicionais</label>
-                <div class="campoDinamico" id="adicionais">
-                    
+                <div class="campoDinamico" id="adicionais"></div>
+                <div class="campoDinamico" id="opcionais">
+                    <p>Opcionais (pago a parte): </p>
                 </div>
                 <p>R$<span id="confirmarValor"> ${get('valor'+identificador).innerHTML}</span></p>
                 <input id="lembrete" type="text" placeholder="Deseja adicionar algum lembrete ?">
@@ -187,7 +188,6 @@
                 if(get('adicional'+i).checked){
                     get('adicionaisCarrinho'+totalIds).innerHTML+=" ["+get('nomeAdicional'+i).innerHTML+"] - ";
                 }
-                
             }
         }
         else{
@@ -378,12 +378,22 @@
     //Adiciona os adicionais ao item
     function montarAdicionais(inclusos){
         for(let i = 0; i < lista.length; i++){
-            get('adicionais').innerHTML+=`
-                <div class="adicionais">
-                    <input id="adicional${i}" onchange="interagirAdicional(${i}, ${inclusos})" id="adicionalListado${i}" type="checkbox">
-                    <label id="nomeAdicional${i}" for="adicional${i}">${lista[i]}</label>
-                </div>
-            `;
+            if(lista[i].slice(0,1)!="*"){
+                get('adicionais').innerHTML+=`
+                    <div class="adicionais">
+                        <input id="adicional${i}" onchange="interagirAdicional(${i}, ${inclusos})" id="adicionalListado${i}" type="checkbox">
+                        <label id="nomeAdicional${i}" for="adicional${i}">${lista[i]}</label>
+                    </div>
+                `;
+            }
+            else{
+                get('opcionais').innerHTML+=`
+                    <div class="adicionais">
+                        <input id="adicional${i}" onchange="interagirAdicional(${i}, ${0})" id="adicionalListado${i}" type="checkbox">
+                        <label id="nomeAdicional${i}" for="adicional${i}">${lista[i].slice(1)}</label>
+                    </div>
+                `;
+            }
         }
     }
 
@@ -402,10 +412,7 @@
         if(get('adicional'+identificador).checked){
 
             //Se a contagem for maior que inclusos, o preço será adicionado
-            if((contagem > inclusos) || (parseFloat((get('nomeAdicional'+identificador).innerHTML).slice(-5)) >= 3.99)){
-                if(parseFloat((get('nomeAdicional'+identificador).innerHTML).slice(-5)) >= 3.99){
-                    alert("Lembrete: adicionais com valor igual ou superior a 3.99 não podem ser inclusos")
-                }
+            if(contagem > inclusos){
                 let adicionarValor = parseFloat(get('confirmarValor').innerHTML);
                 adicionarValor += parseFloat((get('nomeAdicional'+identificador).innerHTML).slice(-5))
                 get('confirmarValor').innerHTML= adicionarValor.toFixed(2);
