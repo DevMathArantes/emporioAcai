@@ -171,33 +171,44 @@
     background-repeat: no-repeat;
     background-position: 0.2em;
 }
-.combosImg{
-    background-image: url(../Assets/Imagens/acai.jpg);
-}
-.coposImg{
-    background-image: url(../Assets/Imagens/copoAcai.jpg);
-}
-.barcasImg{
-    background-image: url(../Assets/Imagens/barca.jpg);
-}
-.tigelasImg{
-    background-image: url(../Assets/Imagens/tigelaAcai.jpg);
-}
-.hamburguerImg{
-    background-image: url(../Assets/Imagens/xBurguer.png);
-}
-.frangoImg{
-    background-image: url(../Assets/Imagens/xFrango.jpg);
-}
-.comboLancheImg{
-    background-image: url(../Assets/Imagens/lanche.jpg);
-}
-.fileImg{
-    background-image: url(../Assets/Imagens/xfile.jpg);
-}
-.lomboImg{
-    background-image: url(../Assets/Imagens/xLombo.jpg);
-}
+
+    /*Adicionando as imagens dos produtos*/
+    .combosImg{
+        background-image: url(../Assets/Imagens/acai.jpg);
+    }
+    .coposImg{
+        background-image: url(../Assets/Imagens/copoAcai.jpg);
+    }
+    .barcasImg{
+        background-image: url(../Assets/Imagens/barca.jpg);
+    }
+    .tigelasImg{
+        background-image: url(../Assets/Imagens/tigelaAcai.jpg);
+    }
+    .hamburguerImg{
+        background-image: url(../Assets/Imagens/xBurguer.png);
+    }
+    .frangoImg{
+        background-image: url(../Assets/Imagens/xFrango.jpg);
+    }
+    .comboLancheImg{
+        background-image: url(../Assets/Imagens/lanche.jpg);
+    }
+    .fileImg{
+        background-image: url(../Assets/Imagens/xfile.jpg);
+    }
+    .lomboImg{
+        background-image: url(../Assets/Imagens/xLombo.jpg);
+    }
+    .salgadasImg{
+        background-image: url(../Assets/Imagens/pizzaMedia.jpg);
+    }
+    .docesImg{
+        background-image: url(../Assets/Imagens/pizzaDoce.jpg);
+    }
+    .litroSorveteImg{
+        background-image: url(../Assets/Imagens/sorvete1litro.jpg);
+    }
 
 @media screen and (min-width: 724px){
     

@@ -121,7 +121,7 @@
                     <div class="especialInfo">
                         <h3 id="nome1">1 Litro de açai</h3>
                         <p id="descricao1">Escolha até 4 adicionais</p>
-                        <span>R$<i id="valor1"> 34.90</i></span>
+                        <span>R$<i id="valor1"> 36.90</i></span>
                         <button onclick="confirmar('1', 4, true, 1)" class="pedir">Pedir</button>
                     </div>
                 </div>
@@ -240,8 +240,10 @@
             <button onclick="interagirModal('modalSorvete')" class="voltar">Voltar</button>
             
             <!--Destaque-->
-            <h2>Mais sorvete, mais diversão</h2>
-            <div class="produtoEspecial">
+            <br><br><br><br>
+            <input class="abrirCampo" id="litroSorvete" type="checkbox">
+            <label class="imagemProduto litroSorveteImg" for="litroSorvete">Litro Sorvete <span></span></label>
+            <div class="produtoEspecial produto">
                 <img src="Assets/Imagens/sorvete1litro.jpg" alt="1 litro de sorvete">
                 <div class="especialInfo">
                     <h3 id="nome14">1 Litro de sorvete</h3>
@@ -254,58 +256,7 @@
                     <span>R$ <i id="valor14">22.00</i></span>
                     <button onclick="confirmar('14', 0, true, 1)" class="pedir" >Pedir</button>
                 </div>
-            </div>
-
-            <!--Casquinhas-->
-            <div class="carrossel">
-                <div class="carrosselFilho combos">
-                
-                    <div class="carrosselItem combo">
-                        <img src="Assets/Imagens/casquinha.jpg" alt="casquinha">
-                        <h3 id="nome15">Casquinha</h3>
-                        <p id="descricao15">Nenhum escolhido</p>
-                        <select onchange="mudarDescricao('15')" id="mudarDescricao15">
-                            <option value="Nenhum escolhido">Escolher</option>
-                        </select>
-                        <span>R$ <i id="valor15">4.00</i></span>
-                        <button class="pedir" onclick="confirmar('15', 0, true, 1)">Pedir</button>
-                    </div>
-
-                    <div class="carrosselItem combo">
-                        <img src="Assets/Imagens/casquinhaTrufada.jpg" alt="casquinha trufada">
-                        <h3 id="nome16">Casquinha trufada</h3>
-                        <p id="descricao16">Nenhum escolhido</p>
-                        <select onchange="mudarDescricao('16')" id="mudarDescricao16">
-                            <option value="Nenhum escolhido">Escolher</option>
-                        </select>
-                        <span>R$ <i id="valor16">8.00</i></span>
-                        <button class="pedir" onclick="confirmar('16', 0, true, 1)">Pedir</button>
-                    </div>
-
-                    <div class="carrosselItem combo">
-                        <img src="Assets/Imagens/cascao.jpg" alt="cascão">
-                        <h3 id="nome17">Cascão</h3>
-                        <p id="descricao17">Nenhum escolhido</p>
-                        <select onchange="mudarDescricao('17')" id="mudarDescricao17">
-                            <option value="Nenhum escolhido">Escolher</option>
-                        </select>
-                        <span>R$ <i id="valor17">5.00</i></span>
-                        <button class="pedir" onclick="confirmar('17', 0, true, 1)">Pedir</button>
-                    </div>
-
-                    <div class="carrosselItem combo">
-                        <img src="Assets/Imagens/cascaoTrufado.jpg" alt="cascão trufado">
-                        <h3 id="nome18">Cascão trufado</h3>
-                        <p id="descricao18">Nenhum escolhido</p>
-                        <select onchange="mudarDescricao('18')" id="mudarDescricao18">
-                            <option value="Nenhum escolhido">Escolher</option>
-                        </select>
-                        <span>R$ <i id="valor18">11.00</i></span>
-                        <button class="pedir" onclick="confirmar('18', 0, true, 1)">Pedir</button>
-                    </div>
-
-                </div>
-            </div>
+            </div><br>
 
             <!--Sorvete (bola)-->
             <div class="produtoEspecial">
@@ -798,13 +749,14 @@
         
         <!--Página das pizzas-->
         <section id="modalPizzas" class="categoria modal">
-            <div class="imagemEntrada pizzas"></div>
+            
             <button onclick="interagirModal('modalPizzas')" class="voltar">Voltar</button>
         
             <!--Pizza salgada-->
-            <h2>Pizzas Salgadas</h2>
-            <div class="produtoVariado">
-                <img src="Assets/Imagens/pizzaMedia.jpg" alt="pizza média">
+            <br><br><br><br>
+            <input class="abrirCampo" id="salgadas" type="checkbox">
+            <label class="imagemProduto salgadasImg" for="salgadas">Salgadas <span></span></label>
+            <div class="produtoVariado produto">
                 <ul>
 
                     <li>
@@ -1157,12 +1109,12 @@
                         <button onclick="confirmar('95', 0, false, 3)">Pedir</button>
                     </li>
                 </ul>
-            </div>
+            </div><br>
 
             <!--Pizza doce-->
-            <h2>Sabores doces</h2>
-            <div class="produtoVariado">
-                <img src="Assets/Imagens/pizzaDoce.jpg" alt="pizza doce">
+            <input class="abrirCampo" id="doces" type="checkbox">
+            <label class="imagemProduto docesImg" for="doces">Doces <span></span></label>
+            <div class="produtoVariado produto">
                 <ul>
 
                     <li>

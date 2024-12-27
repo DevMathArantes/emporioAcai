@@ -18,8 +18,7 @@
         "Creme de morango R$ 5.00", "Kiwi R$ 5.00", "Creme laka R$ 5.00",
         "Creme de leite ninho R$ 5.00", "Creme de lacta com óreo R$ 5.00", "Creme de ovomaltine R$ 5.50", 
         "Creme de kit kat R$ 5.50", "Cereja R$ 6.00", "Creme de pistache R$ 6.50", 
-        "Nutella x2 R$ 7.00", "Ferrero rocher R$ 9.50", "Kinder bueno R$ 9.50", 
-        "Kinder ovo R$ 9.50"
+        "Nutella x2 R$ 7.00", "Ferrero rocher R$ 9.50" 
     ];
 
     let Lanches = [ 

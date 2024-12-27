@@ -42,8 +42,8 @@ nav a img{
     width: 100%;
 }
 nav h2{
-    border: 2px solid var(--cor1);
-    padding: 0.5em;
+    border: 1px solid var(--cor1);
+    padding: 0.5em 1em;
     font-size: 0.9rem;
     text-align: center;
     border-radius: 5px;
