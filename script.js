@@ -70,14 +70,27 @@
     let minutoAtual = dataAtual.getMinutes();
 
     function aberto(){
-        if((horaAtual > 14) && (horaAtual < 21)){
-            return true;
-        }
-        else if(((horaAtual == 14) && (minutoAtual > 30)) || ((horaAtual==21) && (minutoAtual < 30))){
-            return true;
+        if(((dataAtual.getDay())>=1) &&((dataAtual.getDay())<5)){
+            if((horaAtual > 14) && (horaAtual < 21)){
+                return true;
+            }
+            else if(((horaAtual == 14) && (minutoAtual > 30)) || ((horaAtual==21) && (minutoAtual < 30))){
+                return true;
+            }
+            else{
+                return false;
+            }
         }
         else{
-            return false;
+            if((horaAtual > 14) && (horaAtual < 22)){
+                return true;
+            }
+            else if(((horaAtual == 14) && (minutoAtual > 30)) || ((horaAtual==22) && (minutoAtual < 30))){
+                return true;
+            }
+            else{
+                return false;
+            }
         }
     }
 
