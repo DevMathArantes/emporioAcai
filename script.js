@@ -95,9 +95,9 @@
     }
 
     //Preenche um select com uma lista de adicionais, inclusos ou não
-    function preencherLista(campo, lista){
-            for(let i = 0; i < lista.length; i++){
-                get(campo).innerHTML+=`<option value="${lista[i]}">${lista[i]}</option>`;
+    function preencherLista(campo, tipo){
+            for(let i = 0; i < tipo.length; i++){
+                get(campo).innerHTML+=`<option value="${tipo[i]}">${tipo[i]}</option>`;
             }
     }
 
@@ -467,9 +467,8 @@
     //Adicionando as opções de select
 
     //Sorvetes
-    for(let i = 15; i<= 19; i++){
-        preencherLista('mudarDescricao'+i, SaborSorvetes);
-    }
+    preencherLista('mudarDescricao19', SaborSorvetes);
+
     for(let i = 27; i<= 30; i++){
         preencherLista('mudarDescricao'+i, SaborSorvetes);
     }

@@ -16,26 +16,6 @@
     padding: 10em;
 }
 
-/*Imagens de entrada*/
-.acais{
-    background-image: url(../Assets/Imagens/acai.jpg);
-}
-.sorvetes{
-    background-image: url(../Assets/Imagens/sorvetes.jpg);
-}
-.refrescos{
-    background-image: url(../Assets/Imagens/bebidas.jpg);
-}
-.lanches{
-    background-image: url(../Assets/Imagens/lanche.jpg);
-}
-.pizzas{
-    background-image: url(../Assets/Imagens/pizzas.jpg);
-}
-.especiais{
-    background-image: url(../Assets/Imagens/especiais.png);
-}
-
 /*Itens dentro do carrossel*/
 
     /*Combos*/
@@ -59,7 +39,7 @@
 
     /*Taças*/
     .tacas{
-        width: 450%;
+        width: 390%;
     }
     .taca{
         width: 14%;
@@ -67,10 +47,10 @@
 
     /*Bebidas*/
     .bebida{
-        width: 16%;
+        width: 25%;
     }
     .bebidas{
-        width: 400%;
+        width: 250%;
     }
 
 /*Produto único*/
@@ -99,9 +79,6 @@
 /*Mesmo produto com variações*/
 .produtoVariado{
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 .produtoVariado h3{
     width: 100%;
@@ -110,6 +87,9 @@
 .produtoVariado ul{
     list-style: none;
     padding: 1em 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .produtoVariado li{
     display: flex;
@@ -154,11 +134,9 @@
 }
 .produto{
     display: none;
-    flex-direction: column;
-    align-items: center;
 }
 .abrirCampo:checked+label+.produto{
-    display: flex;
+    display: block;
 }
 .abrirCampo:checked + .imagemProduto span{
     background-image: url(../Assets/icons/setaBaixo.png);
@@ -208,6 +186,39 @@
     }
     .litroSorveteImg{
         background-image: url(../Assets/Imagens/sorvete1litro.jpg);
+    }
+    .bolaSorveteImg{
+        background-image: url(../Assets/Imagens/sorveteBola.jpg);
+    }
+    .tacaSorveteImg{
+        background-image: url(../Assets/Imagens/sorvetes.jpg);
+    }
+    .milkShakeImg{
+        background-image: url(../Assets/Imagens/milkShakes.jpg);
+    }
+    .tapiocaSalgadaImg{
+        background-image: url(../Assets/Imagens/tapioca2.jpg);
+    }
+    .tapiocaDoceImg{
+        background-image: url(../Assets/Imagens/tapioca.jpg);
+    }
+    .omeletesImg{
+        background-image: url(../Assets/Imagens/omelete.jpg);
+    }
+    .porcoesImg{
+        background-image: url(../Assets/Imagens/batataEspecial.jpg);
+    }
+    .polpasImg{
+        background-image: url(../Assets/Imagens/polpa.jpg);
+    }
+    .vitaminaImg{
+        background-image: url(../Assets/Imagens/vitaminas.jpg);
+    }
+    .sucoImg{
+        background-image: url(../Assets/Imagens/sucos.jpg);
+    }
+    .refrigerantesImg{
+        background-image: url(../Assets/Imagens/refrigerante.jpg);
     }
 
 @media screen and (min-width: 724px){
