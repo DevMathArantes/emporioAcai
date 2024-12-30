@@ -63,7 +63,7 @@
     text-align: center;
 }
 .produtoEspecial img{
-    width: 90%;
+    width: 16em;
 }
 .produtoEspecial p{
     margin: 0;
@@ -86,7 +86,6 @@
 }
 .produtoVariado ul{
     list-style: none;
-    padding: 1em 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -106,9 +105,6 @@
 }
 .produtoVariado p{
     width: 100%;
-}
-.produtoVariado img{
-    width: 18em;
 }
 .produtoVariado select{
     width: 50%;
@@ -219,6 +215,9 @@
     }
     .refrigerantesImg{
         background-image: url(../Assets/Imagens/refrigerante.jpg);
+    }
+    .saboresImg{
+        background-image: url(../Assets/Imagens/pizzaDupla.jpg);
     }
 
 @media screen and (min-width: 724px){

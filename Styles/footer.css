@@ -54,7 +54,7 @@ footer nav button{
     background-image: url(../Assets/icons/carrinho.png);
     background-repeat: no-repeat;
     background-size: 1.3em;
-    background-position: 7.5em;
+    background-position: 35%;
     z-index: 3;
 }
 

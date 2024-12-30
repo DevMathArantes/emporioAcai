@@ -2,10 +2,11 @@
     z-index: 2;
     text-align: center;
     padding: 5em 1em;
+    display: flex;
+    flex-direction: column;
 }
-
 .confirmarPedido img{
-    width: 10em;
+    width: 12em;
 }
 .confirmarPedido button{
     margin: 1em 0;
@@ -15,9 +16,12 @@
     font-size: 1.5rem;
 }
 .adicionais{
-    padding: 0 1em;
+    width: 100%;
     text-align: left;
-
+    padding: 0.1em 0;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
 }
 .adicionais input{
     width: 10%;
@@ -27,12 +31,17 @@
     text-align: left;
     width: 90%;
 }
-#adicionais{
-    margin: 2em 0;
-}
 .contagemAdicionais{
     font-size: 1rem;
 }
 .contagemAdicionais span{
     font-size: 1rem;
+}
+.campoDinamico{
+    margin-top: 1em;
+}
+.campoDinamico p{
+    color: var(--cor1);
+    border-bottom: 1px solid var(--cor1);
+    padding: 0.5em;
 }

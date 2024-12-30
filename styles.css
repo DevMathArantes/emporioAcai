@@ -77,7 +77,6 @@ input{
 input::placeholder{
     color: var(--cor3);
 }
-
 nav{
     width: 100%;
     display: flex;

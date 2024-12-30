@@ -47,6 +47,11 @@
 
 //Funções coringa
 
+    //
+    function horario(){
+        alert("Segunda a Quinta: 14h30 ás 21h30 \n Sexta a Domingo: 14h30 ás 22h30");
+    }
+
     //Coleta id
     function get(id){
         return document.getElementById(id);
@@ -65,31 +70,68 @@
     }
 
     //Retorna o horário de funcionamento (true para aberto e false para fechado)
+
+    function verificarAMouPM(locale = 'pt-BR') {
+        const data = new Date();
+        const options = { hour: 'numeric', minute: '2-digit', hour12: true };
+        const horaFormatada = data.toLocaleTimeString(locale, options);
+        const amPm = horaFormatada.match(/AM|PM/)[0];
+        return amPm;
+    }
+      
+    // Exemplo de uso com português do Brasil:
+    const periodo = verificarAMouPM('pt-BR');
+
     let dataAtual = new Date();
     let horaAtual = dataAtual.getHours();
     let minutoAtual = dataAtual.getMinutes();
-
     function aberto(){
-        if(((dataAtual.getDay())>=1) &&((dataAtual.getDay())<5)){
-            if((horaAtual > 14) && (horaAtual < 21)){
-                return true;
-            }
-            else if(((horaAtual == 14) && (minutoAtual > 30)) || ((horaAtual==21) && (minutoAtual < 30))){
-                return true;
+        if(periodo === "PM"){
+            if(((dataAtual.getDay())>=1) &&((dataAtual.getDay())<5)){
+                if((horaAtual > 14) && (horaAtual < 21)){
+                    return true;
+                }
+                else if(((horaAtual == 14) && (minutoAtual > 30)) || ((horaAtual==21) && (minutoAtual < 30))){
+                    return true;
+                }
+                else{
+                    return false;
+                }
             }
             else{
-                return false;
+                if((horaAtual > 14) && (horaAtual < 22)){
+                    return true;
+                }
+                else if(((horaAtual == 14) && (minutoAtual > 30)) || ((horaAtual==22) && (minutoAtual < 30))){
+                    return true;
+                }
+                else{
+                    return false;
+                }
             }
         }
-        else{
-            if((horaAtual > 14) && (horaAtual < 22)){
-                return true;
-            }
-            else if(((horaAtual == 14) && (minutoAtual > 30)) || ((horaAtual==22) && (minutoAtual < 30))){
-                return true;
+        if(periodo == "AM"){
+            if(((dataAtual.getDay())>=1) &&((dataAtual.getDay())<5)){
+                if((horaAtual > 2) && (horaAtual < 9)){
+                    return true;
+                }
+                else if(((horaAtual == 2) && (minutoAtual > 30)) || ((horaAtual==9) && (minutoAtual < 30))){
+                    return true;
+                }
+                else{
+                    return false;
+                }
             }
             else{
-                return false;
+                if((horaAtual > 14) && (horaAtual < 22)){
+                    return true;
+                }
+                else if(((horaAtual == 2) && (minutoAtual > 30)) || ((horaAtual==9) && (minutoAtual < 30))){
+                    return true;
+                }
+                else{
+                    return false;
+                }
             }
         }
     }
@@ -173,7 +215,7 @@
 
         }
         else{
-            alert("No momento não estamos recebendo pedidos, agradecemos pela preferência! (Horário de funcionamento: 14h30 ás 22h00)")
+            alert("Agradecemos pela preferência! (abriremos ás 14h30)");
         }
     }
 
@@ -477,3 +519,15 @@
     for(let i = 71; i <= 113; i++){
         preencherLista('borda'+i, Bordas);
     }
+    //Pizza 2 sabores é um produto novo, identificador em "Notas/novosProdutos.txt"
+    preencherLista('borda148', Bordas);
+
+
+
+
+
+
+
+
+
+    

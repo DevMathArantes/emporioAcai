@@ -18,6 +18,7 @@ header p{
     align-items: center;
     gap: 0.5em;
     padding: 0 1.5em;
+    text-decoration: underline;
 }
 header p img{
     width: 1.2em;
@@ -25,13 +26,13 @@ header p img{
 }
 header p a{
     color: var(--cor1);
-    text-decoration: underline;
 }
 
 /*Nav padrão da página*/
 header nav{
     top: 0;
     justify-content: end;
+    flex-flow: row wrap;
 }
 nav a{
     width: 2.5em;
