@@ -219,6 +219,9 @@
     .saboresImg{
         background-image: url(../Assets/Imagens/pizzaDupla.jpg);
     }
+    .cervejaImg{
+        background-image: url(../Assets/Imagens/heineken.jpg);
+    }
 
 @media screen and (min-width: 724px){
     
