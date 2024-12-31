@@ -70,8 +70,6 @@ function interagirModal(modal) {
 }
 
 // Exemplo de uso com português do Brasil:
-const periodo = verificarAMouPM('pt-BR');
-
 let dataAtual = new Date();
 let horaAtual = dataAtual.getHours();
 let minutoAtual = dataAtual.getMinutes();

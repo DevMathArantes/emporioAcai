@@ -1381,7 +1381,23 @@
 
             </ul><br>
 
-            
+            <!--Pizza 2 sabores-->
+            <input class="abrirCampo" id="sabores" type="checkbox">
+            <label class="imagemProduto saboresImg" for="sabores">2 Sabores <span></span></label>
+            <div class="produtoEspecial produto">
+                <img src="Assets/Imagens/pizzaDupla.jpg" alt="1 litro de açai">
+                <div class="especialInfo">
+                    <h3 id="nome148">Pizza 2 sabores</h3>
+                    <p id="descricao148">Sabores Escolhidos: | Borda: Nenhuma R$ 00.00 </p>
+                    <select name="" id="primeiroSabor148"></select>
+                    <select name="" id="segundoSabor148"></select>
+                    <select id="borda148" onchange="adicionarDescricao('148')">
+                        <option value="Nenhuma R$ 00.00">Nenhuma</option>
+                    </select>
+                    <span>R$<i id="valor."> 36.90</i></span>
+                    <button onclick="confirmar('148', 0, false, 3)" class="pedir">Pedir</button>
+                </div>
+            </div>
 
         </section>
 
