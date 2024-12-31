@@ -10,8 +10,10 @@ let Doces = [
     "Pó de guaraná R$ 3.00", "Ouro branco R$ 3.00", "Goiabada R$ 3.00",
     "Abacaxi R$ 3.50", "Chocolate branco R$ 3.50", "Chocolate R$ 3.50",
     "Confete R$ 3.50", "Leite condensado R$ 3.50", "Space boll R$ 3.50",
-    "Chocolate suflair R$ 3.99", "Creme de paçoca R$ 3.99",
-    "Ovomaltine R$ 3.50", "Leite Ninho R$ 4.00", "Morango R$ 4.00",
+    "Polpa de fruta abacaxi R$ 3.75", "Polpa de fruta abacaxi ao vinho R$ 3.75", "Polpa de fruta ameixa R$ 3.75",
+    "Polpa de fruta amora R$ 3.75", "Polpa de fruta cereja R$ 3.75", "Polpa de frutas vermelhas R$ 3.75", 
+    "Polpa de fruta maracujá R$ 3.75", "Polpa de fruta morango R$ 3.75", "Chocolate suflair R$ 3.99",
+    "Creme de paçoca R$ 3.99", "Ovomaltine R$ 3.50", "Leite Ninho R$ 4.00", "Morango R$ 4.00",
     "Nutella R$ 4.50", "Castanha R$ 4.50", "Creme de ouro branco R$ 4.50",
     "Cupuaçu R$ 4.50", "Creme de valsa R$ 4.50", "Kit kat R$ 4.99",
     "Pasta de amendoim, sabor leite ninho R$ 4.99", "Whey protein R$ 4.99", "Creme diamante negro R$ 5.00",
@@ -144,17 +146,17 @@ function alternarProduto(identificador) {
 }
 
 //Função para a pizza de 2 sabores
-function doisSabores(){
+function doisSabores() {
     let sabor1 = (get('sabor1148').value).slice(0, -8);
     let sabor2 = (get('sabor2148').value).slice(0, -8);
-    get('descricao148').innerHTML= sabor1 + " + "+ sabor2
+    get('descricao148').innerHTML = sabor1 + " + " + sabor2
     let preco1 = parseFloat((get('sabor1148').value).slice(-5));
     let preco2 = parseFloat((get('sabor2148').value).slice(-5));
-    if(preco1 >= preco2){
-        get('valor148').innerHTML=(preco1.toFixed(2)).toString();
+    if (preco1 >= preco2) {
+        get('valor148').innerHTML = (preco1.toFixed(2)).toString();
     }
-    else{
-        get('valor148').innerHTML=(preco2.toFixed(2)).toString();
+    else {
+        get('valor148').innerHTML = (preco2.toFixed(2)).toString();
     }
 }
 
@@ -507,12 +509,8 @@ for (let i = 71; i <= 113; i++) {
 }
 //Pizza 2 sabores é um produto novo, identificador em "Notas/novosProdutos.txt"
 
-for(let i = 71; i <= 95; i++){
-    let item = get('nome'+i).innerHTML+" R$ "+get('valor'+i).innerHTML
-    Pizzas.push(item);
-}
-for(let i = 96; i <= 113; i++){
-    let item = get('descricao'+i).innerHTML+" R$ "+get('valor'+i).innerHTML
+for (let i = 71; i <= 113; i++) {
+    let item = get('nome' + i).innerHTML + ": " + get('descricao' + i).innerHTML + " R$ " + get('valor' + i).innerHTML
     Pizzas.push(item);
 }
 preencherLista('sabor1148', Pizzas);
