@@ -507,8 +507,12 @@ for (let i = 71; i <= 113; i++) {
 }
 //Pizza 2 sabores é um produto novo, identificador em "Notas/novosProdutos.txt"
 
-for(let i = 71; i <= 113; i++){
+for(let i = 71; i <= 95; i++){
     let item = get('nome'+i).innerHTML+" R$ "+get('valor'+i).innerHTML
+    Pizzas.push(item);
+}
+for(let i = 96; i <= 113; i++){
+    let item = get('descricao'+i).innerHTML+" R$ "+get('valor'+i).innerHTML
     Pizzas.push(item);
 }
 preencherLista('sabor1148', Pizzas);
