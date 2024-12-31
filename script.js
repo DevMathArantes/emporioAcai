@@ -45,6 +45,8 @@ let SaborSorvetes = [
     "Cheesecake", "Papaya com cassis", "Caraxi",
 ];
 
+let Pizzas = [];
+
 //Funções coringa
 
 //
@@ -69,7 +71,7 @@ function interagirModal(modal) {
     }
 }
 
-// Exemplo de uso com português do Brasil:
+//retorna true para aberto e false para fechado
 let dataAtual = new Date();
 let horaAtual = dataAtual.getHours();
 let minutoAtual = dataAtual.getMinutes();
@@ -134,10 +136,26 @@ function mudarTamanho(identificador, maior, menor) {
     }
 }
 
+//Muda o Nome e valor do produto de acordo com o select
 function alternarProduto(identificador) {
     get('alternar' + identificador).value;
     get('descricao' + identificador).innerHTML = (get('alternar' + identificador).value).slice(0, -5);
     get('valor' + identificador).innerHTML = (get('alternar' + identificador).value).slice(-5);
+}
+
+//Função para a pizza de 2 sabores
+function doisSabores(){
+    let sabor1 = (get('sabor1148').value).slice(0, -5);
+    let sabor2 = (get('sabor2148').value).slice(0, -5);
+    get('descricao148').innerHTML= sabor1 + " + "+ sabor2
+    let preco1 = parseFloat((get('sabor1148').value).slice(-5));
+    let preco2 = parseFloat((get('sabor2148').value).slice(-5));
+    if(preco1 >= preco2){
+        get('valor148').innerHTML=(preco1.toFixed(2)).toString();
+    }
+    else{
+        get('valor148').innerHTML=(preco2.toFixed(2)).toString();
+    }
 }
 
 //Funções principais
@@ -488,11 +506,13 @@ for (let i = 71; i <= 113; i++) {
     preencherLista('borda' + i, Bordas);
 }
 //Pizza 2 sabores é um produto novo, identificador em "Notas/novosProdutos.txt"
-preencherLista('borda148', Bordas);
 
-
-
-
+for(let i = 71; i <= 113; i++){
+    let item = get('nome'+i).innerHTML+" R$ "+get('valor'+i).innerHTML
+    Pizzas.push(item);
+}
+preencherLista('sabor1148', Pizzas);
+preencherLista('sabor2148', Pizzas);
 
 
 

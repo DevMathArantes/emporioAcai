@@ -1388,13 +1388,10 @@
                 <img src="Assets/Imagens/pizzaDupla.jpg" alt="1 litro de açai">
                 <div class="especialInfo">
                     <h3 id="nome148">Pizza 2 sabores</h3>
-                    <p id="descricao148">Sabores Escolhidos: | Borda: Nenhuma R$ 00.00 </p>
-                    <select name="" id="primeiroSabor148"></select>
-                    <select name="" id="segundoSabor148"></select>
-                    <select id="borda148" onchange="adicionarDescricao('148')">
-                        <option value="Nenhuma R$ 00.00">Nenhuma</option>
-                    </select>
-                    <span>R$<i id="valor."> 36.90</i></span>
+                    <p id="descricao148">Pizza alho e óleo (grande) + Pizza Alho e óleo (grande) | Borda: Nenhuma R$ 00.00 </p>
+                    <select onchange="doisSabores()" id="sabor1148"></select>
+                    <select onchange="doisSabores()" id="sabor2148"></select>
+                    <span>R$<i id="valor148"> 70.00</i></span>
                     <button onclick="confirmar('148', 0, false, 3)" class="pedir">Pedir</button>
                 </div>
             </div>
@@ -1453,6 +1450,13 @@
                         <p id="descricao118">Lombo, bacon, cebola, alface e tomate</p>
                         <span>R$ <i id="valor118">50.00</i></span>
                         <button onclick="confirmar('118', 0, false, 0)" class="pedir">Pedir</button>
+                    </div>
+                    <div class="carrosselItem porcao">
+                        <img src="Assets/Imagens/porcaoMista.jpg" alt="porção mista">
+                        <h3 id="nome160">Porção Mista</h3>
+                        <p id="descricao160">Filé vaca, filé frango, filé mignon, suíno, bacon, calabresa, cebola, 500gr batata frita</p>
+                        <span>R$ <i id="valor160">65.00</i></span>
+                        <button onclick="confirmar('160', 0, false, 0)" class="pedir">Pedir</button>
                     </div>
                 </div>
             </div><br>
