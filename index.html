@@ -410,14 +410,15 @@
                         <img src="Assets/Imagens/refrigerante2litros.jpg" alt="refrigerante 2 litros">
                         <h3 id="nome33">Refrigerante 2 Litros</h3>
                         <p id="descricao33">Coca-cola 2 litros</p>
-                        <select onchange="mudarDescricao('33')" id="mudarDescricao33">
-                            <option value="Coca-cola 2 litros">Coca-cola</option>
-                            <option value="Coca-cola 0 2 litros">Coca-cola 0</option>
-                            <option value="Guaraná Jaboti 2 litros">Guaraná Jaboti</option>
-                            <option value="Fanta Laranja 2 litros">Fanta Laranja</option>
-                            <option value="Sprite 2 litros">Sprite</option>
+                        <select onchange="alternarProduto('33')" id="alternar33">
+                            <option value="Coca-cola 2 litros 14.00">Coca-cola</option>
+                            <option value="Coca-cola 0 2 litros 14.00">Coca-cola 0</option>
+                            <option value="Guaraná Jaboti 2 litros 12.00">Guaraná Jaboti</option>
+                            <option value="Fanta Laranja 2 litros 13.00">Fanta Laranja</option>
+                            <option value="Fanta Uva 2 litros 13.00">Fanta Laranja</option>
+                            <option value="Sprite 2 litros 13.00">Sprite</option>
                         </select>
-                        <span>R$ <i id="valor33">12.00</i></span>
+                        <span>R$ <i id="valor33">14.00</i></span>
                         <button onclick="confirmar('33', 0, false, 0)" class="pedir">Pedir</button>
                     </div>
 
@@ -568,13 +569,13 @@
                 <li>
                     <h3 id="nome45">X-Bacon</h3>
                     <p id="descricao45">Pão, queijo, hambúrguer e bacon</p>
-                    <span>R$ <i id="valor45">17.00</i></span>
+                    <span>R$ <i id="valor45">20.00</i></span>
                     <button onclick="confirmar('45', 0, true, 2)">Pedir</button>
                 </li>
                 <li>
                     <h3 id="nome46">X-Burguer</h3>
                     <p id="descricao46">Pão, 2 hambúrgueres e queijo</p>
-                    <span>R$ <i id="valor46">16.00</i></span>
+                    <span>R$ <i id="valor46">18.00</i></span>
                     <button onclick="confirmar('46', 0, true, 2)">Pedir</button>
                 </li>
                 <li>
@@ -586,21 +587,27 @@
                 <li>
                     <h3 id="nome48">X-Salada</h3>
                     <p id="descricao48">Pão, queijo, hambúrguer, alface e tomate</p>
-                    <span>R$ <i id="valor48">17.00</i></span>
+                    <span>R$ <i id="valor48">19.00</i></span>
                     <button onclick="confirmar('48', 0, true, 2)">Pedir</button>
+                </li>
+                <li>
+                    <h3 id="nome150">X-Salada Egg</h3>
+                    <p id="descricao150">Pão, queijo, hambúrguer, presunto, ovo, alface e tomate</p>
+                    <span>R$ <i id="valor150">21.00</i></span>
+                    <button onclick="confirmar('150', 0, true, 2)">Pedir</button>
                 </li>
                 <li>
                     <h3 id="nome49">X-Tudão</h3>
                     <p id="descricao49">Pão, presunto, queijo, catupiry, salsicha, 3 hambúrgueres, bacon, milho,
                         batata palha, alface e tomate</p>
-                    <span>R$ <i id="valor49">31.90</i></span>
+                    <span>R$ <i id="valor49">33.90</i></span>
                     <button onclick="confirmar('49', 0, true, 2)">Pedir</button>
                 </li>
                 <li>
                     <h3 id="nome50">X-Tudo</h3>
                     <p id="descricao50">Pão, presunto, queijo, 2 hambúrgueres, ovo, bacon, alface, catupiry e tomate
                     </p>
-                    <span>R$ <i id="valor50">26.00</i></span>
+                    <span>R$ <i id="valor50">28.00</i></span>
                     <button onclick="confirmar('50', 0, true, 2)">Pedir</button>
                 </li>
             </ul><br>
@@ -612,43 +619,43 @@
                 <li>
                     <h3 id="nome51">X-Frango</h3>
                     <p id="descricao51">Pão, queijo e frango</p>
-                    <span>R$ <i id="valor51">20.00</i></span>
+                    <span>R$ <i id="valor51">22.00</i></span>
                     <button onclick="confirmar('51', 0, true, 2)">Pedir</button>
                 </li>
                 <li>
                     <h3 id="nome52">X-Frango Bacon</h3>
                     <p id="descricao52">Pão, queijo, frango e bacon</p>
-                    <span>R$ <i id="valor52">24.00</i></span>
+                    <span>R$ <i id="valor52">28.00</i></span>
                     <button onclick="confirmar('52', 0, true, 2)">Pedir</button>
                 </li>
                 <li>
                     <h3 id="nome53">X-Frango cremoso</h3>
                     <p id="descricao53">Pão, queijo, frango, catupiry e bacon</p>
-                    <span>R$ <i id="valor53">28.00</i></span>
+                    <span>R$ <i id="valor53">30.00</i></span>
                     <button onclick="confirmar('53', 0, true, 2)">Pedir</button>
                 </li>
                 <li>
                     <h3 id="nome54">X-Frango Egg</h3>
                     <p id="descricao54">Pão, queijo, frango e ovo</p>
-                    <span>R$ <i id="valor54">21.00</i></span>
+                    <span>R$ <i id="valor54">24.00</i></span>
                     <button onclick="confirmar('54', 0, true, 2)">Pedir</button>
                 </li>
                 <li>
                     <h3 id="nome55">X-Frango Salada Egg</h3>
                     <p id="descricao55">Pão, queijo, frango, presunto, ovo, alface e tomate</p>
-                    <span>R$ <i id="valor55">23.00</i></span>
+                    <span>R$ <i id="valor55">27.00</i></span>
                     <button onclick="confirmar('55', 0, true, 2)">Pedir</button>
                 </li>
                 <li>
                     <h3 id="nome56">X-Frango Salada</h3>
                     <p id="descricao56">Pão, queijo, frango, presunto, alface e tomate</p>
-                    <span>R$ <i id="valor56">22.00</i></span>
+                    <span>R$ <i id="valor56">25.00</i></span>
                     <button onclick="confirmar('56', 0, true, 2)">Pedir</button>
                 </li>
                 <li>
                     <h3 id="nome57">X-Frango Tudo</h3>
                     <p id="descricao57">Pão, queijo, frango, alface, tomate, bacon, salsicha, ovo e presunto</p>
-                    <span>R$ <i id="valor57">29.00</i></span>
+                    <span>R$ <i id="valor57">32.00</i></span>
                     <button onclick="confirmar('57', 0, true, 2)">Pedir</button>
                 </li>
             </ul><br>
@@ -674,37 +681,37 @@
                 <li>
                     <h3 id="nome59">X-Filé</h3>
                     <p id="descricao59">Pão, queijo e carne</p>
-                    <span>R$ <i id="valor59">22.00</i></span>
+                    <span>R$ <i id="valor59">25.00</i></span>
                     <button onclick="confirmar('59', 0, true, 2)">Pedir</button>
                 </li>
                 <li>
                     <h3 id="nome60">X-Filé Bacon</h3>
                     <p id="descricao60">Pão, queijo, carne e bacon</p>
-                    <span>R$ <i id="valor60">27.00</i></span>
+                    <span>R$ <i id="valor60">33.00</i></span>
                     <button onclick="confirmar('60', 0, true, 2)">Pedir</button>
                 </li>
                 <li>
                     <h3 id="nome61">X-Filé Egg</h3>
                     <p id="descricao61">Pão, queijo, carne e ovo</p>
-                    <span>R$ <i id="valor61">23.00</i></span>
+                    <span>R$ <i id="valor61">27.00</i></span>
                     <button onclick="confirmar('61', 0, true, 2)">Pedir</button>
                 </li>
                 <li>
                     <h3 id="nome62">X-Filé Salada</h3>
                     <p id="descricao62">Pão, queijo, carne, presunto, alface e tomate</p>
-                    <span>R$ <i id="valor62">25.00</i></span>
+                    <span>R$ <i id="valor62">29.00</i></span>
                     <button onclick="confirmar('62', 0, true, 2)">Pedir</button>
                 </li>
                 <li>
                     <h3 id="nome63">X-Filé Salada Egg</h3>
                     <p id="descricao63">Pão, queijo, carne, presunto, ovo, alface e tomate</p>
-                    <span>R$ <i id="valor63">26.00</i></span>
+                    <span>R$ <i id="valor63">31.00</i></span>
                     <button onclick="confirmar('63', 0, true, 2)">Pedir</button>
                 </li>
                 <li>
                     <h3 id="nome64">X-Filé Tudo</h3>
                     <p id="descricao64">Pão, queijo, carne, presunto, bacon, ovo, salsicha, alface e tomate</p>
-                    <span>R$ <i id="valor64">31.00</i></span>
+                    <span>R$ <i id="valor64">36.00</i></span>
                     <button onclick="confirmar('64', 0, true, 2)">Pedir</button>
                 </li>
             </ul><br>
@@ -716,37 +723,37 @@
                 <li>
                     <h3 id="nome65">X-Lombo</h3>
                     <p id="descricao65">Pão, queijo e Lombo</p>
-                    <span>R$ <i id="valor65">21.00</i></span>
+                    <span>R$ <i id="valor65">22.00</i></span>
                     <button onclick="confirmar('65', 0, true, 2)">Pedir</button>
                 </li>
                 <li>
                     <h3 id="nome66">X-Lombo Bacon</h3>
                     <p id="descricao66">Pão, queijo, lombo e bacon</p>
-                    <span>R$ <i id="valor66">25.00</i></span>
+                    <span>R$ <i id="valor66">29.00</i></span>
                     <button onclick="confirmar('66', 0, true, 2)">Pedir</button>
                 </li>
                 <li>
                     <h3 id="nome67">X-Lombo Egg</h3>
                     <p id="descricao67">Pão, queijo, lombo e ovo</p>
-                    <span>R$ <i id="valor67">22.00</i></span>
+                    <span>R$ <i id="valor67">25.00</i></span>
                     <button onclick="confirmar('67', 0, true, 2)">Pedir</button>
                 </li>
                 <li>
                     <h3 id="nome68">X-Lombo Salada</h3>
                     <p id="descricao68">Pão, queijo, lombo, presunto, alface e tomate</p>
-                    <span>R$ <i id="valor68">23.00</i></span>
+                    <span>R$ <i id="valor68">26.00</i></span>
                     <button onclick="confirmar('68', 0, true, 2)">Pedir</button>
                 </li>
                 <li>
                     <h3 id="nome69">X-Lombo Salada Egg</h3>
                     <p id="descricao69">Pão, queijo, lombo, presunto, ovo, alface e tomate</p>
-                    <span>R$ <i id="valor69">24.00</i></span>
+                    <span>R$ <i id="valor69">28.00</i></span>
                     <button onclick="confirmar('69', 0, true, 2)">Pedir</button>
                 </li>
                 <li>
                     <h3 id="nome70">X-Lombo Tudo</h3>
                     <p id="descricao70">Pão, queijo, lombo, ovo, bacon, presunto, salsicha, alface e tomate</p>
-                    <span>R$ <i id="valor70">29.00</i></span>
+                    <span>R$ <i id="valor70">33.00</i></span>
                     <button onclick="confirmar('70', 0, true, 2)">Pedir</button>
                 </li>
             </ul><br>
@@ -766,8 +773,7 @@
 
                 <li>
                     <h3 id="nome71">Pizza Alho e óleo (Grande)</h3>
-                    <p id="descricao71">Mussarela, bacon, alho, tomate, cebola, orégano e azeitona | Borda: Nenhuma
-                        R$ 00.00 </p>
+                    <p id="descricao71">Mussarela, bacon, alho, tomate, cebola, orégano e azeitona | Borda: Nenhuma R$ 00.00 </p>
                     <select id="tamanho71" onchange="mudarTamanho('71', '65.00', '45.00')">
                         <option value="1">Grande</option>
                         <option value="2">Média</option>
@@ -775,14 +781,13 @@
                     <select onchange="adicionarDescricao('71')" id="borda71">
                         <option value="Nenhuma R$ 00.00 ">Nenhuma</option>
                     </select>
-                    <span>R$ <i id="valor71">65.00</i></span>
+                    <span>R$ <i id="valor71">70.00</i></span>
                     <button onclick="confirmar('71', 0, false, 3)">Pedir</button>
                 </li>
 
                 <li>
                     <h3 id="nome72">Pizza Baiana (Grande)</h3>
-                    <p id="descricao72">Mussarela, calabresa picada, parmesão, pimenta, ovos, pimentão, tomate,
-                        cebola, orégano e azeitona | Borda: Nenhuma R$ 00.00 </p>
+                    <p id="descricao72">Mussarela, calabresa picada, parmesão, pimenta, ovos, pimentão, tomate, cebola, orégano e azeitona | Borda: Nenhuma R$ 00.00 </p>
                     <select id="tamanho72" onchange="mudarTamanho('72', '70.00', '48.00')">
                         <option value="1">Grande</option>
                         <option value="2">Média</option>
@@ -790,14 +795,13 @@
                     <select onchange="adicionarDescricao('72')" id="borda72">
                         <option value="Nenhuma R$ 00.00 ">Nenhuma</option>
                     </select>
-                    <span>R$ <i id="valor72">70.00</i></span>
+                    <span>R$ <i id="valor72">75.00</i></span>
                     <button onclick="confirmar('72', 0, false, 3)">Pedir</button>
                 </li>
 
                 <li>
                     <h3 id="nome73">Pizza Bolonhesa (Grande)</h3>
-                    <p id="descricao73">Molho especial, carne moída, orégano e mussarela | Borda: Nenhuma R$ 00.00
-                    </p>
+                    <p id="descricao73">Molho especial, carne moída, orégano e mussarela | Borda: Nenhuma R$ 00.00</p>
                     <select id="tamanho73" onchange="mudarTamanho('73', '65.00', '45.00')">
                         <option value="1">Grande</option>
                         <option value="2">Média</option>
@@ -805,7 +809,7 @@
                     <select onchange="adicionarDescricao('73')" id="borda73">
                         <option value="Nenhuma R$ 00.00 ">Nenhuma</option>
                     </select>
-                    <span>R$ <i id="valor73">65.00</i></span>
+                    <span>R$ <i id="valor73">70.00</i></span>
                     <button onclick="confirmar('73', 0, false, 3)">Pedir</button>
                 </li>
 
@@ -819,14 +823,13 @@
                     <select onchange="adicionarDescricao('74')" id="borda74">
                         <option value="Nenhuma R$ 00.00 ">Nenhuma</option>
                     </select>
-                    <span>R$ <i id="valor74">70.00</i></span>
+                    <span>R$ <i id="valor74">75.00</i></span>
                     <button onclick="confirmar('74', 0, false, 3)">Pedir</button>
                 </li>
 
                 <li>
                     <h3 id="nome75">Pizza Calabresa (Grande)</h3>
-                    <p id="descricao75">Calabresa, mussarela, cebola, tomate, orégano, molho de tomate | Borda:
-                        Nenhuma R$ 00.00 </p>
+                    <p id="descricao75">Calabresa, mussarela, cebola, tomate, orégano, molho de tomate | Borda: Nenhuma R$ 00.00 </p>
                     <select id="tamanho75" onchange="mudarTamanho('75', '60.00', '45.00')">
                         <option value="1">Grande</option>
                         <option value="2">Média</option>
@@ -834,14 +837,13 @@
                     <select onchange="adicionarDescricao('75')" id="borda75">
                         <option value="Nenhuma R$ 00.00 ">Nenhuma</option>
                     </select>
-                    <span>R$ <i id="valor75">60.00</i></span>
+                    <span>R$ <i id="valor75">65.00</i></span>
                     <button onclick="confirmar('75', 0, false, 3)">Pedir</button>
                 </li>
 
                 <li>
                     <h3 id="nome76">Pizza Carijó (Grande)</h3>
-                    <p id="descricao76">Mussarela, molho, frango, ovo, catupiry, milho, orégano e azeitona | Borda:
-                        Nenhuma R$ 00.00 </p>
+                    <p id="descricao76">Mussarela, molho, frango, ovo, catupiry, milho, orégano e azeitona | Borda: Nenhuma R$ 00.00 </p>
                     <select id="tamanho76" onchange="mudarTamanho('76', '65.00', '45.00')">
                         <option value="1">Grande</option>
                         <option value="2">Média</option>
@@ -849,14 +851,13 @@
                     <select onchange="adicionarDescricao('76')" id="borda76">
                         <option value="Nenhuma R$ 00.00 ">Nenhuma</option>
                     </select>
-                    <span>R$ <i id="valor76">65.00</i></span>
+                    <span>R$ <i id="valor76">70.00</i></span>
                     <button onclick="confirmar('', 0, false, 3)">Pedir</button>
                 </li>
 
                 <li>
                     <h3 id="nome77">Pizza Fazendinha (Grande)</h3>
-                    <p id="descricao77">Presunto, mussarela, ovo, tomate, milho e cebola | Borda: Nenhuma R$ 00.00
-                    </p>
+                    <p id="descricao77">Presunto, mussarela, ovo, tomate, milho e cebola | Borda: Nenhuma R$ 00.00</p>
                     <select id="tamanho77" onchange="mudarTamanho('77', '65.00', '45.00')">
                         <option value="1">Grande</option>
                         <option value="2">Média</option>
@@ -864,14 +865,13 @@
                     <select onchange="adicionarDescricao('77')" id="borda77">
                         <option value="Nenhuma R$ 00.00 ">Nenhuma</option>
                     </select>
-                    <span>R$ <i id="valor77">65.00</i></span>
+                    <span>R$ <i id="valor77">70.00</i></span>
                     <button onclick="confirmar('77', 0, false, 3)">Pedir</button>
                 </li>
 
                 <li>
                     <h3 id="nome78">Pizza Frango com catupiry (Grande)</h3>
-                    <p id="descricao78">Mussarela, frango, catupiry, orégano, tomate, azeitona e molho de tomate |
-                        Borda: Nenhuma R$ 00.00 </p>
+                    <p id="descricao78">Mussarela, frango, catupiry, orégano, tomate, azeitona e molho de tomate | Borda: Nenhuma R$ 00.00 </p>
                     <select id="tamanho78" onchange="mudarTamanho('78', '60.00', '45.00')">
                         <option value="1">Grande</option>
                         <option value="2">Média</option>
@@ -879,14 +879,13 @@
                     <select onchange="adicionarDescricao('78')" id="borda78">
                         <option value="Nenhuma R$ 00.00 ">Nenhuma</option>
                     </select>
-                    <span>R$ <i id="valor78">60.00</i></span>
+                    <span>R$ <i id="valor78">65.00</i></span>
                     <button onclick="confirmar('78', 0, false, 3)">Pedir</button>
                 </li>
 
                 <li>
                     <h3 id="nome79">Pizza Frango cremoso (Grande)</h3>
-                    <p id="descricao79">Frango, catupiry, batata palha, azeitona fatiada, mussarela e orégano |
-                        Borda: Nenhuma R$ 00.00 </p>
+                    <p id="descricao79">Frango, catupiry, batata palha, azeitona fatiada, mussarela e orégano | Borda: Nenhuma R$ 00.00 </p>
                     <select id="tamanho79" onchange="mudarTamanho('79', '67.00', '45.00')">
                         <option value="1">Grande</option>
                         <option value="2">Média</option>
@@ -894,14 +893,13 @@
                     <select onchange="adicionarDescricao('79')" id="borda79">
                         <option value="Nenhuma R$ 00.00 ">Nenhuma</option>
                     </select>
-                    <span>R$ <i id="valor79">67.00</i></span>
+                    <span>R$ <i id="valor79">72.00</i></span>
                     <button onclick="confirmar('79', 0, false, 3)">Pedir</button>
                 </li>
 
                 <li>
                     <h3 id="nome80">Pizza Franlone (Grande)</h3>
-                    <p id="descricao80">Frango, queijo provolone, tomate, mussarela, orégano, azeitona, milho e
-                        molho de tomate | Borda: Nenhuma R$ 00.00 </p>
+                    <p id="descricao80">Frango, queijo provolone, tomate, mussarela, orégano, azeitona, milho e molho de tomate | Borda: Nenhuma R$ 00.00 </p>
                     <select id="tamanho80" onchange="mudarTamanho('80', '65.00', '45.00')">
                         <option value="1">Grande</option>
                         <option value="2">Média</option>
@@ -909,14 +907,13 @@
                     <select onchange="adicionarDescricao('80')" id="borda80">
                         <option value="Nenhuma R$ 00.00 ">Nenhuma</option>
                     </select>
-                    <span>R$ <i id="valor80">65.00</i></span>
+                    <span>R$ <i id="valor80">70.00</i></span>
                     <button onclick="confirmar('80', 0, false, 3)">Pedir</button>
                 </li>
 
                 <li>
                     <h3 id="nome81">Pizza Hot Dog (Grande)</h3>
-                    <p id="descricao81">Salsicha ao molho, batata palha, catchup, maioneses, mussarela e milho |
-                        Borda: Nenhuma R$ 00.00 </p>
+                    <p id="descricao81">Salsicha ao molho, batata palha, catchup, maioneses, mussarela e milho | Borda: Nenhuma R$ 00.00 </p>
                     <select id="tamanho81" onchange="mudarTamanho('81', '60.00', '45.00')">
                         <option value="1">Grande</option>
                         <option value="2">Média</option>
@@ -924,14 +921,13 @@
                     <select onchange="adicionarDescricao('81')" id="borda81">
                         <option value="Nenhuma R$ 00.00 ">Nenhuma</option>
                     </select>
-                    <span>R$ <i id="valor81">60.00</i></span>
+                    <span>R$ <i id="valor81">65.00</i></span>
                     <button onclick="confirmar('81', 0, false, 3)">Pedir</button>
                 </li>
 
                 <li>
                     <h3 id="nome82">Pizza Lombinho especial (Grande)</h3>
-                    <p id="descricao82">Lombo canadense, presunto, mussarela, tomate e orégano | Borda: Nenhuma R$
-                        00.00 </p>
+                    <p id="descricao82">Lombo canadense, presunto, mussarela, tomate e orégano | Borda: Nenhuma R$ 00.00 </p>
                     <select id="tamanho82" onchange="mudarTamanho('82', '70.00', '48.00')">
                         <option value="1">Grande</option>
                         <option value="2">Média</option>
@@ -939,14 +935,13 @@
                     <select onchange="adicionarDescricao('82')" id="borda82">
                         <option value="Nenhuma R$ 00.00 ">Nenhuma</option>
                     </select>
-                    <span>R$ <i id="valor82">70.00</i></span>
+                    <span>R$ <i id="valor82">75.00</i></span>
                     <button onclick="confirmar('82', 0, false, 3)">Pedir</button>
                 </li>
 
                 <li>
                     <h3 id="nome83">Pizza Lombo canadense (Grande)</h3>
-                    <p id="descricao83">Lombo canadense, presunto, mussarela, tomate, orégano, molho de tomate,
-                        palmito e catupiry | Borda: Nenhuma R$ 00.00 </p>
+                    <p id="descricao83">Lombo canadense, presunto, mussarela, tomate, orégano, molho de tomate, palmito e catupiry | Borda: Nenhuma R$ 00.00 </p>
                     <select id="tamanho83" onchange="mudarTamanho('83', '65.00', '45.00')">
                         <option value="1">Grande</option>
                         <option value="2">Média</option>
@@ -954,14 +949,13 @@
                     <select onchange="adicionarDescricao('83')" id="borda83">
                         <option value="Nenhuma R$ 00.00 ">Nenhuma</option>
                     </select>
-                    <span>R$ <i id="valor83">65.00</i></span>
+                    <span>R$ <i id="valor83">70.00</i></span>
                     <button onclick="confirmar('83', 0, false, 3)">Pedir</button>
                 </li>
 
                 <li>
                     <h3 id="nome84">Pizza Marajá (Grande)</h3>
-                    <p id="descricao84">Mussarela, lombo, canadense, catupiry, palmito, bacon, orégano, calabresa,
-                        champignon, azeitona e tomate | Borda: Nenhuma R$ 00.00 </p>
+                    <p id="descricao84">Mussarela, lombo, canadense, catupiry, palmito, bacon, orégano, calabresa, champignon, azeitona e tomate | Borda: Nenhuma R$ 00.00 </p>
                     <select id="tamanho84" onchange="mudarTamanho('84', '73.00', '48.00')">
                         <option value="1">Grande</option>
                         <option value="2">Média</option>
@@ -969,14 +963,13 @@
                     <select onchange="adicionarDescricao('84')" id="borda84">
                         <option value="Nenhuma R$ 00.00 ">Nenhuma</option>
                     </select>
-                    <span>R$ <i id="valor84">73.00</i></span>
+                    <span>R$ <i id="valor84">78.00</i></span>
                     <button onclick="confirmar('84', 0, false, 3)">Pedir</button>
                 </li>
 
                 <li>
                     <h3 id="nome85">Pizza Maromba (Grande)</h3>
-                    <p id="descricao85">Frango, catupiry, ovos, mussarela, orégano, bacon, tomate e molho especial |
-                        Borda: Nenhuma R$ 00.00 </p>
+                    <p id="descricao85">Frango, catupiry, ovos, mussarela, orégano, bacon, tomate e molho especial | Borda: Nenhuma R$ 00.00 </p>
                     <select id="tamanho85" onchange="mudarTamanho('85', '70.00', '48.00')">
                         <option value="1">Grande</option>
                         <option value="2">Média</option>
@@ -984,14 +977,13 @@
                     <select onchange="adicionarDescricao('85')" id="borda85">
                         <option value="Nenhuma R$ 00.00 ">Nenhuma</option>
                     </select>
-                    <span>R$ <i id="valor85">70.00</i></span>
+                    <span>R$ <i id="valor85">75.00</i></span>
                     <button onclick="confirmar('85', 0, false, 3)">Pedir</button>
                 </li>
 
                 <li>
                     <h3 id="nome86">Pizza Moda da casa (Grande)</h3>
-                    <p id="descricao86">Presunto, mussarela, calabresa, bacon, catupiry, tomate, cebola, orégano, e
-                        molho de tomate | Borda: Nenhuma R$ 00.00 </p>
+                    <p id="descricao86">Presunto, mussarela, calabresa, bacon, catupiry, tomate, cebola, orégano, e molho de tomate | Borda: Nenhuma R$ 00.00 </p>
                     <select id="tamanho86" onchange="mudarTamanho('86', '73.00', '48.00')">
                         <option value="1">Grande</option>
                         <option value="2">Média</option>
@@ -999,14 +991,13 @@
                     <select onchange="adicionarDescricao('86')" id="borda86">
                         <option value="Nenhuma R$ 00.00 ">Nenhuma</option>
                     </select>
-                    <span>R$ <i id="valor86">73.00</i></span>
+                    <span>R$ <i id="valor86">78.00</i></span>
                     <button onclick="confirmar('86', 0, false, 3)">Pedir</button>
                 </li>
 
                 <li>
                     <h3 id="nome87">Pizza Mussarela (Grande)</h3>
-                    <p id="descricao87">Mussarela, molho gourmet de tomate, azeitona, tomate e orégano | Borda:
-                        Nenhuma R$ 00.00 </p>
+                    <p id="descricao87">Mussarela, molho gourmet de tomate, azeitona, tomate e orégano | Borda: Nenhuma R$ 00.00 </p>
                     <select id="tamanho87" onchange="mudarTamanho('87', '65.00', '48.00')">
                         <option value="1">Grande</option>
                         <option value="2">Média</option>
@@ -1014,7 +1005,7 @@
                     <select onchange="adicionarDescricao('87')" id="borda87">
                         <option value="Nenhuma R$ 00.00 ">Nenhuma</option>
                     </select>
-                    <span>R$ <i id="valor87">65.00</i></span>
+                    <span>R$ <i id="valor87">75.00</i></span>
                     <button onclick="confirmar('87', 0, false, 3)">Pedir</button>
                 </li>
 
@@ -1028,14 +1019,13 @@
                     <select onchange="adicionarDescricao('88')" id="borda88">
                         <option value="Nenhuma R$ 00.00 ">Nenhuma</option>
                     </select>
-                    <span>R$ <i id="valor88">60.00</i></span>
+                    <span>R$ <i id="valor88">65.00</i></span>
                     <button onclick="confirmar('88', 0, false, 3)">Pedir</button>
                 </li>
 
                 <li>
                     <h3 id="nome89">Pizza Parmegiana (Grande)</h3>
-                    <p id="descricao89">Presunto, queijo, provolono, mussarela, molho de tomate, baconorégano,
-                        azeitona e tomate | Borda: Nenhuma R$ 00.00 </p>
+                    <p id="descricao89">Presunto, queijo, provolono, mussarela, molho de tomate, baconorégano, azeitona e tomate | Borda: Nenhuma R$ 00.00 </p>
                     <select id="tamanho89" onchange="mudarTamanho('89', '70.00', '48.00')">
                         <option value="1">Grande</option>
                         <option value="2">Média</option>
@@ -1043,14 +1033,13 @@
                     <select onchange="adicionarDescricao('89')" id="borda89">
                         <option value="Nenhuma R$ 00.00 ">Nenhuma</option>
                     </select>
-                    <span>R$ <i id="valor89">70.00</i></span>
+                    <span>R$ <i id="valor89">75.00</i></span>
                     <button onclick="confirmar('89', 0, false, 3)">Pedir</button>
                 </li>
 
                 <li>
                     <h3 id="nome90">Pizza Portuguesa (Grande)</h3>
-                    <p id="descricao90">Presunto, mussarela, bacon, ovo, azeitona, tomate, palmito, cebola e molho
-                        de tomate | Borda: Nenhuma R$ 00.00 </p>
+                    <p id="descricao90">Presunto, mussarela, bacon, ovo, azeitona, tomate, palmito, cebola e molho de tomate | Borda: Nenhuma R$ 00.00 </p>
                     <select id="tamanho90" onchange="mudarTamanho('90', '60.00', '45.00')">
                         <option value="1">Grande</option>
                         <option value="2">Média</option>
@@ -1058,14 +1047,13 @@
                     <select onchange="adicionarDescricao('90')" id="borda90">
                         <option value="Nenhuma R$ 00.00 ">Nenhuma</option>
                     </select>
-                    <span>R$ <i id="valor90">60.00</i></span>
+                    <span>R$ <i id="valor90">65.00</i></span>
                     <button onclick="confirmar('90', 0, false, 3)">Pedir</button>
                 </li>
 
                 <li>
                     <h3 id="nome91">Pizza Presunto Mussarela (Grande)</h3>
-                    <p id="descricao91">Presunto, mussarela, orégano, tomate e molho de tomate | Borda: Nenhuma R$
-                        00.00 </p>
+                    <p id="descricao91">Presunto, mussarela, orégano, tomate e molho de tomate | Borda: Nenhuma R$ 00.00 </p>
                     <select id="tamanho91" onchange="mudarTamanho('91', '60.00', '45.00')">
                         <option value="1">Grande</option>
                         <option value="2">Média</option>
@@ -1073,14 +1061,13 @@
                     <select onchange="adicionarDescricao('91')" id="borda91">
                         <option value="Nenhuma R$ 00.00 ">Nenhuma</option>
                     </select>
-                    <span>R$ <i id="valor91">60.00</i></span>
+                    <span>R$ <i id="valor91">65.00</i></span>
                     <button onclick="confirmar('91', 0, false, 3)">Pedir</button>
                 </li>
 
                 <li>
                     <h3 id="nome92">Pizza Quatro queijos (Grande)</h3>
-                    <p id="descricao92">Mussarela, queijo provolone, queijo parmesão, catupiry, tomate, orégano,
-                        azeitona e tomate | Borda: Nenhuma R$ 00.00 </p>
+                    <p id="descricao92">Mussarela, queijo provolone, queijo parmesão, catupiry, tomate, orégano, azeitona e tomate | Borda: Nenhuma R$ 00.00 </p>
                     <select id="tamanho92" onchange="mudarTamanho('92', '73.00', '48.00')">
                         <option value="1">Grande</option>
                         <option value="2">Média</option>
@@ -1088,14 +1075,13 @@
                     <select onchange="adicionarDescricao('92')" id="borda92">
                         <option value="Nenhuma R$ 00.00 ">Nenhuma</option>
                     </select>
-                    <span>R$ <i id="valor92">73.00</i></span>
+                    <span>R$ <i id="valor92">78.00</i></span>
                     <button onclick="confirmar('92', 0, false, 3)">Pedir</button>
                 </li>
 
                 <li>
                     <h3 id="nome93">Pizza Siciliana (Grande)</h3>
-                    <p id="descricao93">Mussarela, calabresa, parmesão, bacon, pimentão, cebola, tomate, orégano e
-                        azeitona | Borda: Nenhuma R$ 00.00 </p>
+                    <p id="descricao93">Mussarela, calabresa, parmesão, bacon, pimentão, cebola, tomate, orégano e azeitona | Borda: Nenhuma R$ 00.00 </p>
                     <select id="tamanho93" onchange="mudarTamanho('93', '70.00', '48.00')">
                         <option value="1">Grande</option>
                         <option value="2">Média</option>
@@ -1103,14 +1089,13 @@
                     <select onchange="adicionarDescricao('93')" id="borda93">
                         <option value="Nenhuma R$ 00.00 ">Nenhuma</option>
                     </select>
-                    <span>R$ <i id="valor93">70.00</i></span>
+                    <span>R$ <i id="valor93">75.00</i></span>
                     <button onclick="confirmar('93', 0, false, 3)">Pedir</button>
                 </li>
 
                 <li>
                     <h3 id="nome94">Pizza Soft(Grande)</h3>
-                    <p id="descricao94">Mussarela, calabresa picada, champignon, cebola, bacon, tomate, catupiry,
-                        orégano e azeitona | Borda: Nenhuma R$ 00.00 </p>
+                    <p id="descricao94">Mussarela, calabresa picada, champignon, cebola, bacon, tomate, catupiry, orégano e azeitona | Borda: Nenhuma R$ 00.00 </p>
                     <select id="tamanho94" onchange="mudarTamanho('94', '70.00', '48.00')">
                         <option value="1">Grande</option>
                         <option value="2">Média</option>
@@ -1118,14 +1103,13 @@
                     <select onchange="adicionarDescricao('94')" id="borda94">
                         <option value="Nenhuma R$ 00.00 ">Nenhuma</option>
                     </select>
-                    <span>R$ <i id="valor94">70.00</i></span>
+                    <span>R$ <i id="valor94">75.00</i></span>
                     <button onclick="confirmar('94', 0, false, 3)">Pedir</button>
                 </li>
 
                 <li>
                     <h3 id="nome95">Pizza Vegetariana(Grande)</h3>
-                    <p id="descricao95">Milho, palmito, brócolis, champignon, mussarela e couve | Borda: Nenhuma R$
-                        00.00 </p>
+                    <p id="descricao95">Milho, palmito, brócolis, champignon, mussarela e couve | Borda: Nenhuma R$ 00.00 </p>
                     <select id="tamanho95" onchange="mudarTamanho('95', '70.00', '48.00')">
                         <option value="1">Grande</option>
                         <option value="2">Média</option>
@@ -1133,7 +1117,7 @@
                     <select onchange="adicionarDescricao('95')" id="borda95">
                         <option value="Nenhuma R$ 00.00 ">Nenhuma</option>
                     </select>
-                    <span>R$ <i id="valor95">70.00</i></span>
+                    <span>R$ <i id="valor95">75.00</i></span>
                     <button onclick="confirmar('95', 0, false, 3)">Pedir</button>
                 </li>
             </ul><br>
@@ -1153,7 +1137,7 @@
                     <select onchange="adicionarDescricao('96')" id="borda96">
                         <option value="Nenhuma R$ 00.00 ">Nenhuma</option>
                     </select>
-                    <span>R$ <i id="valor96">65.00</i></span>
+                    <span>R$ <i id="valor96">70.00</i></span>
                     <button onclick="confirmar('96', 0, false, 3)">Pedir</button>
                 </li>
 
@@ -1167,7 +1151,7 @@
                     <select id="borda97" onchange="adicionarDescricao('97')">
                         <option value="Nenhuma R$ 00.00">Nenhuma</option>
                     </select>
-                    <span>R$ <i id="valor97">65.00</i></span>
+                    <span>R$ <i id="valor97">70.00</i></span>
                     <button onclick="confirmar('97', 0, false, 3)">Pedir</button>
                 </li>
 
@@ -1181,7 +1165,7 @@
                     <select id="borda98" onchange="adicionarDescricao('98')">
                         <option value="Nenhuma R$ 00.00">Nenhuma</option>
                     </select>
-                    <span>R$ <i id="valor98">65.00</i></span>
+                    <span>R$ <i id="valor98">70.00</i></span>
                     <button onclick="confirmar('98', 0, false, 3)">Pedir</button>
                 </li>
 
@@ -1195,7 +1179,7 @@
                     <select id="borda99" onchange="adicionarDescricao('99')">
                         <option value="Nenhuma R$ 00.00">Nenhuma</option>
                     </select>
-                    <span>R$ <i id="valor99">65.00</i></span>
+                    <span>R$ <i id="valor99">70.00</i></span>
                     <button onclick="confirmar('99', 0, false, 3)">Pedir</button>
                 </li>
 
@@ -1209,7 +1193,7 @@
                     <select id="borda100" onchange="adicionarDescricao('100')">
                         <option value="Nenhuma R$ 00.00">Nenhuma</option>
                     </select>
-                    <span>R$ <i id="valor100">65.00</i></span>
+                    <span>R$ <i id="valor100">70.00</i></span>
                     <button onclick="confirmar('100', 0, false, 3)">Pedir</button>
                 </li>
 
@@ -1223,7 +1207,7 @@
                     <select id="borda101" onchange="adicionarDescricao('101')">
                         <option value="Nenhuma R$ 00.00">Nenhuma</option>
                     </select>
-                    <span>R$ <i id="valor101">65.00</i></span>
+                    <span>R$ <i id="valor101">70.00</i></span>
                     <button onclick="confirmar('101', 0, false, 3)">Pedir</button>
                 </li>
 
@@ -1237,7 +1221,7 @@
                     <select id="borda102" onchange="adicionarDescricao('102')">
                         <option value="Nenhuma R$ 00.00">Nenhuma</option>
                     </select>
-                    <span>R$ <i id="valor102">65.00</i></span>
+                    <span>R$ <i id="valor102">70.00</i></span>
                     <button onclick="confirmar('102', 0, false, 3)">Pedir</button>
                 </li>
 
@@ -1251,7 +1235,7 @@
                     <select id="borda103" onchange="adicionarDescricao('103')">
                         <option value="Nenhuma R$ 00.00">Nenhuma</option>
                     </select>
-                    <span>R$ <i id="valor103">65.00</i></span>
+                    <span>R$ <i id="valor103">70.00</i></span>
                     <button onclick="confirmar('103', 0, false, 3)">Pedir</button>
                 </li>
 
@@ -1265,14 +1249,13 @@
                     <select id="borda104" onchange="adicionarDescricao('104')">
                         <option value="Nenhuma R$ 00.00">Nenhuma</option>
                     </select>
-                    <span>R$ <i id="valor104">65.00</i></span>
+                    <span>R$ <i id="valor104">70.00</i></span>
                     <button onclick="confirmar('104', 0, false, 3)">Pedir</button>
                 </li>
 
                 <li>
                     <h3 id="nome105">Pizza Doce (Grande)</h3>
-                    <p id="descricao105">Nutella, morango, coco ralado, leite condensado e bis preto | Borda:
-                        Nenhuma R$ 00.00 </p>
+                    <p id="descricao105">Nutella, morango, coco ralado, leite condensado e bis preto | Borda: Nenhuma R$ 00.00 </p>
                     <select id="tamanho105" onchange="mudarTamanho('105', '65.00', '45.00')">
                         <option value="1">Grande</option>
                         <option value="2">Média</option>
@@ -1280,7 +1263,7 @@
                     <select id="borda105" onchange="adicionarDescricao('105')">
                         <option value="Nenhuma R$ 00.00">Nenhuma</option>
                     </select>
-                    <span>R$ <i id="valor105">65.00</i></span>
+                    <span>R$ <i id="valor105">70.00</i></span>
                     <button onclick="confirmar('105', 0, false, 3)">Pedir</button>
                 </li>
 
@@ -1294,7 +1277,7 @@
                     <select id="borda106" onchange="adicionarDescricao('106')">
                         <option value="Nenhuma R$ 00.00">Nenhuma</option>
                     </select>
-                    <span>R$ <i id="valor106">65.00</i></span>
+                    <span>R$ <i id="valor106">70.00</i></span>
                     <button onclick="confirmar('106', 0, false, 3)">Pedir</button>
                 </li>
 
@@ -1308,7 +1291,7 @@
                     <select id="borda107" onchange="adicionarDescricao('107')">
                         <option value="Nenhuma R$ 00.00">Nenhuma</option>
                     </select>
-                    <span>R$ <i id="valor107">65.00</i></span>
+                    <span>R$ <i id="valor107">70.00</i></span>
                     <button onclick="confirmar('107', 0, false, 3)">Pedir</button>
                 </li>
 
@@ -1322,7 +1305,7 @@
                     <select id="borda108" onchange="adicionarDescricao('108')">
                         <option value="Nenhuma R$ 00.00">Nenhuma</option>
                     </select>
-                    <span>R$ <i id="valor108">65.00</i></span>
+                    <span>R$ <i id="valor108">70.00</i></span>
                     <button onclick="confirmar('108', 0, false, 3)">Pedir</button>
                 </li>
 
@@ -1336,7 +1319,7 @@
                     <select id="borda109" onchange="adicionarDescricao('109')">
                         <option value="Nenhuma R$ 00.00">Nenhuma</option>
                     </select>
-                    <span>R$ <i id="valor109">65.00</i></span>
+                    <span>R$ <i id="valor109">70.00</i></span>
                     <button onclick="confirmar('109', 0, false, 3)">Pedir</button>
                 </li>
 
@@ -1350,7 +1333,7 @@
                     <select id="borda110" onchange="adicionarDescricao('110')">
                         <option value="Nenhuma R$ 00.00">Nenhuma</option>
                     </select>
-                    <span>R$ <i id="valor110">65.00</i></span>
+                    <span>R$ <i id="valor110">70.00</i></span>
                     <button onclick="confirmar('110', 0, false, 3)">Pedir</button>
                 </li>
 
@@ -1364,7 +1347,7 @@
                     <select id="borda111" onchange="adicionarDescricao('111')">
                         <option value="Nenhuma R$ 00.00">Nenhuma</option>
                     </select>
-                    <span>R$ <i id="valor111">65.00</i></span>
+                    <span>R$ <i id="valor111">70.00</i></span>
                     <button onclick="confirmar('111', 0, false, 3)">Pedir</button>
                 </li>
 
@@ -1378,7 +1361,7 @@
                     <select id="borda112" onchange="adicionarDescricao('112')">
                         <option value="Nenhuma R$ 00.00">Nenhuma</option>
                     </select>
-                    <span>R$ <i id="valor112">65.00</i></span>
+                    <span>R$ <i id="valor112">70.00</i></span>
                     <button onclick="confirmar('112', 0, false, 3)">Pedir</button>
                 </li>
 
@@ -1392,7 +1375,7 @@
                     <select id="borda113" onchange="adicionarDescricao('113')">
                         <option value="Nenhuma R$ 00.00">Nenhuma</option>
                     </select>
-                    <span>R$ <i id="valor113">65.00</i></span>
+                    <span>R$ <i id="valor113">70.00</i></span>
                     <button onclick="confirmar('113', 0, false, 3)">Pedir</button>
                 </li>
 
@@ -1416,43 +1399,43 @@
                         <img src="Assets/Imagens/batataFrita.jpg" alt="porção batata frita">
                         <h3 id="nome114">Batata Frita Básica (Grande)</h3>
                         <p id="descricao114"></p>
-                        <select id="tamanho114" onchange="mudarTamanho('114', '31.00', '26.00')">
+                        <select id="tamanho114" onchange="mudarTamanho('114', '35.00', '28.00')">
                             <option value="1">Grande</option>
                             <option value="2">Média</option>
                         </select>
-                        <span>R$ <i id="valor114">31.00</i></span>
+                        <span>R$ <i id="valor114">35.00</i></span>
                         <button onclick="confirmar('114', 0, false, 0)" class="pedir">Pedir</button>
                     </div>
                     <div class="carrosselItem porcao">
                         <img src="Assets/Imagens/batataEspecial.jpg" alt="porção batata frita com queijo e bacon">
                         <h3 id="nome115">Batata Frita Especial (Grande)</h3>
                         <p id="descricao115"></p>
-                        <select id="tamanho115" onchange="mudarTamanho('115', '43.00', '36.00')">
+                        <select id="tamanho115" onchange="mudarTamanho('115', '50.00', '40.00')">
                             <option value="1">Grande</option>
                             <option value="2">Média</option>
                         </select>
-                        <span>R$ <i id="valor115">43.00</i></span>
+                        <span>R$ <i id="valor115">50.00</i></span>
                         <button onclick="confirmar('115', 0, false, 0)" class="pedir">Pedir</button>
                     </div>
                     <div class="carrosselItem porcao">
                         <img src="Assets/Imagens/porcaoFile.jpg" alt="porção file">
                         <h3 id="nome116">Porção de Filé</h3>
                         <p id="descricao116">Filé, bacon, cebola, alface e tomate</p>
-                        <span>R$ <i id="valor116">56.00</i></span>
+                        <span>R$ <i id="valor116">60.00</i></span>
                         <button onclick="confirmar('116', 0, false, 0)" class="pedir">Pedir</button>
                     </div>
                     <div class="carrosselItem porcao">
                         <img src="Assets/Imagens/porcaoFrango.jpg" alt="porção frango">
                         <h3 id="nome117">Porção de Frango</h3>
                         <p id="descricao117">Frango, bacon, cebola, alface e tomate</p>
-                        <span>R$ <i id="valor117">42.00</i></span>
+                        <span>R$ <i id="valor117">48.00</i></span>
                         <button onclick="confirmar('117', 0, false, 0)" class="pedir">Pedir</button>
                     </div>
                     <div class="carrosselItem porcao">
                         <img src="Assets/Imagens/porcaoLombo.jpg" alt="porção lombo">
                         <h3 id="nome118">Porção de Lombo</h3>
                         <p id="descricao118">Lombo, bacon, cebola, alface e tomate</p>
-                        <span>R$ <i id="valor118">46.00</i></span>
+                        <span>R$ <i id="valor118">50.00</i></span>
                         <button onclick="confirmar('118', 0, false, 0)" class="pedir">Pedir</button>
                     </div>
                 </div>

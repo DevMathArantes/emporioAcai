@@ -172,6 +172,12 @@
         }
     }
 
+    function alternarProduto(identificador){
+        get('alternar'+identificador).value;
+        get('descricao'+identificador).innerHTML= (get('alternar'+identificador).value).slice(0,-5);
+        get('valor'+identificador).innerHTML= (get('alternar'+identificador).value).slice(-5);
+    }
+
 //Funções principais
 
     //abre o modal para confirmar o pedido
