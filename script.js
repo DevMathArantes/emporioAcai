@@ -145,8 +145,8 @@ function alternarProduto(identificador) {
 
 //Função para a pizza de 2 sabores
 function doisSabores(){
-    let sabor1 = (get('sabor1148').value).slice(0, -7);
-    let sabor2 = (get('sabor2148').value).slice(0, -7);
+    let sabor1 = (get('sabor1148').value).slice(0, -8);
+    let sabor2 = (get('sabor2148').value).slice(0, -8);
     get('descricao148').innerHTML= sabor1 + " + "+ sabor2
     let preco1 = parseFloat((get('sabor1148').value).slice(-5));
     let preco2 = parseFloat((get('sabor2148').value).slice(-5));
