@@ -219,14 +219,15 @@ function subirCarrinho(identificador, adicionais) {
             <div id="produtoCarrinho${totalIds}" class="produtoCarrinho">
                 <h3 id="nomeCarrinho${totalIds}">${get('nome' + identificador).innerHTML}</h3>
                 <p id="descricaoCarrinho${totalIds}">${get('descricao' + identificador).innerHTML}</p>
-                <p class="adicionais" id="adicionaisCarrinho${totalIds}">ADICIONAIS: </p>
+                <p class="adicionais" id="adicionaisCarrinho${totalIds}"></p>
                 <p id="lembreteCarrinho${totalIds}">${get('lembrete').value}</p>
                 <span>Total: R$ <i id="valorCarrinho${totalIds}">${get('confirmarValor').innerHTML}</i></span>
                 <button id="esquecer${totalIds}" onclick="esquecer('${totalIds}')">Esquecer</button>
             </div>
         `
 
-    if (adicionais) {
+    if(adicionais){
+        get('adicionaisCarrinho' + totalIds).innerHTML +="ADICIONAIS:" 
         for (let i = 0; i < lista.length; i++) {
             if (get('adicional' + i).checked) {
                 get('adicionaisCarrinho' + totalIds).innerHTML += " [" + get('nomeAdicional' + i).innerHTML + "] - ";
@@ -249,6 +250,8 @@ let link = "https://wa.me/551631723514?text=Pedido%20para:%20";
 let nulo;
 let verificado;
 function gerarPedido() {
+
+    get('voltarFinal').style.display='none';
 
     //Executa as devidas verificações
     verificado = true;
