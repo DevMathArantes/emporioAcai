@@ -11,7 +11,7 @@ let Doces = [
     "Abacaxi R$ 3.50", "Chocolate branco R$ 3.50", "Chocolate R$ 3.50",
     "Confete R$ 3.50", "Leite condensado R$ 3.50", "Space boll R$ 3.50",
     "Polpa de fruta abacaxi R$ 3.75", "Polpa de fruta abacaxi ao vinho R$ 3.75", "Polpa de fruta ameixa R$ 3.75",
-    "Polpa de fruta amora R$ 3.75", "Polpa de fruta cereja R$ 3.75", "Polpa de frutas vermelhas R$ 3.75", 
+    "Polpa de fruta amora R$ 3.75", "Polpa de frutas vermelhas R$ 3.75", 
     "Polpa de fruta maracujá R$ 3.75", "Polpa de fruta morango R$ 3.75", "Chocolate suflair R$ 3.99",
     "Creme de paçoca R$ 3.99", "Ovomaltine R$ 3.50", "Leite Ninho R$ 4.00", "Morango R$ 4.00",
     "Nutella R$ 4.50", "Castanha R$ 4.50", "Creme de ouro branco R$ 4.50",
