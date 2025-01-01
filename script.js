@@ -268,7 +268,7 @@ function gerarPedido() {
         //Inserindo dados do formulário ao link
         link += get('nome').value;
         if (get('endereco').checked) {
-            totalPedido += 5.00;
+            totalPedido += 7.00;
             link += "%0ATaxa de entrega: R$ 5.00%0AEndereço:%0A";
             for (let i = 1; i <= 4; i++) {
                 link += get('endereco' + i).value + "%0A";
