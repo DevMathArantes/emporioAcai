@@ -314,10 +314,10 @@ function gerarPedido() {
         link += "%0A_________________________________%0A";
 
         //Inserindo dados do formulário ao link
-        link +="Pedido%20para:%20"+get('nome').value+"%0A%0A";
+        link +="Pedido%20para:%20"+get('nome').value+"%0A";
         if (get('endereco').checked) {
             totalPedido += 5.00;
-            link += "%0ATaxa de entrega: R$ 5.00%0AEndereço:%0A";
+            link += "%0ATaxa de entrega: R$ 5.00%0AEndereço:%0A%0A";
             for (let i = 1; i <= 4; i++) {
                 link += get('endereco' + i).value + "%0A";
             }
@@ -420,13 +420,13 @@ function adicionarPagamento() {
             break;
         case "2":
             let troco = parseFloat(get('troco').value) - totalPedido;
-            link += "Dinheiro%0ATroco:%20" + (troco.toFixed(2)) + "%20(troco%20para%20R$%20" + (parseFloat(get('troco').value)).toFixed(2) + ")%0A";
+            link += "%0ADinheiro%0ATroco:%20R$%20" + (troco.toFixed(2)) + "%0A(troco%20para%20R$%20" + (parseFloat(get('troco').value)).toFixed(2) + ")%0A";
             break;
         case "3":
-            link += "Cartão%0A"
+            link += "%0ACartão%0A"
             break;
         case "4":
-            link += "Pix%0AEnvie%20para:%2016993383633%0A(enviar%20comprovante%20neste%20contato)%0A";
+            link += "%0APix%0AEnvie%20para:%2016993383633%0A(enviar%20comprovante%20neste%20contato)%0A";
             break;
     }
 }
