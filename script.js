@@ -297,7 +297,7 @@ function gerarPedido() {
                     link += "%0A* Adicionais:%0A";
                     let contagemCarrinho = parseInt(get('adicionaisQuantidadeCarrinho'+i).innerHTML)
                     for(let j =1; j <= contagemCarrinho; j++){
-                        link +="+ "+get('adicionais'+contador).innerHTML + "%0A";
+                        link +="-> "+get('adicionais'+contador).innerHTML + "%0A";
                         contador++;
                         
                     }
