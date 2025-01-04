@@ -294,7 +294,7 @@ function gerarPedido() {
 
                 //Verificando se o item possui adicionais
                 if(get('adicionaisCarrinho'+i).style.display != 'none'){
-                    link += "%0A* Adicionais:%0A";
+                    link += "%0A* Adicionais:%0A%0A";
                     let contagemCarrinho = parseInt(get('adicionaisQuantidadeCarrinho'+i).innerHTML)
                     for(let j =1; j <= contagemCarrinho; j++){
                         link +="-> "+get('adicionais'+contador).innerHTML + "%0A";
@@ -322,7 +322,6 @@ function gerarPedido() {
                 link += get('endereco' + i).value + "%0A";
             }
         }
-        link += "%0A__________________________________%0A";
 
         //Inserindo valor do pedido e forma de pagamento ao link
         adicionarPagamento();
