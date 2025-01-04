@@ -297,7 +297,7 @@ function gerarPedido() {
                     link += "%0A* Adicionais:%0A%0A";
                     let contagemCarrinho = parseInt(get('adicionaisQuantidadeCarrinho'+i).innerHTML)
                     for(let j =1; j <= contagemCarrinho; j++){
-                        link +="-> "+get('adicionais'+contador).innerHTML + "%0A";
+                        link +="%0A-> "+get('adicionais'+contador).innerHTML + "%0A";
                         contador++;
                         
                     }
@@ -314,7 +314,7 @@ function gerarPedido() {
         link += "%0A_________________________________%0A";
 
         //Inserindo dados do formulário ao link
-        link +="Pedido%20para:%20"+get('nome').value;
+        link +="Pedido%20para:%20"+get('nome').value+"%0A%0A";
         if (get('endereco').checked) {
             totalPedido += 5.00;
             link += "%0ATaxa de entrega: R$ 5.00%0AEndereço:%0A";
