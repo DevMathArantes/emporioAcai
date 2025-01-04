@@ -166,8 +166,7 @@ function doisSabores() {
 let lista;
 function confirmar(identificador, adicionaisInclusos, adicionaisExtra, tipoLista) {
 
-    //aberto()
-    if(true){
+    if(aberto()){
 
         //Chamando funções auxiliares
         interagirModal('confirmarPedido');
