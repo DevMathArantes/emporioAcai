@@ -166,7 +166,8 @@ function doisSabores() {
 let lista;
 function confirmar(identificador, adicionaisInclusos, adicionaisExtra, tipoLista) {
 
-    if (aberto()) {
+    //aberto()
+    if(true){
 
         //Chamando funções auxiliares
         interagirModal('confirmarPedido');
@@ -210,6 +211,7 @@ function confirmar(identificador, adicionaisInclusos, adicionaisExtra, tipoLista
 //Envia o produto para o carrinho
 let totalProdutos = 0;
 totalIds = 0;
+let contagemAdicionais = 0;
 function subirCarrinho(identificador, adicionais) {
 
     //Adicionando contagem
@@ -219,18 +221,19 @@ function subirCarrinho(identificador, adicionais) {
             <div id="produtoCarrinho${totalIds}" class="produtoCarrinho">
                 <h3 id="nomeCarrinho${totalIds}">${get('nome' + identificador).innerHTML}</h3>
                 <p id="descricaoCarrinho${totalIds}">${get('descricao' + identificador).innerHTML}</p>
-                <p class="adicionais" id="adicionaisCarrinho${totalIds}"></p>
+                <p class="adicionaisCarrinho" id="adicionaisCarrinho${totalIds}"></p>
                 <p id="lembreteCarrinho${totalIds}">${get('lembrete').value}</p>
                 <span>Total: R$ <i id="valorCarrinho${totalIds}">${get('confirmarValor').innerHTML}</i></span>
                 <button id="esquecer${totalIds}" onclick="esquecer('${totalIds}')">Esquecer</button>
             </div>
         `
 
-    if(adicionais){
-        get('adicionaisCarrinho' + totalIds).innerHTML +="ADICIONAIS:" 
+    if(totalAdicionais>0){
+        get('adicionaisCarrinho' + totalIds).innerHTML +=`<span>Adicionais</span>` 
         for (let i = 0; i < lista.length; i++) {
             if (get('adicional' + i).checked) {
-                get('adicionaisCarrinho' + totalIds).innerHTML += " [" + get('nomeAdicional' + i).innerHTML + "] - ";
+                contagemAdicionais++;
+                get('adicionaisCarrinho' + totalIds).innerHTML += `<p id="adicional${contagemAdicionais}">${get('nomeAdicional'+i).innerHTML}</p>`
             }
         }
     }
@@ -291,8 +294,11 @@ function gerarPedido() {
                 link += "%0A* Descrição: " + get('descricaoCarrinho' + i).innerHTML + "%0A";
 
                 //Verificando se o item possui adicionais
-                if (get('adicionaisCarrinho' + i).style.display != 'none') {
-                    link += "%0A* Adicionais: " + get('adicionaisCarrinho' + i).innerHTML + "%0A";
+                if(totalAdicionais>0){
+                    link += "%0A* Adicionais:%0A";
+                    for(let i =1; i <= totalAdicionais; i++){
+                        link +=get('adicional' + i).innerHTML + "%0A";
+                    }
                 }
 
                 link += "%0A* Lembrete: " + get('lembreteCarrinho' + i).innerHTML + "%0A";
@@ -444,6 +450,7 @@ function montarAdicionais(inclusos) {
 }
 
 //Adiciona ou retira o adicional da contagem
+let totalAdicionais = 0;
 function interagirAdicional(identificador, inclusos) {
 
     //Contagem de adicionais inclusos
@@ -456,6 +463,8 @@ function interagirAdicional(identificador, inclusos) {
 
     //Quando a checkbox for marcada
     if (get('adicional' + identificador).checked) {
+
+        totalAdicionais++;
 
         //Se a contagem for maior que inclusos, o preço será adicionado
         if (contagem > inclusos) {
@@ -472,6 +481,8 @@ function interagirAdicional(identificador, inclusos) {
 
     //Quando a checkbox for desmarcada
     else {
+
+        totalAdicionais--;
 
         //Se for incluso, não há alteração de preço
         if (get('nomeAdicional' + identificador).innerHTML.slice(-9) == "(INCLUSO)") {
