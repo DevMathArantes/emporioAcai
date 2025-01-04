@@ -173,26 +173,29 @@ function confirmar(identificador, adicionaisInclusos, adicionaisExtra, tipoLista
         interagirModal('confirmarPedido');
         mostrarLista(tipoLista);
 
+        totalAdicionais= 0;
 
         //Preenchendo o modal com informações do produto
         get('confirmarPedido').innerHTML = `
-                <img src="Assets/Imagens/logo.jpg" alt="logo empório do açai">
-                <button onclick="interagirModal('confirmarPedido')" class="voltar">Voltar</button>
-                <h2>Boa escolha</h2>
-                <h3>${get('nome' + identificador).innerHTML}</h3>
-                <p>${get('descricao' + identificador).innerHTML}</p>
-                <input class="abrirCampo" id="abrirAdicionais" type="checkbox">
-                <label id="revelarAdicionais" class="labelDinamico" for="abrirAdicionais">Ver Adicionais</label>
-                <div class="campoDinamico" id="adicionais"></div>
-                <div class="campoDinamico" id="opcionais">
-                    <p>Opcionais (pago a parte): </p>
-                </div>
-                <p>R$<span id="confirmarValor"> ${get('valor' + identificador).innerHTML}</span></p>
-                <input id="lembrete" type="text" placeholder="Deseja adicionar algum lembrete ?">
-                <button onclick="subirCarrinho('${identificador}', ${adicionaisExtra})" class="pedir">
-                    Confirmar
-                </button>
-            `;
+            <img src="Assets/Imagens/logo.jpg" alt="logo empório do açai">
+            <button onclick="interagirModal('confirmarPedido')" class="voltar">Voltar</button>
+            <h2>Boa escolha</h2>
+            <h3>${get('nome' + identificador).innerHTML}</h3>
+            <p>${get('descricao' + identificador).innerHTML}</p>
+            <input class="abrirCampo" id="abrirAdicionais" type="checkbox">
+            <label id="revelarAdicionais" class="labelDinamico" for="abrirAdicionais">Ver Adicionais</label>
+            <div class="campoDinamico" id="adicionais">
+                <p>Total selecionados: <i id="quantidadeAdicionais">0</i></p>
+            </div>
+            <div class="campoDinamico" id="opcionais">
+                <p>Opcionais (pago a parte): </p>
+            </div>
+            <p>R$<span id="confirmarValor"> ${get('valor' + identificador).innerHTML}</span></p>
+            <input id="lembrete" type="text" placeholder="Deseja adicionar algum lembrete ?">
+            <button onclick="subirCarrinho('${identificador}', ${adicionaisExtra})" class="pedir">
+                Confirmar
+            </button>
+        `;
 
         //Chamando funções auxiliares pós-modal
         if (adicionaisExtra) {
@@ -218,22 +221,28 @@ function subirCarrinho(identificador, adicionais) {
     totalProdutos++;
     totalIds++;
     get('pedido').innerHTML += `
-            <div id="produtoCarrinho${totalIds}" class="produtoCarrinho">
-                <h3 id="nomeCarrinho${totalIds}">${get('nome' + identificador).innerHTML}</h3>
-                <p id="descricaoCarrinho${totalIds}">${get('descricao' + identificador).innerHTML}</p>
-                <p class="adicionaisCarrinho" id="adicionaisCarrinho${totalIds}"></p>
-                <p id="lembreteCarrinho${totalIds}">${get('lembrete').value}</p>
-                <span>Total: R$ <i id="valorCarrinho${totalIds}">${get('confirmarValor').innerHTML}</i></span>
-                <button id="esquecer${totalIds}" onclick="esquecer('${totalIds}')">Esquecer</button>
-            </div>
-        `
+        <div id="produtoCarrinho${totalIds}" class="produtoCarrinho">
+            <h3 id="nomeCarrinho${totalIds}">${get('nome' + identificador).innerHTML}</h3>
+            <p id="descricaoCarrinho${totalIds}">${get('descricao' + identificador).innerHTML}</p>
+            <p class="adicionaisCarrinho" id="adicionaisCarrinho${totalIds}"></p>
+            <p id="lembreteCarrinho${totalIds}">${get('lembrete').value}</p>
+            <span>Total: R$ <i id="valorCarrinho${totalIds}">${get('confirmarValor').innerHTML}</i></span>
+            <button id="esquecer${totalIds}" onclick="esquecer('${totalIds}')">Esquecer</button>
+        </div>
+    `
 
     if(totalAdicionais>0){
-        get('adicionaisCarrinho' + totalIds).innerHTML +=`<span>Adicionais</span>` 
+        get('adicionaisCarrinho' + totalIds).innerHTML +=`
+            <span>
+                Adicionais: <i id="adicionaisQuantidadeCarrinho${totalIds}">${get('quantidadeAdicionais').innerHTML}</i>
+            </span>
+        ` 
         for (let i = 0; i < lista.length; i++) {
             if (get('adicional' + i).checked) {
                 contagemAdicionais++;
-                get('adicionaisCarrinho' + totalIds).innerHTML += `<p id="adicional${contagemAdicionais}">${get('nomeAdicional'+i).innerHTML}</p>`
+                get('adicionaisCarrinho' + totalIds).innerHTML += `
+                    <p id="adicional${totalIds}_${contagemAdicionais}">${get('nomeAdicional'+i).innerHTML}</p>
+                `;
             }
         }
     }
@@ -271,17 +280,6 @@ function gerarPedido() {
 
     if (verificado) {
 
-        //Inserindo dados do formulário ao link
-        link += get('nome').value;
-        if (get('endereco').checked) {
-            totalPedido += 5.00;
-            link += "%0ATaxa de entrega: R$ 5.00%0AEndereço:%0A";
-            for (let i = 1; i <= 4; i++) {
-                link += get('endereco' + i).value + "%0A";
-            }
-        }
-        link += "%0A__________________________________%0A";
-
         //Inserindo dados do pedido ao link
         for (let i = 1; i <= totalIds; i++) {
             if (get('produtoCarrinho' + i).style.display != 'none') {
@@ -296,8 +294,8 @@ function gerarPedido() {
                 //Verificando se o item possui adicionais
                 if(totalAdicionais>0){
                     link += "%0A* Adicionais:%0A";
-                    for(let i =1; i <= totalAdicionais; i++){
-                        link +=get('adicional' + i).innerHTML + "%0A";
+                    for(let j =1; j <= parseInt(get('quantidadeAdicionaisCarrinho'+i).innerHTML); j++){
+                        link +=get('adicional'+i+"_"+j).innerHTML + "%0A";
                     }
                 }
 
@@ -310,6 +308,17 @@ function gerarPedido() {
             }
         }
         link += "%0A_________________________________%0A";
+
+        //Inserindo dados do formulário ao link
+        link += get('nome').value;
+        if (get('endereco').checked) {
+            totalPedido += 5.00;
+            link += "%0ATaxa de entrega: R$ 5.00%0AEndereço:%0A";
+            for (let i = 1; i <= 4; i++) {
+                link += get('endereco' + i).value + "%0A";
+            }
+        }
+        link += "%0A__________________________________%0A";
 
         //Inserindo valor do pedido e forma de pagamento ao link
         adicionarPagamento();
@@ -465,6 +474,7 @@ function interagirAdicional(identificador, inclusos) {
     if (get('adicional' + identificador).checked) {
 
         totalAdicionais++;
+        get('quantidadeAdicionais').innerHTML=totalAdicionais;
 
         //Se a contagem for maior que inclusos, o preço será adicionado
         if (contagem > inclusos) {
@@ -483,6 +493,7 @@ function interagirAdicional(identificador, inclusos) {
     else {
 
         totalAdicionais--;
+        get('quantidadeAdicionais').innerHTML=totalAdicionais;
 
         //Se for incluso, não há alteração de preço
         if (get('nomeAdicional' + identificador).innerHTML.slice(-9) == "(INCLUSO)") {
