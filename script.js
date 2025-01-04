@@ -241,7 +241,7 @@ function subirCarrinho(identificador, adicionais) {
             if (get('adicional' + i).checked) {
                 contagemAdicionais++;
                 get('adicionaisCarrinho' + totalIds).innerHTML += `
-                    <p id="adicional${totalIds}_${contagemAdicionais}">${get('nomeAdicional'+i).innerHTML}</p>
+                    <p id="adicionais${contagemAdicionais}">${get('nomeAdicional'+i).innerHTML}</p>
                 `;
             }
         }
@@ -258,9 +258,10 @@ function subirCarrinho(identificador, adicionais) {
 
 //Gera o link do pedido
 let totalPedido = 0.0
-let link = "https://wa.me/551631723514?text=Pedido%20para:%20";
+let link = "https://wa.me/551631723514?text=";
 let nulo;
 let verificado;
+let contador = 1;
 function gerarPedido() {
 
     get('voltarFinal').style.display='none';
@@ -292,10 +293,13 @@ function gerarPedido() {
                 link += "%0A* Descrição: " + get('descricaoCarrinho' + i).innerHTML + "%0A";
 
                 //Verificando se o item possui adicionais
-                if(totalAdicionais>0){
+                if(get('adicionaisCarrinho'+i).style.display != 'none'){
                     link += "%0A* Adicionais:%0A";
-                    for(let j =1; j <= parseInt(get('quantidadeAdicionaisCarrinho'+i).innerHTML); j++){
-                        link +=get('adicional'+i+"_"+j).innerHTML + "%0A";
+                    let contagemCarrinho = parseInt(get('adicionaisQuantidadeCarrinho'+i).innerHTML)
+                    for(let j =1; j <= contagemCarrinho; j++){
+                        link +=get('adicionais'+contador).innerHTML + "%0A";
+                        contador++;
+                        
                     }
                 }
 
@@ -310,7 +314,7 @@ function gerarPedido() {
         link += "%0A_________________________________%0A";
 
         //Inserindo dados do formulário ao link
-        link += get('nome').value;
+        link +="Pedido%20para:%20"+get('nome').value;
         if (get('endereco').checked) {
             totalPedido += 5.00;
             link += "%0ATaxa de entrega: R$ 5.00%0AEndereço:%0A";
