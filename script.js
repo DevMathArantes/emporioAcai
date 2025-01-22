@@ -47,8 +47,6 @@ let SaborSorvetes = [
     "Cheesecake", "Papaya com cassis", "Caraxi",
 ];
 
-let Pizzas = [];
-
 //Funções coringa
 
 //
@@ -158,6 +156,53 @@ function doisSabores() {
     else {
         get('valor148').innerHTML = (preco2.toFixed(2)).toString();
     }
+}
+
+//Adiciona meio sabor de pizza
+let valorSabor1 = 0.0;
+let valorSabor2 = 0.0;
+function meioSabor(){
+    let saboresSelecionados = 0;
+    let descricao = "";
+    for (let i = 72; i <= 113; i++){
+        if((get('checkMeioSabor'+i).checked)){
+            saboresSelecionados++;
+            if(saboresSelecionados==1){
+                descricao+="PRIMEIRO SABOR = ";
+                valorSabor1= parseFloat(get('valor'+i).innerHTML);
+            }
+            else{
+                descricao+=" // SEGUNDO SABOR = ";
+                valorSabor2= parseFloat(get('valor'+i).innerHTML);
+            }
+            descricao+= get('nome'+i).innerHTML+" : "+ (get('descricao'+i).innerHTML).slice(0,-26);
+        }
+    }
+    if(saboresSelecionados==2){
+        let precoFinal = 0.0;
+        if(valorSabor1 > valorSabor2){
+            precoFinal = valorSabor1;
+        }
+        else{
+            precoFinal = valorSabor2;
+        }
+        get('valor148').innerHTML=precoFinal.toFixed(2);
+        descricao+=" | Borda: Nenhuma R$ 00.00 ";
+        get('descricao148').innerHTML=descricao;
+        get('opcoesPizza').style.display='none';
+        get('doisSabores').style.display='flex';
+    }
+}
+
+function desmontarSabores(){
+    get('doisSabores').style.display='none'
+    get('opcoesPizza').style.display='flex'
+    for (let i = 72; i <= 113; i++){
+        if((get('checkMeioSabor'+i).checked)){
+            get('checkMeioSabor'+i).checked = false;
+        }
+    }
+    get('descricao148').innerHTML="Selecione 2 sabores de pizza ";
 }
 
 //Funções principais
@@ -531,19 +576,22 @@ for (let i = 27; i <= 30; i++) {
 }
 
 //Bordas 
-for (let i = 71; i <= 113; i++) {
+for (let i = 72; i <= 113; i++) {
     preencherLista('borda' + i, Bordas);
 }
+preencherLista('borda' + 148, Bordas);
+
 //Pizza 2 sabores é um produto novo, identificador em "Notas/novosProdutos.txt"
 
-for (let i = 71; i <= 113; i++) {
-    let item = get('nome' + i).innerHTML + ": " + get('descricao' + i).innerHTML + " R$ " + get('valor' + i).innerHTML
-    Pizzas.push(item);
+for (let i = 72; i <= 113; i++){
+    get('opcoesPizza').innerHTML+=`
+        <li id="meioSabor${i}">
+            <h3>
+                <input onchange="meioSabor(${i})" id="checkMeioSabor${i}" type="checkbox">
+                ${get('nome'+i).innerHTML}
+            </h3>
+            <p id="descricaoMeioSabor${i}">${(get('descricao'+i).innerHTML).slice(0,-26)}</p>
+        </li>
+    `
+    
 }
-preencherLista('sabor1148', Pizzas);
-preencherLista('sabor2148', Pizzas);
-
-
-
-
-

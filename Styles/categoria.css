@@ -223,6 +223,47 @@
         background-image: url(../Assets/Imagens/heineken.jpg);
     }
 
+/**/
+.opcoesPizza{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+.opcoesPizza li{
+    display: flex;
+    flex-flow: row wrap;
+    border-bottom: 1px solid var(--cor1);
+    padding: 1em ;
+}
+.opcoesPizza li h3{
+    display: flex;
+    font-size: 0.8rem;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    color: var(--cor1);
+}
+.opcoesPizza li h3 input{
+    width: 10%;
+}
+.opcoesPizza li p{
+    width: 100%;
+    padding: 0.5em;
+}
+.opcoesPizza li i{
+    text-align: center;
+    width: 100%;
+    font-family: var(--fontPadrao);
+}
+.doisSabores{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    padding: 1em;
+}
+
 @media screen and (min-width: 724px){
     
     /*Categorias dos itens*/
