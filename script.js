@@ -210,8 +210,8 @@ function desmontarSabores(){
 //abre o modal para confirmar o pedido
 let lista;
 function confirmar(identificador, adicionaisInclusos, adicionaisExtra, tipoLista) {
-
-    if(aberto()){
+    //aberto()
+    if(true){
 
         //Chamando funções auxiliares
         interagirModal('confirmarPedido');
