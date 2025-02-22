@@ -359,7 +359,7 @@ let hamburguer = [
     ["X-Egg", "Pão, queijo, hambúrguer e ovo", 15.00, 0],
     ["X-Salada", "Pão, queijo, hambúrguer, alface e tomate", 19.00, 0],
     ["X-Salada Egg", "Pão, queijo, hambúrguer, presunto, ovo, alface e tomate", 21.00, 0],
-    ["X-Tudão", "Pão, presunto, queijo, catupiry, salsicha, 3 hambúrgueres, bacon, milho, batata palha, alface e tomate", 33.90, 0],
+    ["X-Tudão", "Pão, presunto, queijo, catupiry, salsicha, 3 hambúrgueres, ovo, bacon, milho, batata palha, alface e tomate", 33.90, 0],
     ["X-Tudo", "Pão, presunto, queijo, 2 hambúrgueres, ovo, bacon, alface, catupiry e tomate", 28.00, 0]
 ];
 let frango = [
