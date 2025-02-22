@@ -407,7 +407,7 @@ let salgadaGrande = [
     ["Cupim acebolado", "Cupim desfiado, molho de tomate especial, mussarela, cebola, azeitona e orégano", 65.00, 0],   
     ["Cupim cremoso", "Cupim desfiado, molho especial, mussarela, catupiry, orégano", 70, 0],
     ["Cupim ao alho", "Cupim desfiado, molho de tomate especial, alho frito, mussarela , azeite , azeitona", 68, 0],
-    ["Cupim especial", "Cupim desfiado, molho de tomate especial, cebola , catupiry, mussarela , tomate , bacon , azeitona e orégano", 63,0],
+    ["Cupim especial", "Cupim desfiado, molho de tomate especial, cebola , catupiry, mussarela , tomate , bacon , azeitona e orégano", 73,0],
     ["Pizza Alho e óleo (Grande)", "Mussarela, bacon, alho, tomate, cebola, orégano e azeitona ", 70.00, 0],
     ["Pizza Baiana (Grande)", "Mussarela, calabresa picada, parmesão, pimenta, ovos, pimentão, tomate, cebola, orégano e azeitona", 75.00, 0],
     ["Pizza Brócolis (Grande)", "Brócolis, bacon fatiado, mussarela e catupiry", 75.00, 0],
