@@ -1,117 +1,120 @@
-/*Parte superior da página*/
+/*Header*/
 header{
-    margin-top: 5em;
-    color: var(--cor1);
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
 }
 header img{
-    width: 15em;   
+    width: 15em;
 }
 header h1{
-    margin: 1em 0;
-}
-header p{
+    position: absolute;
+    bottom: 1em;
+    color: var(--cor2);
+    border: 2px solid var(--cor2);
+    padding: 0 1em;
+    border-radius: 10px;
     text-align: center;
-    display: flex;
-    font-weight: 600;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5em;
-    padding: 0 1.5em;
-    text-decoration: underline;
-}
-header p img{
-    width: 1.2em;
-    margin: 0.5em 0;
-}
-header p a{
-    color: var(--cor1);
+    font-size: 1.7rem;
 }
 
-/*Nav padrão da página*/
+/*Nav dentro do header*/
 header nav{
-    top: 0;
-    justify-content: end;
-    flex-flow: row wrap;
-}
-nav a{
-    width: 2.5em;
     display: flex;
-    gap: 0.5em;
-}
-nav a img{
+    flex-flow: row wrap;
+    box-shadow: 0px 5px 10px var(--cor3);
+    align-items: center;
     width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: var(--cor1);
+    z-index: 4;
 }
-nav h2{
-    border: 1px solid var(--cor1);
-    padding: 0.5em 1em;
-    font-size: 0.9rem;
-    text-align: center;
-    border-radius: 5px;
+header nav h2{
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    margin: 1em;
     margin-right: auto;
+    color: var(--cor2);
 }
-nav a span{
+header nav label{
+    height: 1.5em;
+    width: 1.5em;
+    background-image: url(../Assets/icons/menu.png);
+    background-size: 100%;
+    margin: 1em;
+}
+header nav input{
     display: none;
 }
-
-
-@media screen and (min-width: 724px){
-   
-    /*Parte superior da página*/
-    header{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    header img{
-        width: 20em;
-    }
-
-    /*Nav padrão da página*/
-    nav{
-        padding: 1em;
-    }
-    nav a span, nav button i{
-        display: block;
-        font-size: 0.7rem;
-    }
-    nav a, nav button{
-        width: 12em;
-        justify-content: center;
-        align-items: center;
-        gap: 0.5em;
-    }
-    nav button img, nav a img{
-        width: 2em;
-        height: 2em;
-    }
-    .iconeCarrinho span{
-        display: flex;
-        align-items: center;
-        gap: 0.5em;
-    }
-    .iconeCarrinho img{
-        width: 1.5em;
-        height: 1.5em;
-    }
-
+header nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    flex-direction: column;
+    width: 100%;
+}
+header nav li{
+    text-align: center;
+    display: flex;
+}
+header nav a{
+    background-color: var(--cor1);
+    color: var(--cor2);
+    border-top: 1px solid var(--cor5);
+    width: 100%;
+    padding: 1em 0 1em 4em;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+header nav img{
+    width: 1.5em;
 }
 
-@media screen and (min-width: 1300px){
-    
-    /*Parte superior da página*/
-    header{
+/*Início*/
+.inicio{
+    height: 15em;
+    width: 100%;
+    background-image: url(../Assets/Imagens/ambiente2.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding-bottom: 4em;
+    justify-content: center;
+    filter: brightness(0.5);
+    z-index: 0;
+}
+.inicio h2{
+    text-align: center;
+    color: var(--cor2);
+}
+
+@media screen and (min-width: 724px){
+
+    /*Transforma a nav*/
+    #links{
         display: flex;
-        flex-flow: row wrap;
+        flex-direction: row;
+        width: auto;
+        justify-content: right;
+        padding-right: 2em;
+        gap: 2em;
+    }
+    #links a{
+        padding: 1em 0;
+        width: 8em;
         justify-content: center;
     }
-    header h1{
-        width: 100%;
+    #links a:hover{
+        text-decoration: underline;
     }
-
-    /*Nav padrão da página*/
-    nav{
-        padding: 0.5em;
+    header nav label{
+        display: none;
     }
 
 }

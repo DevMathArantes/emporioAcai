@@ -1,54 +1,59 @@
-/*Divisão principal da página*/
+/*Main*/
 main{
-    padding: 2em 0;
+    padding: 1em 0 3em 0;
 }
-main h2{
-    color: var(--cor1);
+
+/*Card expositivo*/
+.cardExpositivo{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    padding: 1em;
+}
+.cardExpositivo h2{
     text-align: center;
-    padding: 1em;
+    font-size: 1rem;
+    color: var(--cor1);
+}
+.cardExpositivo img{
+    width: 20em;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px var(--cor3);
+}
+.cardInfo{
+    width: 20em;
+    text-align: center;
 }
 
-/*Carrossel dos tipos de produtos*/
-.tipos{
-    width: 200%;
+/*Categorias de produtos*/
+.categorias{
+    display: flex;
+    flex-flow: row wrap;
+    padding: 0.5em;
+    list-style: none;
+    justify-content: space-around;
+    gap: 1em;
 }
-.tipos img{
+.abrirCategoria{
+    width: 10em;
+    position: relative;
+}
+.abrirCategoria img{
     width: 100%;
-    border-radius: 20px 20px 0 0;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px var(--cor3);
+    filter: brightness(0.8);
 }
-.tipoProduto{
-    width: 33%;
-    border-radius: 20px;
-    box-shadow: 0px 0px 10px var(--cor3);
-}
-.tipoProduto button{
+.abrirCategoria span{
+    position: absolute;
+    color: var(--cor2);
+    bottom: 1em;
+    left: 0;
     width: 100%;
-    border-radius: 0 0 20px 20px;
-    padding: 1em;
-    border: none;
-}
-
-@media screen and (min-width: 724px){
-
-    /*Carrossel dos tipos de produtos*/
-    .tipos{
-        width: 90%;
-        margin: 0 auto;
-    }
-    
-}
-
-@media screen and (min-width: 1300px){
-
-    /*Carrossel dos tipos de produtos*/
-    main{
-        display: flex;
-    }
-    .tipos{
-        width: 100%;
-    }
-    .mainCarrossel{
-        width: 50%;
-    }
-    
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.3rem;
+    text-shadow: 0px 0px 10px var(--cor4);
 }
