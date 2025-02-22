@@ -603,42 +603,7 @@ let dia = agora.getDay();
 let fechar;
 function aberto(){
     
-    switch(dia){
-        case 0:
-            fechar=22;
-            break;
-        case 1:
-            fechar=21;
-            break;
-        case 2:
-            fechar=21;
-            break;
-        case 3:
-            fechar=21;
-            break;
-        case 4:
-            fechar=21;
-            break;
-        case 5:
-            fechar=22;
-            break;
-        case 6:
-            fechar=22;
-            break;
-    }
 
-    if(horas == 14 && minutos >= 30){
-        return true;
-    }
-    if(horas == fechar && minutos <= 30){
-        return true;
-    }
-    if(horas > 14 && hora < fechar){
-        return true;
-    }
-    else{
-        return false;
-    }
 }
 
 //Funções auxiliares____________________________________________________________________________________________________
@@ -936,7 +901,7 @@ function montarExtras(tipo, inclusos){
 
 //Abre o modal para personalizar o item desejado
 function pedir(id, ext, inclusos){
-    if(aberto()){
+    
         dijuntor('montar');
         extras=[];
         get('montar').innerHTML=`
@@ -964,10 +929,7 @@ function pedir(id, ext, inclusos){
             </div> 
         `;
         montarExtras(ext, inclusos);
-    }
-    else{
-        alert("Obrigado pela preferência, Abriremos as 14h30.")
-    }
+ 
 }
 
 //Adiciona o item desejado ao pedido
