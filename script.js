@@ -901,7 +901,7 @@ function montarExtras(tipo, inclusos){
 
 //Abre o modal para personalizar o item desejado
 function pedir(id, ext, inclusos){
-    
+    if(false){
         dijuntor('montar');
         extras=[];
         get('montar').innerHTML=`
@@ -929,7 +929,10 @@ function pedir(id, ext, inclusos){
             </div> 
         `;
         montarExtras(ext, inclusos);
- 
+    }
+    else{
+        alert("Agradecemos a preferência, abriremos as 14h30");
+    }
 }
 
 //Adiciona o item desejado ao pedido
