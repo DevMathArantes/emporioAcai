@@ -96,6 +96,57 @@ let ADICIONAIS = [
     bordasPizza
 ]
 
+//Lista de dois sasores de pizza_______________________________________________________________________________________
+
+let doisSaboresPizza=[
+    ["Cupim acebolado", "Cupim desfiado, molho de tomate especial, mussarela, cebola, azeitona e orégano", 65.00],   
+    ["Cupim cremoso", "Cupim desfiado, molho especial, mussarela, catupiry, orégano", 70.00],
+    ["Cupim ao alho", "Cupim desfiado, molho de tomate especial, cebola, alho frito, mussarela , azeite , azeitona", 68.00],
+    ["Cupim especial", "Cupim desfiado, molho de tomate especial, cebola , catupiry, mussarela , tomate , bacon , azeitona e orégano", 73.00],
+    ["Pizza Alho e óleo", "Mussarela, bacon, alho, tomate, cebola, orégano e azeitona ", 70.00],
+    ["Pizza Baiana", "Mussarela, calabresa picada, parmesão, pimenta, ovos, pimentão, tomate, cebola, orégano e azeitona", 75.00],
+    ["Pizza Brócolis", "Brócolis, bacon fatiado, mussarela e catupiry", 75.00],
+    ["Pizza Calabresa", "Calabresa, mussarela, cebola, tomate, orégano, molho de tomate", 65.00],
+    ["Pizza Carijó", "Mussarela, molho, frango, ovo, catupiry, milho, orégano e azeitona", 70.00],
+    ["Pizza Fazendinha", "Presunto, mussarela, ovo, tomate, milho e cebola", 70.00],
+    ["Pizza Frango com catupiry (Grande)", "Mussarela, frango, catupiry, orégano, tomate, azeitona e molho de tomate", 65.00],
+    ["Pizza Frango cremoso", "Frango, catupiry, batata palha, azeitona fatiada, mussarela e orégano", 72.00],
+    ["Pizza Franlone", "Frango, queijo provolone, tomate, mussarela, orégano, azeitona, milho e molho de tomate", 70.00],
+    ["Pizza Hot Dog", "Salsicha ao molho, batata palha, catchup, maioneses, mussarela e milho", 65.00],
+    ["Pizza Lombinho especial", "Lombo canadense, presunto, mussarela, tomate e orégano", 75.00],
+    ["Pizza Lombo canadense", "Lombo canadense, presunto, mussarela, tomate, orégano, molho de tomate, palmito e catupiry", 70.00],
+    ["Pizza Marajá", "Mussarela, lombo, canadense, catupiry, palmito, bacon, orégano, calabresa, champignon, azeitona e tomate", 78.00],
+    ["Pizza Maromba", "Frango, catupiry, ovos, mussarela, orégano, bacon, tomate e molho especial", 75.00],
+    ["Pizza Moda da casa", "Presunto, mussarela, calabresa, bacon, catupiry, tomate, cebola, orégano, e molho de tomate", 78.00],
+    ["Pizza Mussarela", "Mussarela, molho gourmet de tomate, azeitona, tomate e orégano", 75.00],
+    ["Pizza Napolitana", "Tomate, azeite, orégano, alho e mussarela", 65.00],
+    ["Pizza Parmegiana", "Presunto, queijo, provolono, mussarela, molho de tomate, baconorégano, azeitona e tomate", 75.00],
+    ["Pizza Portuguesa", "Presunto, mussarela, bacon, ovo, azeitona, tomate, palmito, cebola e molho de tomate", 65.00],
+    ["Pizza Presunto Mussarela", "Presunto, mussarela, orégano, tomate e molho de tomate", 65.00],
+    ["Pizza Quatro queijos", "Mussarela, queijo provolone, queijo parmesão, catupiry, tomate, orégano, azeitona e tomate", 78.00],
+    ["Pizza Siciliana", "Mussarela, calabresa, parmesão, bacon, pimentão, cebola, tomate, orégano e azeitona", 75.00],
+    ["Pizza Soft", "Mussarela, calabresa picada, champignon, cebola, bacon, tomate, catupiry, orégano e azeitona", 75.00],
+    ["Pizza Vegetariana", "Milho, palmito, brócolis, champignon, mussarela e couve", 75.00],
+    ["Açai com leite ninho", "Açai com leite ninho", 70.00],
+    ["Açai com morango e nutella", "Açai com morango e nutella", 70.00],
+    ["Banana, canela, queijo, calda de caramelo", "Banana, canela, queijo, calda de caramelo", 70.00],
+    ["Creme ninho com morango", "Creme ninho com morango", 70.00],
+    ["Diamante negro", "Diamante negro", 70.00],
+    ["Doce de leite com queijo", "Doce de leite com queijo", 70.00],
+    ["Goiabada com queijo", "Goiabada com queijo", 70.00],
+    ["Laka", "Laka", 70.00],
+    ["Laka óreo", "Laka óreo", 70.00],
+    ["Nutella, morango, coco ralado, leite condensado e bis preto", "Nutella, morango, coco ralado, leite condensado e bis preto", 70.00],
+    ["Nutella", "Nutella", 70.00],
+    ["Nutella com kit kat", "Nutella com kit kat", 70.00],
+    ["Nutella com morango", "Nutella com morango", 70.00],
+    ["Nutella e confete", "Nutella e confete", 70.00],
+    ["Nutella morango e confete", "Nutella morango e confete", 70.00],
+    ["Ouro branco", "Ouro branco", 70.00],
+    ["Prestígio", "Prestígio", 70.00],
+    ["Sonho de valsa", "Sonho de valsa", 70.00]
+];
+
 //Listagem dos produtos________________________________________________________________________________________________
 
 //AÇAI
@@ -421,7 +472,7 @@ let salgadaGrande = [
     ["Pizza Lombinho especial (Grande)", "Lombo canadense, presunto, mussarela, tomate e orégano", 75.00, 0],
     ["Pizza Lombo canadense (Grande)", "Lombo canadense, presunto, mussarela, tomate, orégano, molho de tomate, palmito e catupiry", 70.00, 0],
     ["Pizza Marajá (Grande)", "Mussarela, lombo, canadense, catupiry, palmito, bacon, orégano, calabresa, champignon, azeitona e tomate", 78.00, 0],
-    ["Pizza Maromba (Grande)", "Frango, catupiry, ovos, mussarela, orégano, bacon, tomate e molho especial", 75.00],
+    ["Pizza Maromba (Grande)", "Frango, catupiry, ovos, mussarela, orégano, bacon, tomate e molho especial", 75.00, 0],
     ["Pizza Moda da casa (Grande)", "Presunto, mussarela, calabresa, bacon, catupiry, tomate, cebola, orégano, e molho de tomate", 78.00, 0],
     ["Pizza Mussarela (Grande)", "Mussarela, molho gourmet de tomate, azeitona, tomate e orégano", 75.00, 0],
     ["Pizza Napolitana (Grande)", "Tomate, azeite, orégano, alho e mussarela", 65.00, 0],
@@ -452,7 +503,7 @@ let salgadaPequena = [
     ["Pizza Lombinho especial (Média)", "Lombo canadense, presunto, mussarela, tomate e orégano", 48.00, 0],
     ["Pizza Lombo canadense (Média)", "Lombo canadense, presunto, mussarela, tomate, orégano, molho de tomate, palmito e catupiry", 45.00, 0],
     ["Pizza Marajá (Média)", "Mussarela, lombo, canadense, catupiry, palmito, bacon, orégano, calabresa, champignon, azeitona e tomate", 48.00, 0],
-    ["Pizza Maromba (Média)", "Frango, catupiry, ovos, mussarela, orégano, bacon, tomate e molho especial", 48.00],
+    ["Pizza Maromba (Média)", "Frango, catupiry, ovos, mussarela, orégano, bacon, tomate e molho especial", 48.00, 0],
     ["Pizza Moda da casa (Média)", "Presunto, mussarela, calabresa, bacon, catupiry, tomate, cebola, orégano, e molho de tomate", 48.00, 0],
     ["Pizza Mussarela (Média)", "Mussarela, molho gourmet de tomate, azeitona, tomate e orégano", 48.00, 0],
     ["Pizza Napolitana (Média)", "Tomate, azeite, orégano, alho e mussarela", 45.00, 0],
@@ -474,7 +525,7 @@ let doceGrande = [
     ["Pizza Doce(Grande)", "Doce de leite com queijo", 70.00, 0],
     ["Pizza Doce(Grande)", "Goiabada com queijo", 70.00, 0],
     ["Pizza Doce(Grande)", "Laka", 70.00, 0],
-    ["Pizza Doce(Grande)", "Laka óreo", 70.00],
+    ["Pizza Doce(Grande)", "Laka óreo", 70.00, 0],
     ["Pizza Doce(Grande)", "Nutella, morango, coco ralado, leite condensado e bis preto", 70.00, 0],
     ["Pizza Doce(Grande)", "Nutella", 70.00, 0],
     ["Pizza Doce(Grande)", "Nutella com kit kat", 70.00, 0],
@@ -486,6 +537,7 @@ let doceGrande = [
     ["Pizza Doce(Grande)", "Sonho de valsa", 70.00, 0]
 ];
 let docePequena = [
+    ["lista", "doces", "bordasPizza"],
     ["Açai com leite ninho", "Açai com leite ninho", 70.00, 0],
     ["Açai com morango e nutella", "Açai com morango e nutella", 70.00, 0],
     ["Banana, canela, queijo, calda de caramelo", "Banana, canela, queijo, calda de caramelo", 70.00, 0],
@@ -504,6 +556,10 @@ let docePequena = [
     ["Ouro branco", "Ouro branco", 70.00, 0],
     ["Prestígio", "Prestígio", 70.00, 0],
     ["Sonho de valsa", "Sonho de valsa", 70.00, 0]
+];
+let doisSabores = [
+    ["metade", "doisSabores", "bordasPizza"],
+    ["Dois Sabores", "", 0.00, 0]
 ];
 
 //ESPECIAL
@@ -572,7 +628,7 @@ let PRODUTOS = [
     litros, bolas, tacas, milks1, milks2, milks3, milks4,
     refri2Litros, refri1Litro, refriLata, limoneto, sucos, cervejas, vitaminas,
     hamburguer, frango, combo, file, lombo, cupim,
-    salgadaGrande, salgadaPequena, doceGrande, docePequena,
+    salgadaGrande, salgadaPequena, doceGrande, docePequena, doisSabores,
     porcoesBatata, porcoesCarne, omeleteGrande, omeleteMedio, tapiocaSalgada, tapiocaDoce
 ];
 
@@ -873,7 +929,76 @@ function definirOrg(org, tit, desc, val, incl, posi, id, ext){
                     </div>
                 </li>
             `;
+        case "metade":
+            return `
+                <li>
+                    <div class="metade">
+                        <ul class="listaOpc" id="opcoesMetade">
+                            ${doisSab(doisSaboresPizza, id)}
+                        </ul>
+                        <div id="metadeFinal" class="metadeFinal grandeInfo">
+                            <h3 id="tit${id}">${tit}</h3>
+                            <p id="desc${id}"></p>
+                            <span>R$ <i id="val${id}"></i></span>
+                            <button onclick="pedir(${id}, ${ext}, ${incl})">Pedir</button>
+                            <img src="Assets/Imagens/logo.jpg" alt="icone logo empório do açai">
+                        </div>
+                    </div>
+                </li>
+            `;
     }
+}
+
+function montarSabores(id){
+    let contagem = 0;
+    let sabor1= [];
+    let sabor2 = [];
+    for(let j = 0; j < doisSaboresPizza.length; j++){
+        if(get("opc"+j).checked){
+            contagem++;
+            if(contagem > 2){
+                get("opc"+j).checked= false;
+                alert("Não é possível marcar mais de 2 sabores")
+            }
+            if(contagem == 1){
+                sabor1.push(get('opcTit'+j).innerHTML);
+                sabor1.push(get('opcVal'+j).innerHTML);
+            }
+            if(contagem == 2){
+                get('metadeFinal').style.display='flex';
+                sabor2.push(get('opcTit'+j).innerHTML);
+                sabor2.push(get('opcVal'+j).innerHTML);
+
+                if(sabor2[1] >= sabor1[1]){
+                    get('val'+id).innerHTML=sabor2[1];
+                }
+                else{
+                    get('val'+id).innerHTML=sabor1[1];
+                }
+
+                get('desc'+id).innerHTML=sabor1[0]+" + "+sabor2[0];
+            }
+        }
+    }
+}
+
+//Monta uma lista com opções para 2 sabores
+function doisSab(lista, id){
+    let opc = ``;
+    for(let i = 0; i < lista.length; i++){
+        let list = lista[i];
+        opc+=`
+            <li>
+                <div class="opcTit">
+                    <input type="checkbox" id="opc${i}" onchange="montarSabores(${id})">
+                    <label id="opcTit${i}" for="opc${i}">${list[0]}</label>
+                </div>
+                <p id="opcDesc${i}">${list[1]}</p>
+                <span>R$ <i id="opcVal${i}">${list[2].toFixed(2)}</i></span>
+            </li>
+        `
+    }
+    return opc;
 }
 
 //Adiciona extras no modal de montar item
@@ -901,7 +1026,7 @@ function montarExtras(tipo, inclusos){
 
 //Abre o modal para personalizar o item desejado
 function pedir(id, ext, inclusos){
-    if(false){
+    if(true){
         dijuntor('montar');
         extras=[];
         get('montar').innerHTML=`
@@ -983,9 +1108,3 @@ for(let i = 0; i < PRODUTOS.length; i++){
 }
 
 //Atualiza o status de funcionamento
-if(aberto()){
-    get('status').innerHTML="Aberto";
-}
-else{
-    get('status').innerHTML="Fechado";
-}

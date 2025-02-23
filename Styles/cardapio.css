@@ -202,6 +202,67 @@
     box-shadow: 0px 0px 5px var(--cor3);
 }
 
+/*Pizza 2 sabores*/
+.metadeFinal{
+    display: none;
+}
+.metade{
+    width: 100%;
+    list-style: 0;
+    padding: 2em 1em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.metade input{
+    list-style: none;
+}
+.metade li{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.metade p{
+    width: 100%;
+    font-size: 0.8rem;
+}
+.metade span{
+    color: var(--cor2);
+    background-color: var(--cor1);
+    padding: 0.5em 2em;
+    border-radius: 10px;
+    font-weight: 400;
+}
+.metade label{
+    font-size: 1rem;
+    padding-left: 0.5em;
+    color: var(--cor1);
+    font-weight: 500;
+}
+.listaOpc{
+    list-style: none;
+    padding: 1em;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    gap: 2em;
+}
+.listaOpc li{
+    width: 20em;
+    border-bottom: 2px solid var(--cor1);
+    box-shadow: 0px 5px 10px var(--cor3);
+    padding: 1em;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+.opcTit{
+    width: 100%;
+}
+
 /*Fundos das categorias*/
 
 .acai{
