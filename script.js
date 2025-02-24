@@ -74,7 +74,7 @@ let recheiosSalgados = [
     ["Salada", 4.00],
 ];
 let bordasPizza = [
-    ["Borda: radio", 2],
+    ["radio", 2],
     ["Borda: Doce de leite", 16.00],
     ["Borda: Goiabada", 16.00],
     ["Borda: Queijo com bacon", 21.00],
