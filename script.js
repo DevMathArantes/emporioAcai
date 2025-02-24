@@ -1026,7 +1026,7 @@ function montarExtras(tipo, inclusos){
 
 //Abre o modal para personalizar o item desejado
 function pedir(id, ext, inclusos){
-    if(true){
+    if(false){
         dijuntor('montar');
         extras=[];
         get('montar').innerHTML=`
