@@ -976,7 +976,7 @@ function montarSabores(id){
                     get('val'+id).innerHTML=sabor1[1];
                 }
 
-                get('desc'+id).innerHTML=sabor1[0]+" + "+sabor2[0];
+                get('desc'+id).innerHTML=sabor1[0]+" - "+sabor2[0];
             }
         }
     }
