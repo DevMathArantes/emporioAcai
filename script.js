@@ -74,17 +74,17 @@ let recheiosSalgados = [
     ["Salada", 4.00],
 ];
 let bordasPizza = [
-    ["radio", 2],
-    ["Doce de leite", 16.00],
-    ["Goiabada", 16.00],
-    ["Queijo com bacon", 21.00],
-    ["Catupiry com bacon", 19.00],
-    ["Chocolate com queijo", 20.00],
-    ["Cheddar com bacon", 21.00],
-    ["Borda Musarela", 21.00],
-    ["Borda Catupiry", 16.00],
-    ["Borda Cheddar", 16.00],
-    ["Borda Nutella", 16.00]
+    ["Borda: radio", 2],
+    ["Borda: Doce de leite", 16.00],
+    ["Borda: Goiabada", 16.00],
+    ["Borda: Queijo com bacon", 21.00],
+    ["Borda: Catupiry com bacon", 19.00],
+    ["Borda: Chocolate com queijo", 20.00],
+    ["Borda: Cheddar com bacon", 21.00],
+    ["Borda: Musarela", 21.00],
+    ["Borda: Catupiry", 16.00],
+    ["Borda: Cheddar", 16.00],
+    ["Borda: Nutella", 16.00]
 ];
 let vazio = [
     "vazio"
@@ -976,7 +976,10 @@ function montarSabores(id){
                     get('val'+id).innerHTML=sabor1[1];
                 }
 
-                get('desc'+id).innerHTML=sabor1[0]+" - "+sabor2[0];
+                get('desc'+id).innerHTML=sabor1[0]+" / "+sabor2[0];
+            }
+            else{
+                get('metadeFinal').style.display='none';
             }
         }
     }
