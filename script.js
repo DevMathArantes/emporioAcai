@@ -682,13 +682,16 @@ function aberto() {
             fechar = 22
             break;
     }
-    if (horas >= 14 && horas <= fechar) {
-        if (horas == 14 && minutos < 30) {
+    if ((horas >= 14) && (horas <= fechar)) {
+        if ((horas == 14) && (minutos < 30)) {
             retorno = false;
         }
-        if (horas == fechar && minutos > 30) {
+        if ((horas == fechar) && (minutos > 30)) {
             retorno = false;
         }
+    }
+    else{
+        retorno = false;
     }
     return retorno;
 }
