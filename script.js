@@ -450,15 +450,29 @@ let cupim = [
     ["X-Cupim", "pão , cupim desfiado, queijo duplo", 25.00, 0],
     ["X-Cupim cremoso", "pão , cupim desfiado, queijo duplo, catupiry", 30.00, 0],
     ["X-Cupim tudo", "pão , ovo , cupim desfiado, bacon, salsicha, alface , tomate , queijo duplo , catupiry e presunto", 36.00, 0],
-]
+];
+let costela = [
+    ["lista", "costela", "recheiosSalgados"],
+    ["X-Costela", "Pão, costela desfiada, queijo duplo", 28.00, 0],
+    ["X-Costela Cremoso", "Pão, costela desfiada, queijo duplo, catupiry", 33.00, 0],
+    ["X-Costela Tudo", "Pão , ovo , costela desfiada ,bacon, salsicha, alface , tomate , queijo duplo , catupiry e presunto", 39.00, 0]
+];
 
 //PIZZA
 let salgadaGrande = [
     ["lista", "pizzas", "bordasPizza"],
-    ["Cupim acebolado", "Cupim desfiado, molho de tomate especial, mussarela, cebola, azeitona e orégano", 65.00, 0],
-    ["Cupim cremoso", "Cupim desfiado, molho especial, mussarela, catupiry, orégano", 70, 0],
-    ["Cupim ao alho", "Cupim desfiado, molho de tomate especial, cebola, alho frito, mussarela , azeite , azeitona", 68, 0],
-    ["Cupim especial", "Cupim desfiado, molho de tomate especial, cebola , catupiry, mussarela , tomate , bacon , azeitona e orégano", 73, 0],
+    ["Carne seca acebolada (Grande)", "Carne seca desfiada , molho de tomate especial, mussarela, cebola, azeitona e orégano", 68.00, 0],
+    ["Carne seca cremosa (Grande)", "Carne seca desfiada ,molho especial, mussarela, catupiry, orégano", 73.00, 0],
+    ["Carne seca ao alho (Grande)", "Carne seca desfiada, molho de tomate especial, alho frito, mussarela , azeite , azeitona e cebola", 71.00, 0],
+    ["Carne seca especial (Grande)", "Carne seca desfiada, molho de tomate especial, cebola , catupiry, mussarela , tomate , bacon , azeitona e orégano", 76.00, 0],
+    ["Costela acebolada (Grande)", "Costela desfiado, molho de tomate especial, mussarela, cebola, azeitona e orégano", 68.00, 0],
+    ["Costela cremosa (Grande)", "Costela desfiada ,molho especial, mussarela, catupiry, orégano", 73.00, 0],
+    ["Costela ao alho (Grande)", "Costela desfiada, molho de tomate especial, alho frito, mussarela , azeite , azeitona e cebola", 71.00, 0] ,
+    ["Costela especial (Grande)", "Costela desfiada, molho de tomate especial, cebola , catupiry, mussarela , tomate , bacon , azeitona e orégano", 76.00, 0],
+    ["Cupim acebolado (Grande)", "Cupim desfiado, molho de tomate especial, mussarela, cebola, azeitona e orégano", 65.00, 0],
+    ["Cupim cremoso (Grande)", "Cupim desfiado, molho especial, mussarela, catupiry, orégano", 70, 0],
+    ["Cupim ao alho (Grande)", "Cupim desfiado, molho de tomate especial, cebola, alho frito, mussarela , azeite , azeitona", 68, 0],
+    ["Cupim especial (Grande)", "Cupim desfiado, molho de tomate especial, cebola , catupiry, mussarela , tomate , bacon , azeitona e orégano", 73, 0],
     ["Pizza Alho e óleo (Grande)", "Mussarela, bacon, alho, tomate, cebola, orégano e azeitona ", 70.00, 0],
     ["Pizza Baiana (Grande)", "Mussarela, calabresa picada, parmesão, pimenta, ovos, pimentão, tomate, cebola, orégano e azeitona", 75.00, 0],
     ["Pizza Brócolis (Grande)", "Brócolis, bacon fatiado, mussarela e catupiry", 75.00, 0],
@@ -486,10 +500,18 @@ let salgadaGrande = [
 ];
 let salgadaPequena = [
     ["lista", "pizzas", "bordasPizza"],
-    ["Cupim acebolado", "Cupim desfiado, molho de tomate especial, mussarela, cebola, azeitona e orégano", 48.00, 0],
-    ["Cupim cremoso", "Cupim desfiado, molho especial, mussarela, catupiry, orégano", 48, 0],
-    ["Cupim ao alho", "Cupim desfiado, molho de tomate especial, cebola, alho frito, mussarela , azeite , azeitona", 48, 0],
-    ["Cupim especial", "Cupim desfiado, molho de tomate especial, cebola , catupiry, mussarela , tomate , bacon , azeitona e orégano", 48, 0],
+    ["Carne seca acebolada (Média)", "Carne seca desfiada , molho de tomate especial, mussarela, cebola, azeitona e orégano", 48.00, 0],
+    ["Carne seca cremosa (Média)", "Carne seca desfiada ,molho especial, mussarela, catupiry, orégano", 48.00, 0],
+    ["Carne seca ao alho (Média)", "Carne seca desfiada, molho de tomate especial, alho frito, mussarela , azeite , azeitona e cebola", 48.00, 0],
+    ["Carne seca especial (Média)", "Carne seca desfiada, molho de tomate especial, cebola , catupiry, mussarela , tomate , bacon , azeitona e orégano", 48.00, 0],
+    ["Costela acebolada (Média)", "Costela desfiado, molho de tomate especial, mussarela, cebola, azeitona e orégano", 48.00, 0],
+    ["Costela cremosa (Média)", "Costela desfiada ,molho especial, mussarela, catupiry, orégano", 48.00, 0],
+    ["Costela ao alho (Média)", "Costela desfiada, molho de tomate especial, alho frito, mussarela , azeite , azeitona e cebola", 48.00, 0] ,
+    ["Costela especial (Média)", "Costela desfiada, molho de tomate especial, cebola , catupiry, mussarela , tomate , bacon , azeitona e orégano", 48.00, 0],
+    ["Cupim acebolado (Média)", "Cupim desfiado, molho de tomate especial, mussarela, cebola, azeitona e orégano", 48.00, 0],
+    ["Cupim cremoso (Média)", "Cupim desfiado, molho especial, mussarela, catupiry, orégano", 48, 0],
+    ["Cupim ao alho (Média)", "Cupim desfiado, molho de tomate especial, cebola, alho frito, mussarela , azeite , azeitona", 48, 0],
+    ["Cupim especial (Média)", "Cupim desfiado, molho de tomate especial, cebola , catupiry, mussarela , tomate , bacon , azeitona e orégano", 48, 0],
     ["Pizza Alho e óleo (Média)", "Mussarela, bacon, alho, tomate, cebola, orégano e azeitona ", 45.00, 0],
     ["Pizza Baiana (Média)", "Mussarela, calabresa picada, parmesão, pimenta, ovos, pimentão, tomate, cebola, orégano e azeitona", 48.00, 0],
     ["Pizza Brócolis (Média)", "Brócolis, bacon fatiado, mussarela e catupiry", 48.00, 0],
@@ -591,6 +613,9 @@ let omeleteMedio = [
 ];
 let tapiocaSalgada = [
     ["lista", "tapiocaSalgada", "vazio"],
+    ["Tapioca salgada", "Costela com queijo", 21.00, 0],
+    ["Tapioca salgada", "Carne seca com queijo", 21.00, 0],
+    ["Tapioca salgada", "Cupim com queijo", 21.00, 0],
     ["Tapioca salgada", "Frango com tomate", 18.00, 0],
     ["Tapioca salgada", "Frango com catupiry", 18.00, 0],
     ["Tapioca salgada", "Frango com bacon", 18.00, 0],
@@ -627,7 +652,7 @@ let PRODUTOS = [
     combos, copos, barcas, tigelas,
     litros, bolas, tacas, milks1, milks2, milks3, milks4,
     refri2Litros, refri1Litro, refriLata, limoneto, sucos, cervejas, vitaminas,
-    hamburguer, frango, combo, file, lombo, cupim,
+    hamburguer, frango, combo, file, lombo, cupim, costela,
     salgadaGrande, salgadaPequena, doceGrande, docePequena, doisSabores,
     porcoesBatata, porcoesCarne, omeleteGrande, omeleteMedio, tapiocaSalgada, tapiocaDoce
 ];
