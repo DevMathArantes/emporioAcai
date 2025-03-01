@@ -781,8 +781,10 @@ function mostrarPedido() {
 let totalPedido = 0.0
 
 //Link 
-let link = "https://wa.me/551631723514?text=Novo%20pedido%0A%0A";
+
 function montarLink() {
+
+    let link = "https://wa.me/551631723514?text=Novo%20pedido%0A%0A";
 
     //Reiciando o total
     totalPedido = 0.0;
@@ -1089,7 +1091,7 @@ function montarExtras(tipo, inclusos) {
 
 //Abre o modal para personalizar o item desejado
 function pedir(id, ext, inclusos) {
-    if(aberto()){
+    if(true){
         dijuntor('montar');
         extras = [];
         get('montar').innerHTML = `
