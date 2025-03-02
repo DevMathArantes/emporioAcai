@@ -1149,6 +1149,7 @@ let verificado = true;
 function gerarLink() {
 
     //Verificações necessárias
+    link = "https://wa.me/551631723514?text=Novo%20pedido%0A%0A";
     montarLink()
     verifica();
 
