@@ -38,6 +38,7 @@ let recheiosDoces = [
     ["Ovomaltine", 3.50],
     ["Leite Ninho", 4.00],
     ["Morango", 4.00],
+    ["Manga", 4.50],
     ["Nutella", 4.50],
     ["Castanha", 4.50],
     ["Creme de ouro branco", 4.50],
@@ -179,31 +180,8 @@ let tigelas = [
 //SORVETE
 let litros = [
     ["lista", "litros", "recheiosDoces"],
-    ["1 Litro de sorvete", "Sabor em grande escala", 25.00, 0],
-    ["Sorvete 1 Litro", "Corneto", 25.00, 0],
-    ["Sorvete 1 Litro", "Nozes com doce de leite", 25.00, 0],
-    ["Sorvete 1 Litro", "Abóbora com coco", 25.00, 0],
-    ["Sorvete 1 Litro", "Creme", 25.00, 0],
-    ["Sorvete 1 Litro", "Ninho trufado", 25.00, 0],
-    ["Sorvete 1 Litro", "Red Velvet", 25.00, 0],
-    ["Sorvete 1 Litro", "Sensação", 25.00, 0],
-    ["Sorvete 1 Litro", "Mousse de nutella", 25.00, 0],
-    ["Sorvete 1 Litro", "Delírio", 25.00, 0],
-    ["Sorvete 1 Litro", "Ameixa", 25.00, 0],
-    ["Sorvete 1 Litro", "Laka", 25.00, 0],
-    ["Sorvete 1 Litro", "Flocos", 25.00, 0],
-    ["Sorvete 1 Litro", "Mousse de goiaba", 25.00, 0],
-    ["Sorvete 1 Litro", " Mousse de maracujá", 25.00, 0],
-    ["Sorvete 1 Litro", "Pavê trufado", 25.00, 0],
-    ["Sorvete 1 Litro", "Milho verde", 25.00, 0],
-    ["Sorvete 1 Litro", "Torta de limão", 25.00, 0],
-    ["Sorvete 1 Litro", "Banana com nutella", 25.00, 0],
-    ["Sorvete 1 Litro", "Morango silvestre 0", 25.00, 0],
-    ["Sorvete 1 Litro", "Coca Malasia", 25.00, 0],
-    ["Sorvete 1 Litro", "Torta chocolate", 25.00, 0],
-    ["Sorvete 1 Litro", "Cheesecake", 25.00, 0],
-    ["Sorvete 1 Litro", "Papaya com cassis", 25.00, 0],
-    ["Sorvete 1 Litro", "Caraxi", 25.00, 0]
+    ["1 Litro de sorvete", "Ninho", 25.00, 0],
+    ["1 Litro de sorvete", "Chocolate", 25.00, 0]
 ];
 let bolas = [
     ["lista", "bolas", "recheiosDoces"],
