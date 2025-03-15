@@ -198,17 +198,14 @@ let bolas = [
     ["Sorvete Bola", "Laka", 4.50, 0],
     ["Sorvete Bola", "Flocos", 4.50, 0],
     ["Sorvete Bola", "Mousse de goiaba", 4.50, 0],
-    ["Sorvete Bola", " Mousse de maracujá", 4.50, 0],
-    ["Sorvete Bola", "Pavê trufado", 4.50, 0],
+    ["Sorvete Bola", "Mousse de maracujá", 4.50, 0],
     ["Sorvete Bola", "Milho verde", 4.50, 0],
-    ["Sorvete Bola", "Torta de limão", 4.50, 0],
     ["Sorvete Bola", "Banana com nutella", 4.50, 0],
     ["Sorvete Bola", "Morango silvestre 0", 4.50, 0],
     ["Sorvete Bola", "Coca Malasia", 4.50, 0],
     ["Sorvete Bola", "Torta chocolate", 4.50, 0],
     ["Sorvete Bola", "Cheesecake", 4.50, 0],
-    ["Sorvete Bola", "Papaya com cassis", 4.50, 0],
-    ["Sorvete Bola", "Caraxi", 4.50, 0]
+    ["Sorvete Bola", "Papaya com cassis", 4.50, 0]
 ];
 let tacas = [
     ["carrossel", "tacas", "recheiosDoces"],
@@ -235,17 +232,14 @@ let milks1 = [
     ["Milk Shake 300 Ml", "Laka", 12.00, 0],
     ["Milk Shake 300 Ml", "Flocos", 12.00, 0],
     ["Milk Shake 300 Ml", "Mousse de goiaba", 12.00, 0],
-    ["Milk Shake 300 Ml", " Mousse de maracujá", 12.00, 0],
-    ["Milk Shake 300 Ml", "Pavê trufado", 12.00, 0],
+    ["Milk Shake 300 Ml", "Mousse de maracujá", 12.00, 0],
     ["Milk Shake 300 Ml", "Milho verde", 12.00, 0],
-    ["Milk Shake 300 Ml", "Torta de limão", 12.00, 0],
     ["Milk Shake 300 Ml", "Banana com nutella", 12.00, 0],
     ["Milk Shake 300 Ml", "Morango silvestre 0", 12.00, 0],
     ["Milk Shake 300 Ml", "Coca Malasia", 12.00, 0],
     ["Milk Shake 300 Ml", "Torta chocolate", 12.00, 0],
     ["Milk Shake 300 Ml", "Cheesecake", 12.00, 0],
     ["Milk Shake 300 Ml", "Papaya com cassis", 12.00, 0],
-    ["Milk Shake 300 Ml", "Caraxi", 12.00, 0]
 ];
 let milks2 = [
     ["lista", "milks2", "recheiosDoces"],
@@ -263,16 +257,13 @@ let milks2 = [
     ["Milk Shake 400 Ml", "Flocos", 14.00, 0],
     ["Milk Shake 400 Ml", "Mousse de goiaba", 14.00, 0],
     ["Milk Shake 400 Ml", " Mousse de maracujá", 14.00, 0],
-    ["Milk Shake 400 Ml", "Pavê trufado", 14.00, 0],
     ["Milk Shake 400 Ml", "Milho verde", 14.00, 0],
-    ["Milk Shake 400 Ml", "Torta de limão", 14.00, 0],
     ["Milk Shake 400 Ml", "Banana com nutella", 14.00, 0],
     ["Milk Shake 400 Ml", "Morango silvestre 0", 14.00, 0],
     ["Milk Shake 400 Ml", "Coca Malasia", 14.00, 0],
     ["Milk Shake 400 Ml", "Torta chocolate", 14.00, 0],
     ["Milk Shake 400 Ml", "Cheesecake", 14.00, 0],
-    ["Milk Shake 400 Ml", "Papaya com cassis", 14.00, 0],
-    ["Milk Shake 400 Ml", "Caraxi", 14.00, 0]
+    ["Milk Shake 400 Ml", "Papaya com cassis", 14.00, 0]
 ];
 let milks3 = [
     ["lista", "milks3", "recheiosDoces"],
@@ -290,16 +281,13 @@ let milks3 = [
     ["Milk Shake 500 Ml", "Flocos", 15.00, 0],
     ["Milk Shake 500 Ml", "Mousse de goiaba", 15.00, 0],
     ["Milk Shake 500 Ml", " Mousse de maracujá", 15.00, 0],
-    ["Milk Shake 500 Ml", "Pavê trufado", 15.00, 0],
     ["Milk Shake 500 Ml", "Milho verde", 15.00, 0],
-    ["Milk Shake 500 Ml", "Torta de limão", 15.00, 0],
     ["Milk Shake 500 Ml", "Banana com nutella", 15.00, 0],
     ["Milk Shake 500 Ml", "Morango silvestre 0", 15.00, 0],
     ["Milk Shake 500 Ml", "Coca Malasia", 15.00, 0],
     ["Milk Shake 500 Ml", "Torta chocolate", 15.00, 0],
     ["Milk Shake 500 Ml", "Cheesecake", 15.00, 0],
-    ["Milk Shake 500 Ml", "Papaya com cassis", 15.00, 0],
-    ["Milk Shake 500 Ml", "Caraxi", 15.00, 0]
+    ["Milk Shake 500 Ml", "Papaya com cassis", 15.00, 0]
 ];
 let milks4 = [
     ["lista", "milks4", "recheiosDoces"],
@@ -316,17 +304,14 @@ let milks4 = [
     ["Milk Shake 700 Ml", "Laka", 18.00, 0],
     ["Milk Shake 700 Ml", "Flocos", 18.00, 0],
     ["Milk Shake 700 Ml", "Mousse de goiaba", 18.00, 0],
-    ["Milk Shake 700 Ml", " Mousse de maracujá", 18.00, 0],
-    ["Milk Shake 700 Ml", "Pavê trufado", 18.00, 0],
+    ["Milk Shake 700 Ml", "Mousse de maracujá", 18.00, 0],
     ["Milk Shake 700 Ml", "Milho verde", 18.00, 0],
-    ["Milk Shake 700 Ml", "Torta de limão", 18.00, 0],
     ["Milk Shake 700 Ml", "Banana com nutella", 18.00, 0],
     ["Milk Shake 700 Ml", "Morango silvestre 0", 18.00, 0],
     ["Milk Shake 700 Ml", "Coca Malasia", 18.00, 0],
     ["Milk Shake 700 Ml", "Torta chocolate", 18.00, 0],
     ["Milk Shake 700 Ml", "Cheesecake", 18.00, 0],
-    ["Milk Shake 700 Ml", "Papaya com cassis", 18.00, 0],
-    ["Milk Shake 700 Ml", "Caraxi", 18.00, 0]
+    ["Milk Shake 700 Ml", "Papaya com cassis", 18.00, 0]
 ];
 
 //BEBIDA
