@@ -421,15 +421,15 @@ let lombo = [
 ];
 let cupim = [
     ["lista", "cupim", "recheiosSalgados"],
-    ["X-Cupim", "pão , cupim desfiado, queijo duplo", 25.00, 0],
-    ["X-Cupim cremoso", "pão , cupim desfiado, queijo duplo, catupiry", 30.00, 0],
-    ["X-Cupim tudo", "pão , ovo , cupim desfiado, bacon, salsicha, alface , tomate , queijo duplo , catupiry e presunto", 36.00, 0],
+    ["X-Cupim", "pão , cupim desfiado, cebola, queijo duplo", 25.00, 0],
+    ["X-Cupim cremoso", "pão , cupim desfiado, cebola, queijo duplo, catupiry", 30.00, 0],
+    ["X-Cupim tudo", "pão , ovo , cupim desfiado, cebola, bacon, salsicha, alface , tomate , queijo duplo , catupiry e presunto", 36.00, 0],
 ];
 let costela = [
     ["lista", "costela", "recheiosSalgados"],
-    ["X-Costela", "Pão, costela desfiada, queijo duplo", 28.00, 0],
-    ["X-Costela Cremoso", "Pão, costela desfiada, queijo duplo, catupiry", 33.00, 0],
-    ["X-Costela Tudo", "Pão , ovo , costela desfiada ,bacon, salsicha, alface , tomate , queijo duplo , catupiry e presunto", 39.00, 0]
+    ["X-Costela", "Pão, costela desfiada, cebola, queijo duplo", 28.00, 0],
+    ["X-Costela Cremoso", "Pão, costela desfiada, cebola, queijo duplo, catupiry", 33.00, 0],
+    ["X-Costela Tudo", "Pão , ovo , costela desfiada, cebola,bacon, salsicha, alface , tomate , queijo duplo , catupiry e presunto", 39.00, 0]
 ];
 
 //PIZZA
