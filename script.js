@@ -367,7 +367,7 @@ let sucos = [
 ];
 let cervejas = [
     ["grande", "cervejas", "vazio"],
-    ["Cerveja Heineken", "Cerveja Heineken 330 ml", 10.00, 0]
+    ["Cerveja Heineken", "Cerveja Heineken 330 ml", 8.00, 0]
 ];
 let vitaminas = [
     ["lista", "vitaminas", "vazio"],
