@@ -657,42 +657,35 @@ let minutos = agora.getMinutes();
 let dia = agora.getDay();
 let fechar;
 let retorno = true;
+let diaUtil = true;
 function aberto() {
     switch (dia) {
         case 0:
-            fechar = 22;
-            break;
-        case 1:
-            fechar = 21;
-            break;
-        case 2:
-            fechar = 21;
-            break;
-        case 3:
-            fechar = 21
-            break;
-        case 4:
-            fechar = 21;
-            break;
-        case 5:
-            fechar = 22;
+            diaUtil = false;
             break;
         case 6:
-            fechar = 22
+            diaUtil = false;
             break;
     }
-    if ((horas >= 14) && (horas <= fechar)) {
-        if ((horas == 14) && (minutos < 30)) {
-            retorno = false;
+    if(diaUtil){
+        if(horas >= 15 && horas < 23){
+            return true;
         }
-        if ((horas == fechar) && (minutos > 30)) {
-            retorno = false;
+        else{
+            return false;
         }
     }
     else{
-        retorno = false;
+        if(horas == 14 && minutos > 30){
+            return true;
+        }
+        else if(horas > 14 && horas < 23){
+            return true;
+        }
+        else{
+            return false
+        }
     }
-    return retorno;
 }
 
 //Funções auxiliares____________________________________________________________________________________________________
