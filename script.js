@@ -1086,7 +1086,7 @@ function pedir(id, ext, inclusos) {
         montarExtras(ext, inclusos);
     }
     else {
-        alert("Agradecemos a preferência, abriremos as 14h30");
+        alert("Agradecemos a preferência, abriremos ás 15h (sábados e domingos ás 14h30).");
     }
 }
 
