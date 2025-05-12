@@ -176,7 +176,7 @@ let barcas = [
 ];
 let tigelas = [
     ["lista", "tigelas", "recheiosDoces"],
-    ["Tigela 1 Litro", "Tigela com 1 litro de açai", 25.00, 0],
+    ["Tigela 1 Litro", "Tigela com 1 litro de açai", 28.00, 0],
     ["Tigela 600 ML", "Tigela com 600 ml de açai", 19.00, 0]
 ];
 
@@ -212,13 +212,13 @@ let bolas = [
 ];
 let tacas = [
     ["carrossel", "tacas", "recheiosDoces"],
-    ["Taça Cremoninho", "Açai cremoso, leite ninho e leite condensado", 20.00, 0],
-    ["Taça Kit Kat", "Sorvete de ninho trufado, nutella e kit kat", 20.00, 0],
-    ["Taça Moda da Casa", "Açai, chantilly, paçoca, nutella e morango", 21.00, 0],
-    ["Taça Morango Supremo", "Morango picadinho, chocolate e chantilly", 18.00, 0],
+    ["Taça Cremoninho", "Açai cremoso, leite ninho e leite condensado", 25.00, 0],
+    ["Taça Kit Kat", "Sorvete de ninho trufado, nutella e kit kat", 25.00, 0],
+    ["Taça Moda da Casa", "Açai, chantilly, paçoca, nutella e morango", 28.00, 0],
+    ["Taça Morango Supremo", "Morango picadinho, chocolate e chantilly", 25.00, 0],
     ["Taça Óreo", "Sorvete laka, creme laka oreo, chantilly, nutella e bolacha oreo", 21.00, 0],
-    ["Taça Ovomaltine", "Sorvete torta de chocolate, creme de ovomaltine, chantilly e kinder bueno", 21.00, 0],
-    ["Taça Sonhos", "Sorvete de corneto, chantilly, sonho de valsa e creme de valsa", 20.00, 0]
+    ["Taça Ovomaltine", "Sorvete torta de chocolate, creme de ovomaltine, chantilly e kinder bueno", 28.00, 0],
+    ["Taça Sonhos", "Sorvete de corneto, chantilly, sonho de valsa e creme de valsa", 25.00, 0]
 ];
 
 let precoMilks1 = 14.00;
