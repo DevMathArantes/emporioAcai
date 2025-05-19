@@ -216,7 +216,7 @@ let tacas = [
     ["Taça Kit Kat", "Sorvete de ninho trufado, nutella e kit kat", 25.00, 0],
     ["Taça Moda da Casa", "Açai, chantilly, paçoca, nutella e morango", 28.00, 0],
     ["Taça Morango Supremo", "Morango picadinho, chocolate e chantilly", 25.00, 0],
-    ["Taça Óreo", "Sorvete laka, creme laka oreo, chantilly, nutella e bolacha oreo", 21.00, 0],
+    ["Taça Óreo", "Sorvete laka, creme laka oreo, chantilly, nutella e bolacha oreo", 28.00, 0],
     ["Taça Ovomaltine", "Sorvete torta de chocolate, creme de ovomaltine, chantilly e kinder bueno", 28.00, 0],
     ["Taça Sonhos", "Sorvete de corneto, chantilly, sonho de valsa e creme de valsa", 25.00, 0]
 ];
