@@ -171,8 +171,8 @@ let copos = [
 ];
 let barcas = [
     ["lista", "barcas", "recheiosDoces"],
-    ["Barca 1 Litro", "Inclui até 8 adicionais", 55.00, 8],
-    ["Barca 1.5 Litros", "Inclui até 8 adicionais", 65.00, 8]
+    ["Barca 1 Litro", "Inclui até 8 adicionais", 60.00, 8],
+    ["Barca 1.5 Litros", "Inclui até 8 adicionais", 70.00, 8]
 ];
 let tigelas = [
     ["lista", "tigelas", "recheiosDoces"],
