@@ -59,7 +59,7 @@ let recheiosDoces = [
     ["Creme de pistache (NÃO INCLUSO)", 6.50],
     ["Nutella x2 (NÃO INCLUSO)", 7.00],
     ["Ferrero rocher (NÃO INCLUSO)", 9.50],
-    ["Kinder bueno (NÃO INCLUSO)", 9.50]
+    ["Kinder bueno (NÃO INCLUSO)", 10.00]
 ];
 let recheiosSalgados = [
     ["checkbox", 1],
