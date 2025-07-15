@@ -156,7 +156,7 @@ let doisSaboresPizza = [
 //AÇAI
 let combos = [
     ["carrossel", "combos", "recheiosDoces"],
-    ["1 Litro de açai", "Escolha até 4 adicionais", 36.90, 4],
+    ["1 Litro de açai", "Escolha até 4 adicionais", 38.90, 4],
     ["Copo 300ml de açai", "Escolha até 3 adicionais", 23.00, 3],
     ["Copo 400ml de açai", "Escolha até 3 adicionais", 25.00, 3],
     ["Copo 500ml de açai", "Escolha até 3 adicionais", 28.00, 3],
