@@ -1,0 +1,1 @@
+O cliente solicitou a retirada do download do cardápio.
