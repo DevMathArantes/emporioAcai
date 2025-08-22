@@ -1,532 +1,90 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Empório do Açai</title>
-    <link rel="web icon" href="Assets/Imagens/logo.jpg">
+    <title id="tituloPag"></title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="web icon" href="Assets/Images/logo.png">
 </head>
-
 <body>
 
-    <!--Início da página-->
-    <header>
-
-        <!--Nav principal-->
-        <nav>
-
-            <h2 id="status"></h2>
-            <input class="abrirListaEscondida" id="abrirNav" type="checkbox">
-            <label for="abrirNav"></label>
-
-            <!--Links-->
-            <ul id="links" class="listaEscondida">
-                <li>
-                    <a href="https://wa.me/551631723514">
-                        <img src="Assets/icons/whatsapp.png" alt="icone whatsApp">
-                        Contato
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.instagram.com/omelhordoacai?igsh=emJlOWdvaHF4cWQ2">
-                        <img src="Assets/icons/instagram.png" alt="icone instagram">
-                        Seguir
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.facebook.com/profile.php?id=100064760106360&mibextid=ZbWKwL">
-                        <img src="Assets/icons/facebook.png" alt="icone facebook">
-                        Novidades
-                    </a>
-                </li>
-                <li>
-                    <a href="https://maps.app.goo.gl/rpcVGbXBotXaR6qG8">
-                        <img src="Assets/icons/local.png" alt="icone local">
-                        Endereço
-                    </a>
-                </li>
-            </ul>
-
-        </nav>
-
-        <!--Apresentação-->
-       <div class="inicio"></div>
+    <header class="header1">
+        <div class="header1Img imgDividir"></div>
         
-       <!--Título da página-->
-        <h1>Empório do açai</h1>
-
+        <div class="header1Txt">
+            <h2>Olá, seja bem vindo</h2>
+            <h1 id="Titulo"></h1>
+        </div>
+        
+        <nav>
+            <input class="abrirLista" id="abrirMenu" type="checkbox" name="abrirMenu">
+            <label for="abrirMenu"></label>
+            <ul class="listaFechada" id="links"></ul>
+            <h2 id="status"></h2>
+            <button onclick="globalAbrirCarrinho()">
+                <img src="assets/icons/carrinho.png" alt="icone carrinho">
+                <span>Carrinho</span>
+                <p class="contagem" id="contagem">0</p>
+            </button>
+            <a id="endereco">
+                <img src="assets/icons/endereco.png" alt="icone endereço">
+                <span>Endereço</span>
+            </a>
+            <button onclick="globalInfoStatus()">
+                <img src="assets/icons/relogio.png" alt="icone relogio">
+                <span>Relógio</span>
+            </button>
+        </nav>
     </header>
 
-    <!--Conteúdo principal-->
     <main>
-
-        <!--Card expositivo-->
-        <section class="cardExpositivo">
-            <h2>FAÇA JÁ O SEU PEDIDO !</h2>
+        
+        <!--Filtro de categorias-->
+        <section class="sectionPd">
+            <h2>Ja sabe o que procura ?</h2>
+            <p>Utilize nosso filtro para encontrar a categoria desejada</p>
         </section>
+        <select onchange="globalMudarCategoria()" class="selectDividir" id="grupoAtual">
+            <option value="tudo">Ver tudo</option>
+        </select>
 
-        <!--Categoria de produtos-->
-        <ul class="categorias">
+        <!--Imagem representando a categoria atual-->
+        <section class="trocarImagem" id="imagemGrupo"></section>
 
-            <!--Açais-->
-            <li class="abrirCategoria" onclick="dijuntor('acais')">
-                <img src="Assets/Imagens/acai.jpg" alt="imagem açai">
-                <span>AÇAIS</span>
-            </li>
-            <section id="acais" class="modal cardapio">
-                
-                <!--Botão voltar-->
-                <button class="voltar" onclick="dijuntor('acais')">
-                    <img src="Assets/icons/voltar.png" alt="icone voltar">
-                    Voltar
-                </button>
+        <!--Categorias de produtos-->
+        <section id="produtos"></section>
 
-                <!--Combos-->
-                <input id="combos" type="checkbox" class="abrirListaEscondida">
-                <label class="acai combos abrirCardapio" for="combos">
-                    <span>COMBOS</span>
-                </label>
-                <ul id="produtos0" class="listaEscondida carrossel"></ul>
-                
-                <!--Copos-->
-                <input id="copos" type="checkbox" class="abrirListaEscondida">
-                <label class="acai copos abrirCardapio" for="copos">
-                    <span>COPOS</span>
-                </label>
-                <ul id="produtos1" class="listaEscondida lista"></ul>
-
-                <!--Barcas-->
-                <input id="barcas" type="checkbox" class="abrirListaEscondida">
-                <label class="acai barcas abrirCardapio" for="barcas">
-                    <span>BARCAS</span>
-                </label>
-                <ul id="produtos2" class="listaEscondida lista"></ul>
-
-                <!--Tigelas-->
-                <input id="tigelas" type="checkbox" class="abrirListaEscondida">
-                <label class="acai tigelas abrirCardapio" for="tigelas">
-                    <span>TIGELAS</span>
-                </label>
-                <ul id="produtos3" class="listaEscondida lista"></ul>
-                
-            </section>
-
-            <!--Sorvetes-->
-            <li class="abrirCategoria" onclick="dijuntor('sorvetes')">
-                <img src="Assets/Imagens/sorvetes.jpg" alt="imagem sorvetes">
-                <span>SORVETES</span>
-            </li>
-            <section id="sorvetes" class="modal cardapio">
-                <br><br><br>
-                <button class="voltar" onclick="dijuntor('sorvetes')">
-                    <img src="Assets/icons/voltar.png" alt="icone voltar">
-                    Voltar
-                </button>
-
-                <!--Litros-->
-                <input id="litros" type="checkbox" class="abrirListaEscondida">
-                <label class="sorvete litros abrirCardapio" for="litros">
-                    <span>LITROS</span>
-                </label>
-                <ul id="produtos4" class="listaEscondida lista"></ul>
-
-                <!--Bolas-->
-                <input id="bolas" type="checkbox" class="abrirListaEscondida">
-                <label class="sorvete bolas abrirCardapio" for="bolas">
-                    <span>BOLAS</span>
-                </label>
-                <ul id="produtos5" class="listaEscondida lista"></ul>
-
-                <!--Taças-->
-                <input id="tacas" type="checkbox" class="abrirListaEscondida">
-                <label class="sorvete tacas abrirCardapio" for="tacas">
-                    <span>TAÇAS</span>
-                </label>
-                <ul id="produtos6" class="listaEscondida carrossel"></ul>
-
-                <!--Milk-shakes-->
-                <input id="milks" type="checkbox" class="abrirListaEscondida">
-                <label class="sorvete milks abrirCardapio" for="milks">
-                    <span>MILKS</span>
-                </label>
-                <div class="listaEscondida listas">
-
-                    <input type="checkbox" class="abrirListaEscondida" id="milks1">
-                    <label class="labelMenor" for="milks1">300 Ml</label>
-                    <ul id="produtos7" class="lista listaEscondida"></ul>
-                   
-                    <input type="checkbox" class="abrirListaEscondida" id="milks2">
-                    <label class="labelMenor" for="milks2">400 Ml</label>
-                    <ul id="produtos8" class="lista listaEscondida"></ul>
-                    
-                    <input type="checkbox" class="abrirListaEscondida" id="milks3">
-                    <label class="labelMenor" for="milks3">500 Ml</label>
-                    <ul id="produtos9" class="lista listaEscondida"></ul>
-
-                    <input type="checkbox" class="abrirListaEscondida" id="milks4">
-                    <label class="labelMenor" for="milks4">700 Ml</label>
-                    <ul id="produtos10" class="lista listaEscondida"></ul>
-                </div>
-                
-            </section>
-
-            <!--Bebidas-->
-            <li class="abrirCategoria" onclick="dijuntor('bebidas')">
-                <img src="Assets/Imagens/bebidas.jpg" alt="imagem bebidas">
-                <span>BEBIDAS</span>
-            </li>
-            <section id="bebidas" class="modal cardapio">
-                
-                <!--Botão voltar-->
-                <br><br><br>
-                <button class="voltar" onclick="dijuntor('bebidas')">
-                    <img src="Assets/icons/voltar.png" alt="icone voltar">
-                    Voltar
-                </button>
-
-                <!--Refrigerantes-->
-                <input id="refrigerantes" type="checkbox" class="abrirListaEscondida">
-                <label class="bebida refrigerantes abrirCardapio abrirCardapio" for="refrigerantes">
-                    <span>REFRIGERANTES</span>
-                </label>
-                <div class="listaEscondida listas">
-                    <input type="checkbox" class="abrirListaEscondida" id="doisLitros">
-                    <label class="labelMenor" for="doisLitros">2 Litros</label>
-                    <ul id="produtos11" class="lista listaEscondida"></ul>
-                   
-                    <input type="checkbox" class="abrirListaEscondida" id="umLitro">
-                    <label class="labelMenor" for="umLitro">1 Litro</label>
-                    <ul id="produtos12" class="lista listaEscondida"></ul>
-                    
-                    <input type="checkbox" class="abrirListaEscondida" id="latas">
-                    <label class="labelMenor" for="latas">Lata</label>
-                    <ul id="produtos13" class="lista listaEscondida"></ul>
-
-                    <div id="produtos14" class="grande">
-
-                    </div>
-                </div>
-
-                <!--Sucos-->
-                <input id="sucos" type="checkbox" class="abrirListaEscondida">
-                <label class="bebida sucos abrirCardapio abrirCardapio" for="sucos">
-                    <span>SUCOS</span>
-                </label>
-                <ul id="produtos15" class="listaEscondida lista"></ul>
-
-                <!--Cervejas-->
-                <input id="cervejas" type="checkbox" class="abrirListaEscondida">
-                <label class="bebida cervejas abrirCardapio abrirCardapio" for="cervejas">
-                    <span>CERVEJAS</span>
-                </label>
-                <ul id="produtos16" class="listaEscondida grande"></ul>
-
-                <!--Vitaminas-->
-                <input id="vitaminas" type="checkbox" class="abrirListaEscondida">
-                <label class="bebida vitaminas abrirCardapio abrirCardapio" for="vitaminas">
-                    <span>VITAMINAS</span>
-                </label>
-                <ul id="produtos17" class="listaEscondida lista"></ul>
-
-            </section>
-
-            <!--Lanches-->
-            <li class="abrirCategoria" onclick="dijuntor('lanches')">
-                <img src="Assets/Imagens/combo1.jpg" alt="imagem lanches">
-                <span>LANCHES</span>
-            </li>
-            <section id="lanches" class="modal cardapio">
-                <br><br><br>
-                <button class="voltar" onclick="dijuntor('lanches')">
-                    <img src="Assets/icons/voltar.png" alt="icone voltar">
-                    Voltar
-                </button>
-              
-                <!--Hamburguer-->
-                <input id="hamburguer" type="checkbox" class="abrirListaEscondida">
-                <label class="lanche hamburguer abrirCardapio" for="hamburguer">
-                    <span>HAMBURGUER</span>
-                </label>
-                <ul id="produtos18" class="listaEscondida lista"></ul>
-
-                <!--Frango-->
-                <input id="frango" type="checkbox" class="abrirListaEscondida">
-                <label class="lanche frango abrirCardapio" for="frango">
-                    <span>FRANGO</span>
-                </label>
-                <ul id="produtos19" class="listaEscondida lista"></ul>
-
-                <!--Combo-->
-                <input id="combo" type="checkbox" class="abrirListaEscondida">
-                <label class="lanche combo abrirCardapio" for="combo">
-                    <span>COMBO</span>
-                </label>
-                <ul id="produtos20" class="listaEscondida grande"></ul>
-
-                <!--Filé-->
-                <input id="file" type="checkbox" class="abrirListaEscondida">
-                <label class="lanche file abrirCardapio" for="file">
-                    <span>FILÉ</span>
-                </label>
-                <ul id="produtos21" class="listaEscondida lista"></ul>
-
-                <!--Lombo-->
-                <input id="lombo" type="checkbox" class="abrirListaEscondida">
-                <label class="lanche lombo abrirCardapio" for="lombo">
-                    <span>LOMBO</span>
-                </label>
-                <ul id="produtos22" class="listaEscondida lista"></ul>
-
-                <!--Cupim-->
-                <input id="cupim" type="checkbox" class="abrirListaEscondida">
-                <label class="lanche cupim abrirCardapio" for="cupim">
-                    <span>CUPIM</span>
-                </label>
-                <ul id="produtos23" class="listaEscondida lista"></ul>
-
-                <!--Cupim-->
-                <input id="costela" type="checkbox" class="abrirListaEscondida">
-                <label class="lanche costela abrirCardapio" for="costela">
-                    <span>COSTELA</span>
-                </label>
-                <ul id="produtos24" class="listaEscondida lista"></ul>
-
-            </section>
-
-            <!--Pizzas-->
-            <li class="abrirCategoria" onclick="dijuntor('pizzas')">
-                <img src="Assets/Imagens/pizzas.jpg" alt="imagem pizzas">
-                <span>PIZZAS</span>
-            </li>
-            <section id="pizzas" class="modal cardapio">
-                <br><br><br>
-                <button class="voltar" onclick="dijuntor('pizzas')">
-                    <img src="Assets/icons/voltar.png" alt="icone voltar">
-                    Voltar
-                </button>
-
-                <!--Salgadas-->
-                <input id="salgada" type="checkbox" class="abrirListaEscondida">
-                <label class="pizza salgada abrirCardapio" for="salgada">
-                    <span>SALGADA</span>
-                </label>
-                <div class="listaEscondida listas">
-
-                    <input type="checkbox" class="abrirListaEscondida" id="salgadaPequena">
-                    <label class="labelMenor" for="salgadaPequena">Grande</label>
-                    <ul id="produtos25" class="lista listaEscondida"></ul>
-                   
-                    <input type="checkbox" class="abrirListaEscondida" id="salgadaGrande">
-                    <label class="labelMenor" for="salgadaGrande">Médio</label>
-                    <ul id="produtos26" class="lista listaEscondida"></ul>
-                    
-                </div>
-
-                <!--Doces-->
-                <input id="doce" type="checkbox" class="abrirListaEscondida">
-                <label class="pizza doce abrirCardapio" for="doce">
-                    <span>DOCE</span>
-                </label>
-                <div class="listaEscondida listas">
-
-                    <input type="checkbox" class="abrirListaEscondida" id="docePequena">
-                    <label class="labelMenor" for="docePequena">Grande</label>
-                    <ul id="produtos27" class="lista listaEscondida"></ul>
-                   
-                    <input type="checkbox" class="abrirListaEscondida" id="doceGrande">
-                    <label class="labelMenor" for="doceGrande">Médio</label>
-                    <ul id="produtos28" class="lista listaEscondida"></ul>
-                    
-                </div>
-
-                <!--2 Sabores-->
-                <input id="doisSabores" type="checkbox" class="abrirListaEscondida">
-                <label class="pizza doisSabores abrirCardapio" for="doisSabores">
-                    <span>2 SABORES</span>
-                </label>
-                <ul id="produtos29" class="listaEscondida metade"></ul>
-
-            </section>
-
-            <!--Especiais-->
-            <li class="abrirCategoria" onclick="dijuntor('especiais')">
-                <img src="Assets/Imagens/especiais.png" alt="imagem especiais">
-                <span>ESPECIAIS</span>
-            </li>
-            <section id="especiais" class="modal cardapio">
-                <br><br><br>
-
-                <button class="voltar" onclick="dijuntor('especiais')">
-                    <img src="Assets/icons/voltar.png" alt="icone voltar">
-                    Voltar
-                </button>
-
-                <!--Porções-->
-                <input id="porcoes" type="checkbox" class="abrirListaEscondida">
-                <label class="especial porcoes abrirCardapio" for="porcoes">
-                    <span>PORÇÕES</span>
-                </label>
-                <div class="listaEscondida listas">
-
-                    <input type="checkbox" class="abrirListaEscondida" id="batatas">
-                    <label class="labelMenor" for="batatas">Batatas</label>
-                    <ul id="produtos30" class="carrossel listaEscondida"></ul>
-                   
-                    <input type="checkbox" class="abrirListaEscondida" id="carnes">
-                    <label class="labelMenor" for="carnes">Carnes</label>
-                    <ul id="produtos31" class="carrossel listaEscondida"></ul>
-                    
-                </div>
-                <!--Omeletes-->
-                <input id="omeletes" type="checkbox" class="abrirListaEscondida">
-                <label class="especial omeletes abrirCardapio" for="omeletes">
-                    <span>OMELETES</span>
-                </label>
-                <div class="listaEscondida listas">
-
-                    <input type="checkbox" class="abrirListaEscondida" id="omeleteGrande">
-                    <label class="labelMenor" for="omeleteGrande">Grande</label>
-                    <ul id="produtos32" class="lista listaEscondida"></ul>
-                   
-                    <input type="checkbox" class="abrirListaEscondida" id="omeletePequeno">
-                    <label class="labelMenor" for="omeletePequeno">Médio</label>
-                    <ul id="produtos33" class="lista listaEscondida"></ul>
-                    
-                </div>
-
-                <!--Tapioca salgada-->
-                <input id="tapiocaSalgada" type="checkbox" class="abrirListaEscondida">
-                <label class="especial tapiocaSalgada abrirCardapio" for="tapiocaSalgada">
-                    <span>T. SALGADA</span>
-                </label>
-                <ul id="produtos34" class="listaEscondida lista"></ul>
-
-                <!--Tapioca doce-->
-                <input id="tapiocaDoce" type="checkbox" class="abrirListaEscondida">
-                <label class="especial tapiocaDoce abrirCardapio" for="tapiocaDoce">
-                    <span>T. DOCE</span>
-                </label>
-                <ul id="produtos35" class="listaEscondida lista"></ul>
-
-            </section>
-
-        </ul>
-
-        <!--Card expositivo-->
-        <section class="cardExpositivo">
-            <img src="Assets/Imagens/ambiente6.jpg" alt="imagem do ambiente empório do açai">
-            <div class="cardInfo">
-                <h2>Curta nosso ambiente</h2>
-                <p>Fuja da rotina e venha se deliciar com nossas criações únicas, feitas com ingredientes frescos e selecionados, que despertam sensações inesquecíveis.</p>
-            </div>
-        </section>
-
-        <!--Modal utilizado para montagem de itens-->
-        <section id="montar" class="modal montar"></section>
-
-        <!--Modal utilizado para finalizar o pedido-->
-        <button id="verPedido" onclick="dijuntor('finalizar')" class="btnFinalizar">
-            Pedido
-            <img src="Assets/icons/finalizar.png" alt="icone finalizar">
-        </button>
-
-        <!--Modal para finalizar o pedido-->
-        <section id="finalizar" class="modal finalizar">
+        <!--Convite-->
+        <section class="sectionPd">
             
-            <!--Botão para voltar-->
-            <button id="sairPedido" onclick="dijuntor('finalizar')" class="voltar">
-                <img src="Assets/icons/voltar.png" alt="icone voltar">
-                Voltar
-            </button>
-
-            <!--Fundo estético-->
-            <div class="fundoFinalizar"></div>
-            <h2>AGRADECEMOS A PREFERÊNCIA</h2>
-
-            <!--Lista de produtos-->
-            <ul class="listaPedido" id="listaPedido"></ul>
-
-            <!--Formulário-->
-            <div id="formulario" class="formulario">
-                
-                <h2>Preencha o formulário</h2>
-                <input id="nome" type="text" placeholder="Nome">
-
-                <!--Aonde resgatar-->
-                <h3>Resgate do pedido</h3>
-                <div class="radio">
-                    <input name="resgate" id="retirar" type="radio">
-                    <label for="retirar">Retirar no local</label>
+            <div class="painel">
+                <img src="assets/images/ambiente.png" alt="imagem do ambiente">                
+                <div class="painelTxt">
+                    <h2>Conheça nosso ambiente</h2>
+                    <p>Temos uma equipe pronta para recebe-lo(a) da melhor forma. Baixe o cardápio e se surpreenda.</p>
                 </div>
-                <div class="radio">
-                    <input name="resgate" type="radio" id="consumo">
-                    <label for="consumo">Consumo no local</label>
-                </div>
-                <div class="radio">
-                    <input name="resgate" id="entrega" type="radio" class="abrirListaEscondida">
-                    <label for="entrega">Para entrega</label>
-                    <div class="listaEscondida">
-                        <p>Taxa de entrega: R$ <i id="taxaEntrega"></i></p>
-                        <input id="end1" type="text" placeholder="Bairro">
-                        <input id="end2" type="text" placeholder="Rua">
-                        <input id="end3" type="text" placeholder="Número">
-                        <input id="end4" type="text" placeholder="Complemento">
-                    </div>
-                </div>
-
-                <!--Pagamento-->
-                <h3>Forma de pagamento</h3>
-                <div class="radio">
-                    <input name="pagamento" type="radio" id="cartao">
-                    <label for="cartao">Cartão</label>
-                </div>
-                <div class="radio">
-                    <input name="pagamento" type="radio" id="pix">
-                    <label for="pix">Pix</label>
-                </div>
-                <div class="radio">
-                    <input name="pagamento" type="radio" class="abrirListaEscondida" id="dinheiro">
-                    <label for="dinheiro">Dinheiro</label>
-                    <div class="listaEscondida">
-                        <p>Valor para troco</p>
-                        <input id="troco" type="number">
-                    </div>
-                </div>
-
-                <!--Gerar link-->
-                <h3>Quase lá !</h3>
-                <button onclick="gerarLink()">Gerar link</button>
-
-                <h3>O MELHOR AÇAI</h3>
-                <img src="Assets/Imagens/logo.jpg" alt="logo empório do açai">
-                <p>
-                    Avenida Coronel Quito, 147 / Centro - Igarapava (SP) 
-                    <br>
-                    Segunda a quinta: 14h30 a 21h30, Sexta a domingo: 14h30 a 22h30 
-                </p>
-
             </div>
-
-            <div class="linkFinal" id="linkFinal"></div>
-
+            
         </section>
 
+        <!--Modal de montagem do produto-->
+        <section id="montar" class="modal"></section>
+
+        <!--Modal do carrinho-->
+        <section id="carrinho" class="modal"></section>
+        
     </main>
-    
-    <!--Final da página-->
-    <footer>
+
+    <footer id="footer">
         <p>Developed by Matheus Arantes Ferreira</p>
         <h2>MAF</h2>
-        <a>
-            Acesse nosso site 
-            <img src="Assets/icons/link.png" alt="icone link">
+        <a href="">
+            Acesse nosso site
+            <img src="assets/icons/link.png" alt="icone link">
         </a>
     </footer>
 
-    <!--Scripts-->
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
 </body>
-
 </html>
