@@ -17,7 +17,7 @@ export function linkMontado(){
             link+= "%0A%0A*%20Forma%20de%20entrega:%20"+get('entregaTxt'+i).innerHTML+"%0A";
             if(i == 1){
                 entrega = true;
-                link+="%0A%0ATaxa%20de%20entrega:%20"+taxaEntrega;
+                link+="%0A%0ATaxa%20de%20entrega:%20R$%20"+taxaEntrega.toFixed(2);
                 link+= "%0A%0ABairro:%20"+get('endereco1').value;
                 link+= "%0A%0ARua:%20"+get('endereco2').value;
                 link+= "%0A%0ANúmero:%20"+get('endereco3').value;
