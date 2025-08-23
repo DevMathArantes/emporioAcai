@@ -5,15 +5,18 @@ import { get } from "./utils.js";
 let link;
 let item;
 let adicionais;
+export let entrega;
 
 export function linkMontado(){
 
     link = whatsapp+ "?text=";
     link +="%0ANovo%20Pedido%0A%0A*%20Cliente:%20"+get('nome').value;
+    entrega = false;
     for(let i = 1; i <= 3; i++){
         if(get('entrega'+i).checked){
             link+= "%0A%0A*%20Forma%20de%20entrega:%20"+get('entregaTxt'+i).innerHTML+"%0A";
             if(i == 1){
+                entrega = true;
                 link+= "%0A%0ABairro:%20"+get('endereco1').value;
                 link+= "%0A%0ARua:%20"+get('endereco2').value;
                 link+= "%0A%0ANúmero:%20"+get('endereco3').value;

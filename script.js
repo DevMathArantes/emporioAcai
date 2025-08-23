@@ -51,6 +51,7 @@ const endereco = "https://maps.app.goo.gl/rpcVGbXBotXaR6qG8";
 const facebook = "https://www.facebook.com/profile.php?id=100064760106360&mibextid=ZbWKwL";
 const instagram = "https://www.instagram.com/omelhordoacai?igsh=emJlOWdvaHF4cWQ2";
 export const titulo = "Empório do Açai";
+export let taxaEntrega = 5.00;
 
 //Montagem de elementos variáveis
 get("Titulo").innerHTML = titulo;

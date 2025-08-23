@@ -578,6 +578,9 @@
 .subForm input[type='text'], .subForm input[type='number']{
   width: 100%;
 }
+.subForm p{
+  width: 100%;
+}
 
 @media screen and (min-width: 724px){
 
