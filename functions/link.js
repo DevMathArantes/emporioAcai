@@ -12,21 +12,6 @@ export function linkMontado(){
     link = whatsapp+ "?text=";
     link +="%0ANovo%20Pedido%0A%0A*%20Cliente:%20"+get('nome').value;
     entrega = false;
-    for(let i = 1; i <= 3; i++){
-        if(get('entrega'+i).checked){
-            link+= "%0A%0A*%20Forma%20de%20entrega:%20"+get('entregaTxt'+i).innerHTML+"%0A";
-            if(i == 1){
-                entrega = true;
-                link+="%0A%0ATaxa%20de%20entrega:%20R$%20"+taxaEntrega.toFixed(2);
-                link+= "%0A%0ABairro:%20"+get('endereco1').value;
-                link+= "%0A%0ARua:%20"+get('endereco2').value;
-                link+= "%0A%0ANúmero:%20"+get('endereco3').value;
-                if(get('endereco4').value != ""){
-                    link+= "%0A%0AComplemento:%20"+get('endereco4').value;
-                }
-            } 
-        }
-    }
 
     for(let i = 0; i < compra.length; i++){
         link+="%0A________________________________________%0A";
@@ -42,6 +27,22 @@ export function linkMontado(){
             link+="%0A%0ALembrete:%20"+item[6];
         }
         link+="%0A%0AQuantidade:%20"+item[4]+"%0A%0ATotal%20do%20item:%20R$%20"+item[3];
+    }
+    link+="%0A________________________________________%0A";
+    for(let i = 1; i <= 3; i++){
+        if(get('entrega'+i).checked){
+            link+= "%0A%0A*%20Forma%20de%20entrega:%20"+get('entregaTxt'+i).innerHTML+"%0A";
+            if(i == 1){
+                entrega = true;
+                link+="%0A%0ATaxa%20de%20entrega:%20R$%20"+taxaEntrega.toFixed(2);
+                link+= "%0A%0ABairro:%20"+get('endereco1').value;
+                link+= "%0A%0ARua:%20"+get('endereco2').value;
+                link+= "%0A%0ANúmero:%20"+get('endereco3').value;
+                if(get('endereco4').value != ""){
+                    link+= "%0A%0AComplemento:%20"+get('endereco4').value;
+                }
+            } 
+        }
     }
     link+="%0A________________________________________%0A";
     for(let i = 1; i <= 3; i++){

@@ -31,7 +31,7 @@ export function montarParte(){
         identificado2 = get("Metade2").selectedIndex;
         nome2 = get("Metade2").options[identificado2];
 
-        get("textoMontado").innerHTML=nome1.innerHTML+" + "+nome2.innerHTML;
+        get("textoMontado").innerHTML="Sabor 1: "+nome1.innerHTML+" - Sabor 2: "+nome2.innerHTML;
         
     } else{
         get("itemMontado").style.display="none";
@@ -62,7 +62,7 @@ export function montagemMontado(id){
                     item = categoria[m];
                     
                     htmlOpcs += `
-                        <option value="${item[2]}">${item[1]}</option>
+                        <option value="${item[2]}">${item[0]}</option>
                     `;
 
                 }
