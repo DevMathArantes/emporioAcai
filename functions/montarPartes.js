@@ -31,7 +31,7 @@ export function montarParte(){
         identificado2 = get("Metade2").selectedIndex;
         nome2 = get("Metade2").options[identificado2];
 
-        get("textoMontado").innerHTML=nome1.innerHTML+" - "+nome2.innerHTML;
+        get("textoMontado").innerHTML=nome1.innerHTML+" / "+nome2.innerHTML;
         
     } else{
         get("itemMontado").style.display="none";
