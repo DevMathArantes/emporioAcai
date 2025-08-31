@@ -582,6 +582,65 @@
   width: 100%;
 }
 
+.montarSorvete{
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 1em;
+  align-items: center;
+}
+.montarSorvete p{
+  width: 100%;
+  border-bottom: 1px solid var(--corPrincipal);
+  padding: 1em;
+  color: var(--corPrincipal);
+}
+.montarSorvete img{
+  width: 1em;
+}
+.montarSorvete button{
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
+  border: 1px solid var(--cinza);
+  border-radius: 5px;
+}
+.sorveteMontado{
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  color: var(--corPrincipal);
+}
+.sorveteMontado p{
+  width: 100%;
+}
+.imagemSorvete{
+  width: 15em;
+  border-radius: 10px;
+}
+.selectSorvetes{
+  display: flex;
+  flex-direction: column;
+  width: 15em;
+  gap: 1em;
+}
+.selectSorvetes select{
+  padding: 0.5em;
+  border-radius: 5px;
+  border: 1px solid var(--cinzaClaro);
+  text-align: center;
+  background-image: url(../assets/images/logo.png);
+  background-position: 0;
+  background-size: 2em;
+  background-repeat: no-repeat;
+  padding-left: 2em;
+  color: var(--corPrincipal);
+}
+
 @media screen and (min-width: 724px){
 
   /*Reorganização dos links que dividem a tela*/

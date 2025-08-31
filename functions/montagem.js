@@ -57,6 +57,37 @@ function definirCategoria(idHtml, nome, categoriaHtml){
                 </div>
 
             `;
+        case 3: 
+            return `
+                <h2 class="tituloPd">${nome}</h2>
+                <div class="campoMontagem">
+
+                    <h3>Monte seu sorvete</h3>
+
+                    <img src="assets/images/sorvetes.png" alt="imagem de sorvete" class="imagemSorvete">
+
+                    <p>Após selecionar pelo 1 menos 1 sabor, o campo será liberado para pedir</p>
+
+                    <div id="campoSorvetes" class="selectSorvetes"></div>
+
+                    <div class="montarSorvete">
+                        <p>Quantidade de bolas de sorvete</p>
+                        <button onclick="globalRetirarBola()">
+                            <img src="assets/icons/retirar.png" alt="icone adicionar">
+                        </button>
+                        <span id="quantidadeSorvete">0</span>
+                        <button onclick="globalAdicionarBola()">
+                            <img src="assets/icons/adicionar.png" alt="icone adicionar">
+                        </button>
+                    </div>
+
+                    <div id="sorveteMontado" class="sorveteMontado">
+                        <h3>Seu sorvete está pronto para pedir</h3>
+                        <div id="${idHtml}"></div>
+                    </div>
+                    
+                </div>
+            `;
     }
 
 }
@@ -102,6 +133,15 @@ function definirProduto(identificador, idHtml, numeroImagem, id, nome, descrever
                     <p id="textoMontado"></p>
                 </div>
             `;
+        case 5:
+            return `
+                <div id="produtoSorvete" onclick="globalPedir('Sorvete', '${adicionaisProduto}', ${inclusos})" class="item">
+                    <img id="imagemProdutoSorvete" src="assets/images/logo.png" alt="logo da empresa">
+                    <h3 id="tituloSorvete">${nome}</h3>
+                    <span>R$ <i id="valorSorvete"></i></span>
+                    <p id="textoSorvete"></p>
+                </div>
+            `
     }
 }
 

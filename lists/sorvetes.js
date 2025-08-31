@@ -5,28 +5,8 @@ let litros = [
 ];
 
 let bolas = [
-    [2, "bolas", "Bolas de Sorvete", [1], 1],
-    ["Corneto","Sorvete Bola",  4.50, 0],
-    ["Nozes com doce de leite", "Sorvete Bola",  4.50, 0],
-    ["Abóbora com coco", "Sorvete Bola",  4.50, 0],
-    ["Creme", "Sorvete Bola",  4.50, 0],
-    ["Ninho trufado", "Sorvete Bola",  4.50, 0],
-    ["Red Velvet", "Sorvete Bola",  4.50, 0],
-    ["Sensação", "Sorvete Bola",  4.50, 0],
-    ["Mousse de creme de avelã", "Sorvete Bola",  4.50, 0],
-    ["Delírio", "Sorvete Bola",  4.50, 0],
-    ["Ameixa", "Sorvete Bola",  4.50, 0],
-    ["Laka", "Sorvete Bola",  4.50, 0],
-    ["Flocos", "Sorvete Bola",  4.50, 0],
-    ["Mousse de goiaba", "Sorvete Bola",  4.50, 0],
-    ["Mousse de maracujá", "Sorvete Bola",  4.50, 0],
-    ["Milho verde", "Sorvete Bola",  4.50, 0],
-    ["Banana com creme de avelã", "Sorvete Bola",  4.50, 0],
-    ["Morango silvestre 0", "Sorvete Bola",  4.50, 0],
-    ["Coca Malasia", "Sorvete Bola",  4.50, 0],
-    ["Torta chocolate", "Sorvete Bola",  4.50, 0],
-    ["Cheesecake", "Sorvete Bola",  4.50, 0],
-    ["Papaya com cassis", "Sorvete Bola",  4.50, 0]
+    [5, "bolas", "Monte seu sorvete", [1], 3],
+    ["", "", 0.0, 0]
 ];
 let tacas = [
     [3, "tacas", "Taças Deliciosas", [1], 1],

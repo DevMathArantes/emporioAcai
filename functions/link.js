@@ -17,16 +17,16 @@ export function linkMontado(){
         link+="%0A________________________________________%0A";
         item = compra[i]
         link+="%0A*%20"+item[1]+"%0A%0ADescrição:%0A"+item[2]+"%0A";
-        if(item[5] != "Nenhum"){
-            adicionais = item[5];
+        if(item[4] != "Nenhum"){
+            adicionais = item[4];
             for(let j = 0; j < adicionais.length; j++){
                 link+= "%0A%2B%20"+adicionais[j];
             }
         }
-        if(item[6] != "Nenhum"){
-            link+="%0A%0ALembrete:%20"+item[6];
+        if(item[5] != "Nenhum"){
+            link+="%0A%0ALembrete:%20"+item[5];
         }
-        link+="%0A%0AQuantidade:%20"+item[4]+"%0A%0ATotal%20do%20item:%20R$%20"+item[3];
+        link+="%0A%0ATotal%20do%20item:%20R$%20"+item[3];
     }
     link+="%0A________________________________________%0A";
     for(let i = 1; i <= 3; i++){

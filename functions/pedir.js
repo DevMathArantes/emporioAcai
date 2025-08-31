@@ -45,21 +45,6 @@ export function Pedir(id, listaAdicionais, inclusos){
                     <label>Lembrete</label>
                     <input id="lembrete" class="lembrete" type="text" placeholder="Lembrete">
 
-                    <label>Quantidade do item</label>
-                    <div class="quantidade">
-
-                        <button onclick="globalDiminuirQuantidade()">
-                            <img src="assets/icons/retirar.png" alt="icone retirar">
-                        </button>
-
-                        <span id="quantidade">1</span>
-
-                        <button onclick="globalAumentarQuantidade()">
-                            <img src="assets/icons/adicionar.png" alt="icone adicionar">
-                        </button>
-
-                    </div>
-
                     <button onclick="globalMontar('${id}', ${inclusos})" class="buttonPd">
                         <img src="assets/icons/comprar.png" alt="icone montar">
                         Montar

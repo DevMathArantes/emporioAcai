@@ -22,14 +22,18 @@ export function montar(id, inclusos){
     for(let i = 0; i < contagem; i++){
         if(get("adicional"+i).checked){
             listaAdicionais.push([get("nomeAdicional"+i).innerHTML, get("valorAdicional"+i).innerHTML]);
-            nomesAdicionais.push(get("nomeAdicional"+i).innerHTML);
+            if(listaAdicionais.length <= inclusos && (get("nomeAdicional"+i).innerHTML).slice(-13) != '- Não incluso'){
+                nomesAdicionais.push(get("nomeAdicional"+i).innerHTML+"(+ INCLUSO)")
+            } else{
+                nomesAdicionais.push(get("nomeAdicional"+i).innerHTML+" (+ R$ "+parseFloat((get("valorAdicional"+i).innerHTML)).toFixed(2)+")");
+            }
+            
         }
     }
     montado.push(get('imagemProduto'+id).src)
     montado.push(get('titulo'+id).innerHTML);
     montado.push(get('texto'+id).innerHTML);
     montado.push(calculoValor(id, listaAdicionais, inclusos));
-    montado.push(get('quantidade').innerHTML);
 
     if(listaAdicionais.length > 0){
         montado.push(nomesAdicionais);
@@ -67,6 +71,6 @@ function calculoValor(id, adicionais, inclusos){
         
     }
 
-    return (totalCalculado*parseFloat(get('quantidade').innerHTML)).toFixed(2);
+    return (totalCalculado).toFixed(2);
 
 }

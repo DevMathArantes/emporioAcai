@@ -3,19 +3,17 @@ import {infoStatus, status} from "./functions/funcionamento.js";
 import {montarCategorias} from "./functions/montagem.js";
 import {mudarCategoria} from "./functions/mudarCategoria.js";
 import { Pedir } from "./functions/pedir.js";
-import { aumentarQuantidade, diminuirQuantidade } from "./functions/quantidadeItem.js";
 import { abrirCarrinho } from "./functions/abrirCarrinho.js";
 import { montar } from "./functions/montar.js";
 import { esquecer, montarCompra } from "./functions/montarCompra.js";
 import { montarFormulario } from "./functions/montarFormulario.js";
 import { montarLink } from "./functions/montarLink.js";
 import { montarParte } from "./functions/montarPartes.js";
+import { adicionarBola, retirarBola, sorveteMontado } from "./functions/quantidadeSorvete.js";
 
 window.globalMudarCategoria = mudarCategoria;
 window.globalPedir = Pedir;
 window.globalDijuntor = dijuntor;
-window.globalAumentarQuantidade = aumentarQuantidade;
-window.globalDiminuirQuantidade = diminuirQuantidade;
 window.globalAbrirCarrinho = abrirCarrinho;
 window.globalMontar = montar;
 window.globalEsquecer = esquecer;
@@ -24,6 +22,9 @@ window.globalMontarCompra = montarCompra;
 window.globalMontarLink = montarLink;
 window.globalInfoStatus = infoStatus;
 window.globalMontarParte = montarParte;
+window.globalAdicionarBola = adicionarBola;
+window.globalRetirarBola = retirarBola;
+window.globalSorveteMontado = sorveteMontado;
 
 export let compra = [];
 
@@ -84,3 +85,4 @@ for(let i = 0; i < produtos.length; i++){
     montarCategorias(produtos[i]);
 }
 
+adicionarBola();

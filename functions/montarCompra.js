@@ -33,9 +33,8 @@ export function montarCompra(){
             <div class="itemCompraTxt">
                 <h3>${montado[1]}</h3>
                 <p><strong>Descrição:</strong><br>${montado[2]}</p>
-                <p><strong>Adicionais: </strong><br>${montado[5]}</p>
-                <p><strong>Lembrete: </strong><br>${montado[6]}</p>
-                <p><strong>Quantidade:</strong> ${montado[4]}</p>
+                <p><strong>Adicionais: </strong><br>${montado[4]}</p>
+                <p><strong>Lembrete: </strong><br>${montado[5]}</p>
                 <span>Total: R$ <i>${montado[3]}</i></span>
                 <button onclick="globalEsquecer(${i})" class="buttonPd">
                     <img src="assets/icons/lixeira.png" alt="iconeLixeira">
