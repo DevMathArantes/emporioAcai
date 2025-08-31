@@ -85,17 +85,17 @@ export let doceGrande = [
     ["Diamante negro","Pizza Doce (Grande)",  70.00, 0],
     ["Doce de leite com queijo","Pizza Doce (Grande)",  70.00, 0],
     ["Goiabada com queijo","Pizza Doce (Grande)",  70.00, 0],
-    ["Laka", 70.00,"Pizza Doce (Grande)",  0],
-    ["Laka óreo", 70.00,"Pizza Doce (Grande)",  0],
+    ["Laka", "Pizza Doce (Grande)", 70.00, 0],
+    ["Laka óreo", "Pizza Doce (Grande)", 70.00, 0],
     ["Creme de avelã, morango, coco ralado, leite condensado e bis preto","Pizza Doce (Grande)",  70.00, 0],
-    ["Creme de avelã", 70.00, 0],
+    ["Creme de avelã", "Pizza Doce (Grande)", 70.00, 0],
     ["Creme de avelã com kit kat","Pizza Doce (Grande)",  70.00, 0],
     ["Creme de avelã com morango","Pizza Doce (Grande)",  70.00, 0],
     ["Creme de avelã e confete","Pizza Doce (Grande)",  70.00, 0],
     ["Creme de avelã morango e confete","Pizza Doce (Grande)",  70.00, 0],
-    ["Ouro branco", 70.00,"Pizza Doce (Grande)",  0],
-    ["Prestígio", 70.00,"Pizza Doce (Grande)",  0],
-    ["Sonho de valsa", 70.00,"Pizza Doce (Grande)",  0]
+    ["Ouro branco", "Pizza Doce (Grande)", 70.00, 0],
+    ["Prestígio", "Pizza Doce (Grande)", 70.00, 0],
+    ["Sonho de valsa", "Pizza Doce (Grande)", 70.00, 0]
 ];
 let doceMedia = [
     [2, "doceMedia", "Pizzas Doces (Média)", [0], 1],
@@ -103,20 +103,20 @@ let doceMedia = [
     ["Açai com morango e nutella","Pizza Doce (Média)",  48.00, 0],
     ["Banana, canela, queijo, calda de caramelo","Pizza Doce (Média)",  48.00, 0],
     ["Creme ninho com morango","Pizza Doce (Média)",  48.00, 0],
-    ["Diamante negro", 48.00,"Pizza Doce (Média)",  0],
+    ["Diamante negro", "Pizza Doce (Média)",  0],
     ["Doce de leite com queijo","Pizza Doce (Média)",  48.00, 0],
     ["Goiabada com queijo","Pizza Doce (Média)",  48.00, 0],
-    ["Laka", 48.00,"Pizza Doce (Média)",  0],
-    ["Laka óreo", 48.00, 0],
+    ["Laka", "Pizza Doce (Média)", 48.00, 0],
+    ["Laka óreo", "Pizza Doce (Média)", 48.00, 0],
     ["Creme de avelã, morango, coco ralado, leite condensado e bis preto","Pizza Doce (Média)",  48.00, 0],
-    ["Creme de avelã", 48.00,"Pizza Doce (Média)",  0],
+    ["Creme de avelã", "Pizza Doce (Média)", 48.00, 0],
     ["Creme de avelã com kit kat","Pizza Doce (Média)",  48.00, 0],
     ["Creme de avelã com morango","Pizza Doce (Média)",  48.00, 0],
     ["Creme de avelã e confete","Pizza Doce (Média)",  48.00, 0],
     ["Creme de avelã morango e confete","Pizza Doce (Média)",  48.00, 0],
-    ["Ouro branco", 48.00,"Pizza Doce (Média)",  0],
-    ["Prestígio", 48.00,"Pizza Doce (Média)",  0],
-    ["Sonho de valsa", 48.00,"Pizza Doce (Média)",  0]
+    ["Ouro branco", "Pizza Doce (Média)", 48.00, 0],
+    ["Prestígio", "Pizza Doce (Média)", 48.00, 0],
+    ["Sonho de valsa", "Pizza Doce (Média)", 48.00, 0]
 ];
 
 export let doisSabores = [
