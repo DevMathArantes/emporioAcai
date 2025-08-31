@@ -1,9 +1,10 @@
+/*
 let litros = [
     [2, "litros", "Litro de Sorvete", [1], 1],
     ["Ninho", "1 Litro de sorvete", 25.00, 0],
     ["Chocolate", "1 Litro de sorvete", 25.00, 0]
 ];
-
+*/
 let bolas = [
     [5, "bolas", "Monte seu sorvete", [1], 3],
     ["", "", 0.0, 0]
@@ -24,7 +25,6 @@ let milks1 = [
     [2, "milks1", "Milk Shakes 300Ml", [1], 1],
     ["Corneto","Milk Shake 300 Ml",  precoMilks1, 0],
     ["Nozes com doce de leite","Milk Shake 300 Ml",  precoMilks1, 0],
-    ["Abóbora com coco","Milk Shake 300 Ml",  precoMilks1, 0],
     ["Creme","Milk Shake 300 Ml",  precoMilks1, 0],
     ["Ninho trufado","Milk Shake 300 Ml",  precoMilks1, 0],
     ["Red Velvet","Milk Shake 300 Ml",  precoMilks1, 0],
@@ -37,9 +37,7 @@ let milks1 = [
     ["Mousse de goiaba","Milk Shake 300 Ml",  precoMilks1, 0],
     ["Mousse de maracujá","Milk Shake 300 Ml",  precoMilks1, 0],
     ["Milho verde","Milk Shake 300 Ml",  precoMilks1, 0],
-    ["Banana com creme de avelã","Milk Shake 300 Ml",  precoMilks1, 0],
     ["Morango silvestre 0","Milk Shake 300 Ml",  precoMilks1, 0],
-    ["Coca Malasia","Milk Shake 300 Ml",  precoMilks1, 0],
     ["Torta chocolate","Milk Shake 300 Ml",  precoMilks1, 0],
     ["Cheesecake","Milk Shake 300 Ml",  precoMilks1, 0],
     ["Papaya com cassis","Milk Shake 300 Ml",  precoMilks1, 0],
@@ -50,7 +48,6 @@ let milks2 = [
     [2, "milks2", "Milk Shakes 400Ml", [1], 1],
     ["Corneto","Milk Shake 400 Ml",  precoMilks2, 0],
     ["Nozes com doce de leite","Milk Shake 400 Ml",  precoMilks2, 0],
-    ["Abóbora com coco","Milk Shake 400 Ml",  precoMilks2, 0],
     ["Creme","Milk Shake 400 Ml",  precoMilks2, 0],
     ["Ninho trufado","Milk Shake 400 Ml",  precoMilks2, 0],
     ["Red Velvet","Milk Shake 400 Ml",  precoMilks2, 0],
@@ -63,9 +60,7 @@ let milks2 = [
     ["Mousse de goiaba","Milk Shake 400 Ml",  precoMilks2, 0],
     [" Mousse de maracujá","Milk Shake 400 Ml",  precoMilks2, 0],
     ["Milho verde","Milk Shake 400 Ml",  precoMilks2, 0],
-    ["Banana com creme de avelã","Milk Shake 400 Ml",  precoMilks2, 0],
     ["Morango silvestre 0","Milk Shake 400 Ml",  precoMilks2, 0],
-    ["Coca Malasia","Milk Shake 400 Ml",  precoMilks2, 0],
     ["Torta chocolate","Milk Shake 400 Ml",  precoMilks2, 0],
     ["Cheesecake","Milk Shake 400 Ml",  precoMilks2, 0],
     ["Papaya com cassis","Milk Shake 400 Ml",  precoMilks2, 0]
@@ -76,7 +71,6 @@ let milks3 = [
     [2, "milks3", "Milk Shakes 500Ml", [1], 1],
     ["Corneto","Milk Shake 500 Ml",  precoMilks3, 0],
     ["Nozes com doce de leite","Milk Shake 500 Ml",  precoMilks3, 0],
-    ["Abóbora com coco","Milk Shake 500 Ml",  precoMilks3, 0],
     ["Creme","Milk Shake 500 Ml",  precoMilks3, 0],
     ["Ninho trufado","Milk Shake 500 Ml",  precoMilks3, 0],
     ["Red Velvet","Milk Shake 500 Ml",  precoMilks3, 0],
@@ -89,9 +83,7 @@ let milks3 = [
     ["Mousse de goiaba","Milk Shake 500 Ml",  precoMilks3, 0],
     [" Mousse de maracujá","Milk Shake 500 Ml",  precoMilks3, 0],
     ["Milho verde", precoMilks3,"Milk Shake 500 Ml",  0],
-    ["Banana com creme de avelã","Milk Shake 500 Ml",  precoMilks3, 0],
     ["Morango silvestre 0","Milk Shake 500 Ml",  precoMilks3, 0],
-    ["Coca Malasia","Milk Shake 500 Ml",  precoMilks3, 0],
     ["Torta chocolate","Milk Shake 500 Ml",  precoMilks3, 0],
     ["Cheesecake","Milk Shake 500 Ml",  precoMilks3, 0],
     ["Papaya com cassis","Milk Shake 500 Ml",  precoMilks3, 0]
@@ -102,7 +94,6 @@ let milks4 = [
     [2, "milks4", "Milk Shakes 700Ml", [1], 1],
     ["Corneto", "Milk Shake 700 Ml", "Milk Shake 700 Ml", precoMilks4, 0],
     ["Nozes com doce de leite", "Milk Shake 700 Ml", precoMilks4, 0],
-    ["Abóbora com coco", "Milk Shake 700 Ml", precoMilks4, 0],
     ["Creme", "Milk Shake 700 Ml", precoMilks4, 0],
     ["Ninho trufado", "Milk Shake 700 Ml", precoMilks4, 0],
     ["Red Velvet", "Milk Shake 700 Ml", precoMilks4, 0],
@@ -115,12 +106,10 @@ let milks4 = [
     ["Mousse de goiaba", "Milk Shake 700 Ml", precoMilks4, 0],
     ["Mousse de maracujá", "Milk Shake 700 Ml", precoMilks4, 0],
     ["Milho verde", "Milk Shake 700 Ml", precoMilks4, 0],
-    ["Banana com creme de avelã", "Milk Shake 700 Ml", precoMilks4, 0],
     ["Morango silvestre 0", "Milk Shake 700 Ml", precoMilks4, 0],
-    ["Coca Malasia", "Milk Shake 700 Ml", precoMilks4, 0],
     ["Torta chocolate", "Milk Shake 700 Ml", precoMilks4, 0],
     ["Cheesecake", "Milk Shake 700 Ml", precoMilks4, 0],
     ["Papaya com cassis", "Milk Shake 700 Ml", precoMilks4, 0]
 ];
 
-export let sorvetes = ["sorvetes", "Ver Sorvetes", litros, bolas, tacas, milks1, milks2, milks3, milks4]
+export let sorvetes = ["sorvetes", "Ver Sorvetes", /*litros,*/ bolas, tacas, milks1, milks2, milks3, milks4]

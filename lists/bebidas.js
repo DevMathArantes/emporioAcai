@@ -25,7 +25,7 @@ let limoneto = [
     ["Limoneto h2O", "Refresque seu dia com nosso limoneto (H2O)", 6.00, 0]
 ];
 let sucos = [
-    [2, "suco", "Refrigerantes 2 Litros", [0], 1],
+    [2, "suco", "Confira nossos sucos", [0], 1],
     ["Acerola","Suco", 9.00, 0],
     ["Abacaxi","Suco", 9.00, 0],
     ["Abacaxi com Hortelã","Suco", 9.00, 0],
@@ -38,11 +38,11 @@ let sucos = [
     ["Tamarino", 9.00,"Suco",  0],
 ];
 let cervejas = [
-    [3, "cervejas", "Refrigerantes 2 Litros", [0], 1],
+    [3, "cervejas", "Cerveja Heineken", [0], 1],
     ["Cerveja Heineken 330 ml", "Cerveja Heineken",  8.00, 0]
 ];
 let vitaminas = [
-    [2, "vitaminas", "Refrigerantes 2 Litros", [0], 1],
+    [2, "vitaminas", "Vitaminas", [0], 1],
     ["Morango","Vitamina", 8.00, 0],
     ["Maracujá","Vitamina", 8.00, 0],
     ["Mista","Vitamina", 8.00, 0],

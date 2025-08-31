@@ -14,7 +14,6 @@ let sabores = [
     ["Nenhum", 0.0],
     ["Corneto", 4.50],
     ["Nozes com doce de leite", 4.50],
-    ["Abóbora com coco", 4.50],
     ["Creme", 4.50],
     ["Ninho trufado", 4.50],
     ["Red Velvet", 4.50],
@@ -27,9 +26,7 @@ let sabores = [
     ["Mousse de goiaba", 4.50],
     ["Mousse de maracujá", 4.50],
     ["Milho verde", 4.50],
-    ["Banana com creme de avelã", 4.50],
     ["Morango silvestre 0", 4.50],
-    ["Coca Malasia", 4.50],
     ["Torta chocolate", 4.50],
     ["Cheesecake", 4.50],
     ["Papaya com cassis", 4.50]
