@@ -38,13 +38,13 @@ import { especiais } from "./lists/especiais.js";
 export let grupos = ["acais","sorvetes", "bebidas", "lanches", "pizzas", "especiais"];
 export let produtos = [acais, sorvetes, bebidas, lanches, pizzas, especiais];
 export let funcionamento = [
-    [[15, 0], [23, 0]],
-    [[15, 0], [23, 0]],
-    [[15, 0], [23, 0]],
-    [[15, 0], [23, 0]],
-    [[15, 0], [23, 0]],
-    [[15, 0], [23, 0]],
-    [[15, 0], [23, 0]]
+    [[15, 0], [22, 50]],
+    [[15, 0], [22, 50]],
+    [[15, 0], [22, 50]],
+    [[15, 0], [22, 50]],
+    [[15, 0], [22, 50]],
+    [[15, 0], [22, 50]],
+    [[15, 0], [22, 50]]
 ]
 export const whatsapp = "https://wa.me/551631723514";
 export const pix = "16993383633";
