@@ -38,7 +38,7 @@ export function status(){
                 return false;
             }
         } else if(hora > abrir[0]){
-            if(hora == fechar[0] && minuto < abrir[1]){
+            if(hora == fechar[0] && minuto < fechar[1]){
                 return true;
             } else if(hora < fechar[0]){
                 return true;
