@@ -59,7 +59,7 @@ let recheiosDoces = [
     ["Creme de pistache", 6.50, false],
     ["Creme de avelã x2", 7.00, false],
     ["Ferrero rocher", 9.50, false],
-    ["Kinder bueno" , 10.00, false]
+    ["Kinder bueno" , 12.00, false]
 ];
 let recheiosSalgados = [
     ["Adicionais", "checkbox"],
