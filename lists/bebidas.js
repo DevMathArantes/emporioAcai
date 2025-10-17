@@ -12,17 +12,21 @@ let refri1Litro = [
     ["Coca-Cola","Refri 1 Litro",  9.00, 0],
     ["Guaraná Antártica","Refri 1 Litro",  9.00, 0]
 ];
+
+let refriLataPc = 4.00;
 let refriLata = [
     [1, "refriLata", "Refrigerantes Lata", [0], 1],
-    ["Coca-Cola","Refri Lata",  6.00, 0],
-    ["Fanta Laranja","Refri Lata",  6.00, 0],
-    ["Fanta Uva","Refri Lata",  6.00, 0],
-    ["Sprite","Refri Lata",  6.00, 0],
-    ["Guaraná Antártica","Refri Lata",  6.00, 0]
+    ["Coca-Cola","Refri Lata",  refriLataPc, 0],
+    ["Fanta Laranja","Refri Lata",  refriLataPc, 0],
+    ["Fanta Uva","Refri Lata",  refriLataPc, 0],
+    ["Sprite","Refri Lata",  refriLataPc, 0],
+    ["Guaraná Antártica","Refri Lata",  refriLataPc, 0]
 ];
 let limoneto = [
     [3, "limoneto", "Refresque seu dia", [0], 1],
-    ["Limoneto h2O", "Refresque seu dia com nosso limoneto (H2O)", 6.00, 0]
+    ["Limoneto h2O", "Refresque seu dia com nosso limoneto (H2O)", 8.00, 0],
+    ["Água sem gás", "Água mineral sem gás 500ml (garrafa pet)", 3.00, 0],
+    ["Água com gás", "Água mineral com gás 500ml (garrafa pet)", 4.00, 0],
 ];
 let sucos = [
     [2, "suco", "Confira nossos sucos", [0], 1],
