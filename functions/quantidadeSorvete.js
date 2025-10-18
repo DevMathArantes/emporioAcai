@@ -10,26 +10,28 @@ let selecionado;
 let totalSorvete;
 let descSorvete;
 let contagemVerificada;
+
+let preco = 5.00;
 let sabores = [
     ["Nenhum", 0.0],
-    ["Corneto", 4.50],
-    ["Nozes com doce de leite", 4.50],
-    ["Creme", 4.50],
-    ["Ninho trufado", 4.50],
-    ["Red Velvet", 4.50],
-    ["Sensação", 4.50],
-    ["Mousse de creme de avelã", 4.50],
-    ["Delírio", 4.50],
-    ["Ameixa", 4.50],
-    ["Laka", 4.50],
-    ["Flocos", 4.50],
-    ["Mousse de goiaba", 4.50],
-    ["Mousse de maracujá", 4.50],
-    ["Milho verde", 4.50],
-    ["Morango silvestre 0", 4.50],
-    ["Torta chocolate", 4.50],
-    ["Cheesecake", 4.50],
-    ["Papaya com cassis", 4.50]
+    ["Corneto", preco],
+    ["Nozes com doce de leite", preco],
+    ["Creme", preco],
+    ["Ninho trufado", preco],
+    ["Red Velvet", preco],
+    ["Sensação", preco],
+    ["Mousse de nutella", preco],
+    //["Delírio", preco],
+    ["Ameixa", preco],
+    ["Laka", preco],
+    ["Flocos", preco],
+    ["Mousse de goiaba", preco],
+    ["Mousse de maracujá", preco],
+    ["Milho verde", preco],
+    ["Morango silvestre 0", preco],
+    ["Torta chocolate", preco],
+    ["Cheesecake", preco],
+    ["Papaya com cassis", preco]
 ];
 
 export function adicionarBola(){
