@@ -51,6 +51,7 @@ let recheiosDoces = [
     ["Creme laka", 5.00, true],
     ["Creme de leite ninho", 5.00, true],
     ["Creme de lacta com óreo", 5.00, true],
+    ["Creme cocco bianco", 5.00, true],
     ["Chocolate suflair", 3.99, false],
     ["Creme de morango", 5.00, false],
     ["Creme de ovomaltine", 5.50, false],
