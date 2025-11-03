@@ -13,7 +13,7 @@ let refri1Litro = [
     ["Guaraná Antártica","Refri 1 Litro",  9.00, 0]
 ];
 
-let refriLataPc = 4.00;
+let refriLataPc = 7.00;
 let refriLata = [
     [1, "refriLata", "Refrigerantes Lata", [0], 1],
     ["Coca-Cola","Refri Lata",  refriLataPc, 0],
