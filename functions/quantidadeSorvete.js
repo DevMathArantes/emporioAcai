@@ -32,6 +32,7 @@ let sabores = [
     ["Torta chocolate", preco],
     ["Cheesecake", preco],
     ["Papaya com cassis", preco]
+    ["Ferrero Rocher", preco]
 ];
 
 export function adicionarBola(){

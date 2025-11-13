@@ -41,6 +41,7 @@ let milks1 = [
     ["Torta chocolate","Milk Shake 300 Ml",  precoMilks1, 0],
     ["Cheesecake","Milk Shake 300 Ml",  precoMilks1, 0],
     ["Papaya com cassis","Milk Shake 300 Ml",  precoMilks1, 0],
+    ["Ferrero Rocher","Milk Shake 300 Ml",  precoMilks1, 0],
 ];
 
 let precoMilks2 = 16.00;
@@ -63,7 +64,8 @@ let milks2 = [
     ["Morango silvestre 0","Milk Shake 400 Ml",  precoMilks2, 0],
     ["Torta chocolate","Milk Shake 400 Ml",  precoMilks2, 0],
     ["Cheesecake","Milk Shake 400 Ml",  precoMilks2, 0],
-    ["Papaya com cassis","Milk Shake 400 Ml",  precoMilks2, 0]
+    ["Papaya com cassis","Milk Shake 400 Ml",  precoMilks2, 0],
+    ["Ferrero Rocher","Milk Shake 400 Ml",  precoMilks2, 0]
 ];
 
 let precoMilks3 = 17.00;
@@ -86,13 +88,14 @@ let milks3 = [
     ["Morango silvestre 0","Milk Shake 500 Ml",  precoMilks3, 0],
     ["Torta chocolate","Milk Shake 500 Ml",  precoMilks3, 0],
     ["Cheesecake","Milk Shake 500 Ml",  precoMilks3, 0],
-    ["Papaya com cassis","Milk Shake 500 Ml",  precoMilks3, 0]
+    ["Papaya com cassis","Milk Shake 500 Ml",  precoMilks3, 0],
+    ["Ferrero Rocher","Milk Shake 500 Ml",  precoMilks3, 0]
 ];
 
 let precoMilks4 = 20.00;
 let milks4 = [
     [2, "milks4", "Milk Shakes 700Ml", [1], 1],
-    ["Corneto", "Milk Shake 700 Ml", "Milk Shake 700 Ml", precoMilks4, 0],
+    ["Corneto", "Milk Shake 700 Ml", precoMilks4, 0],
     ["Nozes com doce de leite", "Milk Shake 700 Ml", precoMilks4, 0],
     ["Creme", "Milk Shake 700 Ml", precoMilks4, 0],
     ["Ninho trufado", "Milk Shake 700 Ml", precoMilks4, 0],
@@ -109,7 +112,8 @@ let milks4 = [
     ["Morango silvestre 0", "Milk Shake 700 Ml", precoMilks4, 0],
     ["Torta chocolate", "Milk Shake 700 Ml", precoMilks4, 0],
     ["Cheesecake", "Milk Shake 700 Ml", precoMilks4, 0],
-    ["Papaya com cassis", "Milk Shake 700 Ml", precoMilks4, 0]
+    ["Papaya com cassis", "Milk Shake 700 Ml", precoMilks4, 0],
+    ["Ferrero Rocher", "Milk Shake 700 Ml", precoMilks4, 0]
 ];
 
 export let sorvetes = ["sorvetes", "Ver Sorvetes", /*litros,*/ bolas, tacas, milks1, milks2, milks3, milks4]

@@ -45,7 +45,7 @@ let recheiosDoces = [
     ["Cupuaçu", 4.50, true],
     ["Creme de valsa", 4.50, true],
     ["Kit kat", 4.99, true],
-    ["Pasta de amendoim, sabor leite ninho", 4.99, true],
+    ["Pasta de amendoim", 4.99, true],
     ["Whey protein", 4.99, true],
     ["Kiwi", 5.00, true],
     ["Creme laka", 5.00, true],
