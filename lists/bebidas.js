@@ -20,7 +20,10 @@ let refriLata = [
     ["Fanta Laranja","Refri Lata",  refriLataPc, 0],
     ["Fanta Uva","Refri Lata",  refriLataPc, 0],
     ["Sprite","Refri Lata",  refriLataPc, 0],
-    ["Guaraná Antártica","Refri Lata",  refriLataPc, 0]
+    ["Guaraná Antártica","Refri Lata",  refriLataPc, 0],
+    ["Guaraná Zero", "Refri Lata", refriLataPc, 0],
+    ["Coca-Cola Zero", "Refri Lata", refriLataPc, 0],
+    ["Schepwees", "Refri Lata", refriLataPc, 0]
 ];
 let limoneto = [
     [3, "limoneto", "Refresque seu dia", [0], 1],

@@ -15,7 +15,6 @@ let preco = 5.00;
 let sabores = [
     ["Nenhum", 0.0],
     ["Corneto", preco],
-    ["Nozes com doce de leite", preco],
     ["Creme", preco],
     ["Ninho trufado", preco],
     ["Red Velvet", preco],

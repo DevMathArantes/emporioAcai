@@ -48,15 +48,15 @@ let tapiocaSalgada = [
 ];
 let tapiocaDoce = [
     [2, "tapiocaDoce", "Tapiocas Doces", [2], 1],
-    ["Chocolate ao leite com queijo", 18.00, 0],
+    ["Chocolate ao leite com queijo", "Tapioca Doce", 18.00, 0],
     ["Prestígio","Tapioca doce",  18.00, 0],
     ["Morango com nutella","Tapioca doce",  18.00, 0],
     ["Morango com leite condensado","Tapioca doce",  18.00, 0],
     ["Morango, coco e leite condensado","Tapioca doce",  18.00, 0],
-    ["Creme de avelã e coco", 18.00,"Tapioca doce",  0],
-    ["Creme de avelã com banana", 18.00,"Tapioca doce",  0],
-    ["Banana com canela", 18.00,"Tapioca doce",  0],
-    ["Goiabada com queijo", 18.00,"Tapioca doce",  0],
+    ["Creme de avelã e coco", "Tapioca doce", 18.00, 0],
+    ["Creme de avelã com banana", "Tapioca doce",18.00,  0],
+    ["Banana com canela","Tapioca doce", 18.00,  0],
+    ["Goiabada com queijo", "Tapioca doce",  18.00,0],
     ["Moda da casa (banana, nutella, coco, bis preto e sorvete de creme)","Tapioca doce",  20.00, 0]
 ];
 
