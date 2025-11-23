@@ -20,7 +20,6 @@ let sabores = [
     ["Red Velvet", preco],
     ["Sensação", preco],
     ["Mousse de nutella", preco],
-    //["Delírio", preco],
     ["Ameixa", preco],
     ["Laka", preco],
     ["Flocos", preco],
@@ -31,7 +30,16 @@ let sabores = [
     ["Torta chocolate", preco],
     ["Cheesecake", preco],
     ["Papaya com cassis", preco],
-    ["Ferrero Rocher", preco]
+    ["Ferrero Rocher", preco],
+    ["Pistache", "Milk Shake 300 Ml", preco],
+    ["Floresta branca", "Milk Shake 300 Ml", preco],
+    ["Prestígio ", "Milk Shake 300 Ml", preco],
+    ["Ouro Branco", "Milk Shake 300 Ml", preco],
+    ["Limão siciliano zero lactose", "Milk Shake 300 Ml", preco],
+    ["Pudim", "Milk Shake 300 Ml", preco],
+    ["Iogurte com frutas vermelhas zero açúcar ", "Milk Shake 300 Ml", preco],
+    ["Ninho com nutella zero açúcar ", "Milk Shake 300 Ml", preco],
+    ["Cupuaçu", "Milk Shake 300 Ml", preco],
 ];
 
 export function adicionarBola(){
