@@ -30,7 +30,7 @@ let sabores = [
     ["Morango silvestre 0", preco],
     ["Torta chocolate", preco],
     ["Cheesecake", preco],
-    ["Papaya com cassis", preco]
+    ["Papaya com cassis", preco],
     ["Ferrero Rocher", preco]
 ];
 
