@@ -62,8 +62,6 @@ function definirCategoria(idHtml, nome, categoriaHtml){
                 <h2 class="tituloPd">${nome}</h2>
                 <div class="campoMontagem">
 
-                    <h3>Monte seu sorvete</h3>
-
                     <img src="assets/images/sorvetes.png" alt="imagem de sorvete" class="imagemSorvete">
 
                     <p>Após selecionar pelo 1 menos 1 sabor, o campo será liberado para pedir</p>
@@ -88,6 +86,35 @@ function definirCategoria(idHtml, nome, categoriaHtml){
                     
                 </div>
             `;
+            case 4: 
+                return `
+                    <h2 class="tituloPd">${nome}</h2>
+                    <div class="campoMontagem">
+
+                        <img src="assets/images/acais.png" alt="imagem de sorvete" class="imagemSorvete">
+
+                        <p>Após selecionar pelo 1 menos 1 sabor, o campo será liberado para pedir</p>
+
+                        <div id="campoAcais" class="selectSorvetes"></div>
+
+                        <div class="montarSorvete">
+                            <p>Quantidade de bolas de açai</p>
+                            <button onclick="globalRetirarAcai()">
+                                <img src="assets/icons/retirar.png" alt="icone adicionar">
+                            </button>
+                            <span id="quantidadeAcai">0</span>
+                            <button onclick="globalAdicionarAcai()">
+                                <img src="assets/icons/adicionar.png" alt="icone adicionar">
+                            </button>
+                        </div>
+
+                        <div id="acaiMontado" class="sorveteMontado">
+                            <h3>Seu açai está pronto para pedir</h3>
+                            <div id="${idHtml}"></div>
+                        </div>
+                        
+                    </div>
+                `;
     }
 
 }
@@ -141,7 +168,16 @@ function definirProduto(identificador, idHtml, numeroImagem, id, nome, descrever
                     <span>R$ <i id="valorSorvete"></i></span>
                     <p id="textoSorvete"></p>
                 </div>
-            `
+            `;
+        case 6:
+            return `
+                <div id="produtoAcai" onclick="globalPedir('Acai', '${adicionaisProduto}', ${inclusos})" class="item">
+                    <img id="imagemProdutoAcai" src="assets/images/logo.png" alt="logo da empresa">
+                    <h3 id="tituloAcai">${nome}</h3>
+                    <span>R$ <i id="valorAcai"></i></span>
+                    <p id="textoAcai"></p>
+                </div>
+            `;
     }
 }
 

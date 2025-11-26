@@ -1,3 +1,8 @@
+
+let bolasAcai = [
+    [6, "bolasAcai", "Monte seu açai", [1], 4],
+    ["", "", 0.0, 0]
+];
 let combos = [
     [1, "combos", "Açai com Adicionais Inclusos", [1], 1],
     ["Copo 300ml de açai", "Escolha até 3 adicionais", 23.00, 3],
@@ -24,4 +29,4 @@ let tigelas = [
     ["Tigela 600 ML", "Tigela com 600 ml de açai", 19.00, 0]
 ];
 
-export let acais = ["acais", "Ver Açais", combos, copos, barcas, tigelas];
+export let acais = ["acais", "Ver Açais", bolasAcai, combos, copos, barcas, tigelas];

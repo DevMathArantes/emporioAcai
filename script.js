@@ -10,6 +10,7 @@ import { montarFormulario } from "./functions/montarFormulario.js";
 import { montarLink } from "./functions/montarLink.js";
 import { montarParte } from "./functions/montarPartes.js";
 import { adicionarBola, retirarBola, sorveteMontado } from "./functions/quantidadeSorvete.js";
+import { adicionarAcai, retirarAcai, acaiMontado } from "./functions/quantidadeAcai.js";
 
 window.globalMudarCategoria = mudarCategoria;
 window.globalPedir = Pedir;
@@ -25,6 +26,9 @@ window.globalMontarParte = montarParte;
 window.globalAdicionarBola = adicionarBola;
 window.globalRetirarBola = retirarBola;
 window.globalSorveteMontado = sorveteMontado;
+window.globalAdicionarAcai = adicionarAcai;
+window.globalRetirarAcai = retirarAcai;
+window.globalAcaiMontado = acaiMontado;
 
 export let compra = [];
 
@@ -86,3 +90,4 @@ for(let i = 0; i < produtos.length; i++){
 }
 
 adicionarBola();
+adicionarAcai();
