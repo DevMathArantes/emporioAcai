@@ -1,5 +1,5 @@
 export let salgadaGrande = [
-    [2, "salgadaGrande", "Pizzas Grandes", [3], 1],
+    [2, "salgadaGrande", "Pizzas Grandes (A partir das 18h)", [3], 1],
     ["Carne seca acebolada (Grande)", "Carne seca desfiada , molho de tomate especial, mussarela, cebola, azeitona e orégano", 68.00, 0],
     ["Carne seca cremosa (Grande)", "Carne seca desfiada ,molho especial, mussarela, catupiry, orégano", 73.00, 0],
     ["Carne seca ao alho (Grande)", "Carne seca desfiada, molho de tomate especial, alho frito, mussarela , azeite , azeitona e cebola", 71.00, 0],
@@ -38,7 +38,7 @@ export let salgadaGrande = [
     ["Pizza Vegetariana (Grande)", "Milho, palmito, brócolis, champignon, mussarela e couve", 75.00, 0]
 ];
 let salgadaMedia = [
-    [2, "salgadaMedia", "Pizzas Médias", [3], 1],
+    [2, "salgadaMedia", "Pizzas Médias (A partir das 18h)", [3], 1],
     ["Carne seca acebolada (Média)", "Carne seca desfiada , molho de tomate especial, mussarela, cebola, azeitona e orégano", 48.00, 0],
     ["Carne seca cremosa (Média)", "Carne seca desfiada ,molho especial, mussarela, catupiry, orégano", 48.00, 0],
     ["Carne seca ao alho (Média)", "Carne seca desfiada, molho de tomate especial, alho frito, mussarela , azeite , azeitona e cebola", 48.00, 0],
@@ -77,7 +77,7 @@ let salgadaMedia = [
     ["Pizza Vegetariana (Média)", "Milho, palmito, brócolis, champignon, mussarela e couve", 48.00, 0]
 ]
 export let doceGrande = [
-    [2, "doceGrande", "Pizzas Doces (Grande)", [3], 1],
+    [2, "doceGrande", "Pizzas Doces (Grande) (A partir das 18h)", [3], 1],
     ["Açai com leite ninho","Pizza Doce (Grande)",  70.00, 0],
     ["Açai com morango e nutella","Pizza Doce (Grande)",  70.00, 0],
     ["Banana, canela, queijo, calda de caramelo","Pizza Doce (Grande)",  70.00, 0],
@@ -98,7 +98,7 @@ export let doceGrande = [
     ["Sonho de valsa", "Pizza Doce (Grande)", 70.00, 0]
 ];
 let doceMedia = [
-    [2, "doceMedia", "Pizzas Doces (Média)", [0], 1],
+    [2, "doceMedia", "Pizzas Doces (Média) (A partir das 18h)", [0], 1],
     ["Açai com leite ninho","Pizza Doce (Média)",  48.00, 0],
     ["Açai com morango e nutella","Pizza Doce (Média)",  48.00, 0],
     ["Banana, canela, queijo, calda de caramelo","Pizza Doce (Média)",  48.00, 0],
@@ -120,7 +120,7 @@ let doceMedia = [
 ];
 
 export let doisSabores = [
-    [4, "doisSabores", "Monte sua Pizza de 2 Sabores", [3], 2],
+    [4, "doisSabores", "Monte sua Pizza de 2 Sabores (A partir das 18h)", [3], 2],
     ["Pizza 2 Sabores", "", 0.0, 0]
 ]
 
