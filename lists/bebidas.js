@@ -48,11 +48,13 @@ let cervejas = [
     [3, "cervejas", "Cerveja Heineken", [0], 1],
     ["Cerveja Heineken 330 ml", "Cerveja Heineken",  9.00, 0]
 ];
+
+let vitaminasPc = 10.00;
 let vitaminas = [
     [2, "vitaminas", "Vitaminas", [0], 1],
-    ["Morango","Vitamina", 8.00, 0],
-    ["Maracujá","Vitamina", 8.00, 0],
-    ["Mista","Vitamina", 8.00, 0],
+    ["Morango","Vitamina", vitaminasPc, 0],
+    ["Maracujá","Vitamina", vitaminasPc, 0],
+    ["Mista","Vitamina", vitaminasPc, 0],
 ];
 
 export let bebidas = ["bebidas", "Ver Bebidas", refri2Litros, refri1Litro, refriLata, limoneto, sucos, cervejas, vitaminas];
