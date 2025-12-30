@@ -4,8 +4,7 @@ let refri2Litros = [
     ["Coca-Cola 0","Refri 2 Litros",  14.00, 0],
     ["Fanta Laranja","Refri 2 Litros",  13.00, 0],
     ["Fanta Uva","Refri 2 Litros",  13.00, 0],
-    ["Sprite","Refri 2 Litros",  13.00, 0],
-    ["Guaraná Jaboti","Refri 2 Litros",  12.00]
+    ["Sprite","Refri 2 Litros",  13.00, 0]
 ];
 let refri1Litro = [
     [1, "refri1Litro", "Refrigerantes 1 Litro", [0], 1],
