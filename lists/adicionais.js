@@ -9,7 +9,7 @@ let recheiosDoces = [
     ["Granulado", 2.50, true],
     ["Doce de leite", 2.50, true],
     ["Paçoca", 2.75, true],
-    ["Banana", 3.00, true],
+    //["Banana", 3.00, true],
     ["Bis branco", 3.00, true],
     ["Bis preto", 3.00, true],
     ["Chantilly", 3.00, true],
