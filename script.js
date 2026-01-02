@@ -39,8 +39,8 @@ import { bebidas } from "./lists/bebidas.js";
 import { lanches } from "./lists/lanche.js";
 import { pizzas } from "./lists/pizza.js";
 import { especiais } from "./lists/especiais.js";
-export let grupos = ["acais","sorvetes", "bebidas", "lanches", /*"pizzas",*/ "especiais"];
-export let produtos = [acais, sorvetes, bebidas, lanches, /*pizzas,*/ especiais];
+export let grupos = ["acais","sorvetes", "bebidas", "lanches", "pizzas", "especiais"];
+export let produtos = [acais, sorvetes, bebidas, lanches, pizzas, especiais];
 export let funcionamento = [
     [[15, 0], [22, 50]],
     [[15, 0], [22, 50]],
