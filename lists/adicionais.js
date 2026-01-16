@@ -52,7 +52,7 @@ let recheiosDoces = [
     ["Creme de leite ninho", 5.00, true],
     ["Creme de lacta com óreo", 5.00, true],
     ["Creme cocco bianco", 5.00, true],
-    ["Chocolate suflair", 3.99, false],
+    ["Chocolate suflair", 9.00, false],
     ["Creme de morango", 5.00, false],
     ["Creme de ovomaltine", 5.50, false],
     ["Creme de kit kat", 5.50, false],
@@ -64,9 +64,9 @@ let recheiosDoces = [
 ];
 let recheiosSalgados = [
     ["Adicionais", "checkbox"],
-    ["Bacon", 4.99, false],
-    ["Catupiry", 4.99, false],
-    ["Cheddar", 4.99, false],
+    ["Bacon", 6.00, false],
+    ["Catupiry", 6.00, false],
+    ["Cheddar", 6.00, false],
     ["Creme de alho", 3.00, false],
     ["Hambúrguer", 4.00, false],
     ["Mussarela", 4.00, false],

@@ -45,7 +45,7 @@ let sucos = [
 ];
 let cervejas = [
     [3, "cervejas", "Cerveja Heineken", [0], 1],
-    ["Cerveja Heineken 330 ml", "Cerveja Heineken",  9.00, 0]
+    ["Cerveja Heineken 330 ml", "Cerveja Heineken",  9.50, 0]
 ];
 
 let vitaminasPc = 10.00;
