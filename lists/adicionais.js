@@ -39,7 +39,7 @@ let recheiosDoces = [
     ["Leite Ninho", 4.00, true],
     ["Morango", 4.00, true],
     ["Manga", 4.50, true],
-    ["Creme de avelã", 4.50, true],
+    ["Creme de avelã", 5.50, true],
     ["Castanha", 4.50, true],
     ["Creme de ouro branco", 4.50, true],
     ["Cupuaçu", 4.50, true],
@@ -58,7 +58,7 @@ let recheiosDoces = [
     ["Creme de kit kat", 5.50, false],
     ["Cereja", 6.00, false],
     ["Creme de pistache", 6.50, false],
-    ["Creme de avelã x2", 7.00, false],
+    ["Creme de avelã x2", 9.90, false],
     ["Ferrero rocher", 9.50, false],
     ["Kinder bueno" , 12.00, false]
 ];
