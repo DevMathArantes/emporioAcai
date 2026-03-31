@@ -20,7 +20,7 @@ let frango = [
 ];
 let combo = [
     [3, "combo", "Combos com Lanche", [2], 1],
-    ["Combo", "Lanche (2 hamburgueres, queijo, cheddar cremoso, alface e tomate) + Batata + Coca-Cola lata", 29.90, 0]
+    ["Combo", "Lanche (2 hamburgueres, queijo, cheddar cremoso, alface e tomate) + Batata + Coca-Cola lata", 31.90, 0]
 ];
 let file = [
     [2, "file", "Lanches com Filé", [2], 1],
