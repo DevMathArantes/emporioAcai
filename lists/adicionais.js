@@ -59,7 +59,7 @@ let recheiosDoces = [
     ["Cereja", 6.00, false],
     ["Creme de pistache", 6.50, false],
     ["Creme de avelã x2", 9.90, false],
-    ["Ferrero rocher", 9.50, false],
+    ["Ferrero rocher", 14.00, false],
     ["Kinder bueno" , 12.00, false]
 ];
 let recheiosSalgados = [
