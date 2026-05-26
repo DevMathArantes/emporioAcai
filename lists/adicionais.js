@@ -69,6 +69,7 @@ let recheiosSalgados = [
     ["Cheddar", 6.00, false],
     ["Creme de alho", 3.00, false],
     ["Hambúrguer", 4.00, false],
+    ["Hambúrguer Artesanal", 5.00, false],
     ["Mussarela", 4.00, false],
     ["Ovo", 2.00, false],
     ["Presunto", 4.00, false],

@@ -8,6 +8,18 @@ let hamburguer = [
     ["X-Tudo", "Pão, presunto, queijo, 2 hambúrgueres, ovo, bacon, alface, catupiry e tomate", 28.00, 0],
     ["X-Tudão", "Pão, presunto, queijo, catupiry, salsicha, 3 hambúrgueres, ovo, bacon, milho, batata palha, alface e tomate", 33.90, 0]
 ];
+
+let hamburguerArtesanal = [
+    [2, "hamburguerArtesanal", "Lanches com Hamburguer Artesanal", [2], 1],
+    ["X-Egg (Artesanal)", "Pão, queijo, hambúrguer artesanal e ovo", 19.00, 0],
+    ["X-Burguer (Artesanal)", "Pão, 2 hambúrgueres artesanais e queijo", 26.00, 0],
+    ["X-Salada (Artesanal)", "Pão, queijo, hambúrguer artesanal, alface e tomate", 23.00, 0],
+    ["X-Bacon (Artesanal)", "Pão, queijo, hambúrguer artesanal e bacon", 24.00, 0],
+    ["X-Salada Egg (Artesanal)", "Pão, queijo, hambúrguer artesanal, presunto, ovo, alface e tomate", 25.00, 0],
+    ["X-Tudo (Artesanal)", "Pão, presunto, queijo, 2 hambúrgueres artesanais, ovo, bacon, alface, catupiry e tomate", 36.00, 0],
+    ["X-Tudão (Artesanal)", "Pão, presunto, queijo, catupiry, salsicha, 3 hambúrgueres artesanais, ovo, bacon, milho, batata palha, alface e tomate", 45.90, 0]
+];
+
 let frango = [
     [2, "frango", "Lanches com Frango", [2], 1],
     ["X-Frango", "Pão, queijo e frango", 22.00, 0],
@@ -20,7 +32,8 @@ let frango = [
 ];
 let combo = [
     [3, "combo", "Combos com Lanche", [2], 1],
-    ["Combo", "Lanche (2 hamburgueres, queijo, cheddar cremoso, alface e tomate) + Batata + Coca-Cola lata", 31.90, 0]
+    ["Combo", "Lanche (2 hamburgueres, queijo, cheddar cremoso, alface e tomate) + Batata + Coca-Cola lata", 31.90, 0],
+    ["Combo Artesanal", "Lanche (2 hamburgueres artesanais, queijo, cheddar cremoso, alface e tomate) + Batata + Coca-Cola lata", 39.90, 0]
 ];
 let file = [
     [2, "file", "Lanches com Filé", [2], 1],
@@ -53,4 +66,4 @@ let costela = [
     ["X-Costela Tudo", "Pão , ovo , costela desfiada, cebola,bacon, salsicha, alface , tomate , queijo duplo , catupiry e presunto", 39.00, 0]
 ];
 
-export let lanches = ["lanches", "Ver Lanches", hamburguer, frango, combo, file, lombo, cupim, costela]
+export let lanches = ["lanches", "Ver Lanches", hamburguer, hamburguerArtesanal, frango, combo, file, lombo, cupim, costela]
