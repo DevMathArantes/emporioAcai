@@ -66,4 +66,9 @@ let costela = [
     ["X-Costela Tudo", "Pão , ovo , costela desfiada, cebola,bacon, salsicha, alface , tomate , queijo duplo , catupiry e presunto", 39.00, 0]
 ];
 
-export let lanches = ["lanches", "Ver Lanches", hamburguer, hamburguerArtesanal, frango, combo, file, lombo, cupim, costela]
+let especiais = [
+    [2, "especiaisLanches", "Lanches Especiais", [2], 1],
+    ['Misto Quente', 'Pão, presunto, queijo e tomate', 12.00, 0],
+]
+
+export let lanches = ["lanches", "Ver Lanches", hamburguer, hamburguerArtesanal, frango, combo, file, lombo, cupim, costela, especiais];
