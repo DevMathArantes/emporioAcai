@@ -24,7 +24,7 @@ let frango = [
     [2, "frango", "Lanches com Frango", [2], 1],
     ["X-Frango", "Pão, queijo e frango", 22.00, 0],
     ["X-Frango Egg", "Pão, queijo, frango e ovo", 24.00, 0],
-    ["X-Frango Salada", "Pão, queijo, frango, presunto, alface e tomate", 25.00, 0],
+    ["X-Frango Salada", "Pão, queijo, frango, alface e tomate", 25.00, 0],
     ["X-Frango Salada Egg", "Pão, queijo, frango, presunto, ovo, alface e tomate", 27.00, 0],
     ["X-Frango Bacon", "Pão, queijo, frango e bacon", 28.00, 0],
     ["X-Frango cremoso", "Pão, queijo, frango, catupiry e bacon", 30.00, 0],
