@@ -1,5 +1,4 @@
 import { funcionamento, funcionamentoAtivo } from "../../config.js";
-import { customAlert } from "./utils.js";
 
 const semana = [
     "Domingo",
