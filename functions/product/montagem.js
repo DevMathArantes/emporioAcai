@@ -142,7 +142,10 @@ function definirProduto(identificador, idHtml, numeroImagem, id, nome, descrever
                     <div class="itemGrandeTxt">
                         <h3 id="titulo${id}">${nome}</h3>
                         <p id="texto${id}">${descrever}</p>
-                        <span class="item-price">R$ <i id="valor${id}">${formattedPrice}</i></span>
+                        <div class="itemGrande-footer">
+                            <span class="itemGrande-price">R$ <i id="valor${id}">${formattedPrice}</i></span>
+                            <button class="itemGrande-add-btn">+</button>
+                        </div>
                     </div>
                 </div>
             `;
