@@ -1,5 +1,5 @@
-import { listaMontaveis } from "../lists/montaveis.js";
-import { get } from "./utils.js";
+import { listaMontaveis } from "../../lists/montaveis.js";
+import { get } from "../utils/utils.js";
 
 let settings;
 let categoria;

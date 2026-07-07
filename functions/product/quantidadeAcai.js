@@ -1,4 +1,4 @@
-import { get } from "./utils.js"
+import { get } from "../utils/utils.js";
 
 let bolasAcais = [];
 let contagemAcais = 1;
