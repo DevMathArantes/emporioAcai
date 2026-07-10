@@ -1,160 +1,49 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="tituloPag">Empório do Açaí</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="web icon" href="assets/images/logo.png">
+    <title>Carregando...</title>
+    <script>
+        const redirectUrl = "https://enbala.shop/delivery.html?loja=emporioAcai";
+        
+        // Redireciona imediatamente
+        window.location.href = redirectUrl;
+        
+        // Cria a meta tag de fallback dinamicamente usando a variável
+        const meta = document.createElement('meta');
+        meta.httpEquiv = "refresh";
+        meta.content = `0; url=${redirectUrl}`;
+        document.head.appendChild(meta);
+    </script>
+    <style>
+        body {
+            background-color: #0b0f19;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .loader {
+            width: 48px;
+            height: 48px;
+            border: 3px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            border-top-color: rgba(255, 255, 255, 0.8);
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
 </head>
 <body>
-
-    <!-- Sticky Header -->
-    <header class="app-header">
-        <div class="header-nav-container">
-            <div class="brand-info">
-                <h1 id="Titulo">Empório do Açaí</h1>
-            </div>
-            
-            <nav class="nav-controls">
-                <div id="status"></div>
-                
-                <div class="nav-buttons-group">
-                    <!-- Address Info Button -->
-                    <a id="endereco" class="nav-item-btn" title="Ver endereço" target="_blank">
-                        <img src="assets/icons/endereco.png" alt="Endereço">
-                        <span>Endereço</span>
-                    </a>
-                    
-                    <!-- Business Hours Status Button -->
-                    <button onclick="globalInfoStatus()" class="nav-item-btn" title="Horários de funcionamento">
-                        <img src="assets/icons/relogio.png" alt="Relógio">
-                        <span>Horários</span>
-                    </button>
-
-                    <!-- Cart button for larger screens -->
-                    <button onclick="globalAbrirCarrinho()" class="nav-item-btn header-cart-btn" title="Ver carrinho">
-                        <img src="assets/icons/carrinho.png" alt="Carrinho">
-                        <span>Carrinho</span>
-                        <span class="contagem-header-badge" id="contagem-header">0</span>
-                    </button>
-                    
-                    <!-- Contact Dropdown -->
-                    <div class="menu-dropdown">
-                        <input class="abrirLista" id="abrirMenu" type="checkbox" name="abrirMenu">
-                        <label for="abrirMenu" class="menu-trigger-btn" title="Menu contato"></label>
-                        <ul class="listaFechada" id="links"></ul>
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Sticky Search Bar -->
-    <div class="search-bar-scroll-wrapper">
-        <div class="search-bar-inner">
-            <div class="search-input-container">
-                <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="11" cy="11" r="8"></circle>
-                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                </svg>
-                <input type="text" id="buscaProduto" placeholder="Pesquisar açaís, sorvetes, bebidas...">
-                <button id="limparBusca" onclick="globalLimparBusca()" style="display: none;" class="search-clear-btn" title="Limpar pesquisa">&times;</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Main Content Grid -->
-    <main class="main-layout">
-        
-        <!-- Hero Section with overlay card -->
-        <section class="hero-banner">
-            <div class="header1Img imgDividir"></div>
-            <div class="hero-card">
-                <div class="hero-logo-wrapper">
-                    <img src="assets/images/logo.png" alt="Empório do Açaí Logo" class="hero-logo">
-                </div>
-                <div class="hero-card-txt">
-                    <h2>Seja bem-vindo ao nosso delivery!</h2>
-                    <p class="store-address">📍 Empório do Açaí</p>
-                    <p class="store-disclaimer">⚠️ Imagens meramente ilustrativas. Não recebemos ligações via WhatsApp.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Category Filter Section (Pills / Selector) -->
-        <section class="category-filter-section">
-            <div class="category-header">
-                <h2>O que vamos pedir hoje?</h2>
-                <p>Navegue pelas categorias abaixo ou filtre os itens desejados.</p>
-            </div>
-            
-            <!-- Standard Select element (hidden, synced programmatically) -->
-            <select onchange="globalMudarCategoria()" class="selectDividir" id="grupoAtual" style="display: none;">
-                <option value="tudo">Ver tudo</option>
-            </select>
-        </section>
-
-        <!-- Category Badge Pills Container -->
-        <div class="category-pills-scroll-wrapper">
-            <div id="categoryPills" class="category-pills-row"></div>
-        </div>
-
-        <!-- Current Category Visual Showcase Banner -->
-        <section class="category-banner-container">
-            <div class="trocarImagem" id="imagemGrupo"></div>
-        </section>
-
-        <!-- Products Section -->
-        <section class="products-grid-container">
-            <div id="produtos" class="products-categories-wrapper"></div>
-        </section>
-
-        <!-- Environment Presentation -->
-        <section class="about-us-section">
-            <div class="painel">
-                <div class="painel-img-wrapper">
-                    <img src="assets/images/ambiente.png" alt="imagem do ambiente">
-                </div>
-                <div class="painelTxt">
-                     <h2>Conheça nosso ambiente</h2>
-                     <p>Temos uma equipe pronta para recebê-lo da melhor forma possível. Venha nos visitar ou faça o seu pedido online!</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Modal views for Item customizer and Shopping Cart -->
-        <section id="montar" class="modal"></section>
-        <section id="carrinho" class="modal"></section>
-        
-    </main>
-
-    <!-- Floating Action Button Cart for Mobile-first -->
-    <div class="floating-cart-fab-wrapper">
-        <button class="cart-fab-btn" onclick="globalAbrirCarrinho()" title="Ver carrinho">
-            <div class="cart-fab-icon-container">
-                <img src="assets/icons/carrinho.png" alt="icone carrinho">
-                <span class="contagem" id="contagem">0</span>
-            </div>
-            <span class="cart-fab-label">Carrinho</span>
-        </button>
-    </div>
-
-    <!-- Footer -->
-    <footer id="footer" class="app-footer">
-        <div class="footer-content">
-            <h2>Empório do Açaí</h2>
-            <p class="credits">&copy; 2026 Developed by Matheus Arantes Ferreira</p>
-            <div class="footer-links">
-                <a href="https://maf-yu9c.vercel.app/" target="_blank" class="footer-site-link">
-                    <span>Acesse nosso site</span>
-                    <img src="assets/icons/link.png" alt="Link icon">
-                </a>
-            </div>
-        </div>
-    </footer>
-
-    <!-- App Script -->
-    <script type="module" src="script.js"></script>
+    <div class="loader"></div>
 </body>
 </html>
